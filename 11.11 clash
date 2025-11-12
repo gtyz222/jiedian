@@ -1,0 +1,924 @@
+# ;不要随意改变关键字，否则会导致出错
+# ;acl4SSR规则
+# ;去广告：支持
+# ;自动测速：支持
+# ;微软分流：不支持
+# ;苹果分流：不支持
+# ;增强中国IP段：不支持
+# ;增强国外GFW：不支持
+# ;ruleset=🎯 全球直连,[]GEOIP,LAN
+
+mixed-port: 7890
+allow-lan: false
+mode: rule
+ipv6: false
+log-level: info
+external-controller: 0.0.0.0:9090
+dns:
+  enable: true
+  listen: 0.0.0.0:53
+  ipv6: false
+  default-nameserver:
+    - 223.5.5.5
+    - 114.114.114.114
+  nameserver:
+    - 223.5.5.5
+    - 114.114.114.114
+    - 119.29.29.29
+    - 180.76.76.76
+  enhanced-mode: fake-ip
+  fake-ip-range: 198.18.0.1/16
+  fake-ip-filter:
+    - "*.lan"
+    - "*.localdomain"
+    - "*.example"
+    - "*.invalid"
+    - "*.localhost"
+    - "*.test"
+    - "*.local"
+    - "*.home.arpa"
+    - router.asus.com
+    - localhost.sec.qq.com
+    - localhost.ptlogin2.qq.com
+    - +.msftconnecttest.com
+tun:
+  enable: true
+  stack: system
+  auto-route: true
+  auto-detect-interface: true
+  dns-hijack:
+    - 114.114.114.114
+    - 180.76.76.76
+    - 119.29.29.29
+    - 223.5.5.5
+    - 8.8.8.8
+    - 8.8.4.4
+    - 1.1.1.1
+    - 1.0.0.1
+
+
+proxies:
+  - type: ss
+    name: 微信：gtyz222
+    server: hkg01.dns-node.top
+    port: 45573
+    cipher: aes-128-gcm
+    password: 61c3b62a-19cf-42fa-9a45-d275d9b75e0e
+  - type: trojan
+    name: 应急专用(JP)
+    server: jppro01.tmdns-sing.top
+    port: 29913
+    password: 61c3b62a-19cf-42fa-9a45-d275d9b75e0e
+    network: tcp
+    sni: jppro01.tmdns-sing.top
+    skip-cert-verify: true
+    tls: true
+  - type: ss
+    name: 香港
+    server: hkg01.dns-node.top
+    port: 45573
+    cipher: aes-128-gcm
+    password: 61c3b62a-19cf-42fa-9a45-d275d9b75e0e
+  - type: ss
+    name: 台湾
+    server: tw01.dns-node.top
+    port: 45571
+    cipher: aes-128-gcm
+    password: 61c3b62a-19cf-42fa-9a45-d275d9b75e0e
+  - type: ss
+    name: 日本
+    server: jp01.dns-node.top
+    port: 45612
+    cipher: aes-128-gcm
+    password: 61c3b62a-19cf-42fa-9a45-d275d9b75e0e
+  - type: ss
+    name: 韩国
+    server: jp01.dns-node.top
+    port: 45572
+    cipher: aes-128-gcm
+    password: 61c3b62a-19cf-42fa-9a45-d275d9b75e0e
+  - type: ss
+    name: 新加坡
+    server: sg04.dns-node.top
+    port: 45609
+    cipher: aes-128-gcm
+    password: 61c3b62a-19cf-42fa-9a45-d275d9b75e0e
+  - type: ss
+    name: 泰国
+    server: sg04.dns-node.top
+    port: 45621
+    cipher: aes-128-gcm
+    password: 61c3b62a-19cf-42fa-9a45-d275d9b75e0e
+  - type: ss
+    name: 老挝
+    server: sg04.dns-node.top
+    port: 45622
+    cipher: aes-128-gcm
+    password: 61c3b62a-19cf-42fa-9a45-d275d9b75e0e
+  - type: ss
+    name: 尼泊尔
+    server: sg04.dns-node.top
+    port: 45623
+    cipher: aes-128-gcm
+    password: 61c3b62a-19cf-42fa-9a45-d275d9b75e0e
+  - type: ss
+    name: 斯里兰卡
+    server: sg04.dns-node.top
+    port: 45624
+    cipher: aes-128-gcm
+    password: 61c3b62a-19cf-42fa-9a45-d275d9b75e0e
+  - type: ss
+    name: 缅甸
+    server: sg03.dns-node.top
+    port: 46333
+    cipher: aes-128-gcm
+    password: 61c3b62a-19cf-42fa-9a45-d275d9b75e0e
+  - type: ss
+    name: 蒙古
+    server: sg03.dns-node.top
+    port: 46334
+    cipher: aes-128-gcm
+    password: 61c3b62a-19cf-42fa-9a45-d275d9b75e0e
+  - type: ss
+    name: 柬埔寨
+    server: sg03.dns-node.top
+    port: 46335
+    cipher: aes-128-gcm
+    password: 61c3b62a-19cf-42fa-9a45-d275d9b75e0e
+  - type: ss
+    name: 孟加拉国
+    server: sg04.dns-node.top
+    port: 46338
+    cipher: aes-128-gcm
+    password: 61c3b62a-19cf-42fa-9a45-d275d9b75e0e
+  - type: ss
+    name: 哈萨克斯坦
+    server: sg04.dns-node.top
+    port: 46339
+    cipher: aes-128-gcm
+    password: 61c3b62a-19cf-42fa-9a45-d275d9b75e0e
+  - type: ss
+    name: 阿联酋
+    server: sg04.dns-node.top
+    port: 46340
+    cipher: aes-128-gcm
+    password: 61c3b62a-19cf-42fa-9a45-d275d9b75e0e
+  - type: ss
+    name: 美国
+    server: us01.dns-node.top
+    port: 45581
+    cipher: aes-128-gcm
+    password: 61c3b62a-19cf-42fa-9a45-d275d9b75e0e
+  - type: ss
+    name: 阿尔巴尼亚
+    server: de01.dns-node.top
+    port: 46101
+    cipher: aes-128-gcm
+    password: 61c3b62a-19cf-42fa-9a45-d275d9b75e0e
+  - type: ss
+    name: 安道尔
+    server: de01.dns-node.top
+    port: 46152
+    cipher: aes-128-gcm
+    password: 61c3b62a-19cf-42fa-9a45-d275d9b75e0e
+  - type: ss
+    name: 波黑
+    server: de01.dns-node.top
+    port: 46153
+    cipher: aes-128-gcm
+    password: 61c3b62a-19cf-42fa-9a45-d275d9b75e0e
+  - type: ss
+    name: 保加利亚
+    server: de01.dns-node.top
+    port: 46154
+    cipher: aes-128-gcm
+    password: 61c3b62a-19cf-42fa-9a45-d275d9b75e0e
+  - type: ss
+    name: 捷克
+    server: de01.dns-node.top
+    port: 46155
+    cipher: aes-128-gcm
+    password: 61c3b62a-19cf-42fa-9a45-d275d9b75e0e
+  - type: ss
+    name: 爱沙尼亚
+    server: de01.dns-node.top
+    port: 46156
+    cipher: aes-128-gcm
+    password: 61c3b62a-19cf-42fa-9a45-d275d9b75e0e
+  - type: ss
+    name: 匈牙利
+    server: de01.dns-node.top
+    port: 46157
+    cipher: aes-128-gcm
+    password: 61c3b62a-19cf-42fa-9a45-d275d9b75e0e
+  - type: ss
+    name: 英属泽西岛
+    server: de01.dns-node.top
+    port: 46158
+    cipher: aes-128-gcm
+    password: 61c3b62a-19cf-42fa-9a45-d275d9b75e0e
+  - type: ss
+    name: 奥地利
+    server: de01.dns-node.top
+    port: 46159
+    cipher: aes-128-gcm
+    password: 61c3b62a-19cf-42fa-9a45-d275d9b75e0e
+  - type: ss
+    name: 拉脱维亚
+    server: de01.dns-node.top
+    port: 46160
+    cipher: aes-128-gcm
+    password: 61c3b62a-19cf-42fa-9a45-d275d9b75e0e
+  - type: ss
+    name: 列支敦士登
+    server: de01.dns-node.top
+    port: 46161
+    cipher: aes-128-gcm
+    password: 61c3b62a-19cf-42fa-9a45-d275d9b75e0e
+  - type: ss
+    name: 卢森堡
+    server: de01.dns-node.top
+    port: 46162
+    cipher: aes-128-gcm
+    password: 61c3b62a-19cf-42fa-9a45-d275d9b75e0e
+  - type: ss
+    name: 马耳他
+    server: de01.dns-node.top
+    port: 46163
+    cipher: aes-128-gcm
+    password: 61c3b62a-19cf-42fa-9a45-d275d9b75e0e
+  - type: ss
+    name: 摩尔多瓦
+    server: de01.dns-node.top
+    port: 46164
+    cipher: aes-128-gcm
+    password: 61c3b62a-19cf-42fa-9a45-d275d9b75e0e
+  - type: ss
+    name: 摩纳哥
+    server: de01.dns-node.top
+    port: 46165
+    cipher: aes-128-gcm
+    password: 61c3b62a-19cf-42fa-9a45-d275d9b75e0e
+  - type: ss
+    name: 黑山
+    server: de01.dns-node.top
+    port: 46166
+    cipher: aes-128-gcm
+    password: 61c3b62a-19cf-42fa-9a45-d275d9b75e0e
+  - type: ss
+    name: 英国
+    server: uk01.dns-node.top
+    port: 45615
+    cipher: aes-128-gcm
+    password: 61c3b62a-19cf-42fa-9a45-d275d9b75e0e
+  - type: ss
+    name: 马来西亚
+    server: sg04.dns-node.top
+    port: 45610
+    cipher: aes-128-gcm
+    password: 61c3b62a-19cf-42fa-9a45-d275d9b75e0e
+  - type: ss
+    name: 印度尼西亚
+    server: sg03.dns-node.top
+    port: 45608
+    cipher: aes-128-gcm
+    password: 61c3b62a-19cf-42fa-9a45-d275d9b75e0e
+  - type: ss
+    name: 新西兰
+    server: sg04.dns-node.top
+    port: 45611
+    cipher: aes-128-gcm
+    password: 61c3b62a-19cf-42fa-9a45-d275d9b75e0e
+  - type: ss
+    name: 澳大利亚
+    server: sg03.dns-node.top
+    port: 45607
+    cipher: aes-128-gcm
+    password: 61c3b62a-19cf-42fa-9a45-d275d9b75e0e
+  - type: ss
+    name: 巴基斯坦
+    server: sg03.dns-node.top
+    port: 45800
+    cipher: aes-128-gcm
+    password: 61c3b62a-19cf-42fa-9a45-d275d9b75e0e
+  - type: ss
+    name: 南非
+    server: de01.dns-node.top
+    port: 46102
+    cipher: aes-128-gcm
+    password: 61c3b62a-19cf-42fa-9a45-d275d9b75e0e
+  - type: ss
+    name: 德国
+    server: eu.dns-node.top
+    port: 45594
+    cipher: aes-128-gcm
+    password: 61c3b62a-19cf-42fa-9a45-d275d9b75e0e
+  - type: ss
+    name: 埃及
+    server: eu.dns-node.top
+    port: 45595
+    cipher: aes-128-gcm
+    password: 61c3b62a-19cf-42fa-9a45-d275d9b75e0e
+  - type: ss
+    name: 西班牙
+    server: de01.dns-node.top
+    port: 45596
+    cipher: aes-128-gcm
+    password: 61c3b62a-19cf-42fa-9a45-d275d9b75e0e
+  - type: ss
+    name: 法国
+    server: eu.dns-node.top
+    port: 45597
+    cipher: aes-128-gcm
+    password: 61c3b62a-19cf-42fa-9a45-d275d9b75e0e
+  - type: ss
+    name: 印度
+    server: eu.dns-node.top
+    port: 45598
+    cipher: aes-128-gcm
+    password: 61c3b62a-19cf-42fa-9a45-d275d9b75e0e
+  - type: ss
+    name: 意大利
+    server: de01.dns-node.top
+    port: 45599
+    cipher: aes-128-gcm
+    password: 61c3b62a-19cf-42fa-9a45-d275d9b75e0e
+  - type: ss
+    name: 菲律宾
+    server: sg03.dns-node.top
+    port: 45661
+    cipher: aes-128-gcm
+    password: 61c3b62a-19cf-42fa-9a45-d275d9b75e0e
+  - type: ss
+    name: 尼日利亚
+    server: eu.dns-node.top
+    port: 45601
+    cipher: aes-128-gcm
+    password: 61c3b62a-19cf-42fa-9a45-d275d9b75e0e
+  - type: ss
+    name: 土耳其
+    server: eu.dns-node.top
+    port: 45602
+    cipher: aes-128-gcm
+    password: 61c3b62a-19cf-42fa-9a45-d275d9b75e0e
+  - type: ss
+    name: 乌克兰
+    server: de01.dns-node.top
+    port: 45603
+    cipher: aes-128-gcm
+    password: 61c3b62a-19cf-42fa-9a45-d275d9b75e0e
+  - type: ss
+    name: 阿根廷
+    server: us03.dns-node.top
+    port: 45583
+    cipher: aes-128-gcm
+    password: 61c3b62a-19cf-42fa-9a45-d275d9b75e0e
+  - type: ss
+    name: 越南
+    server: sg04.dns-node.top
+    port: 46115
+    cipher: aes-128-gcm
+    password: 61c3b62a-19cf-42fa-9a45-d275d9b75e0e
+  - type: ss
+    name: 巴西
+    server: us03.dns-node.top
+    port: 45585
+    cipher: aes-128-gcm
+    password: 61c3b62a-19cf-42fa-9a45-d275d9b75e0e
+  - type: ss
+    name: 加拿大
+    server: us03.dns-node.top
+    port: 45586
+    cipher: aes-128-gcm
+    password: 61c3b62a-19cf-42fa-9a45-d275d9b75e0e
+  - type: ss
+    name: 比利时
+    server: eu2.dns-node.top
+    port: 46301
+    cipher: aes-128-gcm
+    password: 61c3b62a-19cf-42fa-9a45-d275d9b75e0e
+  - type: ss
+    name: 丹麦
+    server: eu2.dns-node.top
+    port: 46302
+    cipher: aes-128-gcm
+    password: 61c3b62a-19cf-42fa-9a45-d275d9b75e0e
+  - type: ss
+    name: 芬兰
+    server: eu2.dns-node.top
+    port: 46303
+    cipher: aes-128-gcm
+    password: 61c3b62a-19cf-42fa-9a45-d275d9b75e0e
+  - type: ss
+    name: 克罗地亚
+    server: eu2.dns-node.top
+    port: 46304
+    cipher: aes-128-gcm
+    password: 61c3b62a-19cf-42fa-9a45-d275d9b75e0e
+  - type: ss
+    name: 瑞典
+    server: eu2.dns-node.top
+    port: 46305
+    cipher: aes-128-gcm
+    password: 61c3b62a-19cf-42fa-9a45-d275d9b75e0e
+  - type: ss
+    name: 希腊
+    server: eu2.dns-node.top
+    port: 46306
+    cipher: aes-128-gcm
+    password: 61c3b62a-19cf-42fa-9a45-d275d9b75e0e
+  - type: ss
+    name: 乌兹别克斯坦
+    server: eu2.dns-node.top
+    port: 46491
+    cipher: aes-128-gcm
+    password: 61c3b62a-19cf-42fa-9a45-d275d9b75e0e
+  - type: ss
+    name: 阿尔及利亚
+    server: eu2.dns-node.top
+    port: 46492
+    cipher: aes-128-gcm
+    password: 61c3b62a-19cf-42fa-9a45-d275d9b75e0e
+  - type: ss
+    name: 安哥拉
+    server: eu2.dns-node.top
+    port: 46493
+    cipher: aes-128-gcm
+    password: 61c3b62a-19cf-42fa-9a45-d275d9b75e0e
+  - type: ss
+    name: 冰岛
+    server: eu2.dns-node.top
+    port: 46307
+    cipher: aes-128-gcm
+    password: 61c3b62a-19cf-42fa-9a45-d275d9b75e0e
+  - type: ss
+    name: 爱尔兰
+    server: eu2.dns-node.top
+    port: 46308
+    cipher: aes-128-gcm
+    password: 61c3b62a-19cf-42fa-9a45-d275d9b75e0e
+  - type: ss
+    name: 立陶宛
+    server: eu2.dns-node.top
+    port: 46309
+    cipher: aes-128-gcm
+    password: 61c3b62a-19cf-42fa-9a45-d275d9b75e0e
+  - type: ss
+    name: 墨西哥
+    server: us_nord.dns-node.top
+    port: 45590
+    cipher: aes-128-gcm
+    password: 61c3b62a-19cf-42fa-9a45-d275d9b75e0e
+  - type: ss
+    name: 巴哈马
+    server: us_nord.dns-node.top
+    port: 45591
+    cipher: aes-128-gcm
+    password: 61c3b62a-19cf-42fa-9a45-d275d9b75e0e
+  - type: ss
+    name: 伯利兹
+    server: us_nord.dns-node.top
+    port: 45592
+    cipher: aes-128-gcm
+    password: 61c3b62a-19cf-42fa-9a45-d275d9b75e0e
+  - type: ss
+    name: 百慕大
+    server: us_nord.dns-node.top
+    port: 45593
+    cipher: aes-128-gcm
+    password: 61c3b62a-19cf-42fa-9a45-d275d9b75e0e
+  - type: ss
+    name: 哥斯达黎加
+    server: us_nord.dns-node.top
+    port: 46594
+    cipher: aes-128-gcm
+    password: 61c3b62a-19cf-42fa-9a45-d275d9b75e0e
+  - type: ss
+    name: 多米尼加
+    server: us_nord.dns-node.top
+    port: 46595
+    cipher: aes-128-gcm
+    password: 61c3b62a-19cf-42fa-9a45-d275d9b75e0e
+  - type: ss
+    name: 荷兰
+    server: eu3.dns-node.top
+    port: 46311
+    cipher: aes-128-gcm
+    password: 61c3b62a-19cf-42fa-9a45-d275d9b75e0e
+  - type: ss
+    name: 波兰
+    server: eu3.dns-node.top
+    port: 46316
+    cipher: aes-128-gcm
+    password: 61c3b62a-19cf-42fa-9a45-d275d9b75e0e
+  - type: ss
+    name: 挪威
+    server: eu3.dns-node.top
+    port: 46313
+    cipher: aes-128-gcm
+    password: 61c3b62a-19cf-42fa-9a45-d275d9b75e0e
+  - type: ss
+    name: 葡萄牙
+    server: eu3.dns-node.top
+    port: 46314
+    cipher: aes-128-gcm
+    password: 61c3b62a-19cf-42fa-9a45-d275d9b75e0e
+  - type: ss
+    name: 瑞士
+    server: eu3.dns-node.top
+    port: 46315
+    cipher: aes-128-gcm
+    password: 61c3b62a-19cf-42fa-9a45-d275d9b75e0e
+  - type: ss
+    name: 摩洛哥
+    server: eu3.dns-node.top
+    port: 46317
+    cipher: aes-128-gcm
+    password: 61c3b62a-19cf-42fa-9a45-d275d9b75e0e
+  - type: ss
+    name: 肯尼亚
+    server: eu3.dns-node.top
+    port: 46318
+    cipher: aes-128-gcm
+    password: 61c3b62a-19cf-42fa-9a45-d275d9b75e0e
+  - type: ss
+    name: 开曼群岛
+    server: us04.dns-node.top
+    port: 46319
+    cipher: aes-128-gcm
+    password: 61c3b62a-19cf-42fa-9a45-d275d9b75e0e
+  - type: ss
+    name: 巴拿马
+    server: us04.dns-node.top
+    port: 46320
+    cipher: aes-128-gcm
+    password: 61c3b62a-19cf-42fa-9a45-d275d9b75e0e
+  - type: ss
+    name: 乌拉圭
+    server: us04.dns-node.top
+    port: 46321
+    cipher: aes-128-gcm
+    password: 61c3b62a-19cf-42fa-9a45-d275d9b75e0e
+  - type: trojan
+    name: 日本【新疆|俄罗斯专用】
+    server: sj01.zxywaq.com
+    port: 21912
+    password: 61c3b62a-19cf-42fa-9a45-d275d9b75e0e
+    network: tcp
+    skip-cert-verify: true
+    tls: true
+proxy-groups:
+  - name: 🚀 节点选择
+    type: select
+    proxies:
+      - ♻️ 自动选择
+      - DIRECT
+      - 微信：gtyz222
+      - 应急专用(JP)
+      - 香港
+      - 台湾
+      - 日本
+      - 韩国
+      - 新加坡
+      - 泰国
+      - 老挝
+      - 尼泊尔
+      - 斯里兰卡
+      - 缅甸
+      - 蒙古
+      - 柬埔寨
+      - 孟加拉国
+      - 哈萨克斯坦
+      - 阿联酋
+      - 美国
+      - 阿尔巴尼亚
+      - 安道尔
+      - 波黑
+      - 保加利亚
+      - 捷克
+      - 爱沙尼亚
+      - 匈牙利
+      - 英属泽西岛
+      - 奥地利
+      - 拉脱维亚
+      - 列支敦士登
+      - 卢森堡
+      - 马耳他
+      - 摩尔多瓦
+      - 摩纳哥
+      - 黑山
+      - 英国
+      - 马来西亚
+      - 印度尼西亚
+      - 新西兰
+      - 澳大利亚
+      - 巴基斯坦
+      - 南非
+      - 德国
+      - 埃及
+      - 西班牙
+      - 法国
+      - 印度
+      - 意大利
+      - 菲律宾
+      - 尼日利亚
+      - 土耳其
+      - 乌克兰
+      - 阿根廷
+      - 越南
+      - 巴西
+      - 加拿大
+      - 比利时
+      - 丹麦
+      - 芬兰
+      - 克罗地亚
+      - 瑞典
+      - 希腊
+      - 乌兹别克斯坦
+      - 阿尔及利亚
+      - 安哥拉
+      - 冰岛
+      - 爱尔兰
+      - 立陶宛
+      - 墨西哥
+      - 巴哈马
+      - 伯利兹
+      - 百慕大
+      - 哥斯达黎加
+      - 多米尼加
+      - 荷兰
+      - 波兰
+      - 挪威
+      - 葡萄牙
+      - 瑞士
+      - 摩洛哥
+      - 肯尼亚
+      - 开曼群岛
+      - 巴拿马
+      - 乌拉圭
+      - 日本【新疆|俄罗斯专用】
+  - name: ♻️ 自动选择
+    type: url-test
+    proxies:
+      - 微信：gtyz222
+      - 应急专用(JP)
+      - 香港
+      - 台湾
+      - 日本
+      - 韩国
+      - 新加坡
+      - 泰国
+      - 老挝
+      - 尼泊尔
+      - 斯里兰卡
+      - 缅甸
+      - 蒙古
+      - 柬埔寨
+      - 孟加拉国
+      - 哈萨克斯坦
+      - 阿联酋
+      - 美国
+      - 阿尔巴尼亚
+      - 安道尔
+      - 波黑
+      - 保加利亚
+      - 捷克
+      - 爱沙尼亚
+      - 匈牙利
+      - 英属泽西岛
+      - 奥地利
+      - 拉脱维亚
+      - 列支敦士登
+      - 卢森堡
+      - 马耳他
+      - 摩尔多瓦
+      - 摩纳哥
+      - 黑山
+      - 英国
+      - 马来西亚
+      - 印度尼西亚
+      - 新西兰
+      - 澳大利亚
+      - 巴基斯坦
+      - 南非
+      - 德国
+      - 埃及
+      - 西班牙
+      - 法国
+      - 印度
+      - 意大利
+      - 菲律宾
+      - 尼日利亚
+      - 土耳其
+      - 乌克兰
+      - 阿根廷
+      - 越南
+      - 巴西
+      - 加拿大
+      - 比利时
+      - 丹麦
+      - 芬兰
+      - 克罗地亚
+      - 瑞典
+      - 希腊
+      - 乌兹别克斯坦
+      - 阿尔及利亚
+      - 安哥拉
+      - 冰岛
+      - 爱尔兰
+      - 立陶宛
+      - 墨西哥
+      - 巴哈马
+      - 伯利兹
+      - 百慕大
+      - 哥斯达黎加
+      - 多米尼加
+      - 荷兰
+      - 波兰
+      - 挪威
+      - 葡萄牙
+      - 瑞士
+      - 摩洛哥
+      - 肯尼亚
+      - 开曼群岛
+      - 巴拿马
+      - 乌拉圭
+      - 日本【新疆|俄罗斯专用】
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+  - name: 🎯 全球直连
+    type: select
+    proxies:
+      - DIRECT
+      - 🚀 节点选择
+      - ♻️ 自动选择
+  - name: 🛑 全球拦截
+    type: select
+    proxies:
+      - REJECT
+      - DIRECT
+  - name: 🐟 漏网之鱼
+    type: select
+    proxies:
+      - 🚀 节点选择
+      - 🎯 全球直连
+      - ♻️ 自动选择
+      - 微信：gtyz222
+      - 应急专用(JP)
+      - 香港
+      - 台湾
+      - 日本
+      - 韩国
+      - 新加坡
+      - 泰国
+      - 老挝
+      - 尼泊尔
+      - 斯里兰卡
+      - 缅甸
+      - 蒙古
+      - 柬埔寨
+      - 孟加拉国
+      - 哈萨克斯坦
+      - 阿联酋
+      - 美国
+      - 阿尔巴尼亚
+      - 安道尔
+      - 波黑
+      - 保加利亚
+      - 捷克
+      - 爱沙尼亚
+      - 匈牙利
+      - 英属泽西岛
+      - 奥地利
+      - 拉脱维亚
+      - 列支敦士登
+      - 卢森堡
+      - 马耳他
+      - 摩尔多瓦
+      - 摩纳哥
+      - 黑山
+      - 英国
+      - 马来西亚
+      - 印度尼西亚
+      - 新西兰
+      - 澳大利亚
+      - 巴基斯坦
+      - 南非
+      - 德国
+      - 埃及
+      - 西班牙
+      - 法国
+      - 印度
+      - 意大利
+      - 菲律宾
+      - 尼日利亚
+      - 土耳其
+      - 乌克兰
+      - 阿根廷
+      - 越南
+      - 巴西
+      - 加拿大
+      - 比利时
+      - 丹麦
+      - 芬兰
+      - 克罗地亚
+      - 瑞典
+      - 希腊
+      - 乌兹别克斯坦
+      - 阿尔及利亚
+      - 安哥拉
+      - 冰岛
+      - 爱尔兰
+      - 立陶宛
+      - 墨西哥
+      - 巴哈马
+      - 伯利兹
+      - 百慕大
+      - 哥斯达黎加
+      - 多米尼加
+      - 荷兰
+      - 波兰
+      - 挪威
+      - 葡萄牙
+      - 瑞士
+      - 摩洛哥
+      - 肯尼亚
+      - 开曼群岛
+      - 巴拿马
+      - 乌拉圭
+      - 日本【新疆|俄罗斯专用】
+rule-providers:
+  LocalAreaNetwork:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/LocalAreaNetwork.list
+    path: ./rules/providers/LocalAreaNetwork.list
+    interval: 86400
+  BanAD:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanAD.list
+    path: ./rules/providers/BanAD.list
+    interval: 86400
+  BanProgramAD:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanProgramAD.list
+    path: ./rules/providers/BanProgramAD.list
+    interval: 86400
+  GoogleCN:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/GoogleCN.list
+    path: ./rules/providers/GoogleCN.list
+    interval: 86400
+  SteamCN:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/SteamCN.list
+    path: ./rules/providers/SteamCN.list
+    interval: 86400
+  Telegram:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Telegram.list
+    path: ./rules/providers/Telegram.list
+    interval: 86400
+  ProxyMedia:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ProxyMedia.list
+    path: ./rules/providers/ProxyMedia.list
+    interval: 86400
+  ProxyLite:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ProxyLite.list
+    path: ./rules/providers/ProxyLite.list
+    interval: 86400
+  ChinaDomain:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaDomain.list
+    path: ./rules/providers/ChinaDomain.list
+    interval: 86400
+  ChinaCompanyIp:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaCompanyIp.list
+    path: ./rules/providers/ChinaCompanyIp.list
+    interval: 86400
+
+rules:
+  - RULE-SET,LocalAreaNetwork,🎯 全球直连
+  - RULE-SET,BanAD,🛑 全球拦截
+  - RULE-SET,BanProgramAD,🛑 全球拦截
+  - RULE-SET,GoogleCN,🎯 全球直连
+  - RULE-SET,SteamCN,🎯 全球直连
+  - RULE-SET,Telegram,🚀 节点选择
+  - RULE-SET,ProxyMedia,🚀 节点选择
+  - RULE-SET,ProxyLite,🚀 节点选择
+  - RULE-SET,ChinaDomain,🎯 全球直连
+  - RULE-SET,ChinaCompanyIp,🎯 全球直连
+  - GEOIP,CN,🎯 全球直连
+  - MATCH,🐟 漏网之鱼
