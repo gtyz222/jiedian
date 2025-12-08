@@ -6,7 +6,1278 @@
 # ;苹果分流：不支持
 # ;增强中国IP段：不支持
 # ;增强国外GFW：不支持
+# ;ruleset=🎯 全球直连,[]G# ;不要随意改变关键字，否则会导致出错
+# ;acl4SSR规则
+# ;去广告：支持
+# ;自动测速：支持
+# ;微软分流：不支持
+# ;苹果分流：不支持
+# ;增强中国IP段：不支持
+# ;增强国外GFW：不支持
 # ;ruleset=🎯 全球直连,[]GEOIP,LAN
+
+mixed-port: 7890
+allow-lan: false
+mode: rule
+ipv6: false
+log-level: info
+external-controller: 0.0.0.0:9090
+dns:
+  enable: true
+  listen: 0.0.0.0:53
+  ipv6: false
+  default-nameserver:
+    - 223.5.5.5
+    - 114.114.114.114
+  nameserver:
+    - 223.5.5.5
+    - 114.114.114.114
+    - 119.29.29.29
+    - 180.76.76.76
+  enhanced-mode: fake-ip
+  fake-ip-range: 198.18.0.1/16
+  fake-ip-filter:
+    - "*.lan"
+    - "*.localdomain"
+    - "*.example"
+    - "*.invalid"
+    - "*.localhost"
+    - "*.test"
+    - "*.local"
+    - "*.home.arpa"
+    - router.asus.com
+    - localhost.sec.qq.com
+    - localhost.ptlogin2.qq.com
+    - +.msftconnecttest.com
+tun:
+  enable: true
+  stack: system
+  auto-route: true
+  auto-detect-interface: true
+  dns-hijack:
+    - 114.114.114.114
+    - 180.76.76.76
+    - 119.29.29.29
+    - 223.5.5.5
+    - 8.8.8.8
+    - 8.8.4.4
+    - 1.1.1.1
+    - 1.0.0.1
+
+
+proxies:
+  - type: ss
+    name: 微信：gtyz222
+    server: jp01.kuaileiruko.top
+    port: 25656
+    cipher: chacha20-ietf-poly1305
+    password: 709f4976-39ea-45b5-8f46-1221185a56e5
+  - type: ss
+    name: 🇹🇼 IEPL-台湾1
+    server: jp01.kuaileiruko.top
+    port: 10070
+    cipher: chacha20-ietf-poly1305
+    password: 709f4976-39ea-45b5-8f46-1221185a56e5
+  - type: ss
+    name: 🇹🇼 IEPL-台湾2
+    server: jp01.kuaileiruko.top
+    port: 13556
+    cipher: chacha20-ietf-poly1305
+    password: 709f4976-39ea-45b5-8f46-1221185a56e5
+  - type: trojan
+    name: 🇭🇰 香港中转 - 广州
+    server: hxsz6a2b8299.luckyhongxing168.vip
+    port: 12221
+    password: a547b7ce-b819-43c0-af00-a9f848131c76
+    network: tcp
+    sni: v1-dy.ixigua.com
+    skip-cert-verify: true
+    tls: true
+  - type: trojan
+    name: 🇸🇬  IEPL-新加坡1
+    server: jp01.kuaileiruko.top
+    port: 10464
+    password: 709f4976-39ea-45b5-8f46-1221185a56e5
+    network: tcp
+    sni: gm-sg05.aiwowo.xyz
+    skip-cert-verify: true
+    tls: true
+  - type: ss
+    name: 🇸🇬  IEPL-新加坡2
+    server: jp01.kuaileiruko.top
+    port: 10067
+    cipher: chacha20-ietf-poly1305
+    password: 709f4976-39ea-45b5-8f46-1221185a56e5
+  - type: trojan
+    name: 🇨🇳 台湾中转
+    server: hxfz940e90d9.luckyhongxing168.vip
+    port: 42765
+    password: a547b7ce-b819-43c0-af00-a9f848131c76
+    network: tcp
+    sni: v1-dy.ixigua.com
+    skip-cert-verify: true
+    tls: true
+  - type: trojan
+    name: 🇯🇵  IEPL-日本4
+    server: jp01.kuaileiruko.top
+    port: 13552
+    password: 709f4976-39ea-45b5-8f46-1221185a56e5
+    network: tcp
+    sni: gm-jp04.aiwowo.xyz
+    skip-cert-verify: true
+    tls: true
+  - type: trojan
+    name: 🇭🇰 香港中转
+    server: hxfz940e90d9.luckyhongxing168.vip
+    port: 12221
+    password: a547b7ce-b819-43c0-af00-a9f848131c76
+    network: tcp
+    sni: v1-dy.ixigua.com
+    skip-cert-verify: true
+    tls: true
+  - type: ss
+    name: 🇯🇵  IEPL-日本3
+    server: jp01.kuaileiruko.top
+    port: 10052
+    cipher: chacha20-ietf-poly1305
+    password: 709f4976-39ea-45b5-8f46-1221185a56e5
+  - type: ss
+    name: 🇯🇵  IEPL-日本5
+    server: jp01.kuaileiruko.top
+    port: 12456
+    cipher: chacha20-ietf-poly1305
+    password: 709f4976-39ea-45b5-8f46-1221185a56e5
+  - type: trojan
+    name: 🇸🇬 新加坡中转
+    server: hxfz940e90d9.luckyhongxing168.vip
+    port: 48291
+    password: a547b7ce-b819-43c0-af00-a9f848131c76
+    network: tcp
+    sni: v1-dy.ixigua.com
+    skip-cert-verify: true
+    tls: true
+  - type: ss
+    name: 🇯🇵  IEPL-日本2
+    server: jp01.kuaileiruko.top
+    port: 30055
+    cipher: chacha20-ietf-poly1305
+    password: 709f4976-39ea-45b5-8f46-1221185a56e5
+  - type: ss
+    name: 🇮🇩 IEPL-印度尼西亚
+    server: jp01.kuaileiruko.top
+    port: 24401
+    cipher: chacha20-ietf-poly1305
+    password: 709f4976-39ea-45b5-8f46-1221185a56e5
+  - type: ss
+    name: 🇯🇵  IEPL-日本1
+    server: jp01.kuaileiruko.top
+    port: 15000
+    cipher: chacha20-ietf-poly1305
+    password: 709f4976-39ea-45b5-8f46-1221185a56e5
+  - type: ss
+    name: 🇹🇭 IEPL-泰国
+    server: jp01.kuaileiruko.top
+    port: 10744
+    cipher: chacha20-ietf-poly1305
+    password: 709f4976-39ea-45b5-8f46-1221185a56e5
+  - type: ss
+    name: 🇭🇰 IEPL-香港3
+    server: jp01.kuaileiruko.top
+    port: 10576
+    cipher: chacha20-ietf-poly1305
+    password: 709f4976-39ea-45b5-8f46-1221185a56e5
+  - type: trojan
+    name: 🇸🇬 新加坡中转 - 广州
+    server: hxsz6a2b8299.luckyhongxing168.vip
+    port: 18489
+    password: a547b7ce-b819-43c0-af00-a9f848131c76
+    network: tcp
+    sni: v1-dy.ixigua.com
+    skip-cert-verify: true
+    tls: true
+  - type: trojan
+    name: 🇯🇵 日本中转
+    server: hxfz940e90d9.luckyhongxing168.vip
+    port: 28713
+    password: a547b7ce-b819-43c0-af00-a9f848131c76
+    network: tcp
+    sni: v1-dy.ixigua.com
+    skip-cert-verify: true
+    tls: true
+  - type: ss
+    name: 🇰🇷 IEPL-韩国静态家宽
+    server: jp01.kuaileiruko.top
+    port: 10082
+    cipher: chacha20-ietf-poly1305
+    password: 709f4976-39ea-45b5-8f46-1221185a56e5
+  - type: ss
+    name: 🇻🇳 IEPL-越南
+    server: jp01.kuaileiruko.top
+    port: 14355
+    cipher: chacha20-ietf-poly1305
+    password: 709f4976-39ea-45b5-8f46-1221185a56e5
+  - type: trojan
+    name: 🇲🇾 马来西亚
+    server: hxfz940e90d9.luckyhongxing168.vip
+    port: 30383
+    password: a547b7ce-b819-43c0-af00-a9f848131c76
+    network: tcp
+    sni: v1-dy.ixigua.com
+    skip-cert-verify: true
+    tls: true
+  - type: trojan
+    name: 🇨🇳 台湾中转 - 广州
+    server: hxsz6a2b8299.luckyhongxing168.vip
+    port: 42765
+    password: a547b7ce-b819-43c0-af00-a9f848131c76
+    network: tcp
+    sni: v1-dy.ixigua.com
+    skip-cert-verify: true
+    tls: true
+  - type: trojan
+    name: 🇰🇷 韩国
+    server: hxfz940e90d9.luckyhongxing168.vip
+    port: 43457
+    password: a547b7ce-b819-43c0-af00-a9f848131c76
+    network: tcp
+    sni: v1-dy.ixigua.com
+    skip-cert-verify: true
+    tls: true
+  - type: ss
+    name: 🇲🇾 IEPL-马来西亚2
+    server: jp01.kuaileiruko.top
+    port: 14936
+    cipher: chacha20-ietf-poly1305
+    password: 709f4976-39ea-45b5-8f46-1221185a56e5
+  - type: vmess
+    name: 🇯🇵 直连-日本
+    server: gm-jp06.aiwowo.xyz
+    port: 20010
+    uuid: 709f4976-39ea-45b5-8f46-1221185a56e5
+    alterId: 0
+    network: ws
+    cipher: auto
+    servername: gm-jp06.aiwowo.xyz
+    ws-opts:
+      path: /cctv13/hd.m3u8
+      headers:
+        Host: gm-jp06.aiwowo.xyz
+  - type: trojan
+    name: 🇯🇵 日本中转 - 广州
+    server: hxsz6a2b8299.luckyhongxing168.vip
+    port: 28713
+    password: a547b7ce-b819-43c0-af00-a9f848131c76
+    network: tcp
+    sni: v1-dy.ixigua.com
+    skip-cert-verify: true
+    tls: true
+  - type: ss
+    name: 🇲🇾 IEPL-马来西亚1
+    server: jp01.kuaileiruko.top
+    port: 30441
+    cipher: chacha20-ietf-poly1305
+    password: 709f4976-39ea-45b5-8f46-1221185a56e5
+  - type: trojan
+    name: 🇮🇳 印度-西部
+    server: hxfz940e90d9.luckyhongxing168.vip
+    port: 33243
+    password: a547b7ce-b819-43c0-af00-a9f848131c76
+    network: tcp
+    sni: v1-dy.ixigua.com
+    skip-cert-verify: true
+    tls: true
+  - type: trojan
+    name: 🇰🇷 韩国-首尔
+    server: hxfz940e90d9.luckyhongxing168.vip
+    port: 51075
+    password: a547b7ce-b819-43c0-af00-a9f848131c76
+    network: tcp
+    sni: v1-dy.ixigua.com
+    skip-cert-verify: true
+    tls: true
+  - type: trojan
+    name: 🇲🇲 缅甸
+    server: hxfz940e90d9.luckyhongxing168.vip
+    port: 19797
+    password: a547b7ce-b819-43c0-af00-a9f848131c76
+    network: tcp
+    sni: v1-dy.ixigua.com
+    skip-cert-verify: true
+    tls: true
+  - type: trojan
+    name: 🇹🇭 泰国
+    server: hxfz940e90d9.luckyhongxing168.vip
+    port: 43855
+    password: a547b7ce-b819-43c0-af00-a9f848131c76
+    network: tcp
+    sni: v1-dy.ixigua.com
+    skip-cert-verify: true
+    tls: true
+  - type: trojan
+    name: 🇻🇳 越南
+    server: hxfz940e90d9.luckyhongxing168.vip
+    port: 59009
+    password: a547b7ce-b819-43c0-af00-a9f848131c76
+    network: tcp
+    sni: v1-dy.ixigua.com
+    skip-cert-verify: true
+    tls: true
+  - type: ss
+    name: 🇺🇸  IEPL-美国4
+    server: jp01.kuaileiruko.top
+    port: 10332
+    cipher: chacha20-ietf-poly1305
+    password: 709f4976-39ea-45b5-8f46-1221185a56e5
+  - type: ss
+    name: 🇮🇳 IEPL-印度
+    server: jp01.kuaileiruko.top
+    port: 24555
+    cipher: chacha20-ietf-poly1305
+    password: 709f4976-39ea-45b5-8f46-1221185a56e5
+  - type: trojan
+    name: 🇵🇰 巴基斯坦
+    server: hxfz940e90d9.luckyhongxing168.vip
+    port: 14747
+    password: a547b7ce-b819-43c0-af00-a9f848131c76
+    network: tcp
+    sni: v1-dy.ixigua.com
+    skip-cert-verify: true
+    tls: true
+  - type: vmess
+    name: 🇺🇸 直连-美国
+    server: gm-us06.aiwowo.xyz
+    port: 30002
+    uuid: 709f4976-39ea-45b5-8f46-1221185a56e5
+    alterId: 0
+    network: ws
+    cipher: auto
+    servername: gm-us06.aiwowo.xyz
+    ws-opts:
+      path: /cctv13/hd.m3u8
+      headers:
+        Host: gm-us06.aiwowo.xyz
+  - type: trojan
+    name: 🇺🇸 美国中转
+    server: hxfz940e90d9.luckyhongxing168.vip
+    port: 21489
+    password: a547b7ce-b819-43c0-af00-a9f848131c76
+    network: tcp
+    sni: v1-dy.ixigua.com
+    skip-cert-verify: true
+    tls: true
+  - type: vmess
+    name: 🇸🇬 直连-新加坡
+    server: gm-sg06.aiwowo.xyz
+    port: 10001
+    uuid: 709f4976-39ea-45b5-8f46-1221185a56e5
+    alterId: 0
+    network: ws
+    cipher: auto
+    servername: gm-sg06.aiwowo.xyz
+    ws-opts:
+      path: /cctv13/hd.m3u8
+      headers:
+        Host: gm-sg06.aiwowo.xyz
+  - type: ss
+    name: 🇩🇪 IEPL-德国
+    server: jp01.kuaileiruko.top
+    port: 21666
+    cipher: chacha20-ietf-poly1305
+    password: 709f4976-39ea-45b5-8f46-1221185a56e5
+  - type: ss
+    name: 🇳🇱 IEPL-荷兰
+    server: jp01.kuaileiruko.top
+    port: 10012
+    cipher: chacha20-ietf-poly1305
+    password: 709f4976-39ea-45b5-8f46-1221185a56e5
+  - type: trojan
+    name: 🇦🇺 澳大利亚
+    server: hxfz940e90d9.luckyhongxing168.vip
+    port: 50757
+    password: a547b7ce-b819-43c0-af00-a9f848131c76
+    network: tcp
+    sni: v1-dy.ixigua.com
+    skip-cert-verify: true
+    tls: true
+  - type: trojan
+    name: 🇸🇦 沙特阿拉伯
+    server: hxfz940e90d9.luckyhongxing168.vip
+    port: 59137
+    password: a547b7ce-b819-43c0-af00-a9f848131c76
+    network: tcp
+    sni: v1-dy.ixigua.com
+    skip-cert-verify: true
+    tls: true
+  - type: ss
+    name: 🇨🇦 IEPL-加拿大
+    server: jp01.kuaileiruko.top
+    port: 26801
+    cipher: chacha20-ietf-poly1305
+    password: 709f4976-39ea-45b5-8f46-1221185a56e5
+  - type: trojan
+    name: 🇭🇰 香港中转 - 东莞
+    server: hxdwa7a919e0.luckyhongxing168.vip
+    port: 12221
+    password: a547b7ce-b819-43c0-af00-a9f848131c76
+    network: tcp
+    sni: v1-dy.ixigua.com
+    skip-cert-verify: true
+    tls: true
+  - type: hysteria2
+    name: 🇸🇬 新加坡直连1 - 0.5倍率
+    server: hxzlaws.redapricotcandy.com
+    port: 31183
+    password: a547b7ce-b819-43c0-af00-a9f848131c76
+    skip-cert-verify: true
+    sni: www.bing.com
+  - type: trojan
+    name: 🇳🇱 荷兰
+    server: hxfz940e90d9.luckyhongxing168.vip
+    port: 39851
+    password: a547b7ce-b819-43c0-af00-a9f848131c76
+    network: tcp
+    sni: v1-dy.ixigua.com
+    skip-cert-verify: true
+    tls: true
+  - type: trojan
+    name: 🇦🇪 迪拜
+    server: hxfz940e90d9.luckyhongxing168.vip
+    port: 47621
+    password: a547b7ce-b819-43c0-af00-a9f848131c76
+    network: tcp
+    sni: v1-dy.ixigua.com
+    skip-cert-verify: true
+    tls: true
+  - type: ss
+    name: 🇦🇪IEPL-阿联酋
+    server: jp01.kuaileiruko.top
+    port: 10713
+    cipher: chacha20-ietf-poly1305
+    password: 709f4976-39ea-45b5-8f46-1221185a56e5
+  - type: trojan
+    name: 🇮🇱 以色列
+    server: hxfz940e90d9.luckyhongxing168.vip
+    port: 20783
+    password: a547b7ce-b819-43c0-af00-a9f848131c76
+    network: tcp
+    sni: v1-dy.ixigua.com
+    skip-cert-verify: true
+    tls: true
+  - type: trojan
+    name: 🇮🇩 印度尼西亚
+    server: hxfz940e90d9.luckyhongxing168.vip
+    port: 40391
+    password: a547b7ce-b819-43c0-af00-a9f848131c76
+    network: tcp
+    sni: v1-dy.ixigua.com
+    skip-cert-verify: true
+    tls: true
+  - type: trojan
+    name: 🇸🇪 瑞典
+    server: hxfz940e90d9.luckyhongxing168.vip
+    port: 59225
+    password: a547b7ce-b819-43c0-af00-a9f848131c76
+    network: tcp
+    sni: v1-dy.ixigua.com
+    skip-cert-verify: true
+    tls: true
+  - type: trojan
+    name: 🇲🇽 墨西哥
+    server: hxfz940e90d9.luckyhongxing168.vip
+    port: 14571
+    password: a547b7ce-b819-43c0-af00-a9f848131c76
+    network: tcp
+    sni: v1-dy.ixigua.com
+    skip-cert-verify: true
+    tls: true
+  - type: trojan
+    name: 🇬🇧 英国
+    server: hxfz940e90d9.luckyhongxing168.vip
+    port: 59358
+    password: a547b7ce-b819-43c0-af00-a9f848131c76
+    network: tcp
+    sni: v1-dy.ixigua.com
+    skip-cert-verify: true
+    tls: true
+  - type: ss
+    name: 🇮🇱 IEPL-以色列
+    server: jp01.kuaileiruko.top
+    port: 25252
+    cipher: chacha20-ietf-poly1305
+    password: 709f4976-39ea-45b5-8f46-1221185a56e5
+  - type: ss
+    name: 🇺🇸  IEPL-美国1
+    server: jp01.kuaileiruko.top
+    port: 20019
+    cipher: aes-256-gcm
+    password: 709f4976-39ea-45b5-8f46-1221185a56e5
+  - type: trojan
+    name: 🇷🇺 莫斯科
+    server: hxfz940e90d9.luckyhongxing168.vip
+    port: 16783
+    password: a547b7ce-b819-43c0-af00-a9f848131c76
+    network: tcp
+    sni: v1-dy.ixigua.com
+    skip-cert-verify: true
+    tls: true
+  - type: ss
+    name: 🇪🇸 IEPL-西班牙
+    server: jp01.kuaileiruko.top
+    port: 26688
+    cipher: chacha20-ietf-poly1305
+    password: 709f4976-39ea-45b5-8f46-1221185a56e5
+  - type: trojan
+    name: 🇨🇦 加拿大
+    server: hxfz940e90d9.luckyhongxing168.vip
+    port: 50121
+    password: a547b7ce-b819-43c0-af00-a9f848131c76
+    network: tcp
+    sni: v1-dy.ixigua.com
+    skip-cert-verify: true
+    tls: true
+  - type: ss
+    name: 🇨🇭 IEPL-瑞士
+    server: jp01.kuaileiruko.top
+    port: 10011
+    cipher: chacha20-ietf-poly1305
+    password: 709f4976-39ea-45b5-8f46-1221185a56e5
+  - type: trojan
+    name: 🇺🇸 美国中转 - 广州
+    server: hxsz6a2b8299.luckyhongxing168.vip
+    port: 21489
+    password: a547b7ce-b819-43c0-af00-a9f848131c76
+    network: tcp
+    sni: v1-dy.ixigua.com
+    skip-cert-verify: true
+    tls: true
+  - type: trojan
+    name: 🇫🇷 法国
+    server: hxfz940e90d9.luckyhongxing168.vip
+    port: 14651
+    password: a547b7ce-b819-43c0-af00-a9f848131c76
+    network: tcp
+    sni: v1-dy.ixigua.com
+    skip-cert-verify: true
+    tls: true
+  - type: trojan
+    name: 🇪🇸 西班牙
+    server: hxfz940e90d9.luckyhongxing168.vip
+    port: 34249
+    password: a547b7ce-b819-43c0-af00-a9f848131c76
+    network: tcp
+    sni: v1-dy.ixigua.com
+    skip-cert-verify: true
+    tls: true
+  - type: trojan
+    name: 🇨🇭 瑞士
+    server: hxfz940e90d9.luckyhongxing168.vip
+    port: 50140
+    password: a547b7ce-b819-43c0-af00-a9f848131c76
+    network: tcp
+    sni: v1-dy.ixigua.com
+    skip-cert-verify: true
+    tls: true
+  - type: trojan
+    name: 🇹🇷 土耳其
+    server: hxfz940e90d9.luckyhongxing168.vip
+    port: 49569
+    password: a547b7ce-b819-43c0-af00-a9f848131c76
+    network: tcp
+    sni: v1-dy.ixigua.com
+    skip-cert-verify: true
+    tls: true
+  - type: trojan
+    name: 🇨🇴 哥伦比亚
+    server: hxfz940e90d9.luckyhongxing168.vip
+    port: 55799
+    password: a547b7ce-b819-43c0-af00-a9f848131c76
+    network: tcp
+    sni: v1-dy.ixigua.com
+    skip-cert-verify: true
+    tls: true
+  - type: trojan
+    name: 🇩🇪 德国
+    server: hxfz940e90d9.luckyhongxing168.vip
+    port: 21463
+    password: a547b7ce-b819-43c0-af00-a9f848131c76
+    network: tcp
+    sni: v1-dy.ixigua.com
+    skip-cert-verify: true
+    tls: true
+  - type: trojan
+    name: 🇸🇬 新加坡中转 - 东莞
+    server: hxdwa7a919e0.luckyhongxing168.vip
+    port: 18489
+    password: a547b7ce-b819-43c0-af00-a9f848131c76
+    network: tcp
+    sni: v1-dy.ixigua.com
+    skip-cert-verify: true
+    tls: true
+  - type: ss
+    name: 🇧🇷 IEPL-巴西
+    server: jp01.kuaileiruko.top
+    port: 25253
+    cipher: chacha20-ietf-poly1305
+    password: 709f4976-39ea-45b5-8f46-1221185a56e5
+  - type: trojan
+    name: 🇧🇷 巴西
+    server: hxfz940e90d9.luckyhongxing168.vip
+    port: 28499
+    password: a547b7ce-b819-43c0-af00-a9f848131c76
+    network: tcp
+    sni: v1-dy.ixigua.com
+    skip-cert-verify: true
+    tls: true
+  - type: trojan
+    name: 🇳🇬 尼日利亚
+    server: hxfz940e90d9.luckyhongxing168.vip
+    port: 34183
+    password: a547b7ce-b819-43c0-af00-a9f848131c76
+    network: tcp
+    sni: v1-dy.ixigua.com
+    skip-cert-verify: true
+    tls: true
+  - type: trojan
+    name: 🇯🇵 日本中转 - 东莞
+    server: hxdwa7a919e0.luckyhongxing168.vip
+    port: 28713
+    password: a547b7ce-b819-43c0-af00-a9f848131c76
+    network: tcp
+    sni: v1-dy.ixigua.com
+    skip-cert-verify: true
+    tls: true
+  - type: trojan
+    name: 🇨🇳 台湾中转 - 东莞
+    server: hxdwa7a919e0.luckyhongxing168.vip
+    port: 42765
+    password: a547b7ce-b819-43c0-af00-a9f848131c76
+    network: tcp
+    sni: v1-dy.ixigua.com
+    skip-cert-verify: true
+    tls: true
+  - type: trojan
+    name: 🇨🇱 智利
+    server: hxfz940e90d9.luckyhongxing168.vip
+    port: 54031
+    password: a547b7ce-b819-43c0-af00-a9f848131c76
+    network: tcp
+    sni: v1-dy.ixigua.com
+    skip-cert-verify: true
+    tls: true
+  - type: hysteria2
+    name: 🇨🇳 台湾直连2 - 0.5倍率
+    server: hxzlaws.redapricotcandy.com
+    port: 48597
+    password: a547b7ce-b819-43c0-af00-a9f848131c76
+    skip-cert-verify: true
+    sni: www.bing.com
+  - type: trojan
+    name: 🇿🇦 南非
+    server: hxfz940e90d9.luckyhongxing168.vip
+    port: 53759
+    password: a547b7ce-b819-43c0-af00-a9f848131c76
+    network: tcp
+    sni: v1-dy.ixigua.com
+    skip-cert-verify: true
+    tls: true
+  - type: trojan
+    name: 🇬🇷 希腊
+    server: hxfz940e90d9.luckyhongxing168.vip
+    port: 37473
+    password: a547b7ce-b819-43c0-af00-a9f848131c76
+    network: tcp
+    sni: v1-dy.ixigua.com
+    skip-cert-verify: true
+    tls: true
+  - type: trojan
+    name: 🇺🇸 美国中转 - 东莞
+    server: hxdwa7a919e0.luckyhongxing168.vip
+    port: 21489
+    password: a547b7ce-b819-43c0-af00-a9f848131c76
+    network: tcp
+    sni: v1-dy.ixigua.com
+    skip-cert-verify: true
+    tls: true
+  - type: ss
+    name: 🇭🇰 IEPL-香港2
+    server: jp01.kuaileiruko.top
+    port: 25657
+    cipher: chacha20-ietf-poly1305
+    password: 709f4976-39ea-45b5-8f46-1221185a56e5
+  - type: vmess
+    name: 🇭🇰 直连-香港动态家宽
+    server: gm-hk09.aiwowo.xyz
+    port: 10012
+    uuid: 709f4976-39ea-45b5-8f46-1221185a56e5
+    alterId: 0
+    network: ws
+    cipher: auto
+    servername: gm-hk06.aiwowo.xyz
+    ws-opts:
+      path: /cctv13/hd.m3u8
+      headers:
+        Host: gm-hk06.aiwowo.xyz
+  - type: ss
+    name: 🇸🇬  IEPL-新加坡3
+    server: jp01.kuaileiruko.top
+    port: 20003
+    cipher: chacha20-ietf-poly1305
+    password: 709f4976-39ea-45b5-8f46-1221185a56e5
+  - type: ss
+    name: 🇸🇬  IEPL-新加坡4
+    server: jp01.kuaileiruko.top
+    port: 10876
+    cipher: chacha20-ietf-poly1305
+    password: 709f4976-39ea-45b5-8f46-1221185a56e5
+  - type: ss
+    name: 🇺🇸  IEPL-美国2
+    server: jp01.kuaileiruko.top
+    port: 20000
+    cipher: chacha20-ietf-poly1305
+    password: 709f4976-39ea-45b5-8f46-1221185a56e5
+  - type: ss
+    name: 🇺🇸  IEPL-美国3
+    server: jp01.kuaileiruko.top
+    port: 10036
+    cipher: chacha20-ietf-poly1305
+    password: 709f4976-39ea-45b5-8f46-1221185a56e5
+  - type: ss
+    name: 🇦🇺 IEPL-澳大利亚
+    server: jp01.kuaileiruko.top
+    port: 10245
+    cipher: chacha20-ietf-poly1305
+    password: 709f4976-39ea-45b5-8f46-1221185a56e5
+  - type: ss
+    name: 🇬🇧 IEPL-英国
+    server: jp01.kuaileiruko.top
+    port: 20006
+    cipher: chacha20-ietf-poly1305
+    password: 709f4976-39ea-45b5-8f46-1221185a56e5
+  - type: trojan
+    name: 🇺🇸 美国中转原生
+    server: hxfz940e90d9.luckyhongxing168.vip
+    port: 53547
+    password: a547b7ce-b819-43c0-af00-a9f848131c76
+    network: tcp
+    sni: v1-dy.ixigua.com
+    skip-cert-verify: true
+    tls: true
+  - type: hysteria2
+    name: 🇭🇰 香港直连1 - 0.5倍率
+    server: hxzlaws.redapricotcandy.com
+    port: 20461
+    password: a547b7ce-b819-43c0-af00-a9f848131c76
+    skip-cert-verify: true
+    sni: www.bing.com
+  - type: hysteria2
+    name: 🇭🇰 香港直连2 - 0.5倍率
+    server: hxzlaws.redapricotcandy.com
+    port: 20461
+    password: a547b7ce-b819-43c0-af00-a9f848131c76
+    skip-cert-verify: true
+    sni: www.bing.com
+  - type: hysteria2
+    name: 🇨🇳 台湾直连1 - 0.5倍率
+    server: hxzlaws.redapricotcandy.com
+    port: 48597
+    password: a547b7ce-b819-43c0-af00-a9f848131c76
+    skip-cert-verify: true
+    sni: www.bing.com
+  - type: hysteria2
+    name: 🇸🇬 新加坡直连2 - 0.5倍率
+    server: hxzlaws.redapricotcandy.com
+    port: 31183
+    password: a547b7ce-b819-43c0-af00-a9f848131c76
+    skip-cert-verify: true
+    sni: www.bing.com
+  - type: hysteria2
+    name: 🇯🇵 日本直连1 - 0.5倍率
+    server: hxzlaws.redapricotcandy.com
+    port: 17371
+    password: a547b7ce-b819-43c0-af00-a9f848131c76
+    skip-cert-verify: true
+    sni: www.bing.com
+  - type: hysteria2
+    name: 🇯🇵 日本直连2 - 0.5倍率
+    server: hxzlaws.redapricotcandy.com
+    port: 17371
+    password: a547b7ce-b819-43c0-af00-a9f848131c76
+    skip-cert-verify: true
+    sni: www.bing.com
+  - type: hysteria2
+    name: 🇺🇸 美国直连1 - 0.5倍率
+    server: hxzlaws.redapricotcandy.com
+    port: 56449
+    password: a547b7ce-b819-43c0-af00-a9f848131c76
+    skip-cert-verify: true
+    sni: www.bing.com
+  - type: hysteria2
+    name: 🇺🇸 美国直连2 - 0.5倍率
+    server: hxzlaws.redapricotcandy.com
+    port: 56449
+    password: a547b7ce-b819-43c0-af00-a9f848131c76
+    skip-cert-verify: true
+    sni: www.bing.com
+  - type: trojan
+    name: 🇭🇰香港 IPV6
+    server: hxipv6.hongxingdl.vip
+    port: 12221
+    password: a547b7ce-b819-43c0-af00-a9f848131c76
+    network: tcp
+    sni: v1-dy.ixigua.com
+    skip-cert-verify: true
+    tls: true
+  - type: trojan
+    name: 🇨🇳 台湾 IPV6
+    server: hxipv6.hongxingdl.vip
+    port: 42765
+    password: a547b7ce-b819-43c0-af00-a9f848131c76
+    network: tcp
+    sni: v1-dy.ixigua.com
+    skip-cert-verify: true
+    tls: true
+  - type: trojan
+    name: 🇸🇬 新加坡 IPV6
+    server: hxipv6.hongxingdl.vip
+    port: 48291
+    password: a547b7ce-b819-43c0-af00-a9f848131c76
+    network: tcp
+    sni: v1-dy.ixigua.com
+    skip-cert-verify: true
+    tls: true
+  - type: trojan
+    name: 🇯🇵 日本 IPV6
+    server: hxipv6.hongxingdl.vip
+    port: 28713
+    password: a547b7ce-b819-43c0-af00-a9f848131c76
+    network: tcp
+    sni: v1-dy.ixigua.com
+    skip-cert-verify: true
+    tls: true
+  - type: trojan
+    name: 🇺🇸 美国 IPV6
+    server: hxipv6.hongxingdl.vip
+    port: 21489
+    password: a547b7ce-b819-43c0-af00-a9f848131c76
+    network: tcp
+    sni: v1-dy.ixigua.com
+    skip-cert-verify: true
+    tls: true
+  - type: trojan
+    name: 🇵🇭 菲律宾
+    server: hxfz940e90d9.luckyhongxing168.vip
+    port: 58947
+    password: a547b7ce-b819-43c0-af00-a9f848131c76
+    network: tcp
+    sni: v1-dy.ixigua.com
+    skip-cert-verify: true
+    tls: true
+proxy-groups:
+  - name: 🚀 节点选择
+    type: select
+    proxies:
+      - ♻️ 自动选择
+      - DIRECT
+      - 微信：gtyz222
+      - 🇹🇼 IEPL-台湾1
+      - 🇹🇼 IEPL-台湾2
+      - 🇭🇰 香港中转 - 广州
+      - 🇸🇬  IEPL-新加坡1
+      - 🇸🇬  IEPL-新加坡2
+      - 🇨🇳 台湾中转
+      - 🇯🇵  IEPL-日本4
+      - 🇭🇰 香港中转
+      - 🇯🇵  IEPL-日本3
+      - 🇯🇵  IEPL-日本5
+      - 🇸🇬 新加坡中转
+      - 🇯🇵  IEPL-日本2
+      - 🇮🇩 IEPL-印度尼西亚
+      - 🇯🇵  IEPL-日本1
+      - 🇹🇭 IEPL-泰国
+      - 🇭🇰 IEPL-香港3
+      - 🇸🇬 新加坡中转 - 广州
+      - 🇯🇵 日本中转
+      - 🇰🇷 IEPL-韩国静态家宽
+      - 🇻🇳 IEPL-越南
+      - 🇲🇾 马来西亚
+      - 🇨🇳 台湾中转 - 广州
+      - 🇰🇷 韩国
+      - 🇲🇾 IEPL-马来西亚2
+      - 🇯🇵 直连-日本
+      - 🇯🇵 日本中转 - 广州
+      - 🇲🇾 IEPL-马来西亚1
+      - 🇮🇳 印度-西部
+      - 🇰🇷 韩国-首尔
+      - 🇲🇲 缅甸
+      - 🇹🇭 泰国
+      - 🇻🇳 越南
+      - 🇺🇸  IEPL-美国4
+      - 🇮🇳 IEPL-印度
+      - 🇵🇰 巴基斯坦
+      - 🇺🇸 直连-美国
+      - 🇺🇸 美国中转
+      - 🇸🇬 直连-新加坡
+      - 🇩🇪 IEPL-德国
+      - 🇳🇱 IEPL-荷兰
+      - 🇦🇺 澳大利亚
+      - 🇸🇦 沙特阿拉伯
+      - 🇨🇦 IEPL-加拿大
+      - 🇭🇰 香港中转 - 东莞
+      - 🇸🇬 新加坡直连1 - 0.5倍率
+      - 🇳🇱 荷兰
+      - 🇦🇪 迪拜
+      - 🇦🇪IEPL-阿联酋
+      - 🇮🇱 以色列
+      - 🇮🇩 印度尼西亚
+      - 🇸🇪 瑞典
+      - 🇲🇽 墨西哥
+      - 🇬🇧 英国
+      - 🇮🇱 IEPL-以色列
+      - 🇺🇸  IEPL-美国1
+      - 🇷🇺 莫斯科
+      - 🇪🇸 IEPL-西班牙
+      - 🇨🇦 加拿大
+      - 🇨🇭 IEPL-瑞士
+      - 🇺🇸 美国中转 - 广州
+      - 🇫🇷 法国
+      - 🇪🇸 西班牙
+      - 🇨🇭 瑞士
+      - 🇹🇷 土耳其
+      - 🇨🇴 哥伦比亚
+      - 🇩🇪 德国
+      - 🇸🇬 新加坡中转 - 东莞
+      - 🇧🇷 IEPL-巴西
+      - 🇧🇷 巴西
+      - 🇳🇬 尼日利亚
+      - 🇯🇵 日本中转 - 东莞
+      - 🇨🇳 台湾中转 - 东莞
+      - 🇨🇱 智利
+      - 🇨🇳 台湾直连2 - 0.5倍率
+      - 🇿🇦 南非
+      - 🇬🇷 希腊
+      - 🇺🇸 美国中转 - 东莞
+      - 🇭🇰 IEPL-香港2
+      - 🇭🇰 直连-香港动态家宽
+      - 🇸🇬  IEPL-新加坡3
+      - 🇸🇬  IEPL-新加坡4
+      - 🇺🇸  IEPL-美国2
+      - 🇺🇸  IEPL-美国3
+      - 🇦🇺 IEPL-澳大利亚
+      - 🇬🇧 IEPL-英国
+      - 🇺🇸 美国中转原生
+      - 🇭🇰 香港直连1 - 0.5倍率
+      - 🇭🇰 香港直连2 - 0.5倍率
+      - 🇨🇳 台湾直连1 - 0.5倍率
+      - 🇸🇬 新加坡直连2 - 0.5倍率
+      - 🇯🇵 日本直连1 - 0.5倍率
+      - 🇯🇵 日本直连2 - 0.5倍率
+      - 🇺🇸 美国直连1 - 0.5倍率
+      - 🇺🇸 美国直连2 - 0.5倍率
+      - 🇭🇰香港 IPV6
+      - 🇨🇳 台湾 IPV6
+      - 🇸🇬 新加坡 IPV6
+      - 🇯🇵 日本 IPV6
+      - 🇺🇸 美国 IPV6
+      - 🇵🇭 菲律宾
+  - name: ♻️ 自动选择
+    type: url-test
+    proxies:
+      - 微信：gtyz222
+      - 🇹🇼 IEPL-台湾1
+      - 🇹🇼 IEPL-台湾2
+      - 🇭🇰 香港中转 - 广州
+      - 🇸🇬  IEPL-新加坡1
+      - 🇸🇬  IEPL-新加坡2
+      - 🇨🇳 台湾中转
+      - 🇯🇵  IEPL-日本4
+      - 🇭🇰 香港中转
+      - 🇯🇵  IEPL-日本3
+      - 🇯🇵  IEPL-日本5
+      - 🇸🇬 新加坡中转
+      - 🇯🇵  IEPL-日本2
+      - 🇮🇩 IEPL-印度尼西亚
+      - 🇯🇵  IEPL-日本1
+      - 🇹🇭 IEPL-泰国
+      - 🇭🇰 IEPL-香港3
+      - 🇸🇬 新加坡中转 - 广州
+      - 🇯🇵 日本中转
+      - 🇰🇷 IEPL-韩国静态家宽
+      - 🇻🇳 IEPL-越南
+      - 🇲🇾 马来西亚
+      - 🇨🇳 台湾中转 - 广州
+      - 🇰🇷 韩国
+      - 🇲🇾 IEPL-马来西亚2
+      - 🇯🇵 直连-日本
+      - 🇯🇵 日本中转 - 广州
+      - 🇲🇾 IEPL-马来西亚1
+      - 🇮🇳 印度-西部
+      - 🇰🇷 韩国-首尔
+      - 🇲🇲 缅甸
+      - 🇹🇭 泰国
+      - 🇻🇳 越南
+      - 🇺🇸  IEPL-美国4
+      - 🇮🇳 IEPL-印度
+      - 🇵🇰 巴基斯坦
+      - 🇺🇸 直连-美国
+      - 🇺🇸 美国中转
+      - 🇸🇬 直连-新加坡
+      - 🇩🇪 IEPL-德国
+      - 🇳🇱 IEPL-荷兰
+      - 🇦🇺 澳大利亚
+      - 🇸🇦 沙特阿拉伯
+      - 🇨🇦 IEPL-加拿大
+      - 🇭🇰 香港中转 - 东莞
+      - 🇸🇬 新加坡直连1 - 0.5倍率
+      - 🇳🇱 荷兰
+      - 🇦🇪 迪拜
+      - 🇦🇪IEPL-阿联酋
+      - 🇮🇱 以色列
+      - 🇮🇩 印度尼西亚
+      - 🇸🇪 瑞典
+      - 🇲🇽 墨西哥
+      - 🇬🇧 英国
+      - 🇮🇱 IEPL-以色列
+      - 🇺🇸  IEPL-美国1
+      - 🇷🇺 莫斯科
+      - 🇪🇸 IEPL-西班牙
+      - 🇨🇦 加拿大
+      - 🇨🇭 IEPL-瑞士
+      - 🇺🇸 美国中转 - 广州
+      - 🇫🇷 法国
+      - 🇪🇸 西班牙
+      - 🇨🇭 瑞士
+      - 🇹🇷 土耳其
+      - 🇨🇴 哥伦比亚
+      - 🇩🇪 德国
+      - 🇸🇬 新加坡中转 - 东莞
+      - 🇧🇷 IEPL-巴西
+      - 🇧🇷 巴西
+      - 🇳🇬 尼日利亚
+      - 🇯🇵 日本中转 - 东莞
+      - 🇨🇳 台湾中转 - 东莞
+      - 🇨🇱 智利
+      - 🇨🇳 台湾直连2 - 0.5倍率
+      - 🇿🇦 南非
+      - 🇬🇷 希腊
+      - 🇺🇸 美国中转 - 东莞
+      - 🇭🇰 IEPL-香港2
+      - 🇭🇰 直连-香港动态家宽
+      - 🇸🇬  IEPL-新加坡3
+      - 🇸🇬  IEPL-新加坡4
+      - 🇺🇸  IEPL-美国2
+      - 🇺🇸  IEPL-美国3
+      - 🇦🇺 IEPL-澳大利亚
+      - 🇬🇧 IEPL-英国
+      - 🇺🇸 美国中转原生
+      - 🇭🇰 香港直连1 - 0.5倍率
+      - 🇭🇰 香港直连2 - 0.5倍率
+      - 🇨🇳 台湾直连1 - 0.5倍率
+      - 🇸🇬 新加坡直连2 - 0.5倍率
+      - 🇯🇵 日本直连1 - 0.5倍率
+      - 🇯🇵 日本直连2 - 0.5倍率
+      - 🇺🇸 美国直连1 - 0.5倍率
+      - 🇺🇸 美国直连2 - 0.5倍率
+      - 🇭🇰香港 IPV6
+      - 🇨🇳 台湾 IPV6
+      - 🇸🇬 新加坡 IPV6
+      - 🇯🇵 日本 IPV6
+      - 🇺🇸 美国 IPV6
+      - 🇵🇭 菲律宾
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+  - name: 🎯 全球直连
+    type: select
+    proxies:
+      - DIRECT
+      - 🚀 节点选择
+      - ♻️ 自动选择
+  - name: 🛑 全球拦截
+    type: select
+    proxies:
+      - REJECT
+      - DIRECT
+  - name: 🐟 漏网之鱼
+    type: select
+    proxies:
+      - 🚀 节点选择
+      - 🎯 全球直连
+      - ♻️ 自动选择
+      - 微信：gtyz222
+      - 🇹🇼 IEPL-台湾1
+      - 🇹🇼 IEPL-台湾2
+      - 🇭🇰 香港中转 - 广州
+      - 🇸🇬  IEPL-新加坡1
+      - 🇸🇬  IEPL-新加坡2
+      - 🇨🇳 台湾中转
+      - 🇯🇵  IEPL-日本4
+      - 🇭🇰 香港中转
+      - 🇯🇵  IEPL-日本3
+      - 🇯🇵  IEPL-日本5
+      - 🇸🇬 新加坡中转
+      - 🇯🇵  IEPL-日本2
+      - 🇮🇩 IEPL-印度尼西亚
+      - 🇯🇵  IEPL-日本1
+      - 🇹🇭 IEPL-泰国
+      - 🇭🇰 IEPL-香港3
+      - 🇸🇬 新加坡中转 - 广州
+      - 🇯🇵 日本中转
+      - 🇰🇷 IEPL-韩国静态家宽
+      - 🇻🇳 IEPL-越南
+      - 🇲🇾 马来西亚
+      - 🇨🇳 台湾中转 - 广州
+      - 🇰🇷 韩国
+      - 🇲🇾 IEPL-马来西亚2
+      - 🇯🇵 直连-日本
+      - 🇯🇵 日本中转 - 广州
+      - 🇲🇾 IEPL-马来西亚1
+      - 🇮🇳 印度-西部
+      - 🇰🇷 韩国-首尔
+      - 🇲🇲 缅甸
+      - 🇹🇭 泰国
+      - 🇻🇳 越南
+      - 🇺🇸  IEPL-美国4
+      - 🇮🇳 IEPL-印度
+      - 🇵🇰 巴基斯坦
+      - 🇺🇸 直连-美国
+      - 🇺🇸 美国中转
+      - 🇸🇬 直连-新加坡
+      - 🇩🇪 IEPL-德国
+      - 🇳🇱 IEPL-荷兰
+      - 🇦🇺 澳大利亚
+      - 🇸🇦 沙特阿拉伯
+      - 🇨🇦 IEPL-加拿大
+      - 🇭🇰 香港中转 - 东莞
+      - 🇸🇬 新加坡直连1 - 0.5倍率
+      - 🇳🇱 荷兰
+      - 🇦🇪 迪拜
+      - 🇦🇪IEPL-阿联酋
+      - 🇮🇱 以色列
+      - 🇮🇩 印度尼西亚
+      - 🇸🇪 瑞典
+      - 🇲🇽 墨西哥
+      - 🇬🇧 英国
+      - 🇮🇱 IEPL-以色列
+      - 🇺🇸  IEPL-美国1
+      - 🇷🇺 莫斯科
+      - 🇪🇸 IEPL-西班牙
+      - 🇨🇦 加拿大
+      - 🇨🇭 IEPL-瑞士
+      - 🇺🇸 美国中转 - 广州
+      - 🇫🇷 法国
+      - 🇪🇸 西班牙
+      - 🇨🇭 瑞士
+      - 🇹🇷 土耳其
+      - 🇨🇴 哥伦比亚
+      - 🇩🇪 德国
+      - 🇸🇬 新加坡中转 - 东莞
+      - 🇧🇷 IEPL-巴西
+      - 🇧🇷 巴西
+      - 🇳🇬 尼日利亚
+      - 🇯🇵 日本中转 - 东莞
+      - 🇨🇳 台湾中转 - 东莞
+      - 🇨🇱 智利
+      - 🇨🇳 台湾直连2 - 0.5倍率
+      - 🇿🇦 南非
+      - 🇬🇷 希腊
+      - 🇺🇸 美国中转 - 东莞
+      - 🇭🇰 IEPL-香港2
+      - 🇭🇰 直连-香港动态家宽
+      - 🇸🇬  IEPL-新加坡3
+      - 🇸🇬  IEPL-新加坡4
+      - 🇺🇸  IEPL-美国2
+      - 🇺🇸  IEPL-美国3
+      - 🇦🇺 IEPL-澳大利亚
+      - 🇬🇧 IEPL-英国
+      - 🇺🇸 美国中转原生
+      - 🇭🇰 香港直连1 - 0.5倍率
+      - 🇭🇰 香港直连2 - 0.5倍率
+      - 🇨🇳 台湾直连1 - 0.5倍率
+      - 🇸🇬 新加坡直连2 - 0.5倍率
+      - 🇯🇵 日本直连1 - 0.5倍率
+      - 🇯🇵 日本直连2 - 0.5倍率
+      - 🇺🇸 美国直连1 - 0.5倍率
+      - 🇺🇸 美国直连2 - 0.5倍率
+      - 🇭🇰香港 IPV6
+      - 🇨🇳 台湾 IPV6
+      - 🇸🇬 新加坡 IPV6
+      - 🇯🇵 日本 IPV6
+      - 🇺🇸 美国 IPV6
+      - 🇵🇭 菲律宾
+rule-providers:
+  LocalAreaNetwork:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/LocalAreaNetwork.list
+    path: ./rules/providers/LocalAreaNetwork.list
+    interval: 86400
+  BanAD:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanAD.list
+    path: ./rules/providers/BanAD.list
+    interval: 86400
+  BanProgramAD:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanProgramAD.list
+    path: ./rules/providers/BanProgramAD.list
+    interval: 86400
+  GoogleCN:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/GoogleCN.list
+    path: ./rules/providers/GoogleCN.list
+    interval: 86400
+  SteamCN:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/SteamCN.list
+    path: ./rules/providers/SteamCN.list
+    interval: 86400
+  Telegram:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Telegram.list
+    path: ./rules/providers/Telegram.list
+    interval: 86400
+  ProxyMedia:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ProxyMedia.list
+    path: ./rules/providers/ProxyMedia.list
+    interval: 86400
+  ProxyLite:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ProxyLite.list
+    path: ./rules/providers/ProxyLite.list
+    interval: 86400
+  ChinaDomain:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaDomain.list
+    path: ./rules/providers/ChinaDomain.list
+    interval: 86400
+  ChinaCompanyIp:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaCompanyIp.list
+    path: ./rules/providers/ChinaCompanyIp.list
+    interval: 86400
+
+rules:
+  - RULE-SET,LocalAreaNetwork,🎯 全球直连
+  - RULE-SET,BanAD,🛑 全球拦截
+  - RULE-SET,BanProgramAD,🛑 全球拦截
+  - RULE-SET,GoogleCN,🎯 全球直连
+  - RULE-SET,SteamCN,🎯 全球直连
+  - RULE-SET,Telegram,🚀 节点选择
+  - RULE-SET,ProxyMedia,🚀 节点选择
+  - RULE-SET,ProxyLite,🚀 节点选择
+  - RULE-SET,ChinaDomain,🎯 全球直连
+  - RULE-SET,ChinaCompanyIp,🎯 全球直连
+  - GEOIP,CN,🎯 全球直连
+  - MATCH,🐟 漏网之鱼EOIP,LAN
 
 mixed-port: 7890
 allow-lan: false
