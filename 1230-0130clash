@@ -1,0 +1,1108 @@
+# ;不要随意改变关键字，否则会导致出错
+# ;acl4SSR规则
+# ;去广告：支持
+# ;自动测速：支持
+# ;微软分流：不支持
+# ;苹果分流：不支持
+# ;增强中国IP段：不支持
+# ;增强国外GFW：不支持
+# ;ruleset=🎯 全球直连,[]GEOIP,LAN
+
+mixed-port: 7890
+allow-lan: false
+mode: rule
+ipv6: false
+log-level: info
+external-controller: 0.0.0.0:9090
+dns:
+  enable: true
+  listen: 0.0.0.0:53
+  ipv6: false
+  default-nameserver:
+    - 223.5.5.5
+    - 114.114.114.114
+  nameserver:
+    - 223.5.5.5
+    - 114.114.114.114
+    - 119.29.29.29
+    - 180.76.76.76
+  enhanced-mode: fake-ip
+  fake-ip-range: 198.18.0.1/16
+  fake-ip-filter:
+    - "*.lan"
+    - "*.localdomain"
+    - "*.example"
+    - "*.invalid"
+    - "*.localhost"
+    - "*.test"
+    - "*.local"
+    - "*.home.arpa"
+    - router.asus.com
+    - localhost.sec.qq.com
+    - localhost.ptlogin2.qq.com
+    - +.msftconnecttest.com
+tun:
+  enable: true
+  stack: system
+  auto-route: true
+  auto-detect-interface: true
+  dns-hijack:
+    - 114.114.114.114
+    - 180.76.76.76
+    - 119.29.29.29
+    - 223.5.5.5
+    - 8.8.8.8
+    - 8.8.4.4
+    - 1.1.1.1
+    - 1.0.0.1
+
+
+proxies:
+  - type: vless
+    name: 微信：gtyz222
+    server: lbaws.lbxx9527.xyz
+    port: 24184
+    uuid: dc2288f7-92ca-4764-8f28-f7a80d8f76b1
+    network: tcp
+    servername: live.bilibili.com
+    tls: true
+    encryption: none
+    client-fingerprint: edge
+    flow: xtls-rprx-vision
+  - type: ss
+    name: 🇻🇳 IEPL-越南
+    server: jp01.kuaileiruko.top
+    port: 14355
+    cipher: chacha20-ietf-poly1305
+    password: b712b0ed-7ff9-4876-915c-7f05b63edaed
+  - type: vless
+    name: 🇻🇳 越南-IEPL-01
+    server: lbaws.lbxx9527.xyz
+    port: 19678
+    uuid: dc2288f7-92ca-4764-8f28-f7a80d8f76b1
+    network: tcp
+    servername: live.bilibili.com
+    tls: true
+    encryption: none
+    client-fingerprint: edge
+    flow: xtls-rprx-vision
+  - type: vmess
+    name: 🇺🇸 直连-美国
+    server: gm-us06.aiwowo.xyz
+    port: 30020
+    uuid: b712b0ed-7ff9-4876-915c-7f05b63edaed
+    alterId: 0
+    network: ws
+    cipher: auto
+    servername: gm-us06.aiwowo.xyz
+    ws-opts:
+      path: /cctv13/hd.m3u8
+      headers:
+        Host: gm-us06.aiwowo.xyz
+  - type: vless
+    name: 🇺🇸 美国-IEPL-02
+    server: lblb.lbxx9527.xyz
+    port: 29885
+    uuid: dc2288f7-92ca-4764-8f28-f7a80d8f76b1
+    network: tcp
+    servername: live.bilibili.com
+    tls: true
+    encryption: none
+    client-fingerprint: chrome
+    flow: xtls-rprx-vision
+  - type: vless
+    name: 🇺🇸 美国-IEPL-01
+    server: lblb.lbxx9527.xyz
+    port: 27957
+    uuid: dc2288f7-92ca-4764-8f28-f7a80d8f76b1
+    network: tcp
+    servername: live.bilibili.com
+    tls: true
+    encryption: none
+    client-fingerprint: chrome
+    flow: xtls-rprx-vision
+  - type: ss
+    name: 🇺🇸  IEPL-美国4
+    server: jp01.kuaileiruko.top
+    port: 10332
+    cipher: chacha20-ietf-poly1305
+    password: b712b0ed-7ff9-4876-915c-7f05b63edaed
+  - type: ss
+    name: 🇺🇸  IEPL-美国3
+    server: jp01.kuaileiruko.top
+    port: 10036
+    cipher: chacha20-ietf-poly1305
+    password: b712b0ed-7ff9-4876-915c-7f05b63edaed
+  - type: ss
+    name: 🇺🇸  IEPL-美国2
+    server: jp01.kuaileiruko.top
+    port: 20000
+    cipher: chacha20-ietf-poly1305
+    password: b712b0ed-7ff9-4876-915c-7f05b63edaed
+  - type: ss
+    name: 🇺🇸  IEPL-美国1
+    server: jp01.kuaileiruko.top
+    port: 20019
+    cipher: aes-256-gcm
+    password: b712b0ed-7ff9-4876-915c-7f05b63edaed
+  - type: ss
+    name: 🇹🇼 IEPL-台湾2
+    server: jp01.kuaileiruko.top
+    port: 13556
+    cipher: chacha20-ietf-poly1305
+    password: b712b0ed-7ff9-4876-915c-7f05b63edaed
+  - type: ss
+    name: 🇹🇼 IEPL-台湾1
+    server: jp01.kuaileiruko.top
+    port: 10070
+    cipher: chacha20-ietf-poly1305
+    password: b712b0ed-7ff9-4876-915c-7f05b63edaed
+  - type: vless
+    name: 🇹🇼 台湾-IEPL-家宽
+    server: lbaws.lbxx9527.xyz
+    port: 13159
+    uuid: dc2288f7-92ca-4764-8f28-f7a80d8f76b1
+    network: tcp
+    servername: live.bilibili.com
+    tls: true
+    encryption: none
+    client-fingerprint: edge
+    flow: xtls-rprx-vision
+  - type: vless
+    name: 🇹🇷 土耳其-IEPL-01
+    server: lbaws.lbxx9527.xyz
+    port: 20945
+    uuid: dc2288f7-92ca-4764-8f28-f7a80d8f76b1
+    network: tcp
+    servername: swdist.apple.com
+    tls: true
+    encryption: none
+    client-fingerprint: edge
+    flow: xtls-rprx-vision
+  - type: ss
+    name: 🇹🇭 IEPL-泰国
+    server: jp01.kuaileiruko.top
+    port: 10744
+    cipher: chacha20-ietf-poly1305
+    password: b712b0ed-7ff9-4876-915c-7f05b63edaed
+  - type: vless
+    name: 🇹🇭 泰国-IEPL-01
+    server: lbaws.lbxx9527.xyz
+    port: 40069
+    uuid: dc2288f7-92ca-4764-8f28-f7a80d8f76b1
+    network: tcp
+    servername: live.bilibili.com
+    tls: true
+    encryption: none
+    client-fingerprint: edge
+    flow: xtls-rprx-vision
+  - type: vmess
+    name: 🇸🇬 直连-新加坡
+    server: gm-sg06.aiwowo.xyz
+    port: 10001
+    uuid: b712b0ed-7ff9-4876-915c-7f05b63edaed
+    alterId: 0
+    network: ws
+    cipher: auto
+    servername: gm-sg06.aiwowo.xyz
+    ws-opts:
+      path: /cctv13/hd.m3u8
+      headers:
+        Host: gm-sg06.aiwowo.xyz
+  - type: vless
+    name: 🇸🇬 新加坡-IEPL-02
+    server: lblb.lbxx9527.xyz
+    port: 14687
+    uuid: dc2288f7-92ca-4764-8f28-f7a80d8f76b1
+    network: tcp
+    servername: live.bilibili.com
+    tls: true
+    encryption: none
+    client-fingerprint: chrome
+    flow: xtls-rprx-vision
+  - type: vless
+    name: 🇸🇬 新加坡-IEPL-01
+    server: lblb.lbxx9527.xyz
+    port: 17489
+    uuid: dc2288f7-92ca-4764-8f28-f7a80d8f76b1
+    network: tcp
+    servername: live.bilibili.com
+    tls: true
+    encryption: none
+    client-fingerprint: chrome
+    flow: xtls-rprx-vision
+  - type: ss
+    name: 🇸🇬  IEPL-新加坡4
+    server: jp01.kuaileiruko.top
+    port: 10876
+    cipher: chacha20-ietf-poly1305
+    password: b712b0ed-7ff9-4876-915c-7f05b63edaed
+  - type: ss
+    name: 🇸🇬  IEPL-新加坡3
+    server: jp01.kuaileiruko.top
+    port: 20003
+    cipher: chacha20-ietf-poly1305
+    password: b712b0ed-7ff9-4876-915c-7f05b63edaed
+  - type: ss
+    name: 🇸🇬  IEPL-新加坡2
+    server: jp01.kuaileiruko.top
+    port: 10067
+    cipher: chacha20-ietf-poly1305
+    password: b712b0ed-7ff9-4876-915c-7f05b63edaed
+  - type: trojan
+    name: 🇸🇬  IEPL-新加坡1
+    server: jp01.kuaileiruko.top
+    port: 10464
+    password: b712b0ed-7ff9-4876-915c-7f05b63edaed
+    network: tcp
+    sni: gm-sg05.aiwowo.xyz
+    skip-cert-verify: true
+    tls: true
+  - type: vless
+    name: 🇸🇪 瑞典-IEPL-01
+    server: lbaws.lbxx9527.xyz
+    port: 22184
+    uuid: dc2288f7-92ca-4764-8f28-f7a80d8f76b1
+    network: tcp
+    servername: live.bilibili.com
+    tls: true
+    encryption: none
+    client-fingerprint: edge
+    flow: xtls-rprx-vision
+  - type: vless
+    name: 🇵🇭 菲律宾-IEPL-01
+    server: lbaws.lbxx9527.xyz
+    port: 23598
+    uuid: dc2288f7-92ca-4764-8f28-f7a80d8f76b1
+    network: tcp
+    servername: live.bilibili.com
+    tls: true
+    encryption: none
+    client-fingerprint: edge
+    flow: xtls-rprx-vision
+  - type: vless
+    name: 🇵🇪 秘鲁-IEPL-家宽
+    server: lbaws.lbxx9527.xyz
+    port: 21102
+    uuid: dc2288f7-92ca-4764-8f28-f7a80d8f76b1
+    network: tcp
+    servername: live.bilibili.com
+    tls: true
+    encryption: none
+    client-fingerprint: edge
+    flow: xtls-rprx-vision
+  - type: vless
+    name: 🇳🇿 新西兰-IEPL-家宽
+    server: lbaws.lbxx9527.xyz
+    port: 32420
+    uuid: dc2288f7-92ca-4764-8f28-f7a80d8f76b1
+    network: tcp
+    servername: live.bilibili.com
+    tls: true
+    encryption: none
+    client-fingerprint: edge
+    flow: xtls-rprx-vision
+  - type: ss
+    name: 🇳🇱 IEPL-荷兰
+    server: jp01.kuaileiruko.top
+    port: 10012
+    cipher: chacha20-ietf-poly1305
+    password: b712b0ed-7ff9-4876-915c-7f05b63edaed
+  - type: vless
+    name: 🇳🇱 荷兰-IEPL-01
+    server: lbaws.lbxx9527.xyz
+    port: 30488
+    uuid: dc2288f7-92ca-4764-8f28-f7a80d8f76b1
+    network: tcp
+    servername: live.bilibili.com
+    tls: true
+    encryption: none
+    client-fingerprint: edge
+    flow: xtls-rprx-vision
+  - type: vless
+    name: 🇳🇬 尼日利亚-IEPL-01
+    server: lbaws.lbxx9527.xyz
+    port: 31669
+    uuid: dc2288f7-92ca-4764-8f28-f7a80d8f76b1
+    network: tcp
+    servername: live.bilibili.com
+    tls: true
+    encryption: none
+    client-fingerprint: edge
+    flow: xtls-rprx-vision
+  - type: ss
+    name: 🇲🇾 IEPL-马来西亚2
+    server: jp01.kuaileiruko.top
+    port: 14936
+    cipher: chacha20-ietf-poly1305
+    password: b712b0ed-7ff9-4876-915c-7f05b63edaed
+  - type: ss
+    name: 🇲🇾 IEPL-马来西亚1
+    server: jp01.kuaileiruko.top
+    port: 30441
+    cipher: chacha20-ietf-poly1305
+    password: b712b0ed-7ff9-4876-915c-7f05b63edaed
+  - type: vless
+    name: 🇲🇾 马来西亚-IEPL-家宽
+    server: lbaws.lbxx9527.xyz
+    port: 10264
+    uuid: dc2288f7-92ca-4764-8f28-f7a80d8f76b1
+    network: tcp
+    servername: live.bilibili.com
+    tls: true
+    encryption: none
+    client-fingerprint: edge
+    flow: xtls-rprx-vision
+  - type: vless
+    name: 🇲🇽 墨西哥-IEPL-01
+    server: lbaws.lbxx9527.xyz
+    port: 49247
+    uuid: dc2288f7-92ca-4764-8f28-f7a80d8f76b1
+    network: tcp
+    servername: live.bilibili.com
+    tls: true
+    encryption: none
+    client-fingerprint: edge
+    flow: xtls-rprx-vision
+  - type: vless
+    name: 🇱🇹 立陶宛-IEPL-01
+    server: lbaws.lbxx9527.xyz
+    port: 39013
+    uuid: dc2288f7-92ca-4764-8f28-f7a80d8f76b1
+    network: tcp
+    servername: live.bilibili.com
+    tls: true
+    encryption: none
+    client-fingerprint: edge
+    flow: xtls-rprx-vision
+  - type: ss
+    name: 🇰🇷 IEPL-韩国静态家宽
+    server: jp01.kuaileiruko.top
+    port: 10082
+    cipher: chacha20-ietf-poly1305
+    password: b712b0ed-7ff9-4876-915c-7f05b63edaed
+  - type: vless
+    name: 🇰🇷 韩国-IEPL-01
+    server: lbaws.lbxx9527.xyz
+    port: 52555
+    uuid: dc2288f7-92ca-4764-8f28-f7a80d8f76b1
+    network: tcp
+    servername: live.bilibili.com
+    tls: true
+    encryption: none
+    client-fingerprint: edge
+    flow: xtls-rprx-vision
+  - type: vless
+    name: 🇰🇭 柬埔寨-IEPL-01
+    server: lbaws.lbxx9527.xyz
+    port: 16773
+    uuid: dc2288f7-92ca-4764-8f28-f7a80d8f76b1
+    network: tcp
+    servername: live.bilibili.com
+    tls: true
+    encryption: none
+    client-fingerprint: edge
+    flow: xtls-rprx-vision
+  - type: vmess
+    name: 🇯🇵 直连-日本
+    server: gm-jp06.aiwowo.xyz
+    port: 20031
+    uuid: b712b0ed-7ff9-4876-915c-7f05b63edaed
+    alterId: 0
+    network: ws
+    cipher: auto
+    servername: gm-jp06.aiwowo.xyz
+    ws-opts:
+      path: /cctv13/hd.m3u8
+      headers:
+        Host: gm-jp06.aiwowo.xyz
+  - type: vless
+    name: 🇯🇵 日本-IEPL-02
+    server: lblb.lbxx9527.xyz
+    port: 49557
+    uuid: dc2288f7-92ca-4764-8f28-f7a80d8f76b1
+    network: tcp
+    servername: live.bilibili.com
+    tls: true
+    encryption: none
+    client-fingerprint: chrome
+    flow: xtls-rprx-vision
+  - type: vless
+    name: 🇯🇵 日本-IEPL-01
+    server: lblb.lbxx9527.xyz
+    port: 36308
+    uuid: dc2288f7-92ca-4764-8f28-f7a80d8f76b1
+    network: tcp
+    servername: live.bilibili.com
+    tls: true
+    encryption: none
+    client-fingerprint: chrome
+    flow: xtls-rprx-vision
+  - type: ss
+    name: 🇯🇵  IEPL-日本5
+    server: jp01.kuaileiruko.top
+    port: 12456
+    cipher: chacha20-ietf-poly1305
+    password: b712b0ed-7ff9-4876-915c-7f05b63edaed
+  - type: trojan
+    name: 🇯🇵  IEPL-日本4
+    server: jp01.kuaileiruko.top
+    port: 13552
+    password: b712b0ed-7ff9-4876-915c-7f05b63edaed
+    network: tcp
+    sni: gm-jp04.aiwowo.xyz
+    skip-cert-verify: true
+    tls: true
+  - type: ss
+    name: 🇯🇵  IEPL-日本3
+    server: jp01.kuaileiruko.top
+    port: 10052
+    cipher: chacha20-ietf-poly1305
+    password: b712b0ed-7ff9-4876-915c-7f05b63edaed
+  - type: ss
+    name: 🇯🇵  IEPL-日本2
+    server: jp01.kuaileiruko.top
+    port: 30055
+    cipher: chacha20-ietf-poly1305
+    password: b712b0ed-7ff9-4876-915c-7f05b63edaed
+  - type: ss
+    name: 🇯🇵  IEPL-日本1
+    server: jp01.kuaileiruko.top
+    port: 15000
+    cipher: chacha20-ietf-poly1305
+    password: b712b0ed-7ff9-4876-915c-7f05b63edaed
+  - type: vless
+    name: 🇮🇸 冰岛-IEPL-01
+    server: lbaws.lbxx9527.xyz
+    port: 20588
+    uuid: dc2288f7-92ca-4764-8f28-f7a80d8f76b1
+    network: tcp
+    servername: live.bilibili.com
+    tls: true
+    encryption: none
+    client-fingerprint: edge
+    flow: xtls-rprx-vision
+  - type: ss
+    name: 🇮🇳 IEPL-印度
+    server: jp01.kuaileiruko.top
+    port: 24555
+    cipher: chacha20-ietf-poly1305
+    password: b712b0ed-7ff9-4876-915c-7f05b63edaed
+  - type: vless
+    name: 🇮🇳 印度-IEPL-01
+    server: lbaws.lbxx9527.xyz
+    port: 47956
+    uuid: dc2288f7-92ca-4764-8f28-f7a80d8f76b1
+    network: tcp
+    servername: live.bilibili.com
+    tls: true
+    encryption: none
+    client-fingerprint: edge
+    flow: xtls-rprx-vision
+  - type: ss
+    name: 🇮🇱 IEPL-以色列
+    server: jp01.kuaileiruko.top
+    port: 25252
+    cipher: chacha20-ietf-poly1305
+    password: b712b0ed-7ff9-4876-915c-7f05b63edaed
+  - type: ss
+    name: 🇮🇩 IEPL-印度尼西亚
+    server: jp01.kuaileiruko.top
+    port: 24401
+    cipher: chacha20-ietf-poly1305
+    password: b712b0ed-7ff9-4876-915c-7f05b63edaed
+  - type: vless
+    name: 🇮🇩 印度尼西亚-IEPL-01
+    server: lbaws.lbxx9527.xyz
+    port: 41091
+    uuid: dc2288f7-92ca-4764-8f28-f7a80d8f76b1
+    network: tcp
+    servername: live.bilibili.com
+    tls: true
+    encryption: none
+    client-fingerprint: edge
+    flow: xtls-rprx-vision
+  - type: vless
+    name: 🇭🇺 匈牙利-IEPL-01
+    server: lbaws.lbxx9527.xyz
+    port: 32218
+    uuid: dc2288f7-92ca-4764-8f28-f7a80d8f76b1
+    network: tcp
+    servername: live.bilibili.com
+    tls: true
+    encryption: none
+    client-fingerprint: edge
+    flow: xtls-rprx-vision
+  - type: ss
+    name: 🇭🇰 IEPL-香港3
+    server: jp01.kuaileiruko.top
+    port: 10576
+    cipher: chacha20-ietf-poly1305
+    password: b712b0ed-7ff9-4876-915c-7f05b63edaed
+  - type: ss
+    name: 🇭🇰 IEPL-香港2
+    server: jp01.kuaileiruko.top
+    port: 25657
+    cipher: chacha20-ietf-poly1305
+    password: b712b0ed-7ff9-4876-915c-7f05b63edaed
+  - type: ss
+    name: 🇭🇰 IEPL-香港1
+    server: jp01.kuaileiruko.top
+    port: 25656
+    cipher: chacha20-ietf-poly1305
+    password: b712b0ed-7ff9-4876-915c-7f05b63edaed
+  - type: vmess
+    name: 🇭🇰 直连-香港动态家宽
+    server: gm-hk09.aiwowo.xyz
+    port: 20018
+    uuid: b712b0ed-7ff9-4876-915c-7f05b63edaed
+    alterId: 0
+    network: ws
+    cipher: auto
+    servername: gm-hk06.aiwowo.xyz
+    ws-opts:
+      path: /cctv13/hd.m3u8
+      headers:
+        Host: gm-hk06.aiwowo.xyz
+  - type: vless
+    name: 🇭🇰 香港-IEPL-02
+    server: lblb.lbxx9527.xyz
+    port: 11637
+    uuid: dc2288f7-92ca-4764-8f28-f7a80d8f76b1
+    network: tcp
+    servername: live.bilibili.com
+    tls: true
+    encryption: none
+    client-fingerprint: edge
+    flow: xtls-rprx-vision
+  - type: vless
+    name: 🇭🇰 香港-IEPL-01
+    server: lblb.lbxx9527.xyz
+    port: 49726
+    uuid: dc2288f7-92ca-4764-8f28-f7a80d8f76b1
+    network: tcp
+    servername: live.bilibili.com
+    tls: true
+    encryption: none
+    client-fingerprint: chrome
+    flow: xtls-rprx-vision
+  - type: ss
+    name: 🇬🇧 IEPL-英国
+    server: jp01.kuaileiruko.top
+    port: 20006
+    cipher: chacha20-ietf-poly1305
+    password: b712b0ed-7ff9-4876-915c-7f05b63edaed
+  - type: vless
+    name: 🇬🇧 英国-IEPL-01
+    server: lbaws.lbxx9527.xyz
+    port: 12922
+    uuid: dc2288f7-92ca-4764-8f28-f7a80d8f76b1
+    network: tcp
+    servername: live.bilibili.com
+    tls: true
+    encryption: none
+    client-fingerprint: edge
+    flow: xtls-rprx-vision
+  - type: vless
+    name: 🇫🇷 法国-IEPL-01
+    server: lbaws.lbxx9527.xyz
+    port: 29201
+    uuid: dc2288f7-92ca-4764-8f28-f7a80d8f76b1
+    network: tcp
+    servername: live.bilibili.com
+    tls: true
+    encryption: none
+    client-fingerprint: edge
+    flow: xtls-rprx-vision
+  - type: ss
+    name: 🇪🇸 IEPL-西班牙
+    server: jp01.kuaileiruko.top
+    port: 26688
+    cipher: chacha20-ietf-poly1305
+    password: b712b0ed-7ff9-4876-915c-7f05b63edaed
+  - type: vless
+    name: 🇪🇬 埃及-IEPL-01
+    server: lbaws.lbxx9527.xyz
+    port: 35531
+    uuid: dc2288f7-92ca-4764-8f28-f7a80d8f76b1
+    network: tcp
+    servername: live.bilibili.com
+    tls: true
+    encryption: none
+    client-fingerprint: edge
+    flow: xtls-rprx-vision
+  - type: ss
+    name: 🇩🇪 IEPL-德国
+    server: jp01.kuaileiruko.top
+    port: 21666
+    cipher: chacha20-ietf-poly1305
+    password: b712b0ed-7ff9-4876-915c-7f05b63edaed
+  - type: vless
+    name: 🇩🇪 德国-IEPL-01
+    server: lbaws.lbxx9527.xyz
+    port: 44205
+    uuid: dc2288f7-92ca-4764-8f28-f7a80d8f76b1
+    network: tcp
+    servername: live.bilibili.com
+    tls: true
+    encryption: none
+    client-fingerprint: edge
+    flow: xtls-rprx-vision
+  - type: vless
+    name: 🇨🇿 捷克-IEPL-01
+    server: lbaws.lbxx9527.xyz
+    port: 41729
+    uuid: dc2288f7-92ca-4764-8f28-f7a80d8f76b1
+    network: tcp
+    servername: live.bilibili.com
+    tls: true
+    encryption: none
+    client-fingerprint: edge
+    flow: xtls-rprx-vision
+  - type: vless
+    name: 🇨🇾 塞浦路斯-IEPL-01
+    server: lbaws.lbxx9527.xyz
+    port: 37956
+    uuid: dc2288f7-92ca-4764-8f28-f7a80d8f76b1
+    network: tcp
+    servername: live.bilibili.com
+    tls: true
+    encryption: none
+    client-fingerprint: edge
+    flow: xtls-rprx-vision
+  - type: ss
+    name: 🇨🇭 IEPL-瑞士
+    server: jp01.kuaileiruko.top
+    port: 10011
+    cipher: chacha20-ietf-poly1305
+    password: b712b0ed-7ff9-4876-915c-7f05b63edaed
+  - type: ss
+    name: 🇨🇦 IEPL-加拿大
+    server: jp01.kuaileiruko.top
+    port: 26801
+    cipher: chacha20-ietf-poly1305
+    password: b712b0ed-7ff9-4876-915c-7f05b63edaed
+  - type: vless
+    name: 🇨🇦 加拿大-IEPL-01
+    server: lbaws.lbxx9527.xyz
+    port: 19237
+    uuid: dc2288f7-92ca-4764-8f28-f7a80d8f76b1
+    network: tcp
+    servername: live.bilibili.com
+    tls: true
+    encryption: none
+    client-fingerprint: edge
+    flow: xtls-rprx-vision
+  - type: ss
+    name: 🇧🇷 IEPL-巴西
+    server: jp01.kuaileiruko.top
+    port: 25253
+    cipher: chacha20-ietf-poly1305
+    password: b712b0ed-7ff9-4876-915c-7f05b63edaed
+  - type: vless
+    name: 🇧🇬 保加利亚-IEPL-01
+    server: lbaws.lbxx9527.xyz
+    port: 27589
+    uuid: dc2288f7-92ca-4764-8f28-f7a80d8f76b1
+    network: tcp
+    servername: live.bilibili.com
+    tls: true
+    encryption: none
+    client-fingerprint: edge
+    flow: xtls-rprx-vision
+  - type: vless
+    name: 🇧🇦 波黑-IEPL-01
+    server: lbaws.lbxx9527.xyz
+    port: 37927
+    uuid: dc2288f7-92ca-4764-8f28-f7a80d8f76b1
+    network: tcp
+    servername: live.bilibili.com
+    tls: true
+    encryption: none
+    client-fingerprint: edge
+    flow: xtls-rprx-vision
+  - type: ss
+    name: 🇦🇺 IEPL-澳大利亚
+    server: jp01.kuaileiruko.top
+    port: 10245
+    cipher: chacha20-ietf-poly1305
+    password: b712b0ed-7ff9-4876-915c-7f05b63edaed
+  - type: vless
+    name: 🇦🇺 澳大利亚-IEPL-01
+    server: lbaws.lbxx9527.xyz
+    port: 45379
+    uuid: dc2288f7-92ca-4764-8f28-f7a80d8f76b1
+    network: tcp
+    servername: live.bilibili.com
+    tls: true
+    encryption: none
+    client-fingerprint: ios
+    flow: xtls-rprx-vision
+  - type: vless
+    name: 🇦🇶 南极洲-IEPL-01
+    server: lbaws.lbxx9527.xyz
+    port: 41549
+    uuid: dc2288f7-92ca-4764-8f28-f7a80d8f76b1
+    network: tcp
+    servername: live.bilibili.com
+    tls: true
+    encryption: none
+    client-fingerprint: edge
+    flow: xtls-rprx-vision
+  - type: ss
+    name: 🇦🇪IEPL-阿联酋
+    server: jp01.kuaileiruko.top
+    port: 10713
+    cipher: chacha20-ietf-poly1305
+    password: b712b0ed-7ff9-4876-915c-7f05b63edaed
+  - type: vless
+    name: 🇦🇪 阿联酋-IEPL-01
+    server: lbaws.lbxx9527.xyz
+    port: 36311
+    uuid: dc2288f7-92ca-4764-8f28-f7a80d8f76b1
+    network: tcp
+    servername: live.bilibili.com
+    tls: true
+    encryption: none
+    client-fingerprint: edge
+    flow: xtls-rprx-vision
+proxy-groups:
+  - name: 🚀 节点选择
+    type: select
+    proxies:
+      - ♻️ 自动选择
+      - DIRECT
+      - 微信：gtyz222
+      - 🇻🇳 IEPL-越南
+      - 🇻🇳 越南-IEPL-01
+      - 🇺🇸 直连-美国
+      - 🇺🇸 美国-IEPL-02
+      - 🇺🇸 美国-IEPL-01
+      - 🇺🇸  IEPL-美国4
+      - 🇺🇸  IEPL-美国3
+      - 🇺🇸  IEPL-美国2
+      - 🇺🇸  IEPL-美国1
+      - 🇹🇼 IEPL-台湾2
+      - 🇹🇼 IEPL-台湾1
+      - 🇹🇼 台湾-IEPL-家宽
+      - 🇹🇷 土耳其-IEPL-01
+      - 🇹🇭 IEPL-泰国
+      - 🇹🇭 泰国-IEPL-01
+      - 🇸🇬 直连-新加坡
+      - 🇸🇬 新加坡-IEPL-02
+      - 🇸🇬 新加坡-IEPL-01
+      - 🇸🇬  IEPL-新加坡4
+      - 🇸🇬  IEPL-新加坡3
+      - 🇸🇬  IEPL-新加坡2
+      - 🇸🇬  IEPL-新加坡1
+      - 🇸🇪 瑞典-IEPL-01
+      - 🇵🇭 菲律宾-IEPL-01
+      - 🇵🇪 秘鲁-IEPL-家宽
+      - 🇳🇿 新西兰-IEPL-家宽
+      - 🇳🇱 IEPL-荷兰
+      - 🇳🇱 荷兰-IEPL-01
+      - 🇳🇬 尼日利亚-IEPL-01
+      - 🇲🇾 IEPL-马来西亚2
+      - 🇲🇾 IEPL-马来西亚1
+      - 🇲🇾 马来西亚-IEPL-家宽
+      - 🇲🇽 墨西哥-IEPL-01
+      - 🇱🇹 立陶宛-IEPL-01
+      - 🇰🇷 IEPL-韩国静态家宽
+      - 🇰🇷 韩国-IEPL-01
+      - 🇰🇭 柬埔寨-IEPL-01
+      - 🇯🇵 直连-日本
+      - 🇯🇵 日本-IEPL-02
+      - 🇯🇵 日本-IEPL-01
+      - 🇯🇵  IEPL-日本5
+      - 🇯🇵  IEPL-日本4
+      - 🇯🇵  IEPL-日本3
+      - 🇯🇵  IEPL-日本2
+      - 🇯🇵  IEPL-日本1
+      - 🇮🇸 冰岛-IEPL-01
+      - 🇮🇳 IEPL-印度
+      - 🇮🇳 印度-IEPL-01
+      - 🇮🇱 IEPL-以色列
+      - 🇮🇩 IEPL-印度尼西亚
+      - 🇮🇩 印度尼西亚-IEPL-01
+      - 🇭🇺 匈牙利-IEPL-01
+      - 🇭🇰 IEPL-香港3
+      - 🇭🇰 IEPL-香港2
+      - 🇭🇰 IEPL-香港1
+      - 🇭🇰 直连-香港动态家宽
+      - 🇭🇰 香港-IEPL-02
+      - 🇭🇰 香港-IEPL-01
+      - 🇬🇧 IEPL-英国
+      - 🇬🇧 英国-IEPL-01
+      - 🇫🇷 法国-IEPL-01
+      - 🇪🇸 IEPL-西班牙
+      - 🇪🇬 埃及-IEPL-01
+      - 🇩🇪 IEPL-德国
+      - 🇩🇪 德国-IEPL-01
+      - 🇨🇿 捷克-IEPL-01
+      - 🇨🇾 塞浦路斯-IEPL-01
+      - 🇨🇭 IEPL-瑞士
+      - 🇨🇦 IEPL-加拿大
+      - 🇨🇦 加拿大-IEPL-01
+      - 🇧🇷 IEPL-巴西
+      - 🇧🇬 保加利亚-IEPL-01
+      - 🇧🇦 波黑-IEPL-01
+      - 🇦🇺 IEPL-澳大利亚
+      - 🇦🇺 澳大利亚-IEPL-01
+      - 🇦🇶 南极洲-IEPL-01
+      - 🇦🇪IEPL-阿联酋
+      - 🇦🇪 阿联酋-IEPL-01
+  - name: ♻️ 自动选择
+    type: url-test
+    proxies:
+      - 微信：gtyz222
+      - 🇻🇳 IEPL-越南
+      - 🇻🇳 越南-IEPL-01
+      - 🇺🇸 直连-美国
+      - 🇺🇸 美国-IEPL-02
+      - 🇺🇸 美国-IEPL-01
+      - 🇺🇸  IEPL-美国4
+      - 🇺🇸  IEPL-美国3
+      - 🇺🇸  IEPL-美国2
+      - 🇺🇸  IEPL-美国1
+      - 🇹🇼 IEPL-台湾2
+      - 🇹🇼 IEPL-台湾1
+      - 🇹🇼 台湾-IEPL-家宽
+      - 🇹🇷 土耳其-IEPL-01
+      - 🇹🇭 IEPL-泰国
+      - 🇹🇭 泰国-IEPL-01
+      - 🇸🇬 直连-新加坡
+      - 🇸🇬 新加坡-IEPL-02
+      - 🇸🇬 新加坡-IEPL-01
+      - 🇸🇬  IEPL-新加坡4
+      - 🇸🇬  IEPL-新加坡3
+      - 🇸🇬  IEPL-新加坡2
+      - 🇸🇬  IEPL-新加坡1
+      - 🇸🇪 瑞典-IEPL-01
+      - 🇵🇭 菲律宾-IEPL-01
+      - 🇵🇪 秘鲁-IEPL-家宽
+      - 🇳🇿 新西兰-IEPL-家宽
+      - 🇳🇱 IEPL-荷兰
+      - 🇳🇱 荷兰-IEPL-01
+      - 🇳🇬 尼日利亚-IEPL-01
+      - 🇲🇾 IEPL-马来西亚2
+      - 🇲🇾 IEPL-马来西亚1
+      - 🇲🇾 马来西亚-IEPL-家宽
+      - 🇲🇽 墨西哥-IEPL-01
+      - 🇱🇹 立陶宛-IEPL-01
+      - 🇰🇷 IEPL-韩国静态家宽
+      - 🇰🇷 韩国-IEPL-01
+      - 🇰🇭 柬埔寨-IEPL-01
+      - 🇯🇵 直连-日本
+      - 🇯🇵 日本-IEPL-02
+      - 🇯🇵 日本-IEPL-01
+      - 🇯🇵  IEPL-日本5
+      - 🇯🇵  IEPL-日本4
+      - 🇯🇵  IEPL-日本3
+      - 🇯🇵  IEPL-日本2
+      - 🇯🇵  IEPL-日本1
+      - 🇮🇸 冰岛-IEPL-01
+      - 🇮🇳 IEPL-印度
+      - 🇮🇳 印度-IEPL-01
+      - 🇮🇱 IEPL-以色列
+      - 🇮🇩 IEPL-印度尼西亚
+      - 🇮🇩 印度尼西亚-IEPL-01
+      - 🇭🇺 匈牙利-IEPL-01
+      - 🇭🇰 IEPL-香港3
+      - 🇭🇰 IEPL-香港2
+      - 🇭🇰 IEPL-香港1
+      - 🇭🇰 直连-香港动态家宽
+      - 🇭🇰 香港-IEPL-02
+      - 🇭🇰 香港-IEPL-01
+      - 🇬🇧 IEPL-英国
+      - 🇬🇧 英国-IEPL-01
+      - 🇫🇷 法国-IEPL-01
+      - 🇪🇸 IEPL-西班牙
+      - 🇪🇬 埃及-IEPL-01
+      - 🇩🇪 IEPL-德国
+      - 🇩🇪 德国-IEPL-01
+      - 🇨🇿 捷克-IEPL-01
+      - 🇨🇾 塞浦路斯-IEPL-01
+      - 🇨🇭 IEPL-瑞士
+      - 🇨🇦 IEPL-加拿大
+      - 🇨🇦 加拿大-IEPL-01
+      - 🇧🇷 IEPL-巴西
+      - 🇧🇬 保加利亚-IEPL-01
+      - 🇧🇦 波黑-IEPL-01
+      - 🇦🇺 IEPL-澳大利亚
+      - 🇦🇺 澳大利亚-IEPL-01
+      - 🇦🇶 南极洲-IEPL-01
+      - 🇦🇪IEPL-阿联酋
+      - 🇦🇪 阿联酋-IEPL-01
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+  - name: 🎯 全球直连
+    type: select
+    proxies:
+      - DIRECT
+      - 🚀 节点选择
+      - ♻️ 自动选择
+  - name: 🛑 全球拦截
+    type: select
+    proxies:
+      - REJECT
+      - DIRECT
+  - name: 🐟 漏网之鱼
+    type: select
+    proxies:
+      - 🚀 节点选择
+      - 🎯 全球直连
+      - ♻️ 自动选择
+      - 微信：gtyz222
+      - 🇻🇳 IEPL-越南
+      - 🇻🇳 越南-IEPL-01
+      - 🇺🇸 直连-美国
+      - 🇺🇸 美国-IEPL-02
+      - 🇺🇸 美国-IEPL-01
+      - 🇺🇸  IEPL-美国4
+      - 🇺🇸  IEPL-美国3
+      - 🇺🇸  IEPL-美国2
+      - 🇺🇸  IEPL-美国1
+      - 🇹🇼 IEPL-台湾2
+      - 🇹🇼 IEPL-台湾1
+      - 🇹🇼 台湾-IEPL-家宽
+      - 🇹🇷 土耳其-IEPL-01
+      - 🇹🇭 IEPL-泰国
+      - 🇹🇭 泰国-IEPL-01
+      - 🇸🇬 直连-新加坡
+      - 🇸🇬 新加坡-IEPL-02
+      - 🇸🇬 新加坡-IEPL-01
+      - 🇸🇬  IEPL-新加坡4
+      - 🇸🇬  IEPL-新加坡3
+      - 🇸🇬  IEPL-新加坡2
+      - 🇸🇬  IEPL-新加坡1
+      - 🇸🇪 瑞典-IEPL-01
+      - 🇵🇭 菲律宾-IEPL-01
+      - 🇵🇪 秘鲁-IEPL-家宽
+      - 🇳🇿 新西兰-IEPL-家宽
+      - 🇳🇱 IEPL-荷兰
+      - 🇳🇱 荷兰-IEPL-01
+      - 🇳🇬 尼日利亚-IEPL-01
+      - 🇲🇾 IEPL-马来西亚2
+      - 🇲🇾 IEPL-马来西亚1
+      - 🇲🇾 马来西亚-IEPL-家宽
+      - 🇲🇽 墨西哥-IEPL-01
+      - 🇱🇹 立陶宛-IEPL-01
+      - 🇰🇷 IEPL-韩国静态家宽
+      - 🇰🇷 韩国-IEPL-01
+      - 🇰🇭 柬埔寨-IEPL-01
+      - 🇯🇵 直连-日本
+      - 🇯🇵 日本-IEPL-02
+      - 🇯🇵 日本-IEPL-01
+      - 🇯🇵  IEPL-日本5
+      - 🇯🇵  IEPL-日本4
+      - 🇯🇵  IEPL-日本3
+      - 🇯🇵  IEPL-日本2
+      - 🇯🇵  IEPL-日本1
+      - 🇮🇸 冰岛-IEPL-01
+      - 🇮🇳 IEPL-印度
+      - 🇮🇳 印度-IEPL-01
+      - 🇮🇱 IEPL-以色列
+      - 🇮🇩 IEPL-印度尼西亚
+      - 🇮🇩 印度尼西亚-IEPL-01
+      - 🇭🇺 匈牙利-IEPL-01
+      - 🇭🇰 IEPL-香港3
+      - 🇭🇰 IEPL-香港2
+      - 🇭🇰 IEPL-香港1
+      - 🇭🇰 直连-香港动态家宽
+      - 🇭🇰 香港-IEPL-02
+      - 🇭🇰 香港-IEPL-01
+      - 🇬🇧 IEPL-英国
+      - 🇬🇧 英国-IEPL-01
+      - 🇫🇷 法国-IEPL-01
+      - 🇪🇸 IEPL-西班牙
+      - 🇪🇬 埃及-IEPL-01
+      - 🇩🇪 IEPL-德国
+      - 🇩🇪 德国-IEPL-01
+      - 🇨🇿 捷克-IEPL-01
+      - 🇨🇾 塞浦路斯-IEPL-01
+      - 🇨🇭 IEPL-瑞士
+      - 🇨🇦 IEPL-加拿大
+      - 🇨🇦 加拿大-IEPL-01
+      - 🇧🇷 IEPL-巴西
+      - 🇧🇬 保加利亚-IEPL-01
+      - 🇧🇦 波黑-IEPL-01
+      - 🇦🇺 IEPL-澳大利亚
+      - 🇦🇺 澳大利亚-IEPL-01
+      - 🇦🇶 南极洲-IEPL-01
+      - 🇦🇪IEPL-阿联酋
+      - 🇦🇪 阿联酋-IEPL-01
+rule-providers:
+  LocalAreaNetwork:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/LocalAreaNetwork.list
+    path: ./rules/providers/LocalAreaNetwork.list
+    interval: 86400
+  BanAD:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanAD.list
+    path: ./rules/providers/BanAD.list
+    interval: 86400
+  BanProgramAD:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanProgramAD.list
+    path: ./rules/providers/BanProgramAD.list
+    interval: 86400
+  GoogleCN:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/GoogleCN.list
+    path: ./rules/providers/GoogleCN.list
+    interval: 86400
+  SteamCN:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/SteamCN.list
+    path: ./rules/providers/SteamCN.list
+    interval: 86400
+  Telegram:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Telegram.list
+    path: ./rules/providers/Telegram.list
+    interval: 86400
+  ProxyMedia:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ProxyMedia.list
+    path: ./rules/providers/ProxyMedia.list
+    interval: 86400
+  ProxyLite:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ProxyLite.list
+    path: ./rules/providers/ProxyLite.list
+    interval: 86400
+  ChinaDomain:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaDomain.list
+    path: ./rules/providers/ChinaDomain.list
+    interval: 86400
+  ChinaCompanyIp:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaCompanyIp.list
+    path: ./rules/providers/ChinaCompanyIp.list
+    interval: 86400
+
+rules:
+  - RULE-SET,LocalAreaNetwork,🎯 全球直连
+  - RULE-SET,BanAD,🛑 全球拦截
+  - RULE-SET,BanProgramAD,🛑 全球拦截
+  - RULE-SET,GoogleCN,🎯 全球直连
+  - RULE-SET,SteamCN,🎯 全球直连
+  - RULE-SET,Telegram,🚀 节点选择
+  - RULE-SET,ProxyMedia,🚀 节点选择
+  - RULE-SET,ProxyLite,🚀 节点选择
+  - RULE-SET,ChinaDomain,🎯 全球直连
+  - RULE-SET,ChinaCompanyIp,🎯 全球直连
+  - GEOIP,CN,🎯 全球直连
+  - MATCH,🐟 漏网之鱼
