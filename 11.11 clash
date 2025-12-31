@@ -60,13 +60,13 @@ tun:
 proxies:
   - type: ss
     name: 微信：gtyz222
-    server: hkg01.dns-node.top
+    server: hkg01.plus-cdn-dns.com
     port: 45573
     cipher: aes-128-gcm
     password: 61c3b62a-19cf-42fa-9a45-d275d9b75e0e
   - type: trojan
     name: 应急专用(JP)
-    server: jppro01.tmdns-sing.top
+    server: jppro01.plus-cdn-dns.com
     port: 29913
     password: 61c3b62a-19cf-42fa-9a45-d275d9b75e0e
     network: tcp
@@ -75,493 +75,487 @@ proxies:
     tls: true
   - type: ss
     name: 香港
-    server: hkg01.dns-node.top
+    server: hkg01.plus-cdn-dns.com
     port: 45573
     cipher: aes-128-gcm
     password: 61c3b62a-19cf-42fa-9a45-d275d9b75e0e
   - type: ss
     name: 台湾
-    server: tw01.dns-node.top
+    server: tw01.plus-cdn-dns.com
     port: 45571
     cipher: aes-128-gcm
     password: 61c3b62a-19cf-42fa-9a45-d275d9b75e0e
   - type: ss
     name: 日本
-    server: jp01.dns-node.top
+    server: jp01.plus-cdn-dns.com
     port: 45612
     cipher: aes-128-gcm
     password: 61c3b62a-19cf-42fa-9a45-d275d9b75e0e
   - type: ss
     name: 韩国
-    server: jp01.dns-node.top
+    server: jp01.plus-cdn-dns.com
     port: 45572
     cipher: aes-128-gcm
     password: 61c3b62a-19cf-42fa-9a45-d275d9b75e0e
   - type: ss
     name: 新加坡
-    server: sg04.dns-node.top
+    server: sg04.plus-cdn-dns.com
     port: 45609
     cipher: aes-128-gcm
     password: 61c3b62a-19cf-42fa-9a45-d275d9b75e0e
   - type: ss
     name: 泰国
-    server: sg04.dns-node.top
+    server: sg04.plus-cdn-dns.com
     port: 45621
     cipher: aes-128-gcm
     password: 61c3b62a-19cf-42fa-9a45-d275d9b75e0e
   - type: ss
     name: 老挝
-    server: sg04.dns-node.top
+    server: sg04.plus-cdn-dns.com
     port: 45622
     cipher: aes-128-gcm
     password: 61c3b62a-19cf-42fa-9a45-d275d9b75e0e
   - type: ss
     name: 尼泊尔
-    server: sg04.dns-node.top
+    server: sg04.plus-cdn-dns.com
     port: 45623
     cipher: aes-128-gcm
     password: 61c3b62a-19cf-42fa-9a45-d275d9b75e0e
   - type: ss
     name: 斯里兰卡
-    server: sg04.dns-node.top
+    server: sg04.plus-cdn-dns.com
     port: 45624
     cipher: aes-128-gcm
     password: 61c3b62a-19cf-42fa-9a45-d275d9b75e0e
   - type: ss
     name: 缅甸
-    server: sg03.dns-node.top
+    server: sg03.plus-cdn-dns.com
     port: 46333
     cipher: aes-128-gcm
     password: 61c3b62a-19cf-42fa-9a45-d275d9b75e0e
   - type: ss
     name: 蒙古
-    server: sg03.dns-node.top
+    server: sg03.plus-cdn-dns.com
     port: 46334
     cipher: aes-128-gcm
     password: 61c3b62a-19cf-42fa-9a45-d275d9b75e0e
   - type: ss
     name: 柬埔寨
-    server: sg03.dns-node.top
+    server: sg03.plus-cdn-dns.com
     port: 46335
     cipher: aes-128-gcm
     password: 61c3b62a-19cf-42fa-9a45-d275d9b75e0e
   - type: ss
     name: 孟加拉国
-    server: sg04.dns-node.top
+    server: sg04.plus-cdn-dns.com
     port: 46338
     cipher: aes-128-gcm
     password: 61c3b62a-19cf-42fa-9a45-d275d9b75e0e
   - type: ss
     name: 哈萨克斯坦
-    server: sg04.dns-node.top
+    server: sg04.plus-cdn-dns.com
     port: 46339
     cipher: aes-128-gcm
     password: 61c3b62a-19cf-42fa-9a45-d275d9b75e0e
   - type: ss
     name: 阿联酋
-    server: sg04.dns-node.top
+    server: sg04.plus-cdn-dns.com
     port: 46340
     cipher: aes-128-gcm
     password: 61c3b62a-19cf-42fa-9a45-d275d9b75e0e
   - type: ss
     name: 美国
-    server: us01.dns-node.top
+    server: us01.plus-cdn-dns.com
     port: 45581
     cipher: aes-128-gcm
     password: 61c3b62a-19cf-42fa-9a45-d275d9b75e0e
   - type: ss
     name: 阿尔巴尼亚
-    server: de01.dns-node.top
+    server: de01.plus-cdn-dns.com
     port: 46101
     cipher: aes-128-gcm
     password: 61c3b62a-19cf-42fa-9a45-d275d9b75e0e
   - type: ss
     name: 安道尔
-    server: de01.dns-node.top
+    server: de01.plus-cdn-dns.com
     port: 46152
     cipher: aes-128-gcm
     password: 61c3b62a-19cf-42fa-9a45-d275d9b75e0e
   - type: ss
-    name: 波黑
-    server: de01.dns-node.top
-    port: 46153
-    cipher: aes-128-gcm
-    password: 61c3b62a-19cf-42fa-9a45-d275d9b75e0e
-  - type: ss
     name: 保加利亚
-    server: de01.dns-node.top
+    server: de01.plus-cdn-dns.com
     port: 46154
     cipher: aes-128-gcm
     password: 61c3b62a-19cf-42fa-9a45-d275d9b75e0e
   - type: ss
     name: 捷克
-    server: de01.dns-node.top
+    server: de01.plus-cdn-dns.com
     port: 46155
     cipher: aes-128-gcm
     password: 61c3b62a-19cf-42fa-9a45-d275d9b75e0e
   - type: ss
     name: 爱沙尼亚
-    server: de01.dns-node.top
+    server: de01.plus-cdn-dns.com
     port: 46156
     cipher: aes-128-gcm
     password: 61c3b62a-19cf-42fa-9a45-d275d9b75e0e
   - type: ss
     name: 匈牙利
-    server: de01.dns-node.top
+    server: de01.plus-cdn-dns.com
     port: 46157
     cipher: aes-128-gcm
     password: 61c3b62a-19cf-42fa-9a45-d275d9b75e0e
   - type: ss
     name: 英属泽西岛
-    server: de01.dns-node.top
+    server: de01.plus-cdn-dns.com
     port: 46158
     cipher: aes-128-gcm
     password: 61c3b62a-19cf-42fa-9a45-d275d9b75e0e
   - type: ss
     name: 奥地利
-    server: de01.dns-node.top
+    server: de01.plus-cdn-dns.com
     port: 46159
     cipher: aes-128-gcm
     password: 61c3b62a-19cf-42fa-9a45-d275d9b75e0e
   - type: ss
     name: 拉脱维亚
-    server: de01.dns-node.top
+    server: de01.plus-cdn-dns.com
     port: 46160
     cipher: aes-128-gcm
     password: 61c3b62a-19cf-42fa-9a45-d275d9b75e0e
   - type: ss
     name: 列支敦士登
-    server: de01.dns-node.top
+    server: de01.plus-cdn-dns.com
     port: 46161
     cipher: aes-128-gcm
     password: 61c3b62a-19cf-42fa-9a45-d275d9b75e0e
   - type: ss
     name: 卢森堡
-    server: de01.dns-node.top
+    server: de01.plus-cdn-dns.com
     port: 46162
     cipher: aes-128-gcm
     password: 61c3b62a-19cf-42fa-9a45-d275d9b75e0e
   - type: ss
     name: 马耳他
-    server: de01.dns-node.top
+    server: de01.plus-cdn-dns.com
     port: 46163
     cipher: aes-128-gcm
     password: 61c3b62a-19cf-42fa-9a45-d275d9b75e0e
   - type: ss
     name: 摩尔多瓦
-    server: de01.dns-node.top
+    server: de01.plus-cdn-dns.com
     port: 46164
     cipher: aes-128-gcm
     password: 61c3b62a-19cf-42fa-9a45-d275d9b75e0e
   - type: ss
     name: 摩纳哥
-    server: de01.dns-node.top
+    server: de01.plus-cdn-dns.com
     port: 46165
     cipher: aes-128-gcm
     password: 61c3b62a-19cf-42fa-9a45-d275d9b75e0e
   - type: ss
     name: 黑山
-    server: de01.dns-node.top
+    server: de01.plus-cdn-dns.com
     port: 46166
     cipher: aes-128-gcm
     password: 61c3b62a-19cf-42fa-9a45-d275d9b75e0e
   - type: ss
     name: 英国
-    server: uk01.dns-node.top
+    server: uk01.plus-cdn-dns.com
     port: 45615
     cipher: aes-128-gcm
     password: 61c3b62a-19cf-42fa-9a45-d275d9b75e0e
   - type: ss
     name: 马来西亚
-    server: sg04.dns-node.top
+    server: sg04.plus-cdn-dns.com
     port: 45610
     cipher: aes-128-gcm
     password: 61c3b62a-19cf-42fa-9a45-d275d9b75e0e
   - type: ss
     name: 印度尼西亚
-    server: sg03.dns-node.top
+    server: sg03.plus-cdn-dns.com
     port: 45608
     cipher: aes-128-gcm
     password: 61c3b62a-19cf-42fa-9a45-d275d9b75e0e
   - type: ss
     name: 新西兰
-    server: sg04.dns-node.top
+    server: sg04.plus-cdn-dns.com
     port: 45611
     cipher: aes-128-gcm
     password: 61c3b62a-19cf-42fa-9a45-d275d9b75e0e
   - type: ss
     name: 澳大利亚
-    server: sg03.dns-node.top
+    server: sg03.plus-cdn-dns.com
     port: 45607
     cipher: aes-128-gcm
     password: 61c3b62a-19cf-42fa-9a45-d275d9b75e0e
   - type: ss
     name: 巴基斯坦
-    server: sg03.dns-node.top
+    server: sg03.plus-cdn-dns.com
     port: 45800
     cipher: aes-128-gcm
     password: 61c3b62a-19cf-42fa-9a45-d275d9b75e0e
   - type: ss
     name: 南非
-    server: de01.dns-node.top
+    server: de01.plus-cdn-dns.com
     port: 46102
     cipher: aes-128-gcm
     password: 61c3b62a-19cf-42fa-9a45-d275d9b75e0e
   - type: ss
     name: 德国
-    server: eu.dns-node.top
+    server: eu.plus-cdn-dns.com
     port: 45594
     cipher: aes-128-gcm
     password: 61c3b62a-19cf-42fa-9a45-d275d9b75e0e
   - type: ss
     name: 埃及
-    server: eu.dns-node.top
+    server: eu.plus-cdn-dns.com
     port: 45595
     cipher: aes-128-gcm
     password: 61c3b62a-19cf-42fa-9a45-d275d9b75e0e
   - type: ss
     name: 西班牙
-    server: de01.dns-node.top
+    server: de01.plus-cdn-dns.com
     port: 45596
     cipher: aes-128-gcm
     password: 61c3b62a-19cf-42fa-9a45-d275d9b75e0e
   - type: ss
     name: 法国
-    server: eu.dns-node.top
+    server: eu.plus-cdn-dns.com
     port: 45597
     cipher: aes-128-gcm
     password: 61c3b62a-19cf-42fa-9a45-d275d9b75e0e
   - type: ss
     name: 印度
-    server: eu.dns-node.top
+    server: eu.plus-cdn-dns.com
     port: 45598
     cipher: aes-128-gcm
     password: 61c3b62a-19cf-42fa-9a45-d275d9b75e0e
   - type: ss
     name: 意大利
-    server: de01.dns-node.top
+    server: de01.plus-cdn-dns.com
     port: 45599
     cipher: aes-128-gcm
     password: 61c3b62a-19cf-42fa-9a45-d275d9b75e0e
   - type: ss
     name: 菲律宾
-    server: sg03.dns-node.top
+    server: sg03.plus-cdn-dns.com
     port: 45661
     cipher: aes-128-gcm
     password: 61c3b62a-19cf-42fa-9a45-d275d9b75e0e
   - type: ss
     name: 尼日利亚
-    server: eu.dns-node.top
+    server: eu.plus-cdn-dns.com
     port: 45601
     cipher: aes-128-gcm
     password: 61c3b62a-19cf-42fa-9a45-d275d9b75e0e
   - type: ss
     name: 土耳其
-    server: eu.dns-node.top
+    server: eu.plus-cdn-dns.com
     port: 45602
     cipher: aes-128-gcm
     password: 61c3b62a-19cf-42fa-9a45-d275d9b75e0e
   - type: ss
     name: 乌克兰
-    server: de01.dns-node.top
+    server: de01.plus-cdn-dns.com
     port: 45603
     cipher: aes-128-gcm
     password: 61c3b62a-19cf-42fa-9a45-d275d9b75e0e
   - type: ss
     name: 阿根廷
-    server: us03.dns-node.top
+    server: us03.plus-cdn-dns.com
     port: 45583
     cipher: aes-128-gcm
     password: 61c3b62a-19cf-42fa-9a45-d275d9b75e0e
   - type: ss
     name: 越南
-    server: sg04.dns-node.top
+    server: sg04.plus-cdn-dns.com
     port: 46115
     cipher: aes-128-gcm
     password: 61c3b62a-19cf-42fa-9a45-d275d9b75e0e
   - type: ss
     name: 巴西
-    server: us03.dns-node.top
+    server: us03.plus-cdn-dns.com
     port: 45585
     cipher: aes-128-gcm
     password: 61c3b62a-19cf-42fa-9a45-d275d9b75e0e
   - type: ss
     name: 加拿大
-    server: us03.dns-node.top
+    server: us03.plus-cdn-dns.com
     port: 45586
     cipher: aes-128-gcm
     password: 61c3b62a-19cf-42fa-9a45-d275d9b75e0e
   - type: ss
     name: 比利时
-    server: eu2.dns-node.top
+    server: eu2.plus-cdn-dns.com
     port: 46301
     cipher: aes-128-gcm
     password: 61c3b62a-19cf-42fa-9a45-d275d9b75e0e
   - type: ss
     name: 丹麦
-    server: eu2.dns-node.top
+    server: eu2.plus-cdn-dns.com
     port: 46302
     cipher: aes-128-gcm
     password: 61c3b62a-19cf-42fa-9a45-d275d9b75e0e
   - type: ss
     name: 芬兰
-    server: eu2.dns-node.top
+    server: eu2.plus-cdn-dns.com
     port: 46303
     cipher: aes-128-gcm
     password: 61c3b62a-19cf-42fa-9a45-d275d9b75e0e
   - type: ss
     name: 克罗地亚
-    server: eu2.dns-node.top
+    server: eu2.plus-cdn-dns.com
     port: 46304
     cipher: aes-128-gcm
     password: 61c3b62a-19cf-42fa-9a45-d275d9b75e0e
   - type: ss
     name: 瑞典
-    server: eu2.dns-node.top
+    server: eu2.plus-cdn-dns.com
     port: 46305
     cipher: aes-128-gcm
     password: 61c3b62a-19cf-42fa-9a45-d275d9b75e0e
   - type: ss
     name: 希腊
-    server: eu2.dns-node.top
+    server: eu2.plus-cdn-dns.com
     port: 46306
     cipher: aes-128-gcm
     password: 61c3b62a-19cf-42fa-9a45-d275d9b75e0e
   - type: ss
     name: 乌兹别克斯坦
-    server: eu2.dns-node.top
+    server: eu2.plus-cdn-dns.com
     port: 46491
     cipher: aes-128-gcm
     password: 61c3b62a-19cf-42fa-9a45-d275d9b75e0e
   - type: ss
     name: 阿尔及利亚
-    server: eu2.dns-node.top
+    server: eu2.plus-cdn-dns.com
     port: 46492
     cipher: aes-128-gcm
     password: 61c3b62a-19cf-42fa-9a45-d275d9b75e0e
   - type: ss
     name: 安哥拉
-    server: eu2.dns-node.top
+    server: eu2.plus-cdn-dns.com
     port: 46493
     cipher: aes-128-gcm
     password: 61c3b62a-19cf-42fa-9a45-d275d9b75e0e
   - type: ss
     name: 冰岛
-    server: eu2.dns-node.top
+    server: eu2.plus-cdn-dns.com
     port: 46307
     cipher: aes-128-gcm
     password: 61c3b62a-19cf-42fa-9a45-d275d9b75e0e
   - type: ss
     name: 爱尔兰
-    server: eu2.dns-node.top
+    server: eu2.plus-cdn-dns.com
     port: 46308
     cipher: aes-128-gcm
     password: 61c3b62a-19cf-42fa-9a45-d275d9b75e0e
   - type: ss
     name: 立陶宛
-    server: eu2.dns-node.top
+    server: eu2.plus-cdn-dns.com
     port: 46309
     cipher: aes-128-gcm
     password: 61c3b62a-19cf-42fa-9a45-d275d9b75e0e
   - type: ss
     name: 墨西哥
-    server: us_nord.dns-node.top
+    server: us_nord.plus-cdn-dns.com
     port: 45590
     cipher: aes-128-gcm
     password: 61c3b62a-19cf-42fa-9a45-d275d9b75e0e
   - type: ss
     name: 巴哈马
-    server: us_nord.dns-node.top
+    server: us_nord.plus-cdn-dns.com
     port: 45591
     cipher: aes-128-gcm
     password: 61c3b62a-19cf-42fa-9a45-d275d9b75e0e
   - type: ss
     name: 伯利兹
-    server: us_nord.dns-node.top
+    server: us_nord.plus-cdn-dns.com
     port: 45592
     cipher: aes-128-gcm
     password: 61c3b62a-19cf-42fa-9a45-d275d9b75e0e
   - type: ss
     name: 百慕大
-    server: us_nord.dns-node.top
+    server: us_nord.plus-cdn-dns.com
     port: 45593
     cipher: aes-128-gcm
     password: 61c3b62a-19cf-42fa-9a45-d275d9b75e0e
   - type: ss
     name: 哥斯达黎加
-    server: us_nord.dns-node.top
+    server: us_nord.plus-cdn-dns.com
     port: 46594
     cipher: aes-128-gcm
     password: 61c3b62a-19cf-42fa-9a45-d275d9b75e0e
   - type: ss
     name: 多米尼加
-    server: us_nord.dns-node.top
+    server: us_nord.plus-cdn-dns.com
     port: 46595
     cipher: aes-128-gcm
     password: 61c3b62a-19cf-42fa-9a45-d275d9b75e0e
   - type: ss
     name: 荷兰
-    server: eu3.dns-node.top
+    server: eu3.plus-cdn-dns.com
     port: 46311
     cipher: aes-128-gcm
     password: 61c3b62a-19cf-42fa-9a45-d275d9b75e0e
   - type: ss
     name: 波兰
-    server: eu3.dns-node.top
+    server: eu3.plus-cdn-dns.com
     port: 46316
     cipher: aes-128-gcm
     password: 61c3b62a-19cf-42fa-9a45-d275d9b75e0e
   - type: ss
     name: 挪威
-    server: eu3.dns-node.top
+    server: eu3.plus-cdn-dns.com
     port: 46313
     cipher: aes-128-gcm
     password: 61c3b62a-19cf-42fa-9a45-d275d9b75e0e
   - type: ss
     name: 葡萄牙
-    server: eu3.dns-node.top
+    server: eu3.plus-cdn-dns.com
     port: 46314
     cipher: aes-128-gcm
     password: 61c3b62a-19cf-42fa-9a45-d275d9b75e0e
   - type: ss
     name: 瑞士
-    server: eu3.dns-node.top
+    server: eu3.plus-cdn-dns.com
     port: 46315
     cipher: aes-128-gcm
     password: 61c3b62a-19cf-42fa-9a45-d275d9b75e0e
   - type: ss
     name: 摩洛哥
-    server: eu3.dns-node.top
+    server: eu3.plus-cdn-dns.com
     port: 46317
     cipher: aes-128-gcm
     password: 61c3b62a-19cf-42fa-9a45-d275d9b75e0e
   - type: ss
     name: 肯尼亚
-    server: eu3.dns-node.top
+    server: eu3.plus-cdn-dns.com
     port: 46318
     cipher: aes-128-gcm
     password: 61c3b62a-19cf-42fa-9a45-d275d9b75e0e
   - type: ss
     name: 开曼群岛
-    server: us04.dns-node.top
+    server: us04.plus-cdn-dns.com
     port: 46319
     cipher: aes-128-gcm
     password: 61c3b62a-19cf-42fa-9a45-d275d9b75e0e
   - type: ss
     name: 巴拿马
-    server: us04.dns-node.top
+    server: us04.plus-cdn-dns.com
     port: 46320
     cipher: aes-128-gcm
     password: 61c3b62a-19cf-42fa-9a45-d275d9b75e0e
   - type: ss
     name: 乌拉圭
-    server: us04.dns-node.top
+    server: us04.plus-cdn-dns.com
     port: 46321
     cipher: aes-128-gcm
     password: 61c3b62a-19cf-42fa-9a45-d275d9b75e0e
   - type: trojan
     name: 日本【新疆|俄罗斯专用】
-    server: sj01.zxywaq.com
+    server: sj01.plus-cdn-dns.com
     port: 21912
     password: 61c3b62a-19cf-42fa-9a45-d275d9b75e0e
     network: tcp
@@ -593,7 +587,6 @@ proxy-groups:
       - 美国
       - 阿尔巴尼亚
       - 安道尔
-      - 波黑
       - 保加利亚
       - 捷克
       - 爱沙尼亚
@@ -680,7 +673,6 @@ proxy-groups:
       - 美国
       - 阿尔巴尼亚
       - 安道尔
-      - 波黑
       - 保加利亚
       - 捷克
       - 爱沙尼亚
@@ -783,7 +775,6 @@ proxy-groups:
       - 美国
       - 阿尔巴尼亚
       - 安道尔
-      - 波黑
       - 保加利亚
       - 捷克
       - 爱沙尼亚
