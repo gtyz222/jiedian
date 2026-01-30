@@ -1,0 +1,1225 @@
+mixed-port: 7890
+allow-lan: true
+mode: rule
+log-level: info
+ipv6: false
+external-controller: 0.0.0.0:9090
+dns:
+  enable: true
+  listen: 0.0.0.0:53
+  ipv6: false
+  default-nameserver:
+    - 223.5.5.5
+    - 114.114.114.114
+  nameserver:
+    - 223.5.5.5
+    - 114.114.114.114
+    - 119.29.29.29
+    - 180.76.76.76
+  enhanced-mode: fake-ip
+  fake-ip-range: 198.18.0.1/16
+  fake-ip-filter:
+    - "*.lan"
+    - "*.localdomain"
+    - "*.example"
+    - "*.invalid"
+    - "*.localhost"
+    - "*.test"
+    - "*.local"
+    - "*.home.arpa"
+    - router.asus.com
+    - localhost.sec.qq.com
+    - localhost.ptlogin2.qq.com
+    - +.msftconnecttest.com
+tun:
+  enable: true
+  stack: system
+  auto-route: true
+  auto-detect-interface: true
+  dns-hijack:
+    - 114.114.114.114
+    - 180.76.76.76
+    - 119.29.29.29
+    - 223.5.5.5
+    - 8.8.8.8
+    - 8.8.4.4
+    - 1.1.1.1
+    - 1.0.0.1
+proxies:
+  - name: 微信：gtyz222
+    type: ss
+    server: jp01.kuaileiruko.top
+    port: 36083
+    cipher: aes-128-gcm
+    password: 4701daff-a8b4-4c44-afe3-5cee9ffcf832
+  - name: 🇭🇰 IEPL-香港4
+    type: ss
+    server: jp01.kuaileiruko.top
+    port: 36087
+    cipher: aes-128-gcm
+    password: 4701daff-a8b4-4c44-afe3-5cee9ffcf832
+  - name: 🇭🇰 直连-香港动态家宽
+    type: vmess
+    server: gm-hk0111.aiwowo.xyz
+    port: 10012
+    uuid: 4701daff-a8b4-4c44-afe3-5cee9ffcf832
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+    network: ws
+    ws-opts:
+      path: /cctv13/hd.m3u8
+      headers:
+        Host: gm-hk111.aiwowo.xyz
+  - name: 🇭🇰 IEPL-香港3
+    type: ss
+    server: jp01.kuaileiruko.top
+    port: 36082
+    cipher: aes-128-gcm
+    password: 4701daff-a8b4-4c44-afe3-5cee9ffcf832
+  - name: 🇭🇰 IEPL-香港1
+    type: ss
+    server: jp01.kuaileiruko.top
+    port: 36084
+    cipher: aes-128-gcm
+    password: 4701daff-a8b4-4c44-afe3-5cee9ffcf832
+  - name: 🇭🇰 HK | 香港04 B
+    type: ss
+    server: stb.osjrhh.com
+    port: 37104
+    cipher: aes-128-gcm
+    password: e17cd5a4-4447-40cc-8411-67481445d0d4
+  - name: 🇭🇰 HK | 香港01 B
+    type: ss
+    server: stb.osjrhh.com
+    port: 37101
+    cipher: aes-128-gcm
+    password: e17cd5a4-4447-40cc-8411-67481445d0d4
+  - name: 🇭🇰 HK | 香港02 A
+    type: ss
+    server: sh.osjrhh.com
+    port: 37102
+    cipher: aes-128-gcm
+    password: e17cd5a4-4447-40cc-8411-67481445d0d4
+  - name: 🇭🇰 HK | 香港01 A
+    type: ss
+    server: sh.osjrhh.com
+    port: 37101
+    cipher: aes-128-gcm
+    password: e17cd5a4-4447-40cc-8411-67481445d0d4
+  - name: 🇹🇼 IEPL-台湾2
+    type: ss
+    server: jp01.kuaileiruko.top
+    port: 36063
+    cipher: aes-128-gcm
+    password: 4701daff-a8b4-4c44-afe3-5cee9ffcf832
+  - name: 🇭🇰 HK | 香港02 B
+    type: ss
+    server: stb.osjrhh.com
+    port: 37102
+    cipher: aes-128-gcm
+    password: e17cd5a4-4447-40cc-8411-67481445d0d4
+  - name: 🇹🇼 IEPL-台湾1
+    type: ss
+    server: jp01.kuaileiruko.top
+    port: 36064
+    cipher: aes-128-gcm
+    password: 4701daff-a8b4-4c44-afe3-5cee9ffcf832
+  - name: 🇭🇰 HK | 香港04 A
+    type: ss
+    server: sh.osjrhh.com
+    port: 37104
+    cipher: aes-128-gcm
+    password: e17cd5a4-4447-40cc-8411-67481445d0d4
+  - name: 🇭🇰 HK | 香港03 A
+    type: ss
+    server: sh.osjrhh.com
+    port: 37057
+    cipher: aes-128-gcm
+    password: e17cd5a4-4447-40cc-8411-67481445d0d4
+  - name: 🇭🇰 HK | 香港03 B
+    type: ss
+    server: stb.osjrhh.com
+    port: 37057
+    cipher: aes-128-gcm
+    password: e17cd5a4-4447-40cc-8411-67481445d0d4
+  - name: 🇨🇳 TW | 台北02 B
+    type: ss
+    server: stb.osjrhh.com
+    port: 37112
+    cipher: aes-128-gcm
+    password: e17cd5a4-4447-40cc-8411-67481445d0d4
+  - name: 🇨🇳 TW | 台北03 B
+    type: ss
+    server: stb.osjrhh.com
+    port: 37113
+    cipher: aes-128-gcm
+    password: e17cd5a4-4447-40cc-8411-67481445d0d4
+  - name: 🇨🇳 TW | 台北01 B
+    type: ss
+    server: stb.osjrhh.com
+    port: 52181
+    cipher: aes-128-gcm
+    password: e17cd5a4-4447-40cc-8411-67481445d0d4
+  - name: 🇨🇳 TW | 台北04 B
+    type: ss
+    server: stb.osjrhh.com
+    port: 37115
+    cipher: aes-128-gcm
+    password: e17cd5a4-4447-40cc-8411-67481445d0d4
+  - name: 🇸🇬  IEPL-新加坡1
+    type: ss
+    server: jp01.kuaileiruko.top
+    port: 36076
+    cipher: aes-128-gcm
+    password: 4701daff-a8b4-4c44-afe3-5cee9ffcf832
+  - name: 🇨🇳 TW | 台北01 A
+    type: ss
+    server: sh.osjrhh.com
+    port: 52181
+    cipher: aes-128-gcm
+    password: e17cd5a4-4447-40cc-8411-67481445d0d4
+  - name: 🇸🇬  IEPL-新加坡3
+    type: ss
+    server: jp01.kuaileiruko.top
+    port: 36073
+    cipher: aes-128-gcm
+    password: 4701daff-a8b4-4c44-afe3-5cee9ffcf832
+  - name: 🇸🇬  IEPL-新加坡2
+    type: ss
+    server: jp01.kuaileiruko.top
+    port: 36075
+    cipher: aes-128-gcm
+    password: 4701daff-a8b4-4c44-afe3-5cee9ffcf832
+  - name: 🇨🇳 TW | 台北03 A
+    type: ss
+    server: sh.osjrhh.com
+    port: 37113
+    cipher: aes-128-gcm
+    password: e17cd5a4-4447-40cc-8411-67481445d0d4
+  - name: 🇨🇳 TW | 台北04 A
+    type: ss
+    server: sh.osjrhh.com
+    port: 37115
+    cipher: aes-128-gcm
+    password: e17cd5a4-4447-40cc-8411-67481445d0d4
+  - name: 🇨🇳 TW | 台北02 A
+    type: ss
+    server: sh.osjrhh.com
+    port: 37112
+    cipher: aes-128-gcm
+    password: e17cd5a4-4447-40cc-8411-67481445d0d4
+  - name: 🇯🇵  IEPL-日本1
+    type: ss
+    server: jp01.kuaileiruko.top
+    port: 36081
+    cipher: aes-128-gcm
+    password: 4701daff-a8b4-4c44-afe3-5cee9ffcf832
+  - name: 🇯🇵  IEPL-日本4
+    type: ss
+    server: jp01.kuaileiruko.top
+    port: 36078
+    cipher: aes-128-gcm
+    password: 4701daff-a8b4-4c44-afe3-5cee9ffcf832
+  - name: 🇯🇵  IEPL-日本2
+    type: ss
+    server: jp01.kuaileiruko.top
+    port: 36080
+    cipher: aes-128-gcm
+    password: 4701daff-a8b4-4c44-afe3-5cee9ffcf832
+  - name: 🇸🇬 SG | 狮城04 B
+    type: ss
+    server: stb.osjrhh.com
+    port: 37110
+    cipher: aes-128-gcm
+    password: e17cd5a4-4447-40cc-8411-67481445d0d4
+  - name: 🇯🇵  IEPL-日本3
+    type: ss
+    server: jp01.kuaileiruko.top
+    port: 36079
+    cipher: aes-128-gcm
+    password: 4701daff-a8b4-4c44-afe3-5cee9ffcf832
+  - name: 🇸🇬 SG | 狮城02 A
+    type: ss
+    server: sh.osjrhh.com
+    port: 37107
+    cipher: aes-128-gcm
+    password: e17cd5a4-4447-40cc-8411-67481445d0d4
+  - name: 🇯🇵 直连-日本
+    type: vmess
+    server: gm-jp066.aiwowo.xyz
+    port: 20062
+    uuid: 4701daff-a8b4-4c44-afe3-5cee9ffcf832
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+    network: ws
+    ws-opts:
+      path: /cctv13/hd.m3u8
+      headers:
+        Host: gm-jp06.aiwowo.xyz
+  - name: 🇸🇬 SG | 狮城02 B
+    type: ss
+    server: stb.osjrhh.com
+    port: 37107
+    cipher: aes-128-gcm
+    password: e17cd5a4-4447-40cc-8411-67481445d0d4
+  - name: 🇸🇬 SG | 狮城03 A
+    type: ss
+    server: sh.osjrhh.com
+    port: 37109
+    cipher: aes-128-gcm
+    password: e17cd5a4-4447-40cc-8411-67481445d0d4
+  - name: 🇸🇬 SG | 狮城01 A
+    type: ss
+    server: sh.osjrhh.com
+    port: 26687
+    cipher: aes-128-gcm
+    password: e17cd5a4-4447-40cc-8411-67481445d0d4
+  - name: 🇸🇬 SG | 狮城03 B
+    type: ss
+    server: stb.osjrhh.com
+    port: 37109
+    cipher: aes-128-gcm
+    password: e17cd5a4-4447-40cc-8411-67481445d0d4
+  - name: 🇸🇬 SG | 狮城01 B
+    type: ss
+    server: stb.osjrhh.com
+    port: 26687
+    cipher: aes-128-gcm
+    password: e17cd5a4-4447-40cc-8411-67481445d0d4
+  - name: 🇹🇭 IEPL-泰国
+    type: ss
+    server: jp01.kuaileiruko.top
+    port: 36061
+    cipher: aes-128-gcm
+    password: 4701daff-a8b4-4c44-afe3-5cee9ffcf832
+  - name: 🇸🇬 SG | 狮城04 A
+    type: ss
+    server: sh.osjrhh.com
+    port: 37110
+    cipher: aes-128-gcm
+    password: e17cd5a4-4447-40cc-8411-67481445d0d4
+  - name: 🇯🇵 JP | 日本04 A
+    type: ss
+    server: s.osjrhh.com
+    port: 37120
+    cipher: aes-128-gcm
+    password: e17cd5a4-4447-40cc-8411-67481445d0d4
+  - name: 🇯🇵 JP | 日本04 B
+    type: ss
+    server: sb.osjrhh.com
+    port: 37120
+    cipher: aes-128-gcm
+    password: e17cd5a4-4447-40cc-8411-67481445d0d4
+  - name: 🇯🇵 JP | 日本01 B
+    type: ss
+    server: sb.osjrhh.com
+    port: 31301
+    cipher: aes-128-gcm
+    password: e17cd5a4-4447-40cc-8411-67481445d0d4
+  - name: 🇯🇵 JP | 日本02 A
+    type: ss
+    server: s.osjrhh.com
+    port: 37118
+    cipher: aes-128-gcm
+    password: e17cd5a4-4447-40cc-8411-67481445d0d4
+  - name: 🇯🇵 JP | 日本02 B
+    type: ss
+    server: sb.osjrhh.com
+    port: 37118
+    cipher: aes-128-gcm
+    password: e17cd5a4-4447-40cc-8411-67481445d0d4
+  - name: 🇯🇵 JP | 日本01 A
+    type: ss
+    server: s.osjrhh.com
+    port: 31301
+    cipher: aes-128-gcm
+    password: e17cd5a4-4447-40cc-8411-67481445d0d4
+  - name: 🇯🇵 JP | 日本03 A
+    type: ss
+    server: s.osjrhh.com
+    port: 37119
+    cipher: aes-128-gcm
+    password: e17cd5a4-4447-40cc-8411-67481445d0d4
+  - name: 🇲🇾 IEPL-马来西亚1
+    type: ss
+    server: jp01.kuaileiruko.top
+    port: 36066
+    cipher: aes-128-gcm
+    password: 4701daff-a8b4-4c44-afe3-5cee9ffcf832
+  - name: 🇯🇵 JP | 日本03 B
+    type: ss
+    server: sb.osjrhh.com
+    port: 37119
+    cipher: aes-128-gcm
+    password: e17cd5a4-4447-40cc-8411-67481445d0d4
+  - name: 🇲🇾 IEPL-马来西亚2
+    type: ss
+    server: jp01.kuaileiruko.top
+    port: 36065
+    cipher: aes-128-gcm
+    password: 4701daff-a8b4-4c44-afe3-5cee9ffcf832
+  - name: 🇰🇷 IEPL-韩国静态家宽
+    type: ss
+    server: jp01.kuaileiruko.top
+    port: 36062
+    cipher: aes-128-gcm
+    password: 4701daff-a8b4-4c44-afe3-5cee9ffcf832
+  - name: 🇮🇩 IEPL-印度尼西亚
+    type: ss
+    server: jp01.kuaileiruko.top
+    port: 36051
+    cipher: aes-128-gcm
+    password: 4701daff-a8b4-4c44-afe3-5cee9ffcf832
+  - name: 🇻🇳 IEPL-越南
+    type: ss
+    server: jp01.kuaileiruko.top
+    port: 36052
+    cipher: aes-128-gcm
+    password: 4701daff-a8b4-4c44-afe3-5cee9ffcf832
+  - name: 🇦🇪IEPL-阿联酋
+    type: ss
+    server: jp01.kuaileiruko.top
+    port: 36055
+    cipher: aes-128-gcm
+    password: 4701daff-a8b4-4c44-afe3-5cee9ffcf832
+  - name: 🇸🇬 直连-新加坡
+    type: vmess
+    server: gm-sg06.aiwowo.xyz
+    port: 10001
+    uuid: 4701daff-a8b4-4c44-afe3-5cee9ffcf832
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+    network: ws
+    ws-opts:
+      path: /cctv13/hd.m3u8
+      headers:
+        Host: gm-sg06.aiwowo.xyz
+  - name: 🇺🇸 直连-美国
+    type: vmess
+    server: gm-us06.aiwowo.xyz
+    port: 30050
+    uuid: 4701daff-a8b4-4c44-afe3-5cee9ffcf832
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+    network: ws
+    ws-opts:
+      path: /cctv13/hd.m3u8
+      headers:
+        Host: gm-us06.aiwowo.xyz
+  - name: 🇦🇺 IEPL-澳大利亚
+    type: ss
+    server: jp01.kuaileiruko.top
+    port: 36068
+    cipher: aes-128-gcm
+    password: 4701daff-a8b4-4c44-afe3-5cee9ffcf832
+  - name: 🇺🇸 US | 美国04 B
+    type: ss
+    server: sb.osjrhh.com
+    port: 37124
+    cipher: aes-128-gcm
+    password: e17cd5a4-4447-40cc-8411-67481445d0d4
+  - name: 🇺🇸  IEPL-美国3
+    type: ss
+    server: jp01.kuaileiruko.top
+    port: 36070
+    cipher: aes-128-gcm
+    password: 4701daff-a8b4-4c44-afe3-5cee9ffcf832
+  - name: 🇺🇸 US | 美国01 B
+    type: ss
+    server: sb.osjrhh.com
+    port: 37121
+    cipher: aes-128-gcm
+    password: e17cd5a4-4447-40cc-8411-67481445d0d4
+  - name: 🇺🇸 US | 美国03 B
+    type: ss
+    server: sb.osjrhh.com
+    port: 37123
+    cipher: aes-128-gcm
+    password: e17cd5a4-4447-40cc-8411-67481445d0d4
+  - name: 🇺🇸 US | 美国02 B
+    type: ss
+    server: sb.osjrhh.com
+    port: 37122
+    cipher: aes-128-gcm
+    password: e17cd5a4-4447-40cc-8411-67481445d0d4
+  - name: 🇺🇸  IEPL-美国1
+    type: ss
+    server: jp01.kuaileiruko.top
+    port: 36072
+    cipher: aes-128-gcm
+    password: 4701daff-a8b4-4c44-afe3-5cee9ffcf832
+  - name: 🇺🇸  IEPL-美国2
+    type: ss
+    server: jp01.kuaileiruko.top
+    port: 36071
+    cipher: aes-128-gcm
+    password: 4701daff-a8b4-4c44-afe3-5cee9ffcf832
+  - name: 🇺🇸  IEPL-美国4
+    type: ss
+    server: jp01.kuaileiruko.top
+    port: 36069
+    cipher: aes-128-gcm
+    password: 4701daff-a8b4-4c44-afe3-5cee9ffcf832
+  - name: 🇺🇸 US | 美国04 A
+    type: ss
+    server: s.osjrhh.com
+    port: 37124
+    cipher: aes-128-gcm
+    password: e17cd5a4-4447-40cc-8411-67481445d0d4
+  - name: 🇺🇸 US | 美国01 A
+    type: ss
+    server: s.osjrhh.com
+    port: 37121
+    cipher: aes-128-gcm
+    password: e17cd5a4-4447-40cc-8411-67481445d0d4
+  - name: 🇺🇸 US | 美国02 A
+    type: ss
+    server: s.osjrhh.com
+    port: 37122
+    cipher: aes-128-gcm
+    password: e17cd5a4-4447-40cc-8411-67481445d0d4
+  - name: 🇳🇱 IEPL-荷兰
+    type: ss
+    server: jp01.kuaileiruko.top
+    port: 36057
+    cipher: aes-128-gcm
+    password: 4701daff-a8b4-4c44-afe3-5cee9ffcf832
+  - name: 🇩🇪 IEPL-德国
+    type: ss
+    server: jp01.kuaileiruko.top
+    port: 36060
+    cipher: aes-128-gcm
+    password: 4701daff-a8b4-4c44-afe3-5cee9ffcf832
+  - name: 🇨🇦 IEPL-加拿大
+    type: ss
+    server: jp01.kuaileiruko.top
+    port: 36050
+    cipher: aes-128-gcm
+    password: 4701daff-a8b4-4c44-afe3-5cee9ffcf832
+  - name: 🇬🇧 IEPL-英国
+    type: ss
+    server: jp01.kuaileiruko.top
+    port: 36059
+    cipher: aes-128-gcm
+    password: 4701daff-a8b4-4c44-afe3-5cee9ffcf832
+  - name: 🇨🇭 IEPL-瑞士
+    type: ss
+    server: jp01.kuaileiruko.top
+    port: 36058
+    cipher: aes-128-gcm
+    password: 4701daff-a8b4-4c44-afe3-5cee9ffcf832
+  - name: 🇪🇸 IEPL-西班牙
+    type: ss
+    server: jp01.kuaileiruko.top
+    port: 36053
+    cipher: aes-128-gcm
+    password: 4701daff-a8b4-4c44-afe3-5cee9ffcf832
+  - name: 🇮🇱 IEPL-以色列
+    type: ss
+    server: jp01.kuaileiruko.top
+    port: 36056
+    cipher: aes-128-gcm
+    password: 4701daff-a8b4-4c44-afe3-5cee9ffcf832
+  - name: 🇮🇳 IEPL-印度
+    type: ss
+    server: jp01.kuaileiruko.top
+    port: 36067
+    cipher: aes-128-gcm
+    password: 4701daff-a8b4-4c44-afe3-5cee9ffcf832
+  - name: 🇧🇷 IEPL-巴西
+    type: ss
+    server: jp01.kuaileiruko.top
+    port: 36054
+    cipher: aes-128-gcm
+    password: 4701daff-a8b4-4c44-afe3-5cee9ffcf832
+  - name: 🇺🇸 US | 美国03 A
+    type: ss
+    server: s.osjrhh.com
+    port: 37123
+    cipher: aes-128-gcm
+    password: e17cd5a4-4447-40cc-8411-67481445d0d4
+proxy-groups:
+  - name: 🚀 节点选择
+    type: select
+    proxies:
+      - ♻️ 自动选择
+      - DIRECT
+      - 微信：gtyz222
+      - 🇭🇰 IEPL-香港4
+      - 🇭🇰 直连-香港动态家宽
+      - 🇭🇰 IEPL-香港3
+      - 🇭🇰 IEPL-香港1
+      - 🇭🇰 HK | 香港04 B
+      - 🇭🇰 HK | 香港01 B
+      - 🇭🇰 HK | 香港02 A
+      - 🇭🇰 HK | 香港01 A
+      - 🇹🇼 IEPL-台湾2
+      - 🇭🇰 HK | 香港02 B
+      - 🇹🇼 IEPL-台湾1
+      - 🇭🇰 HK | 香港04 A
+      - 🇭🇰 HK | 香港03 A
+      - 🇭🇰 HK | 香港03 B
+      - 🇨🇳 TW | 台北02 B
+      - 🇨🇳 TW | 台北03 B
+      - 🇨🇳 TW | 台北01 B
+      - 🇨🇳 TW | 台北04 B
+      - 🇸🇬  IEPL-新加坡1
+      - 🇨🇳 TW | 台北01 A
+      - 🇸🇬  IEPL-新加坡3
+      - 🇸🇬  IEPL-新加坡2
+      - 🇨🇳 TW | 台北03 A
+      - 🇨🇳 TW | 台北04 A
+      - 🇨🇳 TW | 台北02 A
+      - 🇯🇵  IEPL-日本1
+      - 🇯🇵  IEPL-日本4
+      - 🇯🇵  IEPL-日本2
+      - 🇸🇬 SG | 狮城04 B
+      - 🇯🇵  IEPL-日本3
+      - 🇸🇬 SG | 狮城02 A
+      - 🇯🇵 直连-日本
+      - 🇸🇬 SG | 狮城02 B
+      - 🇸🇬 SG | 狮城03 A
+      - 🇸🇬 SG | 狮城01 A
+      - 🇸🇬 SG | 狮城03 B
+      - 🇸🇬 SG | 狮城01 B
+      - 🇹🇭 IEPL-泰国
+      - 🇸🇬 SG | 狮城04 A
+      - 🇯🇵 JP | 日本04 A
+      - 🇯🇵 JP | 日本04 B
+      - 🇯🇵 JP | 日本01 B
+      - 🇯🇵 JP | 日本02 A
+      - 🇯🇵 JP | 日本02 B
+      - 🇯🇵 JP | 日本01 A
+      - 🇯🇵 JP | 日本03 A
+      - 🇲🇾 IEPL-马来西亚1
+      - 🇯🇵 JP | 日本03 B
+      - 🇲🇾 IEPL-马来西亚2
+      - 🇰🇷 IEPL-韩国静态家宽
+      - 🇮🇩 IEPL-印度尼西亚
+      - 🇻🇳 IEPL-越南
+      - 🇦🇪IEPL-阿联酋
+      - 🇸🇬 直连-新加坡
+      - 🇺🇸 直连-美国
+      - 🇦🇺 IEPL-澳大利亚
+      - 🇺🇸 US | 美国04 B
+      - 🇺🇸  IEPL-美国3
+      - 🇺🇸 US | 美国01 B
+      - 🇺🇸 US | 美国03 B
+      - 🇺🇸 US | 美国02 B
+      - 🇺🇸  IEPL-美国1
+      - 🇺🇸  IEPL-美国2
+      - 🇺🇸  IEPL-美国4
+      - 🇺🇸 US | 美国04 A
+      - 🇺🇸 US | 美国01 A
+      - 🇺🇸 US | 美国02 A
+      - 🇳🇱 IEPL-荷兰
+      - 🇩🇪 IEPL-德国
+      - 🇨🇦 IEPL-加拿大
+      - 🇬🇧 IEPL-英国
+      - 🇨🇭 IEPL-瑞士
+      - 🇪🇸 IEPL-西班牙
+      - 🇮🇱 IEPL-以色列
+      - 🇮🇳 IEPL-印度
+      - 🇧🇷 IEPL-巴西
+      - 🇺🇸 US | 美国03 A
+  - name: ♻️ 自动选择
+    type: url-test
+    proxies:
+      - 微信：gtyz222
+      - 🇭🇰 IEPL-香港4
+      - 🇭🇰 直连-香港动态家宽
+      - 🇭🇰 IEPL-香港3
+      - 🇭🇰 IEPL-香港1
+      - 🇭🇰 HK | 香港04 B
+      - 🇭🇰 HK | 香港01 B
+      - 🇭🇰 HK | 香港02 A
+      - 🇭🇰 HK | 香港01 A
+      - 🇹🇼 IEPL-台湾2
+      - 🇭🇰 HK | 香港02 B
+      - 🇹🇼 IEPL-台湾1
+      - 🇭🇰 HK | 香港04 A
+      - 🇭🇰 HK | 香港03 A
+      - 🇭🇰 HK | 香港03 B
+      - 🇨🇳 TW | 台北02 B
+      - 🇨🇳 TW | 台北03 B
+      - 🇨🇳 TW | 台北01 B
+      - 🇨🇳 TW | 台北04 B
+      - 🇸🇬  IEPL-新加坡1
+      - 🇨🇳 TW | 台北01 A
+      - 🇸🇬  IEPL-新加坡3
+      - 🇸🇬  IEPL-新加坡2
+      - 🇨🇳 TW | 台北03 A
+      - 🇨🇳 TW | 台北04 A
+      - 🇨🇳 TW | 台北02 A
+      - 🇯🇵  IEPL-日本1
+      - 🇯🇵  IEPL-日本4
+      - 🇯🇵  IEPL-日本2
+      - 🇸🇬 SG | 狮城04 B
+      - 🇯🇵  IEPL-日本3
+      - 🇸🇬 SG | 狮城02 A
+      - 🇯🇵 直连-日本
+      - 🇸🇬 SG | 狮城02 B
+      - 🇸🇬 SG | 狮城03 A
+      - 🇸🇬 SG | 狮城01 A
+      - 🇸🇬 SG | 狮城03 B
+      - 🇸🇬 SG | 狮城01 B
+      - 🇹🇭 IEPL-泰国
+      - 🇸🇬 SG | 狮城04 A
+      - 🇯🇵 JP | 日本04 A
+      - 🇯🇵 JP | 日本04 B
+      - 🇯🇵 JP | 日本01 B
+      - 🇯🇵 JP | 日本02 A
+      - 🇯🇵 JP | 日本02 B
+      - 🇯🇵 JP | 日本01 A
+      - 🇯🇵 JP | 日本03 A
+      - 🇲🇾 IEPL-马来西亚1
+      - 🇯🇵 JP | 日本03 B
+      - 🇲🇾 IEPL-马来西亚2
+      - 🇰🇷 IEPL-韩国静态家宽
+      - 🇮🇩 IEPL-印度尼西亚
+      - 🇻🇳 IEPL-越南
+      - 🇦🇪IEPL-阿联酋
+      - 🇸🇬 直连-新加坡
+      - 🇺🇸 直连-美国
+      - 🇦🇺 IEPL-澳大利亚
+      - 🇺🇸 US | 美国04 B
+      - 🇺🇸  IEPL-美国3
+      - 🇺🇸 US | 美国01 B
+      - 🇺🇸 US | 美国03 B
+      - 🇺🇸 US | 美国02 B
+      - 🇺🇸  IEPL-美国1
+      - 🇺🇸  IEPL-美国2
+      - 🇺🇸  IEPL-美国4
+      - 🇺🇸 US | 美国04 A
+      - 🇺🇸 US | 美国01 A
+      - 🇺🇸 US | 美国02 A
+      - 🇳🇱 IEPL-荷兰
+      - 🇩🇪 IEPL-德国
+      - 🇨🇦 IEPL-加拿大
+      - 🇬🇧 IEPL-英国
+      - 🇨🇭 IEPL-瑞士
+      - 🇪🇸 IEPL-西班牙
+      - 🇮🇱 IEPL-以色列
+      - 🇮🇳 IEPL-印度
+      - 🇧🇷 IEPL-巴西
+      - 🇺🇸 US | 美国03 A
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    tolerance: 50
+  - name: 🌍 国外媒体
+    type: select
+    proxies:
+      - 🚀 节点选择
+      - ♻️ 自动选择
+      - 🎯 全球直连
+      - 微信：gtyz222
+      - 🇭🇰 IEPL-香港4
+      - 🇭🇰 直连-香港动态家宽
+      - 🇭🇰 IEPL-香港3
+      - 🇭🇰 IEPL-香港1
+      - 🇭🇰 HK | 香港04 B
+      - 🇭🇰 HK | 香港01 B
+      - 🇭🇰 HK | 香港02 A
+      - 🇭🇰 HK | 香港01 A
+      - 🇹🇼 IEPL-台湾2
+      - 🇭🇰 HK | 香港02 B
+      - 🇹🇼 IEPL-台湾1
+      - 🇭🇰 HK | 香港04 A
+      - 🇭🇰 HK | 香港03 A
+      - 🇭🇰 HK | 香港03 B
+      - 🇨🇳 TW | 台北02 B
+      - 🇨🇳 TW | 台北03 B
+      - 🇨🇳 TW | 台北01 B
+      - 🇨🇳 TW | 台北04 B
+      - 🇸🇬  IEPL-新加坡1
+      - 🇨🇳 TW | 台北01 A
+      - 🇸🇬  IEPL-新加坡3
+      - 🇸🇬  IEPL-新加坡2
+      - 🇨🇳 TW | 台北03 A
+      - 🇨🇳 TW | 台北04 A
+      - 🇨🇳 TW | 台北02 A
+      - 🇯🇵  IEPL-日本1
+      - 🇯🇵  IEPL-日本4
+      - 🇯🇵  IEPL-日本2
+      - 🇸🇬 SG | 狮城04 B
+      - 🇯🇵  IEPL-日本3
+      - 🇸🇬 SG | 狮城02 A
+      - 🇯🇵 直连-日本
+      - 🇸🇬 SG | 狮城02 B
+      - 🇸🇬 SG | 狮城03 A
+      - 🇸🇬 SG | 狮城01 A
+      - 🇸🇬 SG | 狮城03 B
+      - 🇸🇬 SG | 狮城01 B
+      - 🇹🇭 IEPL-泰国
+      - 🇸🇬 SG | 狮城04 A
+      - 🇯🇵 JP | 日本04 A
+      - 🇯🇵 JP | 日本04 B
+      - 🇯🇵 JP | 日本01 B
+      - 🇯🇵 JP | 日本02 A
+      - 🇯🇵 JP | 日本02 B
+      - 🇯🇵 JP | 日本01 A
+      - 🇯🇵 JP | 日本03 A
+      - 🇲🇾 IEPL-马来西亚1
+      - 🇯🇵 JP | 日本03 B
+      - 🇲🇾 IEPL-马来西亚2
+      - 🇰🇷 IEPL-韩国静态家宽
+      - 🇮🇩 IEPL-印度尼西亚
+      - 🇻🇳 IEPL-越南
+      - 🇦🇪IEPL-阿联酋
+      - 🇸🇬 直连-新加坡
+      - 🇺🇸 直连-美国
+      - 🇦🇺 IEPL-澳大利亚
+      - 🇺🇸 US | 美国04 B
+      - 🇺🇸  IEPL-美国3
+      - 🇺🇸 US | 美国01 B
+      - 🇺🇸 US | 美国03 B
+      - 🇺🇸 US | 美国02 B
+      - 🇺🇸  IEPL-美国1
+      - 🇺🇸  IEPL-美国2
+      - 🇺🇸  IEPL-美国4
+      - 🇺🇸 US | 美国04 A
+      - 🇺🇸 US | 美国01 A
+      - 🇺🇸 US | 美国02 A
+      - 🇳🇱 IEPL-荷兰
+      - 🇩🇪 IEPL-德国
+      - 🇨🇦 IEPL-加拿大
+      - 🇬🇧 IEPL-英国
+      - 🇨🇭 IEPL-瑞士
+      - 🇪🇸 IEPL-西班牙
+      - 🇮🇱 IEPL-以色列
+      - 🇮🇳 IEPL-印度
+      - 🇧🇷 IEPL-巴西
+      - 🇺🇸 US | 美国03 A
+  - name: 📲 电报信息
+    type: select
+    proxies:
+      - 🚀 节点选择
+      - 🎯 全球直连
+      - 微信：gtyz222
+      - 🇭🇰 IEPL-香港4
+      - 🇭🇰 直连-香港动态家宽
+      - 🇭🇰 IEPL-香港3
+      - 🇭🇰 IEPL-香港1
+      - 🇭🇰 HK | 香港04 B
+      - 🇭🇰 HK | 香港01 B
+      - 🇭🇰 HK | 香港02 A
+      - 🇭🇰 HK | 香港01 A
+      - 🇹🇼 IEPL-台湾2
+      - 🇭🇰 HK | 香港02 B
+      - 🇹🇼 IEPL-台湾1
+      - 🇭🇰 HK | 香港04 A
+      - 🇭🇰 HK | 香港03 A
+      - 🇭🇰 HK | 香港03 B
+      - 🇨🇳 TW | 台北02 B
+      - 🇨🇳 TW | 台北03 B
+      - 🇨🇳 TW | 台北01 B
+      - 🇨🇳 TW | 台北04 B
+      - 🇸🇬  IEPL-新加坡1
+      - 🇨🇳 TW | 台北01 A
+      - 🇸🇬  IEPL-新加坡3
+      - 🇸🇬  IEPL-新加坡2
+      - 🇨🇳 TW | 台北03 A
+      - 🇨🇳 TW | 台北04 A
+      - 🇨🇳 TW | 台北02 A
+      - 🇯🇵  IEPL-日本1
+      - 🇯🇵  IEPL-日本4
+      - 🇯🇵  IEPL-日本2
+      - 🇸🇬 SG | 狮城04 B
+      - 🇯🇵  IEPL-日本3
+      - 🇸🇬 SG | 狮城02 A
+      - 🇯🇵 直连-日本
+      - 🇸🇬 SG | 狮城02 B
+      - 🇸🇬 SG | 狮城03 A
+      - 🇸🇬 SG | 狮城01 A
+      - 🇸🇬 SG | 狮城03 B
+      - 🇸🇬 SG | 狮城01 B
+      - 🇹🇭 IEPL-泰国
+      - 🇸🇬 SG | 狮城04 A
+      - 🇯🇵 JP | 日本04 A
+      - 🇯🇵 JP | 日本04 B
+      - 🇯🇵 JP | 日本01 B
+      - 🇯🇵 JP | 日本02 A
+      - 🇯🇵 JP | 日本02 B
+      - 🇯🇵 JP | 日本01 A
+      - 🇯🇵 JP | 日本03 A
+      - 🇲🇾 IEPL-马来西亚1
+      - 🇯🇵 JP | 日本03 B
+      - 🇲🇾 IEPL-马来西亚2
+      - 🇰🇷 IEPL-韩国静态家宽
+      - 🇮🇩 IEPL-印度尼西亚
+      - 🇻🇳 IEPL-越南
+      - 🇦🇪IEPL-阿联酋
+      - 🇸🇬 直连-新加坡
+      - 🇺🇸 直连-美国
+      - 🇦🇺 IEPL-澳大利亚
+      - 🇺🇸 US | 美国04 B
+      - 🇺🇸  IEPL-美国3
+      - 🇺🇸 US | 美国01 B
+      - 🇺🇸 US | 美国03 B
+      - 🇺🇸 US | 美国02 B
+      - 🇺🇸  IEPL-美国1
+      - 🇺🇸  IEPL-美国2
+      - 🇺🇸  IEPL-美国4
+      - 🇺🇸 US | 美国04 A
+      - 🇺🇸 US | 美国01 A
+      - 🇺🇸 US | 美国02 A
+      - 🇳🇱 IEPL-荷兰
+      - 🇩🇪 IEPL-德国
+      - 🇨🇦 IEPL-加拿大
+      - 🇬🇧 IEPL-英国
+      - 🇨🇭 IEPL-瑞士
+      - 🇪🇸 IEPL-西班牙
+      - 🇮🇱 IEPL-以色列
+      - 🇮🇳 IEPL-印度
+      - 🇧🇷 IEPL-巴西
+      - 🇺🇸 US | 美国03 A
+  - name: Ⓜ️ 微软服务
+    type: select
+    proxies:
+      - 🎯 全球直连
+      - 🚀 节点选择
+      - 微信：gtyz222
+      - 🇭🇰 IEPL-香港4
+      - 🇭🇰 直连-香港动态家宽
+      - 🇭🇰 IEPL-香港3
+      - 🇭🇰 IEPL-香港1
+      - 🇭🇰 HK | 香港04 B
+      - 🇭🇰 HK | 香港01 B
+      - 🇭🇰 HK | 香港02 A
+      - 🇭🇰 HK | 香港01 A
+      - 🇹🇼 IEPL-台湾2
+      - 🇭🇰 HK | 香港02 B
+      - 🇹🇼 IEPL-台湾1
+      - 🇭🇰 HK | 香港04 A
+      - 🇭🇰 HK | 香港03 A
+      - 🇭🇰 HK | 香港03 B
+      - 🇨🇳 TW | 台北02 B
+      - 🇨🇳 TW | 台北03 B
+      - 🇨🇳 TW | 台北01 B
+      - 🇨🇳 TW | 台北04 B
+      - 🇸🇬  IEPL-新加坡1
+      - 🇨🇳 TW | 台北01 A
+      - 🇸🇬  IEPL-新加坡3
+      - 🇸🇬  IEPL-新加坡2
+      - 🇨🇳 TW | 台北03 A
+      - 🇨🇳 TW | 台北04 A
+      - 🇨🇳 TW | 台北02 A
+      - 🇯🇵  IEPL-日本1
+      - 🇯🇵  IEPL-日本4
+      - 🇯🇵  IEPL-日本2
+      - 🇸🇬 SG | 狮城04 B
+      - 🇯🇵  IEPL-日本3
+      - 🇸🇬 SG | 狮城02 A
+      - 🇯🇵 直连-日本
+      - 🇸🇬 SG | 狮城02 B
+      - 🇸🇬 SG | 狮城03 A
+      - 🇸🇬 SG | 狮城01 A
+      - 🇸🇬 SG | 狮城03 B
+      - 🇸🇬 SG | 狮城01 B
+      - 🇹🇭 IEPL-泰国
+      - 🇸🇬 SG | 狮城04 A
+      - 🇯🇵 JP | 日本04 A
+      - 🇯🇵 JP | 日本04 B
+      - 🇯🇵 JP | 日本01 B
+      - 🇯🇵 JP | 日本02 A
+      - 🇯🇵 JP | 日本02 B
+      - 🇯🇵 JP | 日本01 A
+      - 🇯🇵 JP | 日本03 A
+      - 🇲🇾 IEPL-马来西亚1
+      - 🇯🇵 JP | 日本03 B
+      - 🇲🇾 IEPL-马来西亚2
+      - 🇰🇷 IEPL-韩国静态家宽
+      - 🇮🇩 IEPL-印度尼西亚
+      - 🇻🇳 IEPL-越南
+      - 🇦🇪IEPL-阿联酋
+      - 🇸🇬 直连-新加坡
+      - 🇺🇸 直连-美国
+      - 🇦🇺 IEPL-澳大利亚
+      - 🇺🇸 US | 美国04 B
+      - 🇺🇸  IEPL-美国3
+      - 🇺🇸 US | 美国01 B
+      - 🇺🇸 US | 美国03 B
+      - 🇺🇸 US | 美国02 B
+      - 🇺🇸  IEPL-美国1
+      - 🇺🇸  IEPL-美国2
+      - 🇺🇸  IEPL-美国4
+      - 🇺🇸 US | 美国04 A
+      - 🇺🇸 US | 美国01 A
+      - 🇺🇸 US | 美国02 A
+      - 🇳🇱 IEPL-荷兰
+      - 🇩🇪 IEPL-德国
+      - 🇨🇦 IEPL-加拿大
+      - 🇬🇧 IEPL-英国
+      - 🇨🇭 IEPL-瑞士
+      - 🇪🇸 IEPL-西班牙
+      - 🇮🇱 IEPL-以色列
+      - 🇮🇳 IEPL-印度
+      - 🇧🇷 IEPL-巴西
+      - 🇺🇸 US | 美国03 A
+  - name: 🍎 苹果服务
+    type: select
+    proxies:
+      - 🚀 节点选择
+      - 🎯 全球直连
+      - 微信：gtyz222
+      - 🇭🇰 IEPL-香港4
+      - 🇭🇰 直连-香港动态家宽
+      - 🇭🇰 IEPL-香港3
+      - 🇭🇰 IEPL-香港1
+      - 🇭🇰 HK | 香港04 B
+      - 🇭🇰 HK | 香港01 B
+      - 🇭🇰 HK | 香港02 A
+      - 🇭🇰 HK | 香港01 A
+      - 🇹🇼 IEPL-台湾2
+      - 🇭🇰 HK | 香港02 B
+      - 🇹🇼 IEPL-台湾1
+      - 🇭🇰 HK | 香港04 A
+      - 🇭🇰 HK | 香港03 A
+      - 🇭🇰 HK | 香港03 B
+      - 🇨🇳 TW | 台北02 B
+      - 🇨🇳 TW | 台北03 B
+      - 🇨🇳 TW | 台北01 B
+      - 🇨🇳 TW | 台北04 B
+      - 🇸🇬  IEPL-新加坡1
+      - 🇨🇳 TW | 台北01 A
+      - 🇸🇬  IEPL-新加坡3
+      - 🇸🇬  IEPL-新加坡2
+      - 🇨🇳 TW | 台北03 A
+      - 🇨🇳 TW | 台北04 A
+      - 🇨🇳 TW | 台北02 A
+      - 🇯🇵  IEPL-日本1
+      - 🇯🇵  IEPL-日本4
+      - 🇯🇵  IEPL-日本2
+      - 🇸🇬 SG | 狮城04 B
+      - 🇯🇵  IEPL-日本3
+      - 🇸🇬 SG | 狮城02 A
+      - 🇯🇵 直连-日本
+      - 🇸🇬 SG | 狮城02 B
+      - 🇸🇬 SG | 狮城03 A
+      - 🇸🇬 SG | 狮城01 A
+      - 🇸🇬 SG | 狮城03 B
+      - 🇸🇬 SG | 狮城01 B
+      - 🇹🇭 IEPL-泰国
+      - 🇸🇬 SG | 狮城04 A
+      - 🇯🇵 JP | 日本04 A
+      - 🇯🇵 JP | 日本04 B
+      - 🇯🇵 JP | 日本01 B
+      - 🇯🇵 JP | 日本02 A
+      - 🇯🇵 JP | 日本02 B
+      - 🇯🇵 JP | 日本01 A
+      - 🇯🇵 JP | 日本03 A
+      - 🇲🇾 IEPL-马来西亚1
+      - 🇯🇵 JP | 日本03 B
+      - 🇲🇾 IEPL-马来西亚2
+      - 🇰🇷 IEPL-韩国静态家宽
+      - 🇮🇩 IEPL-印度尼西亚
+      - 🇻🇳 IEPL-越南
+      - 🇦🇪IEPL-阿联酋
+      - 🇸🇬 直连-新加坡
+      - 🇺🇸 直连-美国
+      - 🇦🇺 IEPL-澳大利亚
+      - 🇺🇸 US | 美国04 B
+      - 🇺🇸  IEPL-美国3
+      - 🇺🇸 US | 美国01 B
+      - 🇺🇸 US | 美国03 B
+      - 🇺🇸 US | 美国02 B
+      - 🇺🇸  IEPL-美国1
+      - 🇺🇸  IEPL-美国2
+      - 🇺🇸  IEPL-美国4
+      - 🇺🇸 US | 美国04 A
+      - 🇺🇸 US | 美国01 A
+      - 🇺🇸 US | 美国02 A
+      - 🇳🇱 IEPL-荷兰
+      - 🇩🇪 IEPL-德国
+      - 🇨🇦 IEPL-加拿大
+      - 🇬🇧 IEPL-英国
+      - 🇨🇭 IEPL-瑞士
+      - 🇪🇸 IEPL-西班牙
+      - 🇮🇱 IEPL-以色列
+      - 🇮🇳 IEPL-印度
+      - 🇧🇷 IEPL-巴西
+      - 🇺🇸 US | 美国03 A
+  - name: 🎯 全球直连
+    type: select
+    proxies:
+      - DIRECT
+      - 🚀 节点选择
+      - ♻️ 自动选择
+  - name: 🛑 全球拦截
+    type: select
+    proxies:
+      - REJECT
+      - DIRECT
+  - name: 🍃 应用净化
+    type: select
+    proxies:
+      - REJECT
+      - DIRECT
+  - name: 🐟 漏网之鱼
+    type: select
+    proxies:
+      - 🚀 节点选择
+      - 🎯 全球直连
+      - ♻️ 自动选择
+      - 微信：gtyz222
+      - 🇭🇰 IEPL-香港4
+      - 🇭🇰 直连-香港动态家宽
+      - 🇭🇰 IEPL-香港3
+      - 🇭🇰 IEPL-香港1
+      - 🇭🇰 HK | 香港04 B
+      - 🇭🇰 HK | 香港01 B
+      - 🇭🇰 HK | 香港02 A
+      - 🇭🇰 HK | 香港01 A
+      - 🇹🇼 IEPL-台湾2
+      - 🇭🇰 HK | 香港02 B
+      - 🇹🇼 IEPL-台湾1
+      - 🇭🇰 HK | 香港04 A
+      - 🇭🇰 HK | 香港03 A
+      - 🇭🇰 HK | 香港03 B
+      - 🇨🇳 TW | 台北02 B
+      - 🇨🇳 TW | 台北03 B
+      - 🇨🇳 TW | 台北01 B
+      - 🇨🇳 TW | 台北04 B
+      - 🇸🇬  IEPL-新加坡1
+      - 🇨🇳 TW | 台北01 A
+      - 🇸🇬  IEPL-新加坡3
+      - 🇸🇬  IEPL-新加坡2
+      - 🇨🇳 TW | 台北03 A
+      - 🇨🇳 TW | 台北04 A
+      - 🇨🇳 TW | 台北02 A
+      - 🇯🇵  IEPL-日本1
+      - 🇯🇵  IEPL-日本4
+      - 🇯🇵  IEPL-日本2
+      - 🇸🇬 SG | 狮城04 B
+      - 🇯🇵  IEPL-日本3
+      - 🇸🇬 SG | 狮城02 A
+      - 🇯🇵 直连-日本
+      - 🇸🇬 SG | 狮城02 B
+      - 🇸🇬 SG | 狮城03 A
+      - 🇸🇬 SG | 狮城01 A
+      - 🇸🇬 SG | 狮城03 B
+      - 🇸🇬 SG | 狮城01 B
+      - 🇹🇭 IEPL-泰国
+      - 🇸🇬 SG | 狮城04 A
+      - 🇯🇵 JP | 日本04 A
+      - 🇯🇵 JP | 日本04 B
+      - 🇯🇵 JP | 日本01 B
+      - 🇯🇵 JP | 日本02 A
+      - 🇯🇵 JP | 日本02 B
+      - 🇯🇵 JP | 日本01 A
+      - 🇯🇵 JP | 日本03 A
+      - 🇲🇾 IEPL-马来西亚1
+      - 🇯🇵 JP | 日本03 B
+      - 🇲🇾 IEPL-马来西亚2
+      - 🇰🇷 IEPL-韩国静态家宽
+      - 🇮🇩 IEPL-印度尼西亚
+      - 🇻🇳 IEPL-越南
+      - 🇦🇪IEPL-阿联酋
+      - 🇸🇬 直连-新加坡
+      - 🇺🇸 直连-美国
+      - 🇦🇺 IEPL-澳大利亚
+      - 🇺🇸 US | 美国04 B
+      - 🇺🇸  IEPL-美国3
+      - 🇺🇸 US | 美国01 B
+      - 🇺🇸 US | 美国03 B
+      - 🇺🇸 US | 美国02 B
+      - 🇺🇸  IEPL-美国1
+      - 🇺🇸  IEPL-美国2
+      - 🇺🇸  IEPL-美国4
+      - 🇺🇸 US | 美国04 A
+      - 🇺🇸 US | 美国01 A
+      - 🇺🇸 US | 美国02 A
+      - 🇳🇱 IEPL-荷兰
+      - 🇩🇪 IEPL-德国
+      - 🇨🇦 IEPL-加拿大
+      - 🇬🇧 IEPL-英国
+      - 🇨🇭 IEPL-瑞士
+      - 🇪🇸 IEPL-西班牙
+      - 🇮🇱 IEPL-以色列
+      - 🇮🇳 IEPL-印度
+      - 🇧🇷 IEPL-巴西
+      - 🇺🇸 US | 美国03 A
+rule-providers:
+  LocalAreaNetwork:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/LocalAreaNetwork.list
+    path: ./rules/LocalAreaNetwork.yaml
+  BanAD:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/BanAD.list
+    path: ./rules/BanAD.yaml
+  BanProgramAD:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/BanProgramAD.list
+    path: ./rules/BanProgramAD.yaml
+  GoogleCN:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/GoogleCN.list
+    path: ./rules/GoogleCN.yaml
+  SteamCN:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/Ruleset/SteamCN.list
+    path: ./rules/SteamCN.yaml
+  Microsoft:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/Microsoft.list
+    path: ./rules/Microsoft.yaml
+  Apple:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/Apple.list
+    path: ./rules/Apple.yaml
+  ProxyMedia:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/ProxyMedia.list
+    path: ./rules/ProxyMedia.yaml
+  Telegram:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/Telegram.list
+    path: ./rules/Telegram.yaml
+  ProxyLite:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/ProxyLite.list
+    path: ./rules/ProxyLite.yaml
+  ChinaDomain:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/ChinaDomain.list
+    path: ./rules/ChinaDomain.yaml
+  ChinaCompanyIp:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/ChinaCompanyIp.list
+    path: ./rules/ChinaCompanyIp.yaml
+rules:
+  - RULE-SET,LocalAreaNetwork,🎯 全球直连
+  - RULE-SET,BanAD,🛑 全球拦截
+  - RULE-SET,BanProgramAD,🍃 应用净化
+  - RULE-SET,GoogleCN,🎯 全球直连
+  - RULE-SET,SteamCN,🎯 全球直连
+  - RULE-SET,Microsoft,Ⓜ️ 微软服务
+  - RULE-SET,Apple,🍎 苹果服务
+  - RULE-SET,ProxyMedia,🌍 国外媒体
+  - RULE-SET,Telegram,📲 电报信息
+  - RULE-SET,ProxyLite,🚀 节点选择
+  - RULE-SET,ChinaDomain,🎯 全球直连
+  - RULE-SET,ChinaCompanyIp,🎯 全球直连
+  - GEOIP,CN,🎯 全球直连
+  - MATCH,🐟 漏网之鱼
