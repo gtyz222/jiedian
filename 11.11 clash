@@ -1,18 +1,8 @@
-# ;不要随意改变关键字，否则会导致出错
-# ;acl4SSR规则
-# ;去广告：支持
-# ;自动测速：支持
-# ;微软分流：不支持
-# ;苹果分流：不支持
-# ;增强中国IP段：不支持
-# ;增强国外GFW：不支持
-# ;ruleset=🎯 全球直连,[]GEOIP,LAN
-
 mixed-port: 7890
-allow-lan: false
+allow-lan: true
 mode: rule
-ipv6: false
 log-level: info
+ipv6: false
 external-controller: 0.0.0.0:9090
 dns:
   enable: true
@@ -55,512 +45,682 @@ tun:
     - 8.8.4.4
     - 1.1.1.1
     - 1.0.0.1
-
-
 proxies:
-  - type: ss
-    name: 微信：gtyz222
-    server: hkg01.plus-cdn-dns.com
-    port: 45573
-    cipher: aes-128-gcm
-    password: 61c3b62a-19cf-42fa-9a45-d275d9b75e0e
-  - type: trojan
-    name: 应急专用(JP)
-    server: jppro01.plus-cdn-dns.com
-    port: 29913
-    password: 61c3b62a-19cf-42fa-9a45-d275d9b75e0e
-    network: tcp
-    sni: jppro01.tmdns-sing.top
-    skip-cert-verify: true
-    tls: true
-  - type: ss
-    name: 香港
-    server: hkg01.plus-cdn-dns.com
-    port: 45573
-    cipher: aes-128-gcm
-    password: 61c3b62a-19cf-42fa-9a45-d275d9b75e0e
-  - type: ss
-    name: 台湾
-    server: tw01.plus-cdn-dns.com
-    port: 45571
-    cipher: aes-128-gcm
-    password: 61c3b62a-19cf-42fa-9a45-d275d9b75e0e
-  - type: ss
-    name: 日本
-    server: jp01.plus-cdn-dns.com
-    port: 45612
-    cipher: aes-128-gcm
-    password: 61c3b62a-19cf-42fa-9a45-d275d9b75e0e
-  - type: ss
-    name: 韩国
-    server: jp01.plus-cdn-dns.com
-    port: 45572
-    cipher: aes-128-gcm
-    password: 61c3b62a-19cf-42fa-9a45-d275d9b75e0e
-  - type: ss
-    name: 新加坡
-    server: sg04.plus-cdn-dns.com
-    port: 45609
-    cipher: aes-128-gcm
-    password: 61c3b62a-19cf-42fa-9a45-d275d9b75e0e
-  - type: ss
-    name: 泰国
-    server: sg04.plus-cdn-dns.com
-    port: 45621
-    cipher: aes-128-gcm
-    password: 61c3b62a-19cf-42fa-9a45-d275d9b75e0e
-  - type: ss
-    name: 老挝
-    server: sg04.plus-cdn-dns.com
-    port: 45622
-    cipher: aes-128-gcm
-    password: 61c3b62a-19cf-42fa-9a45-d275d9b75e0e
-  - type: ss
-    name: 尼泊尔
-    server: sg04.plus-cdn-dns.com
-    port: 45623
-    cipher: aes-128-gcm
-    password: 61c3b62a-19cf-42fa-9a45-d275d9b75e0e
-  - type: ss
-    name: 斯里兰卡
-    server: sg04.plus-cdn-dns.com
-    port: 45624
-    cipher: aes-128-gcm
-    password: 61c3b62a-19cf-42fa-9a45-d275d9b75e0e
-  - type: ss
-    name: 缅甸
-    server: sg03.plus-cdn-dns.com
-    port: 46333
-    cipher: aes-128-gcm
-    password: 61c3b62a-19cf-42fa-9a45-d275d9b75e0e
-  - type: ss
-    name: 蒙古
-    server: sg03.plus-cdn-dns.com
-    port: 46334
-    cipher: aes-128-gcm
-    password: 61c3b62a-19cf-42fa-9a45-d275d9b75e0e
-  - type: ss
-    name: 柬埔寨
-    server: sg03.plus-cdn-dns.com
-    port: 46335
-    cipher: aes-128-gcm
-    password: 61c3b62a-19cf-42fa-9a45-d275d9b75e0e
-  - type: ss
-    name: 孟加拉国
-    server: sg04.plus-cdn-dns.com
-    port: 46338
-    cipher: aes-128-gcm
-    password: 61c3b62a-19cf-42fa-9a45-d275d9b75e0e
-  - type: ss
-    name: 哈萨克斯坦
-    server: sg04.plus-cdn-dns.com
-    port: 46339
-    cipher: aes-128-gcm
-    password: 61c3b62a-19cf-42fa-9a45-d275d9b75e0e
-  - type: ss
-    name: 阿联酋
-    server: sg04.plus-cdn-dns.com
-    port: 46340
-    cipher: aes-128-gcm
-    password: 61c3b62a-19cf-42fa-9a45-d275d9b75e0e
-  - type: ss
-    name: 美国
-    server: us01.plus-cdn-dns.com
-    port: 45581
-    cipher: aes-128-gcm
-    password: 61c3b62a-19cf-42fa-9a45-d275d9b75e0e
-  - type: ss
-    name: 阿尔巴尼亚
-    server: de01.plus-cdn-dns.com
-    port: 46101
-    cipher: aes-128-gcm
-    password: 61c3b62a-19cf-42fa-9a45-d275d9b75e0e
-  - type: ss
-    name: 安道尔
-    server: de01.plus-cdn-dns.com
-    port: 46152
-    cipher: aes-128-gcm
-    password: 61c3b62a-19cf-42fa-9a45-d275d9b75e0e
-  - type: ss
-    name: 保加利亚
-    server: de01.plus-cdn-dns.com
-    port: 46154
-    cipher: aes-128-gcm
-    password: 61c3b62a-19cf-42fa-9a45-d275d9b75e0e
-  - type: ss
-    name: 捷克
-    server: de01.plus-cdn-dns.com
-    port: 46155
-    cipher: aes-128-gcm
-    password: 61c3b62a-19cf-42fa-9a45-d275d9b75e0e
-  - type: ss
-    name: 爱沙尼亚
-    server: de01.plus-cdn-dns.com
-    port: 46156
-    cipher: aes-128-gcm
-    password: 61c3b62a-19cf-42fa-9a45-d275d9b75e0e
-  - type: ss
-    name: 匈牙利
-    server: de01.plus-cdn-dns.com
-    port: 46157
-    cipher: aes-128-gcm
-    password: 61c3b62a-19cf-42fa-9a45-d275d9b75e0e
-  - type: ss
-    name: 英属泽西岛
-    server: de01.plus-cdn-dns.com
-    port: 46158
-    cipher: aes-128-gcm
-    password: 61c3b62a-19cf-42fa-9a45-d275d9b75e0e
-  - type: ss
-    name: 奥地利
-    server: de01.plus-cdn-dns.com
-    port: 46159
-    cipher: aes-128-gcm
-    password: 61c3b62a-19cf-42fa-9a45-d275d9b75e0e
-  - type: ss
-    name: 拉脱维亚
-    server: de01.plus-cdn-dns.com
-    port: 46160
-    cipher: aes-128-gcm
-    password: 61c3b62a-19cf-42fa-9a45-d275d9b75e0e
-  - type: ss
-    name: 列支敦士登
-    server: de01.plus-cdn-dns.com
-    port: 46161
-    cipher: aes-128-gcm
-    password: 61c3b62a-19cf-42fa-9a45-d275d9b75e0e
-  - type: ss
-    name: 卢森堡
-    server: de01.plus-cdn-dns.com
-    port: 46162
-    cipher: aes-128-gcm
-    password: 61c3b62a-19cf-42fa-9a45-d275d9b75e0e
-  - type: ss
-    name: 马耳他
-    server: de01.plus-cdn-dns.com
-    port: 46163
-    cipher: aes-128-gcm
-    password: 61c3b62a-19cf-42fa-9a45-d275d9b75e0e
-  - type: ss
-    name: 摩尔多瓦
-    server: de01.plus-cdn-dns.com
-    port: 46164
-    cipher: aes-128-gcm
-    password: 61c3b62a-19cf-42fa-9a45-d275d9b75e0e
-  - type: ss
-    name: 摩纳哥
-    server: de01.plus-cdn-dns.com
-    port: 46165
-    cipher: aes-128-gcm
-    password: 61c3b62a-19cf-42fa-9a45-d275d9b75e0e
-  - type: ss
-    name: 黑山
-    server: de01.plus-cdn-dns.com
-    port: 46166
-    cipher: aes-128-gcm
-    password: 61c3b62a-19cf-42fa-9a45-d275d9b75e0e
-  - type: ss
-    name: 英国
-    server: uk01.plus-cdn-dns.com
-    port: 45615
-    cipher: aes-128-gcm
-    password: 61c3b62a-19cf-42fa-9a45-d275d9b75e0e
-  - type: ss
-    name: 马来西亚
-    server: sg04.plus-cdn-dns.com
-    port: 45610
-    cipher: aes-128-gcm
-    password: 61c3b62a-19cf-42fa-9a45-d275d9b75e0e
-  - type: ss
-    name: 印度尼西亚
-    server: sg03.plus-cdn-dns.com
-    port: 45608
-    cipher: aes-128-gcm
-    password: 61c3b62a-19cf-42fa-9a45-d275d9b75e0e
-  - type: ss
-    name: 新西兰
-    server: sg04.plus-cdn-dns.com
-    port: 45611
-    cipher: aes-128-gcm
-    password: 61c3b62a-19cf-42fa-9a45-d275d9b75e0e
-  - type: ss
-    name: 澳大利亚
-    server: sg03.plus-cdn-dns.com
-    port: 45607
-    cipher: aes-128-gcm
-    password: 61c3b62a-19cf-42fa-9a45-d275d9b75e0e
-  - type: ss
-    name: 巴基斯坦
-    server: sg03.plus-cdn-dns.com
-    port: 45800
-    cipher: aes-128-gcm
-    password: 61c3b62a-19cf-42fa-9a45-d275d9b75e0e
-  - type: ss
-    name: 南非
-    server: de01.plus-cdn-dns.com
-    port: 46102
-    cipher: aes-128-gcm
-    password: 61c3b62a-19cf-42fa-9a45-d275d9b75e0e
-  - type: ss
-    name: 德国
-    server: eu.plus-cdn-dns.com
-    port: 45594
-    cipher: aes-128-gcm
-    password: 61c3b62a-19cf-42fa-9a45-d275d9b75e0e
-  - type: ss
-    name: 埃及
-    server: eu.plus-cdn-dns.com
-    port: 45595
-    cipher: aes-128-gcm
-    password: 61c3b62a-19cf-42fa-9a45-d275d9b75e0e
-  - type: ss
-    name: 西班牙
-    server: de01.plus-cdn-dns.com
-    port: 45596
-    cipher: aes-128-gcm
-    password: 61c3b62a-19cf-42fa-9a45-d275d9b75e0e
-  - type: ss
-    name: 法国
-    server: eu.plus-cdn-dns.com
-    port: 45597
-    cipher: aes-128-gcm
-    password: 61c3b62a-19cf-42fa-9a45-d275d9b75e0e
-  - type: ss
-    name: 印度
-    server: eu.plus-cdn-dns.com
-    port: 45598
-    cipher: aes-128-gcm
-    password: 61c3b62a-19cf-42fa-9a45-d275d9b75e0e
-  - type: ss
-    name: 意大利
-    server: de01.plus-cdn-dns.com
-    port: 45599
-    cipher: aes-128-gcm
-    password: 61c3b62a-19cf-42fa-9a45-d275d9b75e0e
-  - type: ss
-    name: 菲律宾
-    server: sg03.plus-cdn-dns.com
-    port: 45661
-    cipher: aes-128-gcm
-    password: 61c3b62a-19cf-42fa-9a45-d275d9b75e0e
-  - type: ss
-    name: 尼日利亚
-    server: eu.plus-cdn-dns.com
-    port: 45601
-    cipher: aes-128-gcm
-    password: 61c3b62a-19cf-42fa-9a45-d275d9b75e0e
-  - type: ss
-    name: 土耳其
-    server: eu.plus-cdn-dns.com
-    port: 45602
-    cipher: aes-128-gcm
-    password: 61c3b62a-19cf-42fa-9a45-d275d9b75e0e
-  - type: ss
-    name: 乌克兰
-    server: de01.plus-cdn-dns.com
-    port: 45603
-    cipher: aes-128-gcm
-    password: 61c3b62a-19cf-42fa-9a45-d275d9b75e0e
-  - type: ss
-    name: 阿根廷
-    server: us03.plus-cdn-dns.com
-    port: 45583
-    cipher: aes-128-gcm
-    password: 61c3b62a-19cf-42fa-9a45-d275d9b75e0e
-  - type: ss
-    name: 越南
-    server: sg04.plus-cdn-dns.com
-    port: 46115
-    cipher: aes-128-gcm
-    password: 61c3b62a-19cf-42fa-9a45-d275d9b75e0e
-  - type: ss
-    name: 巴西
-    server: us03.plus-cdn-dns.com
-    port: 45585
-    cipher: aes-128-gcm
-    password: 61c3b62a-19cf-42fa-9a45-d275d9b75e0e
-  - type: ss
-    name: 加拿大
-    server: us03.plus-cdn-dns.com
-    port: 45586
-    cipher: aes-128-gcm
-    password: 61c3b62a-19cf-42fa-9a45-d275d9b75e0e
-  - type: ss
-    name: 比利时
-    server: eu2.plus-cdn-dns.com
-    port: 46301
-    cipher: aes-128-gcm
-    password: 61c3b62a-19cf-42fa-9a45-d275d9b75e0e
-  - type: ss
-    name: 丹麦
-    server: eu2.plus-cdn-dns.com
-    port: 46302
-    cipher: aes-128-gcm
-    password: 61c3b62a-19cf-42fa-9a45-d275d9b75e0e
-  - type: ss
-    name: 芬兰
-    server: eu2.plus-cdn-dns.com
-    port: 46303
-    cipher: aes-128-gcm
-    password: 61c3b62a-19cf-42fa-9a45-d275d9b75e0e
-  - type: ss
-    name: 克罗地亚
-    server: eu2.plus-cdn-dns.com
-    port: 46304
-    cipher: aes-128-gcm
-    password: 61c3b62a-19cf-42fa-9a45-d275d9b75e0e
-  - type: ss
-    name: 瑞典
-    server: eu2.plus-cdn-dns.com
-    port: 46305
-    cipher: aes-128-gcm
-    password: 61c3b62a-19cf-42fa-9a45-d275d9b75e0e
-  - type: ss
-    name: 希腊
-    server: eu2.plus-cdn-dns.com
-    port: 46306
-    cipher: aes-128-gcm
-    password: 61c3b62a-19cf-42fa-9a45-d275d9b75e0e
-  - type: ss
-    name: 乌兹别克斯坦
-    server: eu2.plus-cdn-dns.com
-    port: 46491
-    cipher: aes-128-gcm
-    password: 61c3b62a-19cf-42fa-9a45-d275d9b75e0e
-  - type: ss
-    name: 阿尔及利亚
-    server: eu2.plus-cdn-dns.com
-    port: 46492
-    cipher: aes-128-gcm
-    password: 61c3b62a-19cf-42fa-9a45-d275d9b75e0e
-  - type: ss
-    name: 安哥拉
-    server: eu2.plus-cdn-dns.com
-    port: 46493
-    cipher: aes-128-gcm
-    password: 61c3b62a-19cf-42fa-9a45-d275d9b75e0e
-  - type: ss
-    name: 冰岛
-    server: eu2.plus-cdn-dns.com
-    port: 46307
-    cipher: aes-128-gcm
-    password: 61c3b62a-19cf-42fa-9a45-d275d9b75e0e
-  - type: ss
-    name: 爱尔兰
-    server: eu2.plus-cdn-dns.com
-    port: 46308
-    cipher: aes-128-gcm
-    password: 61c3b62a-19cf-42fa-9a45-d275d9b75e0e
-  - type: ss
-    name: 立陶宛
-    server: eu2.plus-cdn-dns.com
-    port: 46309
-    cipher: aes-128-gcm
-    password: 61c3b62a-19cf-42fa-9a45-d275d9b75e0e
-  - type: ss
-    name: 墨西哥
-    server: us_nord.plus-cdn-dns.com
-    port: 45590
-    cipher: aes-128-gcm
-    password: 61c3b62a-19cf-42fa-9a45-d275d9b75e0e
-  - type: ss
-    name: 巴哈马
-    server: us_nord.plus-cdn-dns.com
-    port: 45591
-    cipher: aes-128-gcm
-    password: 61c3b62a-19cf-42fa-9a45-d275d9b75e0e
-  - type: ss
-    name: 伯利兹
-    server: us_nord.plus-cdn-dns.com
-    port: 45592
-    cipher: aes-128-gcm
-    password: 61c3b62a-19cf-42fa-9a45-d275d9b75e0e
-  - type: ss
-    name: 百慕大
-    server: us_nord.plus-cdn-dns.com
-    port: 45593
-    cipher: aes-128-gcm
-    password: 61c3b62a-19cf-42fa-9a45-d275d9b75e0e
-  - type: ss
-    name: 哥斯达黎加
-    server: us_nord.plus-cdn-dns.com
-    port: 46594
-    cipher: aes-128-gcm
-    password: 61c3b62a-19cf-42fa-9a45-d275d9b75e0e
-  - type: ss
-    name: 多米尼加
-    server: us_nord.plus-cdn-dns.com
-    port: 46595
-    cipher: aes-128-gcm
-    password: 61c3b62a-19cf-42fa-9a45-d275d9b75e0e
-  - type: ss
-    name: 荷兰
-    server: eu3.plus-cdn-dns.com
-    port: 46311
-    cipher: aes-128-gcm
-    password: 61c3b62a-19cf-42fa-9a45-d275d9b75e0e
-  - type: ss
-    name: 波兰
-    server: eu3.plus-cdn-dns.com
-    port: 46316
-    cipher: aes-128-gcm
-    password: 61c3b62a-19cf-42fa-9a45-d275d9b75e0e
-  - type: ss
-    name: 挪威
-    server: eu3.plus-cdn-dns.com
-    port: 46313
-    cipher: aes-128-gcm
-    password: 61c3b62a-19cf-42fa-9a45-d275d9b75e0e
-  - type: ss
-    name: 葡萄牙
-    server: eu3.plus-cdn-dns.com
-    port: 46314
-    cipher: aes-128-gcm
-    password: 61c3b62a-19cf-42fa-9a45-d275d9b75e0e
-  - type: ss
-    name: 瑞士
-    server: eu3.plus-cdn-dns.com
-    port: 46315
-    cipher: aes-128-gcm
-    password: 61c3b62a-19cf-42fa-9a45-d275d9b75e0e
-  - type: ss
-    name: 摩洛哥
-    server: eu3.plus-cdn-dns.com
-    port: 46317
-    cipher: aes-128-gcm
-    password: 61c3b62a-19cf-42fa-9a45-d275d9b75e0e
-  - type: ss
-    name: 肯尼亚
-    server: eu3.plus-cdn-dns.com
-    port: 46318
-    cipher: aes-128-gcm
-    password: 61c3b62a-19cf-42fa-9a45-d275d9b75e0e
-  - type: ss
-    name: 开曼群岛
-    server: us04.plus-cdn-dns.com
-    port: 46319
-    cipher: aes-128-gcm
-    password: 61c3b62a-19cf-42fa-9a45-d275d9b75e0e
-  - type: ss
-    name: 巴拿马
-    server: us04.plus-cdn-dns.com
-    port: 46320
-    cipher: aes-128-gcm
-    password: 61c3b62a-19cf-42fa-9a45-d275d9b75e0e
-  - type: ss
-    name: 乌拉圭
-    server: us04.plus-cdn-dns.com
-    port: 46321
-    cipher: aes-128-gcm
-    password: 61c3b62a-19cf-42fa-9a45-d275d9b75e0e
-  - type: trojan
-    name: 日本【新疆|俄罗斯专用】
-    server: sj01.plus-cdn-dns.com
-    port: 21912
-    password: 61c3b62a-19cf-42fa-9a45-d275d9b75e0e
-    network: tcp
-    skip-cert-verify: true
-    tls: true
+  - name: 微信：gtyz222
+    type: vmess
+    server: cos-csn-gzg4.friends34369.xyz
+    port: 3443
+    uuid: 0dbd1b75-5c61-32fb-9924-ade5da75f57e
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+  - name: 香港HKT1[x1|Vmess]@10Gbps
+    type: vmess
+    server: cos-csn-gzg4.friends34369.xyz
+    port: 23012
+    uuid: 0dbd1b75-5c61-32fb-9924-ade5da75f57e
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+  - name: 香港HKT2[x1|Vmess]@10Gbps
+    type: vmess
+    server: cos-csn-gzg4.friends34369.xyz
+    port: 23014
+    uuid: 0dbd1b75-5c61-32fb-9924-ade5da75f57e
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+  - name: 香港HKT3[x1|Vmess]@10Gbps
+    type: vmess
+    server: cos-csn-gzg4.friends34369.xyz
+    port: 23016
+    uuid: 0dbd1b75-5c61-32fb-9924-ade5da75f57e
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+  - name: 香港HKT4[x1|Vmess]@10Gbps
+    type: vmess
+    server: cos-csn-gzg4.friends34369.xyz
+    port: 23018
+    uuid: 0dbd1b75-5c61-32fb-9924-ade5da75f57e
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+  - name: 香港BGP1[x1|Vmess]@10Gbps
+    type: vmess
+    server: cos-csn-gzg4.friends34369.xyz
+    port: 13002
+    uuid: 0dbd1b75-5c61-32fb-9924-ade5da75f57e
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+  - name: 香港BGP2[x1|Vmess]@10Gbps
+    type: vmess
+    server: cos-csn-gzg4.friends34369.xyz
+    port: 13004
+    uuid: 0dbd1b75-5c61-32fb-9924-ade5da75f57e
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+  - name: 香港BGP3[x1|Vmess]@10Gbps
+    type: vmess
+    server: cos-csn-gzg4.friends34369.xyz
+    port: 13006
+    uuid: 0dbd1b75-5c61-32fb-9924-ade5da75f57e
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+  - name: 香港BGP4[x1|Vmess]@10Gbps
+    type: vmess
+    server: cos-csn-gzg4.friends34369.xyz
+    port: 13008
+    uuid: 0dbd1b75-5c61-32fb-9924-ade5da75f57e
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+  - name: 香港BGP5[x1|Vmess]@10Gbps
+    type: vmess
+    server: cos-csn-gzg4.friends34369.xyz
+    port: 13010
+    uuid: 0dbd1b75-5c61-32fb-9924-ade5da75f57e
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+  - name: 香港BGP6[x1|Vmess]@10Gbps
+    type: vmess
+    server: cos-csn-gzg4.friends34369.xyz
+    port: 13052
+    uuid: 0dbd1b75-5c61-32fb-9924-ade5da75f57e
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+  - name: 香港BGP7[x1|Vmess]@10Gbps
+    type: vmess
+    server: cos-csn-gzg4.friends34369.xyz
+    port: 13054
+    uuid: 0dbd1b75-5c61-32fb-9924-ade5da75f57e
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+  - name: 香港BGP8[x1|Vmess]@10Gbps
+    type: vmess
+    server: cos-csn-gzg4.friends34369.xyz
+    port: 13056
+    uuid: 0dbd1b75-5c61-32fb-9924-ade5da75f57e
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+  - name: 香港BGP9[x1|Vmess]@10Gbps
+    type: vmess
+    server: cos-csn-gzg4.friends34369.xyz
+    port: 13058
+    uuid: 0dbd1b75-5c61-32fb-9924-ade5da75f57e
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+  - name: 香港BGP10[x1|Vmess]@10Gbps
+    type: vmess
+    server: cos-csn-gzg4.friends34369.xyz
+    port: 13060
+    uuid: 0dbd1b75-5c61-32fb-9924-ade5da75f57e
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+  - name: 日本BGP1[x1|Vmess]@10Gbps
+    type: vmess
+    server: cos-csn-gzg4.friends34369.xyz
+    port: 23002
+    uuid: 0dbd1b75-5c61-32fb-9924-ade5da75f57e
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+  - name: 日本BGP2[x1|Vmess]@10Gbps
+    type: vmess
+    server: cos-csn-gzg4.friends34369.xyz
+    port: 23004
+    uuid: 0dbd1b75-5c61-32fb-9924-ade5da75f57e
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+  - name: 日本BGP3[x1|Vmess]@10Gbps
+    type: vmess
+    server: cos-csn-gzg4.friends34369.xyz
+    port: 23006
+    uuid: 0dbd1b75-5c61-32fb-9924-ade5da75f57e
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+  - name: 日本BGP4[x1|Vmess]@10Gbps
+    type: vmess
+    server: cos-csn-gzg4.friends34369.xyz
+    port: 23008
+    uuid: 0dbd1b75-5c61-32fb-9924-ade5da75f57e
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+  - name: 日本BGP5[x1|Vmess]@10Gbps
+    type: vmess
+    server: cos-csn-gzg4.friends34369.xyz
+    port: 23010
+    uuid: 0dbd1b75-5c61-32fb-9924-ade5da75f57e
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+  - name: 日本BGP6[x1|Vmess]@10Gbps
+    type: vmess
+    server: cos-csn-gzg4.friends34369.xyz
+    port: 23022
+    uuid: 0dbd1b75-5c61-32fb-9924-ade5da75f57e
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+  - name: 日本BGP7[x1|Vmess]@10Gbps
+    type: vmess
+    server: cos-csn-gzg4.friends34369.xyz
+    port: 23024
+    uuid: 0dbd1b75-5c61-32fb-9924-ade5da75f57e
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+  - name: 日本BGP8[x1|Vmess]@10Gbps
+    type: vmess
+    server: cos-csn-gzg4.friends34369.xyz
+    port: 23026
+    uuid: 0dbd1b75-5c61-32fb-9924-ade5da75f57e
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+  - name: 日本BGP9[x1|Vmess]@10Gbps
+    type: vmess
+    server: cos-csn-gzg4.friends34369.xyz
+    port: 23028
+    uuid: 0dbd1b75-5c61-32fb-9924-ade5da75f57e
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+  - name: 日本BGP10[x1|Vmess]@10Gbps
+    type: vmess
+    server: cos-csn-gzg4.friends34369.xyz
+    port: 23030
+    uuid: 0dbd1b75-5c61-32fb-9924-ade5da75f57e
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+  - name: 台湾HiNet1[x1|Vmess]@500Mbps
+    type: vmess
+    server: cos-csn-gzg4.friends34369.xyz
+    port: 13022
+    uuid: 0dbd1b75-5c61-32fb-9924-ade5da75f57e
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+  - name: 台湾HiNet2[x1|Vmess]@500Mbps
+    type: vmess
+    server: cos-csn-gzg4.friends34369.xyz
+    port: 13024
+    uuid: 0dbd1b75-5c61-32fb-9924-ade5da75f57e
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+  - name: 台湾HiNet3[x1|Vmess]@500Mbps
+    type: vmess
+    server: cos-csn-gzg4.friends34369.xyz
+    port: 13026
+    uuid: 0dbd1b75-5c61-32fb-9924-ade5da75f57e
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+  - name: 台湾HiNet4[x1|Vmess]@500Mbps
+    type: vmess
+    server: cos-csn-gzg4.friends34369.xyz
+    port: 13028
+    uuid: 0dbd1b75-5c61-32fb-9924-ade5da75f57e
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+  - name: 台湾HiNet5[x1|Vmess]@500Mbps
+    type: vmess
+    server: cos-csn-gzg4.friends34369.xyz
+    port: 13030
+    uuid: 0dbd1b75-5c61-32fb-9924-ade5da75f57e
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+  - name: 台湾SeedNet1[x1|Vmess]@500Mbps
+    type: vmess
+    server: cos-csn-gzg4.friends34369.xyz
+    port: 13042
+    uuid: 0dbd1b75-5c61-32fb-9924-ade5da75f57e
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+  - name: 台湾SeedNet2[x1|Vmess]@500Mbps
+    type: vmess
+    server: cos-csn-gzg4.friends34369.xyz
+    port: 13044
+    uuid: 0dbd1b75-5c61-32fb-9924-ade5da75f57e
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+  - name: 台湾SeedNet3[x1|Vmess]@500Mbps
+    type: vmess
+    server: cos-csn-gzg4.friends34369.xyz
+    port: 13046
+    uuid: 0dbd1b75-5c61-32fb-9924-ade5da75f57e
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+  - name: 新加坡DO1[x1|Vmess]@1Gbps
+    type: vmess
+    server: cos-csn-gzg4.friends34369.xyz
+    port: 13014
+    uuid: 0dbd1b75-5c61-32fb-9924-ade5da75f57e
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+  - name: 新加坡DO2[x1|Vmess]@1Gbps
+    type: vmess
+    server: cos-csn-gzg4.friends34369.xyz
+    port: 13016
+    uuid: 0dbd1b75-5c61-32fb-9924-ade5da75f57e
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+  - name: 新加坡DO3[x1|Vmess]@1Gbps
+    type: vmess
+    server: cos-csn-gzg4.friends34369.xyz
+    port: 13018
+    uuid: 0dbd1b75-5c61-32fb-9924-ade5da75f57e
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+  - name: 新加坡DO4[x1|Vmess]@1Gbps
+    type: vmess
+    server: cos-csn-gzg4.friends34369.xyz
+    port: 13032
+    uuid: 0dbd1b75-5c61-32fb-9924-ade5da75f57e
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+  - name: 新加坡DO5[x1|Vmess]@1Gbps
+    type: vmess
+    server: cos-csn-gzg4.friends34369.xyz
+    port: 13034
+    uuid: 0dbd1b75-5c61-32fb-9924-ade5da75f57e
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+  - name: 新加坡VQ1[x1|Vmess]@1Gbps
+    type: vmess
+    server: cos-csn-gzg4.friends34369.xyz
+    port: 13012
+    uuid: 0dbd1b75-5c61-32fb-9924-ade5da75f57e
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+  - name: 美国BGP1[x1|Vmess]@10Gbps
+    type: vmess
+    server: cos-csn-gzg4.friends34369.xyz
+    port: 23062
+    uuid: 0dbd1b75-5c61-32fb-9924-ade5da75f57e
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+  - name: 美国BGP2[x1|Vmess]@10Gbps
+    type: vmess
+    server: cos-csn-gzg4.friends34369.xyz
+    port: 23064
+    uuid: 0dbd1b75-5c61-32fb-9924-ade5da75f57e
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+  - name: 美国BGP3[x1|Vmess]@10Gbps
+    type: vmess
+    server: cos-csn-gzg4.friends34369.xyz
+    port: 23066
+    uuid: 0dbd1b75-5c61-32fb-9924-ade5da75f57e
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+  - name: 美国BGP4[x1|Vmess]@10Gbps
+    type: vmess
+    server: cos-csn-gzg4.friends34369.xyz
+    port: 23068
+    uuid: 0dbd1b75-5c61-32fb-9924-ade5da75f57e
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+  - name: 美国BGP5[x1|Vmess]@10Gbps
+    type: vmess
+    server: cos-csn-gzg4.friends34369.xyz
+    port: 23070
+    uuid: 0dbd1b75-5c61-32fb-9924-ade5da75f57e
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+  - name: 美国HE1[x1|Vmess]@1Gbps
+    type: vmess
+    server: cos-csn-gzg4.friends34369.xyz
+    port: 23052
+    uuid: 0dbd1b75-5c61-32fb-9924-ade5da75f57e
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+  - name: 美国HE2[x1|Vmess]@1Gbps
+    type: vmess
+    server: cos-csn-gzg4.friends34369.xyz
+    port: 23054
+    uuid: 0dbd1b75-5c61-32fb-9924-ade5da75f57e
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+  - name: 美国HE3[x1|Vmess]@1Gbps
+    type: vmess
+    server: cos-csn-gzg4.friends34369.xyz
+    port: 23056
+    uuid: 0dbd1b75-5c61-32fb-9924-ade5da75f57e
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+  - name: 美国HE4[x1|Vmess]@1Gbps
+    type: vmess
+    server: cos-csn-gzg4.friends34369.xyz
+    port: 23058
+    uuid: 0dbd1b75-5c61-32fb-9924-ade5da75f57e
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+  - name: 美国HE5[x1|Vmess]@1Gbps
+    type: vmess
+    server: cos-csn-gzg4.friends34369.xyz
+    port: 23060
+    uuid: 0dbd1b75-5c61-32fb-9924-ade5da75f57e
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+  - name: 美国OVH1[x0.5|Vmess]@1Gbps
+    type: vmess
+    server: cos-csn-gzg4.friends34369.xyz
+    port: 23082
+    uuid: 0dbd1b75-5c61-32fb-9924-ade5da75f57e
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+  - name: 加拿大1[x1|Vmess]@1Gbps
+    type: vmess
+    server: cos-csn-gzg4.friends34369.xyz
+    port: 28102
+    uuid: 0dbd1b75-5c61-32fb-9924-ade5da75f57e
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+  - name: 澳大利亚1[x1|Vmess]@1Gbps
+    type: vmess
+    server: cos-csn-gzg4.friends34369.xyz
+    port: 18032
+    uuid: 0dbd1b75-5c61-32fb-9924-ade5da75f57e
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+  - name: 俄罗斯伯力1[x1|Vmess]@1Gbps
+    type: vmess
+    server: cos-csn-gzg4.friends34369.xyz
+    port: 18052
+    uuid: 0dbd1b75-5c61-32fb-9924-ade5da75f57e
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+  - name: 德国1[x1|Vmess]@1Gbps
+    type: vmess
+    server: cos-csn-gzg4.friends34369.xyz
+    port: 18062
+    uuid: 0dbd1b75-5c61-32fb-9924-ade5da75f57e
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+  - name: 英国1[x1|Vmess]@1Gbps
+    type: vmess
+    server: cos-csn-gzg4.friends34369.xyz
+    port: 18064
+    uuid: 0dbd1b75-5c61-32fb-9924-ade5da75f57e
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+  - name: 法国1[x1|Vmess]@1Gbps
+    type: vmess
+    server: cos-csn-gzg4.friends34369.xyz
+    port: 28112
+    uuid: 0dbd1b75-5c61-32fb-9924-ade5da75f57e
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+  - name: 意大利1[x1|Vmess]@1Gbps
+    type: vmess
+    server: cos-csn-gzg4.friends34369.xyz
+    port: 28114
+    uuid: 0dbd1b75-5c61-32fb-9924-ade5da75f57e
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+  - name: 荷兰1[x1|Vmess]@1Gbps
+    type: vmess
+    server: cos-csn-gzg4.friends34369.xyz
+    port: 28116
+    uuid: 0dbd1b75-5c61-32fb-9924-ade5da75f57e
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+  - name: 西班牙1[x1|Vmess]@200Mbps
+    type: vmess
+    server: cos-csn-gzg4.friends34369.xyz
+    port: 18078
+    uuid: 0dbd1b75-5c61-32fb-9924-ade5da75f57e
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+  - name: 卢森堡1[x1|Vmess]@200Mbps
+    type: vmess
+    server: cos-csn-gzg4.friends34369.xyz
+    port: 18076
+    uuid: 0dbd1b75-5c61-32fb-9924-ade5da75f57e
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+  - name: 土耳其1[x1|Vmess]@500Mbps
+    type: vmess
+    server: cos-csn-gzg4.friends34369.xyz
+    port: 18082
+    uuid: 0dbd1b75-5c61-32fb-9924-ade5da75f57e
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+  - name: 瑞典1[x1|Vmess]@80Mbps
+    type: vmess
+    server: cos-csn-gzg4.friends34369.xyz
+    port: 18084
+    uuid: 0dbd1b75-5c61-32fb-9924-ade5da75f57e
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+  - name: 乌克兰1[x1|Vmess]@200Mbps
+    type: vmess
+    server: cos-csn-gzg4.friends34369.xyz
+    port: 18074
+    uuid: 0dbd1b75-5c61-32fb-9924-ade5da75f57e
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+  - name: 以色列1[x1|Vmess]@200Mbps
+    type: vmess
+    server: cos-csn-gzg4.friends34369.xyz
+    port: 18072
+    uuid: 0dbd1b75-5c61-32fb-9924-ade5da75f57e
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+  - name: 印度1[x1|Vmess]@1Gbps
+    type: vmess
+    server: cos-csn-gzg4.friends34369.xyz
+    port: 18012
+    uuid: 0dbd1b75-5c61-32fb-9924-ade5da75f57e
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+  - name: 马来西亚1[x1|Vmess]@200Mbps
+    type: vmess
+    server: cos-csn-gzg4.friends34369.xyz
+    port: 18022
+    uuid: 0dbd1b75-5c61-32fb-9924-ade5da75f57e
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+  - name: 印度尼西亚1[x1|Vmess]@1Gbps
+    type: vmess
+    server: cos-csn-gzg4.friends34369.xyz
+    port: 18036
+    uuid: 0dbd1b75-5c61-32fb-9924-ade5da75f57e
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+  - name: 菲律宾1[x1|Vmess]@2Gbps
+    type: vmess
+    server: cos-csn-gzg4.friends34369.xyz
+    port: 18014
+    uuid: 0dbd1b75-5c61-32fb-9924-ade5da75f57e
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+  - name: 泰国1[x1|Vmess]@200Mbps
+    type: vmess
+    server: cos-csn-gzg4.friends34369.xyz
+    port: 18038
+    uuid: 0dbd1b75-5c61-32fb-9924-ade5da75f57e
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+  - name: 哈萨克斯坦1[x1|Vmess]@200Mbps
+    type: vmess
+    server: cos-csn-gzg4.friends34369.xyz
+    port: 18086
+    uuid: 0dbd1b75-5c61-32fb-9924-ade5da75f57e
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+  - name: 巴西1[x1|Vmess]@200Mbps
+    type: vmess
+    server: cos-csn-gzg4.friends34369.xyz
+    port: 18044
+    uuid: 0dbd1b75-5c61-32fb-9924-ade5da75f57e
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+  - name: 阿根廷1[x1|Vmess]@1Gbps
+    type: vmess
+    server: cos-csn-gzg4.friends34369.xyz
+    port: 18042
+    uuid: 0dbd1b75-5c61-32fb-9924-ade5da75f57e
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+  - name: 香港试用[x1|无SLA|Vmess]@100Mbps
+    type: vmess
+    server: cos-csn-gzg4.friends34369.xyz
+    port: 15342
+    uuid: 0dbd1b75-5c61-32fb-9924-ade5da75f57e
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+  - name: 日本试用[x1|无SLA|Vmess]@100Mbps
+    type: vmess
+    server: cos-csn-gzg4.friends34369.xyz
+    port: 15344
+    uuid: 0dbd1b75-5c61-32fb-9924-ade5da75f57e
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+  - name: 新加坡试用[x1|无SLA|Vmess]@100Mbps
+    type: vmess
+    server: cos-csn-gzg4.friends34369.xyz
+    port: 15348
+    uuid: 0dbd1b75-5c61-32fb-9924-ade5da75f57e
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -568,176 +728,482 @@ proxy-groups:
       - ♻️ 自动选择
       - DIRECT
       - 微信：gtyz222
-      - 应急专用(JP)
-      - 香港
-      - 台湾
-      - 日本
-      - 韩国
-      - 新加坡
-      - 泰国
-      - 老挝
-      - 尼泊尔
-      - 斯里兰卡
-      - 缅甸
-      - 蒙古
-      - 柬埔寨
-      - 孟加拉国
-      - 哈萨克斯坦
-      - 阿联酋
-      - 美国
-      - 阿尔巴尼亚
-      - 安道尔
-      - 保加利亚
-      - 捷克
-      - 爱沙尼亚
-      - 匈牙利
-      - 英属泽西岛
-      - 奥地利
-      - 拉脱维亚
-      - 列支敦士登
-      - 卢森堡
-      - 马耳他
-      - 摩尔多瓦
-      - 摩纳哥
-      - 黑山
-      - 英国
-      - 马来西亚
-      - 印度尼西亚
-      - 新西兰
-      - 澳大利亚
-      - 巴基斯坦
-      - 南非
-      - 德国
-      - 埃及
-      - 西班牙
-      - 法国
-      - 印度
-      - 意大利
-      - 菲律宾
-      - 尼日利亚
-      - 土耳其
-      - 乌克兰
-      - 阿根廷
-      - 越南
-      - 巴西
-      - 加拿大
-      - 比利时
-      - 丹麦
-      - 芬兰
-      - 克罗地亚
-      - 瑞典
-      - 希腊
-      - 乌兹别克斯坦
-      - 阿尔及利亚
-      - 安哥拉
-      - 冰岛
-      - 爱尔兰
-      - 立陶宛
-      - 墨西哥
-      - 巴哈马
-      - 伯利兹
-      - 百慕大
-      - 哥斯达黎加
-      - 多米尼加
-      - 荷兰
-      - 波兰
-      - 挪威
-      - 葡萄牙
-      - 瑞士
-      - 摩洛哥
-      - 肯尼亚
-      - 开曼群岛
-      - 巴拿马
-      - 乌拉圭
-      - 日本【新疆|俄罗斯专用】
+      - 香港HKT1[x1|Vmess]@10Gbps
+      - 香港HKT2[x1|Vmess]@10Gbps
+      - 香港HKT3[x1|Vmess]@10Gbps
+      - 香港HKT4[x1|Vmess]@10Gbps
+      - 香港BGP1[x1|Vmess]@10Gbps
+      - 香港BGP2[x1|Vmess]@10Gbps
+      - 香港BGP3[x1|Vmess]@10Gbps
+      - 香港BGP4[x1|Vmess]@10Gbps
+      - 香港BGP5[x1|Vmess]@10Gbps
+      - 香港BGP6[x1|Vmess]@10Gbps
+      - 香港BGP7[x1|Vmess]@10Gbps
+      - 香港BGP8[x1|Vmess]@10Gbps
+      - 香港BGP9[x1|Vmess]@10Gbps
+      - 香港BGP10[x1|Vmess]@10Gbps
+      - 日本BGP1[x1|Vmess]@10Gbps
+      - 日本BGP2[x1|Vmess]@10Gbps
+      - 日本BGP3[x1|Vmess]@10Gbps
+      - 日本BGP4[x1|Vmess]@10Gbps
+      - 日本BGP5[x1|Vmess]@10Gbps
+      - 日本BGP6[x1|Vmess]@10Gbps
+      - 日本BGP7[x1|Vmess]@10Gbps
+      - 日本BGP8[x1|Vmess]@10Gbps
+      - 日本BGP9[x1|Vmess]@10Gbps
+      - 日本BGP10[x1|Vmess]@10Gbps
+      - 台湾HiNet1[x1|Vmess]@500Mbps
+      - 台湾HiNet2[x1|Vmess]@500Mbps
+      - 台湾HiNet3[x1|Vmess]@500Mbps
+      - 台湾HiNet4[x1|Vmess]@500Mbps
+      - 台湾HiNet5[x1|Vmess]@500Mbps
+      - 台湾SeedNet1[x1|Vmess]@500Mbps
+      - 台湾SeedNet2[x1|Vmess]@500Mbps
+      - 台湾SeedNet3[x1|Vmess]@500Mbps
+      - 新加坡DO1[x1|Vmess]@1Gbps
+      - 新加坡DO2[x1|Vmess]@1Gbps
+      - 新加坡DO3[x1|Vmess]@1Gbps
+      - 新加坡DO4[x1|Vmess]@1Gbps
+      - 新加坡DO5[x1|Vmess]@1Gbps
+      - 新加坡VQ1[x1|Vmess]@1Gbps
+      - 美国BGP1[x1|Vmess]@10Gbps
+      - 美国BGP2[x1|Vmess]@10Gbps
+      - 美国BGP3[x1|Vmess]@10Gbps
+      - 美国BGP4[x1|Vmess]@10Gbps
+      - 美国BGP5[x1|Vmess]@10Gbps
+      - 美国HE1[x1|Vmess]@1Gbps
+      - 美国HE2[x1|Vmess]@1Gbps
+      - 美国HE3[x1|Vmess]@1Gbps
+      - 美国HE4[x1|Vmess]@1Gbps
+      - 美国HE5[x1|Vmess]@1Gbps
+      - 美国OVH1[x0.5|Vmess]@1Gbps
+      - 加拿大1[x1|Vmess]@1Gbps
+      - 澳大利亚1[x1|Vmess]@1Gbps
+      - 俄罗斯伯力1[x1|Vmess]@1Gbps
+      - 德国1[x1|Vmess]@1Gbps
+      - 英国1[x1|Vmess]@1Gbps
+      - 法国1[x1|Vmess]@1Gbps
+      - 意大利1[x1|Vmess]@1Gbps
+      - 荷兰1[x1|Vmess]@1Gbps
+      - 西班牙1[x1|Vmess]@200Mbps
+      - 卢森堡1[x1|Vmess]@200Mbps
+      - 土耳其1[x1|Vmess]@500Mbps
+      - 瑞典1[x1|Vmess]@80Mbps
+      - 乌克兰1[x1|Vmess]@200Mbps
+      - 以色列1[x1|Vmess]@200Mbps
+      - 印度1[x1|Vmess]@1Gbps
+      - 马来西亚1[x1|Vmess]@200Mbps
+      - 印度尼西亚1[x1|Vmess]@1Gbps
+      - 菲律宾1[x1|Vmess]@2Gbps
+      - 泰国1[x1|Vmess]@200Mbps
+      - 哈萨克斯坦1[x1|Vmess]@200Mbps
+      - 巴西1[x1|Vmess]@200Mbps
+      - 阿根廷1[x1|Vmess]@1Gbps
+      - 香港试用[x1|无SLA|Vmess]@100Mbps
+      - 日本试用[x1|无SLA|Vmess]@100Mbps
+      - 新加坡试用[x1|无SLA|Vmess]@100Mbps
   - name: ♻️ 自动选择
     type: url-test
     proxies:
       - 微信：gtyz222
-      - 应急专用(JP)
-      - 香港
-      - 台湾
-      - 日本
-      - 韩国
-      - 新加坡
-      - 泰国
-      - 老挝
-      - 尼泊尔
-      - 斯里兰卡
-      - 缅甸
-      - 蒙古
-      - 柬埔寨
-      - 孟加拉国
-      - 哈萨克斯坦
-      - 阿联酋
-      - 美国
-      - 阿尔巴尼亚
-      - 安道尔
-      - 保加利亚
-      - 捷克
-      - 爱沙尼亚
-      - 匈牙利
-      - 英属泽西岛
-      - 奥地利
-      - 拉脱维亚
-      - 列支敦士登
-      - 卢森堡
-      - 马耳他
-      - 摩尔多瓦
-      - 摩纳哥
-      - 黑山
-      - 英国
-      - 马来西亚
-      - 印度尼西亚
-      - 新西兰
-      - 澳大利亚
-      - 巴基斯坦
-      - 南非
-      - 德国
-      - 埃及
-      - 西班牙
-      - 法国
-      - 印度
-      - 意大利
-      - 菲律宾
-      - 尼日利亚
-      - 土耳其
-      - 乌克兰
-      - 阿根廷
-      - 越南
-      - 巴西
-      - 加拿大
-      - 比利时
-      - 丹麦
-      - 芬兰
-      - 克罗地亚
-      - 瑞典
-      - 希腊
-      - 乌兹别克斯坦
-      - 阿尔及利亚
-      - 安哥拉
-      - 冰岛
-      - 爱尔兰
-      - 立陶宛
-      - 墨西哥
-      - 巴哈马
-      - 伯利兹
-      - 百慕大
-      - 哥斯达黎加
-      - 多米尼加
-      - 荷兰
-      - 波兰
-      - 挪威
-      - 葡萄牙
-      - 瑞士
-      - 摩洛哥
-      - 肯尼亚
-      - 开曼群岛
-      - 巴拿马
-      - 乌拉圭
-      - 日本【新疆|俄罗斯专用】
+      - 香港HKT1[x1|Vmess]@10Gbps
+      - 香港HKT2[x1|Vmess]@10Gbps
+      - 香港HKT3[x1|Vmess]@10Gbps
+      - 香港HKT4[x1|Vmess]@10Gbps
+      - 香港BGP1[x1|Vmess]@10Gbps
+      - 香港BGP2[x1|Vmess]@10Gbps
+      - 香港BGP3[x1|Vmess]@10Gbps
+      - 香港BGP4[x1|Vmess]@10Gbps
+      - 香港BGP5[x1|Vmess]@10Gbps
+      - 香港BGP6[x1|Vmess]@10Gbps
+      - 香港BGP7[x1|Vmess]@10Gbps
+      - 香港BGP8[x1|Vmess]@10Gbps
+      - 香港BGP9[x1|Vmess]@10Gbps
+      - 香港BGP10[x1|Vmess]@10Gbps
+      - 日本BGP1[x1|Vmess]@10Gbps
+      - 日本BGP2[x1|Vmess]@10Gbps
+      - 日本BGP3[x1|Vmess]@10Gbps
+      - 日本BGP4[x1|Vmess]@10Gbps
+      - 日本BGP5[x1|Vmess]@10Gbps
+      - 日本BGP6[x1|Vmess]@10Gbps
+      - 日本BGP7[x1|Vmess]@10Gbps
+      - 日本BGP8[x1|Vmess]@10Gbps
+      - 日本BGP9[x1|Vmess]@10Gbps
+      - 日本BGP10[x1|Vmess]@10Gbps
+      - 台湾HiNet1[x1|Vmess]@500Mbps
+      - 台湾HiNet2[x1|Vmess]@500Mbps
+      - 台湾HiNet3[x1|Vmess]@500Mbps
+      - 台湾HiNet4[x1|Vmess]@500Mbps
+      - 台湾HiNet5[x1|Vmess]@500Mbps
+      - 台湾SeedNet1[x1|Vmess]@500Mbps
+      - 台湾SeedNet2[x1|Vmess]@500Mbps
+      - 台湾SeedNet3[x1|Vmess]@500Mbps
+      - 新加坡DO1[x1|Vmess]@1Gbps
+      - 新加坡DO2[x1|Vmess]@1Gbps
+      - 新加坡DO3[x1|Vmess]@1Gbps
+      - 新加坡DO4[x1|Vmess]@1Gbps
+      - 新加坡DO5[x1|Vmess]@1Gbps
+      - 新加坡VQ1[x1|Vmess]@1Gbps
+      - 美国BGP1[x1|Vmess]@10Gbps
+      - 美国BGP2[x1|Vmess]@10Gbps
+      - 美国BGP3[x1|Vmess]@10Gbps
+      - 美国BGP4[x1|Vmess]@10Gbps
+      - 美国BGP5[x1|Vmess]@10Gbps
+      - 美国HE1[x1|Vmess]@1Gbps
+      - 美国HE2[x1|Vmess]@1Gbps
+      - 美国HE3[x1|Vmess]@1Gbps
+      - 美国HE4[x1|Vmess]@1Gbps
+      - 美国HE5[x1|Vmess]@1Gbps
+      - 美国OVH1[x0.5|Vmess]@1Gbps
+      - 加拿大1[x1|Vmess]@1Gbps
+      - 澳大利亚1[x1|Vmess]@1Gbps
+      - 俄罗斯伯力1[x1|Vmess]@1Gbps
+      - 德国1[x1|Vmess]@1Gbps
+      - 英国1[x1|Vmess]@1Gbps
+      - 法国1[x1|Vmess]@1Gbps
+      - 意大利1[x1|Vmess]@1Gbps
+      - 荷兰1[x1|Vmess]@1Gbps
+      - 西班牙1[x1|Vmess]@200Mbps
+      - 卢森堡1[x1|Vmess]@200Mbps
+      - 土耳其1[x1|Vmess]@500Mbps
+      - 瑞典1[x1|Vmess]@80Mbps
+      - 乌克兰1[x1|Vmess]@200Mbps
+      - 以色列1[x1|Vmess]@200Mbps
+      - 印度1[x1|Vmess]@1Gbps
+      - 马来西亚1[x1|Vmess]@200Mbps
+      - 印度尼西亚1[x1|Vmess]@1Gbps
+      - 菲律宾1[x1|Vmess]@2Gbps
+      - 泰国1[x1|Vmess]@200Mbps
+      - 哈萨克斯坦1[x1|Vmess]@200Mbps
+      - 巴西1[x1|Vmess]@200Mbps
+      - 阿根廷1[x1|Vmess]@1Gbps
+      - 香港试用[x1|无SLA|Vmess]@100Mbps
+      - 日本试用[x1|无SLA|Vmess]@100Mbps
+      - 新加坡试用[x1|无SLA|Vmess]@100Mbps
     url: http://www.gstatic.com/generate_204
     interval: 300
+    tolerance: 50
+  - name: 🌍 国外媒体
+    type: select
+    proxies:
+      - 🚀 节点选择
+      - ♻️ 自动选择
+      - 🎯 全球直连
+      - 微信：gtyz222
+      - 香港HKT1[x1|Vmess]@10Gbps
+      - 香港HKT2[x1|Vmess]@10Gbps
+      - 香港HKT3[x1|Vmess]@10Gbps
+      - 香港HKT4[x1|Vmess]@10Gbps
+      - 香港BGP1[x1|Vmess]@10Gbps
+      - 香港BGP2[x1|Vmess]@10Gbps
+      - 香港BGP3[x1|Vmess]@10Gbps
+      - 香港BGP4[x1|Vmess]@10Gbps
+      - 香港BGP5[x1|Vmess]@10Gbps
+      - 香港BGP6[x1|Vmess]@10Gbps
+      - 香港BGP7[x1|Vmess]@10Gbps
+      - 香港BGP8[x1|Vmess]@10Gbps
+      - 香港BGP9[x1|Vmess]@10Gbps
+      - 香港BGP10[x1|Vmess]@10Gbps
+      - 日本BGP1[x1|Vmess]@10Gbps
+      - 日本BGP2[x1|Vmess]@10Gbps
+      - 日本BGP3[x1|Vmess]@10Gbps
+      - 日本BGP4[x1|Vmess]@10Gbps
+      - 日本BGP5[x1|Vmess]@10Gbps
+      - 日本BGP6[x1|Vmess]@10Gbps
+      - 日本BGP7[x1|Vmess]@10Gbps
+      - 日本BGP8[x1|Vmess]@10Gbps
+      - 日本BGP9[x1|Vmess]@10Gbps
+      - 日本BGP10[x1|Vmess]@10Gbps
+      - 台湾HiNet1[x1|Vmess]@500Mbps
+      - 台湾HiNet2[x1|Vmess]@500Mbps
+      - 台湾HiNet3[x1|Vmess]@500Mbps
+      - 台湾HiNet4[x1|Vmess]@500Mbps
+      - 台湾HiNet5[x1|Vmess]@500Mbps
+      - 台湾SeedNet1[x1|Vmess]@500Mbps
+      - 台湾SeedNet2[x1|Vmess]@500Mbps
+      - 台湾SeedNet3[x1|Vmess]@500Mbps
+      - 新加坡DO1[x1|Vmess]@1Gbps
+      - 新加坡DO2[x1|Vmess]@1Gbps
+      - 新加坡DO3[x1|Vmess]@1Gbps
+      - 新加坡DO4[x1|Vmess]@1Gbps
+      - 新加坡DO5[x1|Vmess]@1Gbps
+      - 新加坡VQ1[x1|Vmess]@1Gbps
+      - 美国BGP1[x1|Vmess]@10Gbps
+      - 美国BGP2[x1|Vmess]@10Gbps
+      - 美国BGP3[x1|Vmess]@10Gbps
+      - 美国BGP4[x1|Vmess]@10Gbps
+      - 美国BGP5[x1|Vmess]@10Gbps
+      - 美国HE1[x1|Vmess]@1Gbps
+      - 美国HE2[x1|Vmess]@1Gbps
+      - 美国HE3[x1|Vmess]@1Gbps
+      - 美国HE4[x1|Vmess]@1Gbps
+      - 美国HE5[x1|Vmess]@1Gbps
+      - 美国OVH1[x0.5|Vmess]@1Gbps
+      - 加拿大1[x1|Vmess]@1Gbps
+      - 澳大利亚1[x1|Vmess]@1Gbps
+      - 俄罗斯伯力1[x1|Vmess]@1Gbps
+      - 德国1[x1|Vmess]@1Gbps
+      - 英国1[x1|Vmess]@1Gbps
+      - 法国1[x1|Vmess]@1Gbps
+      - 意大利1[x1|Vmess]@1Gbps
+      - 荷兰1[x1|Vmess]@1Gbps
+      - 西班牙1[x1|Vmess]@200Mbps
+      - 卢森堡1[x1|Vmess]@200Mbps
+      - 土耳其1[x1|Vmess]@500Mbps
+      - 瑞典1[x1|Vmess]@80Mbps
+      - 乌克兰1[x1|Vmess]@200Mbps
+      - 以色列1[x1|Vmess]@200Mbps
+      - 印度1[x1|Vmess]@1Gbps
+      - 马来西亚1[x1|Vmess]@200Mbps
+      - 印度尼西亚1[x1|Vmess]@1Gbps
+      - 菲律宾1[x1|Vmess]@2Gbps
+      - 泰国1[x1|Vmess]@200Mbps
+      - 哈萨克斯坦1[x1|Vmess]@200Mbps
+      - 巴西1[x1|Vmess]@200Mbps
+      - 阿根廷1[x1|Vmess]@1Gbps
+      - 香港试用[x1|无SLA|Vmess]@100Mbps
+      - 日本试用[x1|无SLA|Vmess]@100Mbps
+      - 新加坡试用[x1|无SLA|Vmess]@100Mbps
+  - name: 📲 电报信息
+    type: select
+    proxies:
+      - 🚀 节点选择
+      - 🎯 全球直连
+      - 微信：gtyz222
+      - 香港HKT1[x1|Vmess]@10Gbps
+      - 香港HKT2[x1|Vmess]@10Gbps
+      - 香港HKT3[x1|Vmess]@10Gbps
+      - 香港HKT4[x1|Vmess]@10Gbps
+      - 香港BGP1[x1|Vmess]@10Gbps
+      - 香港BGP2[x1|Vmess]@10Gbps
+      - 香港BGP3[x1|Vmess]@10Gbps
+      - 香港BGP4[x1|Vmess]@10Gbps
+      - 香港BGP5[x1|Vmess]@10Gbps
+      - 香港BGP6[x1|Vmess]@10Gbps
+      - 香港BGP7[x1|Vmess]@10Gbps
+      - 香港BGP8[x1|Vmess]@10Gbps
+      - 香港BGP9[x1|Vmess]@10Gbps
+      - 香港BGP10[x1|Vmess]@10Gbps
+      - 日本BGP1[x1|Vmess]@10Gbps
+      - 日本BGP2[x1|Vmess]@10Gbps
+      - 日本BGP3[x1|Vmess]@10Gbps
+      - 日本BGP4[x1|Vmess]@10Gbps
+      - 日本BGP5[x1|Vmess]@10Gbps
+      - 日本BGP6[x1|Vmess]@10Gbps
+      - 日本BGP7[x1|Vmess]@10Gbps
+      - 日本BGP8[x1|Vmess]@10Gbps
+      - 日本BGP9[x1|Vmess]@10Gbps
+      - 日本BGP10[x1|Vmess]@10Gbps
+      - 台湾HiNet1[x1|Vmess]@500Mbps
+      - 台湾HiNet2[x1|Vmess]@500Mbps
+      - 台湾HiNet3[x1|Vmess]@500Mbps
+      - 台湾HiNet4[x1|Vmess]@500Mbps
+      - 台湾HiNet5[x1|Vmess]@500Mbps
+      - 台湾SeedNet1[x1|Vmess]@500Mbps
+      - 台湾SeedNet2[x1|Vmess]@500Mbps
+      - 台湾SeedNet3[x1|Vmess]@500Mbps
+      - 新加坡DO1[x1|Vmess]@1Gbps
+      - 新加坡DO2[x1|Vmess]@1Gbps
+      - 新加坡DO3[x1|Vmess]@1Gbps
+      - 新加坡DO4[x1|Vmess]@1Gbps
+      - 新加坡DO5[x1|Vmess]@1Gbps
+      - 新加坡VQ1[x1|Vmess]@1Gbps
+      - 美国BGP1[x1|Vmess]@10Gbps
+      - 美国BGP2[x1|Vmess]@10Gbps
+      - 美国BGP3[x1|Vmess]@10Gbps
+      - 美国BGP4[x1|Vmess]@10Gbps
+      - 美国BGP5[x1|Vmess]@10Gbps
+      - 美国HE1[x1|Vmess]@1Gbps
+      - 美国HE2[x1|Vmess]@1Gbps
+      - 美国HE3[x1|Vmess]@1Gbps
+      - 美国HE4[x1|Vmess]@1Gbps
+      - 美国HE5[x1|Vmess]@1Gbps
+      - 美国OVH1[x0.5|Vmess]@1Gbps
+      - 加拿大1[x1|Vmess]@1Gbps
+      - 澳大利亚1[x1|Vmess]@1Gbps
+      - 俄罗斯伯力1[x1|Vmess]@1Gbps
+      - 德国1[x1|Vmess]@1Gbps
+      - 英国1[x1|Vmess]@1Gbps
+      - 法国1[x1|Vmess]@1Gbps
+      - 意大利1[x1|Vmess]@1Gbps
+      - 荷兰1[x1|Vmess]@1Gbps
+      - 西班牙1[x1|Vmess]@200Mbps
+      - 卢森堡1[x1|Vmess]@200Mbps
+      - 土耳其1[x1|Vmess]@500Mbps
+      - 瑞典1[x1|Vmess]@80Mbps
+      - 乌克兰1[x1|Vmess]@200Mbps
+      - 以色列1[x1|Vmess]@200Mbps
+      - 印度1[x1|Vmess]@1Gbps
+      - 马来西亚1[x1|Vmess]@200Mbps
+      - 印度尼西亚1[x1|Vmess]@1Gbps
+      - 菲律宾1[x1|Vmess]@2Gbps
+      - 泰国1[x1|Vmess]@200Mbps
+      - 哈萨克斯坦1[x1|Vmess]@200Mbps
+      - 巴西1[x1|Vmess]@200Mbps
+      - 阿根廷1[x1|Vmess]@1Gbps
+      - 香港试用[x1|无SLA|Vmess]@100Mbps
+      - 日本试用[x1|无SLA|Vmess]@100Mbps
+      - 新加坡试用[x1|无SLA|Vmess]@100Mbps
+  - name: Ⓜ️ 微软服务
+    type: select
+    proxies:
+      - 🎯 全球直连
+      - 🚀 节点选择
+      - 微信：gtyz222
+      - 香港HKT1[x1|Vmess]@10Gbps
+      - 香港HKT2[x1|Vmess]@10Gbps
+      - 香港HKT3[x1|Vmess]@10Gbps
+      - 香港HKT4[x1|Vmess]@10Gbps
+      - 香港BGP1[x1|Vmess]@10Gbps
+      - 香港BGP2[x1|Vmess]@10Gbps
+      - 香港BGP3[x1|Vmess]@10Gbps
+      - 香港BGP4[x1|Vmess]@10Gbps
+      - 香港BGP5[x1|Vmess]@10Gbps
+      - 香港BGP6[x1|Vmess]@10Gbps
+      - 香港BGP7[x1|Vmess]@10Gbps
+      - 香港BGP8[x1|Vmess]@10Gbps
+      - 香港BGP9[x1|Vmess]@10Gbps
+      - 香港BGP10[x1|Vmess]@10Gbps
+      - 日本BGP1[x1|Vmess]@10Gbps
+      - 日本BGP2[x1|Vmess]@10Gbps
+      - 日本BGP3[x1|Vmess]@10Gbps
+      - 日本BGP4[x1|Vmess]@10Gbps
+      - 日本BGP5[x1|Vmess]@10Gbps
+      - 日本BGP6[x1|Vmess]@10Gbps
+      - 日本BGP7[x1|Vmess]@10Gbps
+      - 日本BGP8[x1|Vmess]@10Gbps
+      - 日本BGP9[x1|Vmess]@10Gbps
+      - 日本BGP10[x1|Vmess]@10Gbps
+      - 台湾HiNet1[x1|Vmess]@500Mbps
+      - 台湾HiNet2[x1|Vmess]@500Mbps
+      - 台湾HiNet3[x1|Vmess]@500Mbps
+      - 台湾HiNet4[x1|Vmess]@500Mbps
+      - 台湾HiNet5[x1|Vmess]@500Mbps
+      - 台湾SeedNet1[x1|Vmess]@500Mbps
+      - 台湾SeedNet2[x1|Vmess]@500Mbps
+      - 台湾SeedNet3[x1|Vmess]@500Mbps
+      - 新加坡DO1[x1|Vmess]@1Gbps
+      - 新加坡DO2[x1|Vmess]@1Gbps
+      - 新加坡DO3[x1|Vmess]@1Gbps
+      - 新加坡DO4[x1|Vmess]@1Gbps
+      - 新加坡DO5[x1|Vmess]@1Gbps
+      - 新加坡VQ1[x1|Vmess]@1Gbps
+      - 美国BGP1[x1|Vmess]@10Gbps
+      - 美国BGP2[x1|Vmess]@10Gbps
+      - 美国BGP3[x1|Vmess]@10Gbps
+      - 美国BGP4[x1|Vmess]@10Gbps
+      - 美国BGP5[x1|Vmess]@10Gbps
+      - 美国HE1[x1|Vmess]@1Gbps
+      - 美国HE2[x1|Vmess]@1Gbps
+      - 美国HE3[x1|Vmess]@1Gbps
+      - 美国HE4[x1|Vmess]@1Gbps
+      - 美国HE5[x1|Vmess]@1Gbps
+      - 美国OVH1[x0.5|Vmess]@1Gbps
+      - 加拿大1[x1|Vmess]@1Gbps
+      - 澳大利亚1[x1|Vmess]@1Gbps
+      - 俄罗斯伯力1[x1|Vmess]@1Gbps
+      - 德国1[x1|Vmess]@1Gbps
+      - 英国1[x1|Vmess]@1Gbps
+      - 法国1[x1|Vmess]@1Gbps
+      - 意大利1[x1|Vmess]@1Gbps
+      - 荷兰1[x1|Vmess]@1Gbps
+      - 西班牙1[x1|Vmess]@200Mbps
+      - 卢森堡1[x1|Vmess]@200Mbps
+      - 土耳其1[x1|Vmess]@500Mbps
+      - 瑞典1[x1|Vmess]@80Mbps
+      - 乌克兰1[x1|Vmess]@200Mbps
+      - 以色列1[x1|Vmess]@200Mbps
+      - 印度1[x1|Vmess]@1Gbps
+      - 马来西亚1[x1|Vmess]@200Mbps
+      - 印度尼西亚1[x1|Vmess]@1Gbps
+      - 菲律宾1[x1|Vmess]@2Gbps
+      - 泰国1[x1|Vmess]@200Mbps
+      - 哈萨克斯坦1[x1|Vmess]@200Mbps
+      - 巴西1[x1|Vmess]@200Mbps
+      - 阿根廷1[x1|Vmess]@1Gbps
+      - 香港试用[x1|无SLA|Vmess]@100Mbps
+      - 日本试用[x1|无SLA|Vmess]@100Mbps
+      - 新加坡试用[x1|无SLA|Vmess]@100Mbps
+  - name: 🍎 苹果服务
+    type: select
+    proxies:
+      - 🚀 节点选择
+      - 🎯 全球直连
+      - 微信：gtyz222
+      - 香港HKT1[x1|Vmess]@10Gbps
+      - 香港HKT2[x1|Vmess]@10Gbps
+      - 香港HKT3[x1|Vmess]@10Gbps
+      - 香港HKT4[x1|Vmess]@10Gbps
+      - 香港BGP1[x1|Vmess]@10Gbps
+      - 香港BGP2[x1|Vmess]@10Gbps
+      - 香港BGP3[x1|Vmess]@10Gbps
+      - 香港BGP4[x1|Vmess]@10Gbps
+      - 香港BGP5[x1|Vmess]@10Gbps
+      - 香港BGP6[x1|Vmess]@10Gbps
+      - 香港BGP7[x1|Vmess]@10Gbps
+      - 香港BGP8[x1|Vmess]@10Gbps
+      - 香港BGP9[x1|Vmess]@10Gbps
+      - 香港BGP10[x1|Vmess]@10Gbps
+      - 日本BGP1[x1|Vmess]@10Gbps
+      - 日本BGP2[x1|Vmess]@10Gbps
+      - 日本BGP3[x1|Vmess]@10Gbps
+      - 日本BGP4[x1|Vmess]@10Gbps
+      - 日本BGP5[x1|Vmess]@10Gbps
+      - 日本BGP6[x1|Vmess]@10Gbps
+      - 日本BGP7[x1|Vmess]@10Gbps
+      - 日本BGP8[x1|Vmess]@10Gbps
+      - 日本BGP9[x1|Vmess]@10Gbps
+      - 日本BGP10[x1|Vmess]@10Gbps
+      - 台湾HiNet1[x1|Vmess]@500Mbps
+      - 台湾HiNet2[x1|Vmess]@500Mbps
+      - 台湾HiNet3[x1|Vmess]@500Mbps
+      - 台湾HiNet4[x1|Vmess]@500Mbps
+      - 台湾HiNet5[x1|Vmess]@500Mbps
+      - 台湾SeedNet1[x1|Vmess]@500Mbps
+      - 台湾SeedNet2[x1|Vmess]@500Mbps
+      - 台湾SeedNet3[x1|Vmess]@500Mbps
+      - 新加坡DO1[x1|Vmess]@1Gbps
+      - 新加坡DO2[x1|Vmess]@1Gbps
+      - 新加坡DO3[x1|Vmess]@1Gbps
+      - 新加坡DO4[x1|Vmess]@1Gbps
+      - 新加坡DO5[x1|Vmess]@1Gbps
+      - 新加坡VQ1[x1|Vmess]@1Gbps
+      - 美国BGP1[x1|Vmess]@10Gbps
+      - 美国BGP2[x1|Vmess]@10Gbps
+      - 美国BGP3[x1|Vmess]@10Gbps
+      - 美国BGP4[x1|Vmess]@10Gbps
+      - 美国BGP5[x1|Vmess]@10Gbps
+      - 美国HE1[x1|Vmess]@1Gbps
+      - 美国HE2[x1|Vmess]@1Gbps
+      - 美国HE3[x1|Vmess]@1Gbps
+      - 美国HE4[x1|Vmess]@1Gbps
+      - 美国HE5[x1|Vmess]@1Gbps
+      - 美国OVH1[x0.5|Vmess]@1Gbps
+      - 加拿大1[x1|Vmess]@1Gbps
+      - 澳大利亚1[x1|Vmess]@1Gbps
+      - 俄罗斯伯力1[x1|Vmess]@1Gbps
+      - 德国1[x1|Vmess]@1Gbps
+      - 英国1[x1|Vmess]@1Gbps
+      - 法国1[x1|Vmess]@1Gbps
+      - 意大利1[x1|Vmess]@1Gbps
+      - 荷兰1[x1|Vmess]@1Gbps
+      - 西班牙1[x1|Vmess]@200Mbps
+      - 卢森堡1[x1|Vmess]@200Mbps
+      - 土耳其1[x1|Vmess]@500Mbps
+      - 瑞典1[x1|Vmess]@80Mbps
+      - 乌克兰1[x1|Vmess]@200Mbps
+      - 以色列1[x1|Vmess]@200Mbps
+      - 印度1[x1|Vmess]@1Gbps
+      - 马来西亚1[x1|Vmess]@200Mbps
+      - 印度尼西亚1[x1|Vmess]@1Gbps
+      - 菲律宾1[x1|Vmess]@2Gbps
+      - 泰国1[x1|Vmess]@200Mbps
+      - 哈萨克斯坦1[x1|Vmess]@200Mbps
+      - 巴西1[x1|Vmess]@200Mbps
+      - 阿根廷1[x1|Vmess]@1Gbps
+      - 香港试用[x1|无SLA|Vmess]@100Mbps
+      - 日本试用[x1|无SLA|Vmess]@100Mbps
+      - 新加坡试用[x1|无SLA|Vmess]@100Mbps
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -749,6 +1215,11 @@ proxy-groups:
     proxies:
       - REJECT
       - DIRECT
+  - name: 🍃 应用净化
+    type: select
+    proxies:
+      - REJECT
+      - DIRECT
   - name: 🐟 漏网之鱼
     type: select
     proxies:
@@ -756,158 +1227,151 @@ proxy-groups:
       - 🎯 全球直连
       - ♻️ 自动选择
       - 微信：gtyz222
-      - 应急专用(JP)
-      - 香港
-      - 台湾
-      - 日本
-      - 韩国
-      - 新加坡
-      - 泰国
-      - 老挝
-      - 尼泊尔
-      - 斯里兰卡
-      - 缅甸
-      - 蒙古
-      - 柬埔寨
-      - 孟加拉国
-      - 哈萨克斯坦
-      - 阿联酋
-      - 美国
-      - 阿尔巴尼亚
-      - 安道尔
-      - 保加利亚
-      - 捷克
-      - 爱沙尼亚
-      - 匈牙利
-      - 英属泽西岛
-      - 奥地利
-      - 拉脱维亚
-      - 列支敦士登
-      - 卢森堡
-      - 马耳他
-      - 摩尔多瓦
-      - 摩纳哥
-      - 黑山
-      - 英国
-      - 马来西亚
-      - 印度尼西亚
-      - 新西兰
-      - 澳大利亚
-      - 巴基斯坦
-      - 南非
-      - 德国
-      - 埃及
-      - 西班牙
-      - 法国
-      - 印度
-      - 意大利
-      - 菲律宾
-      - 尼日利亚
-      - 土耳其
-      - 乌克兰
-      - 阿根廷
-      - 越南
-      - 巴西
-      - 加拿大
-      - 比利时
-      - 丹麦
-      - 芬兰
-      - 克罗地亚
-      - 瑞典
-      - 希腊
-      - 乌兹别克斯坦
-      - 阿尔及利亚
-      - 安哥拉
-      - 冰岛
-      - 爱尔兰
-      - 立陶宛
-      - 墨西哥
-      - 巴哈马
-      - 伯利兹
-      - 百慕大
-      - 哥斯达黎加
-      - 多米尼加
-      - 荷兰
-      - 波兰
-      - 挪威
-      - 葡萄牙
-      - 瑞士
-      - 摩洛哥
-      - 肯尼亚
-      - 开曼群岛
-      - 巴拿马
-      - 乌拉圭
-      - 日本【新疆|俄罗斯专用】
+      - 香港HKT1[x1|Vmess]@10Gbps
+      - 香港HKT2[x1|Vmess]@10Gbps
+      - 香港HKT3[x1|Vmess]@10Gbps
+      - 香港HKT4[x1|Vmess]@10Gbps
+      - 香港BGP1[x1|Vmess]@10Gbps
+      - 香港BGP2[x1|Vmess]@10Gbps
+      - 香港BGP3[x1|Vmess]@10Gbps
+      - 香港BGP4[x1|Vmess]@10Gbps
+      - 香港BGP5[x1|Vmess]@10Gbps
+      - 香港BGP6[x1|Vmess]@10Gbps
+      - 香港BGP7[x1|Vmess]@10Gbps
+      - 香港BGP8[x1|Vmess]@10Gbps
+      - 香港BGP9[x1|Vmess]@10Gbps
+      - 香港BGP10[x1|Vmess]@10Gbps
+      - 日本BGP1[x1|Vmess]@10Gbps
+      - 日本BGP2[x1|Vmess]@10Gbps
+      - 日本BGP3[x1|Vmess]@10Gbps
+      - 日本BGP4[x1|Vmess]@10Gbps
+      - 日本BGP5[x1|Vmess]@10Gbps
+      - 日本BGP6[x1|Vmess]@10Gbps
+      - 日本BGP7[x1|Vmess]@10Gbps
+      - 日本BGP8[x1|Vmess]@10Gbps
+      - 日本BGP9[x1|Vmess]@10Gbps
+      - 日本BGP10[x1|Vmess]@10Gbps
+      - 台湾HiNet1[x1|Vmess]@500Mbps
+      - 台湾HiNet2[x1|Vmess]@500Mbps
+      - 台湾HiNet3[x1|Vmess]@500Mbps
+      - 台湾HiNet4[x1|Vmess]@500Mbps
+      - 台湾HiNet5[x1|Vmess]@500Mbps
+      - 台湾SeedNet1[x1|Vmess]@500Mbps
+      - 台湾SeedNet2[x1|Vmess]@500Mbps
+      - 台湾SeedNet3[x1|Vmess]@500Mbps
+      - 新加坡DO1[x1|Vmess]@1Gbps
+      - 新加坡DO2[x1|Vmess]@1Gbps
+      - 新加坡DO3[x1|Vmess]@1Gbps
+      - 新加坡DO4[x1|Vmess]@1Gbps
+      - 新加坡DO5[x1|Vmess]@1Gbps
+      - 新加坡VQ1[x1|Vmess]@1Gbps
+      - 美国BGP1[x1|Vmess]@10Gbps
+      - 美国BGP2[x1|Vmess]@10Gbps
+      - 美国BGP3[x1|Vmess]@10Gbps
+      - 美国BGP4[x1|Vmess]@10Gbps
+      - 美国BGP5[x1|Vmess]@10Gbps
+      - 美国HE1[x1|Vmess]@1Gbps
+      - 美国HE2[x1|Vmess]@1Gbps
+      - 美国HE3[x1|Vmess]@1Gbps
+      - 美国HE4[x1|Vmess]@1Gbps
+      - 美国HE5[x1|Vmess]@1Gbps
+      - 美国OVH1[x0.5|Vmess]@1Gbps
+      - 加拿大1[x1|Vmess]@1Gbps
+      - 澳大利亚1[x1|Vmess]@1Gbps
+      - 俄罗斯伯力1[x1|Vmess]@1Gbps
+      - 德国1[x1|Vmess]@1Gbps
+      - 英国1[x1|Vmess]@1Gbps
+      - 法国1[x1|Vmess]@1Gbps
+      - 意大利1[x1|Vmess]@1Gbps
+      - 荷兰1[x1|Vmess]@1Gbps
+      - 西班牙1[x1|Vmess]@200Mbps
+      - 卢森堡1[x1|Vmess]@200Mbps
+      - 土耳其1[x1|Vmess]@500Mbps
+      - 瑞典1[x1|Vmess]@80Mbps
+      - 乌克兰1[x1|Vmess]@200Mbps
+      - 以色列1[x1|Vmess]@200Mbps
+      - 印度1[x1|Vmess]@1Gbps
+      - 马来西亚1[x1|Vmess]@200Mbps
+      - 印度尼西亚1[x1|Vmess]@1Gbps
+      - 菲律宾1[x1|Vmess]@2Gbps
+      - 泰国1[x1|Vmess]@200Mbps
+      - 哈萨克斯坦1[x1|Vmess]@200Mbps
+      - 巴西1[x1|Vmess]@200Mbps
+      - 阿根廷1[x1|Vmess]@1Gbps
+      - 香港试用[x1|无SLA|Vmess]@100Mbps
+      - 日本试用[x1|无SLA|Vmess]@100Mbps
+      - 新加坡试用[x1|无SLA|Vmess]@100Mbps
 rule-providers:
   LocalAreaNetwork:
     type: http
     behavior: classical
-    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/LocalAreaNetwork.list
-    path: ./rules/providers/LocalAreaNetwork.list
-    interval: 86400
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/LocalAreaNetwork.list
+    path: ./rules/LocalAreaNetwork.yaml
   BanAD:
     type: http
     behavior: classical
-    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanAD.list
-    path: ./rules/providers/BanAD.list
-    interval: 86400
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/BanAD.list
+    path: ./rules/BanAD.yaml
   BanProgramAD:
     type: http
     behavior: classical
-    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanProgramAD.list
-    path: ./rules/providers/BanProgramAD.list
-    interval: 86400
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/BanProgramAD.list
+    path: ./rules/BanProgramAD.yaml
   GoogleCN:
     type: http
     behavior: classical
-    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/GoogleCN.list
-    path: ./rules/providers/GoogleCN.list
-    interval: 86400
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/GoogleCN.list
+    path: ./rules/GoogleCN.yaml
   SteamCN:
     type: http
     behavior: classical
-    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/SteamCN.list
-    path: ./rules/providers/SteamCN.list
-    interval: 86400
-  Telegram:
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/Ruleset/SteamCN.list
+    path: ./rules/SteamCN.yaml
+  Microsoft:
     type: http
     behavior: classical
-    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Telegram.list
-    path: ./rules/providers/Telegram.list
-    interval: 86400
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/Microsoft.list
+    path: ./rules/Microsoft.yaml
+  Apple:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/Apple.list
+    path: ./rules/Apple.yaml
   ProxyMedia:
     type: http
     behavior: classical
-    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ProxyMedia.list
-    path: ./rules/providers/ProxyMedia.list
-    interval: 86400
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/ProxyMedia.list
+    path: ./rules/ProxyMedia.yaml
+  Telegram:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/Telegram.list
+    path: ./rules/Telegram.yaml
   ProxyLite:
     type: http
     behavior: classical
-    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ProxyLite.list
-    path: ./rules/providers/ProxyLite.list
-    interval: 86400
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/ProxyLite.list
+    path: ./rules/ProxyLite.yaml
   ChinaDomain:
     type: http
     behavior: classical
-    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaDomain.list
-    path: ./rules/providers/ChinaDomain.list
-    interval: 86400
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/ChinaDomain.list
+    path: ./rules/ChinaDomain.yaml
   ChinaCompanyIp:
     type: http
     behavior: classical
-    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaCompanyIp.list
-    path: ./rules/providers/ChinaCompanyIp.list
-    interval: 86400
-
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/ChinaCompanyIp.list
+    path: ./rules/ChinaCompanyIp.yaml
 rules:
   - RULE-SET,LocalAreaNetwork,🎯 全球直连
   - RULE-SET,BanAD,🛑 全球拦截
-  - RULE-SET,BanProgramAD,🛑 全球拦截
+  - RULE-SET,BanProgramAD,🍃 应用净化
   - RULE-SET,GoogleCN,🎯 全球直连
   - RULE-SET,SteamCN,🎯 全球直连
-  - RULE-SET,Telegram,🚀 节点选择
-  - RULE-SET,ProxyMedia,🚀 节点选择
+  - RULE-SET,Microsoft,Ⓜ️ 微软服务
+  - RULE-SET,Apple,🍎 苹果服务
+  - RULE-SET,ProxyMedia,🌍 国外媒体
+  - RULE-SET,Telegram,📲 电报信息
   - RULE-SET,ProxyLite,🚀 节点选择
   - RULE-SET,ChinaDomain,🎯 全球直连
   - RULE-SET,ChinaCompanyIp,🎯 全球直连
