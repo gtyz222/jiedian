@@ -1,0 +1,1315 @@
+mixed-port: 7890
+allow-lan: true
+mode: rule
+log-level: info
+ipv6: false
+external-controller: 0.0.0.0:9090
+dns:
+  enable: true
+  listen: 0.0.0.0:53
+  ipv6: false
+  default-nameserver:
+    - 223.5.5.5
+    - 114.114.114.114
+  nameserver:
+    - 223.5.5.5
+    - 114.114.114.114
+    - 119.29.29.29
+    - 180.76.76.76
+  enhanced-mode: fake-ip
+  fake-ip-range: 198.18.0.1/16
+  fake-ip-filter:
+    - "*.lan"
+    - "*.localdomain"
+    - "*.example"
+    - "*.invalid"
+    - "*.localhost"
+    - "*.test"
+    - "*.local"
+    - "*.home.arpa"
+    - router.asus.com
+    - localhost.sec.qq.com
+    - localhost.ptlogin2.qq.com
+    - +.msftconnecttest.com
+tun:
+  enable: true
+  stack: system
+  auto-route: true
+  auto-detect-interface: true
+  dns-hijack:
+    - 114.114.114.114
+    - 180.76.76.76
+    - 119.29.29.29
+    - 223.5.5.5
+    - 8.8.8.8
+    - 8.8.4.4
+    - 1.1.1.1
+    - 1.0.0.1
+proxies:
+  - name: 微信：gtyz222
+    type: vmess
+    server: cos-csn-gzg4.friends34369.xyz
+    port: 3443
+    uuid: 451582da-e192-3bca-8205-3b8d7d688147
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+  - name: 香港BGP1[x1|Vmess]@10Gbps
+    type: vmess
+    server: cos-csn-gzg4.friends34369.xyz
+    port: 13002
+    uuid: 451582da-e192-3bca-8205-3b8d7d688147
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+  - name: 香港BGP2[x1|Vmess]@10Gbps
+    type: vmess
+    server: cos-csn-gzg4.friends34369.xyz
+    port: 13004
+    uuid: 451582da-e192-3bca-8205-3b8d7d688147
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+  - name: 香港BGP3[x1|Vmess]@10Gbps
+    type: vmess
+    server: cos-csn-gzg4.friends34369.xyz
+    port: 13006
+    uuid: 451582da-e192-3bca-8205-3b8d7d688147
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+  - name: 香港BGP4[x1|Vmess]@10Gbps
+    type: vmess
+    server: cos-csn-gzg4.friends34369.xyz
+    port: 13008
+    uuid: 451582da-e192-3bca-8205-3b8d7d688147
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+  - name: 香港BGP5[x1|Vmess]@10Gbps
+    type: vmess
+    server: cos-csn-gzg4.friends34369.xyz
+    port: 13010
+    uuid: 451582da-e192-3bca-8205-3b8d7d688147
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+  - name: 香港BGP6[x1|Vmess]@10Gbps
+    type: vmess
+    server: cos-csn-gzg4.friends34369.xyz
+    port: 13052
+    uuid: 451582da-e192-3bca-8205-3b8d7d688147
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+  - name: 香港BGP7[x1|Vmess]@10Gbps
+    type: vmess
+    server: cos-csn-gzg4.friends34369.xyz
+    port: 13054
+    uuid: 451582da-e192-3bca-8205-3b8d7d688147
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+  - name: 香港BGP8[x1|Vmess]@10Gbps
+    type: vmess
+    server: cos-csn-gzg4.friends34369.xyz
+    port: 13056
+    uuid: 451582da-e192-3bca-8205-3b8d7d688147
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+  - name: 香港BGP9[x1|Vmess]@10Gbps
+    type: vmess
+    server: cos-csn-gzg4.friends34369.xyz
+    port: 13058
+    uuid: 451582da-e192-3bca-8205-3b8d7d688147
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+  - name: 香港BGP10[x1|Vmess]@10Gbps
+    type: vmess
+    server: cos-csn-gzg4.friends34369.xyz
+    port: 13060
+    uuid: 451582da-e192-3bca-8205-3b8d7d688147
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+  - name: 日本BGP1[x1|Vmess]@10Gbps
+    type: vmess
+    server: cos-csn-gzg4.friends34369.xyz
+    port: 23002
+    uuid: 451582da-e192-3bca-8205-3b8d7d688147
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+  - name: 日本BGP2[x1|Vmess]@10Gbps
+    type: vmess
+    server: cos-csn-gzg4.friends34369.xyz
+    port: 23004
+    uuid: 451582da-e192-3bca-8205-3b8d7d688147
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+  - name: 日本BGP3[x1|Vmess]@10Gbps
+    type: vmess
+    server: cos-csn-gzg4.friends34369.xyz
+    port: 23006
+    uuid: 451582da-e192-3bca-8205-3b8d7d688147
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+  - name: 日本BGP4[x1|Vmess]@10Gbps
+    type: vmess
+    server: cos-csn-gzg4.friends34369.xyz
+    port: 23008
+    uuid: 451582da-e192-3bca-8205-3b8d7d688147
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+  - name: 日本BGP5[x1|Vmess]@10Gbps
+    type: vmess
+    server: cos-csn-gzg4.friends34369.xyz
+    port: 23010
+    uuid: 451582da-e192-3bca-8205-3b8d7d688147
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+  - name: 日本BGP6[x1|Vmess]@10Gbps
+    type: vmess
+    server: cos-csn-gzg4.friends34369.xyz
+    port: 23022
+    uuid: 451582da-e192-3bca-8205-3b8d7d688147
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+  - name: 日本BGP7[x1|Vmess]@10Gbps
+    type: vmess
+    server: cos-csn-gzg4.friends34369.xyz
+    port: 23024
+    uuid: 451582da-e192-3bca-8205-3b8d7d688147
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+  - name: 日本BGP8[x1|Vmess]@10Gbps
+    type: vmess
+    server: cos-csn-gzg4.friends34369.xyz
+    port: 23026
+    uuid: 451582da-e192-3bca-8205-3b8d7d688147
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+  - name: 日本BGP9[x1|Vmess]@10Gbps
+    type: vmess
+    server: cos-csn-gzg4.friends34369.xyz
+    port: 23028
+    uuid: 451582da-e192-3bca-8205-3b8d7d688147
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+  - name: 日本BGP10[x1|Vmess]@10Gbps
+    type: vmess
+    server: cos-csn-gzg4.friends34369.xyz
+    port: 23030
+    uuid: 451582da-e192-3bca-8205-3b8d7d688147
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+  - name: 台湾HiNet1[x1|Vmess]@500Mbps
+    type: vmess
+    server: cos-csn-gzg4.friends34369.xyz
+    port: 13022
+    uuid: 451582da-e192-3bca-8205-3b8d7d688147
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+  - name: 台湾HiNet2[x1|Vmess]@500Mbps
+    type: vmess
+    server: cos-csn-gzg4.friends34369.xyz
+    port: 13024
+    uuid: 451582da-e192-3bca-8205-3b8d7d688147
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+  - name: 台湾HiNet3[x1|Vmess]@500Mbps
+    type: vmess
+    server: cos-csn-gzg4.friends34369.xyz
+    port: 13026
+    uuid: 451582da-e192-3bca-8205-3b8d7d688147
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+  - name: 台湾HiNet4[x1|Vmess]@500Mbps
+    type: vmess
+    server: cos-csn-gzg4.friends34369.xyz
+    port: 13028
+    uuid: 451582da-e192-3bca-8205-3b8d7d688147
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+  - name: 台湾HiNet5[x1|Vmess]@500Mbps
+    type: vmess
+    server: cos-csn-gzg4.friends34369.xyz
+    port: 13030
+    uuid: 451582da-e192-3bca-8205-3b8d7d688147
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+  - name: 台湾SeedNet1[x1|Vmess]@500Mbps
+    type: vmess
+    server: cos-csn-gzg4.friends34369.xyz
+    port: 13042
+    uuid: 451582da-e192-3bca-8205-3b8d7d688147
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+  - name: 台湾SeedNet2[x1|Vmess]@500Mbps
+    type: vmess
+    server: cos-csn-gzg4.friends34369.xyz
+    port: 13044
+    uuid: 451582da-e192-3bca-8205-3b8d7d688147
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+  - name: 台湾SeedNet3[x1|Vmess]@500Mbps
+    type: vmess
+    server: cos-csn-gzg4.friends34369.xyz
+    port: 13046
+    uuid: 451582da-e192-3bca-8205-3b8d7d688147
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+  - name: 新加坡Linode1[x1|Vmess]@1Gbps
+    type: vmess
+    server: cos-csn-gzg4.friends34369.xyz
+    port: 13014
+    uuid: 451582da-e192-3bca-8205-3b8d7d688147
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+  - name: 新加坡Linode2[x1|Vmess]@1Gbps
+    type: vmess
+    server: cos-csn-gzg4.friends34369.xyz
+    port: 13016
+    uuid: 451582da-e192-3bca-8205-3b8d7d688147
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+  - name: 新加坡Linode3[x1|Vmess]@1Gbps
+    type: vmess
+    server: cos-csn-gzg4.friends34369.xyz
+    port: 13018
+    uuid: 451582da-e192-3bca-8205-3b8d7d688147
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+  - name: 新加坡Linode4[x1|Vmess]@1Gbps
+    type: vmess
+    server: cos-csn-gzg4.friends34369.xyz
+    port: 13032
+    uuid: 451582da-e192-3bca-8205-3b8d7d688147
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+  - name: 新加坡Linode5[x1|Vmess]@1Gbps
+    type: vmess
+    server: cos-csn-gzg4.friends34369.xyz
+    port: 13034
+    uuid: 451582da-e192-3bca-8205-3b8d7d688147
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+  - name: 新加坡VQ1[x1|Vmess]@1Gbps
+    type: vmess
+    server: cos-csn-gzg4.friends34369.xyz
+    port: 13012
+    uuid: 451582da-e192-3bca-8205-3b8d7d688147
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+  - name: 美国BGP1[x1|Vmess]@10Gbps
+    type: vmess
+    server: cos-csn-gzg4.friends34369.xyz
+    port: 23062
+    uuid: 451582da-e192-3bca-8205-3b8d7d688147
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+  - name: 美国BGP2[x1|Vmess]@10Gbps
+    type: vmess
+    server: cos-csn-gzg4.friends34369.xyz
+    port: 23064
+    uuid: 451582da-e192-3bca-8205-3b8d7d688147
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+  - name: 美国BGP3[x1|Vmess]@10Gbps
+    type: vmess
+    server: cos-csn-gzg4.friends34369.xyz
+    port: 23066
+    uuid: 451582da-e192-3bca-8205-3b8d7d688147
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+  - name: 美国BGP4[x1|Vmess]@10Gbps
+    type: vmess
+    server: cos-csn-gzg4.friends34369.xyz
+    port: 23068
+    uuid: 451582da-e192-3bca-8205-3b8d7d688147
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+  - name: 美国BGP5[x1|Vmess]@10Gbps
+    type: vmess
+    server: cos-csn-gzg4.friends34369.xyz
+    port: 23070
+    uuid: 451582da-e192-3bca-8205-3b8d7d688147
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+  - name: 美国HE1[x1|Vmess]@1Gbps
+    type: vmess
+    server: cos-csn-gzg4.friends34369.xyz
+    port: 23052
+    uuid: 451582da-e192-3bca-8205-3b8d7d688147
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+  - name: 美国HE2[x1|Vmess]@1Gbps
+    type: vmess
+    server: cos-csn-gzg4.friends34369.xyz
+    port: 23054
+    uuid: 451582da-e192-3bca-8205-3b8d7d688147
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+  - name: 美国HE3[x1|Vmess]@1Gbps
+    type: vmess
+    server: cos-csn-gzg4.friends34369.xyz
+    port: 23056
+    uuid: 451582da-e192-3bca-8205-3b8d7d688147
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+  - name: 美国HE4[x1|Vmess]@1Gbps
+    type: vmess
+    server: cos-csn-gzg4.friends34369.xyz
+    port: 23058
+    uuid: 451582da-e192-3bca-8205-3b8d7d688147
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+  - name: 美国HE5[x1|Vmess]@1Gbps
+    type: vmess
+    server: cos-csn-gzg4.friends34369.xyz
+    port: 23060
+    uuid: 451582da-e192-3bca-8205-3b8d7d688147
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+  - name: 美国OVH1[x0.5|Vmess]@1Gbps
+    type: vmess
+    server: cos-csn-gzg4.friends34369.xyz
+    port: 23082
+    uuid: 451582da-e192-3bca-8205-3b8d7d688147
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+  - name: 加拿大1[x1|Vmess]@1Gbps
+    type: vmess
+    server: cos-csn-gzg4.friends34369.xyz
+    port: 28102
+    uuid: 451582da-e192-3bca-8205-3b8d7d688147
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+  - name: 澳大利亚1[x1|Vmess]@1Gbps
+    type: vmess
+    server: cos-csn-gzg4.friends34369.xyz
+    port: 18032
+    uuid: 451582da-e192-3bca-8205-3b8d7d688147
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+  - name: 俄罗斯伯力1[x1|Vmess]@1Gbps
+    type: vmess
+    server: cos-csn-gzg4.friends34369.xyz
+    port: 18052
+    uuid: 451582da-e192-3bca-8205-3b8d7d688147
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+  - name: 德国1[x1|Vmess]@1Gbps
+    type: vmess
+    server: cos-csn-gzg4.friends34369.xyz
+    port: 18062
+    uuid: 451582da-e192-3bca-8205-3b8d7d688147
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+  - name: 英国1[x1|Vmess]@1Gbps
+    type: vmess
+    server: cos-csn-gzg4.friends34369.xyz
+    port: 18064
+    uuid: 451582da-e192-3bca-8205-3b8d7d688147
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+  - name: 法国1[x1|Vmess]@1Gbps
+    type: vmess
+    server: cos-csn-gzg4.friends34369.xyz
+    port: 28112
+    uuid: 451582da-e192-3bca-8205-3b8d7d688147
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+  - name: 意大利1[x1|Vmess]@1Gbps
+    type: vmess
+    server: cos-csn-gzg4.friends34369.xyz
+    port: 28114
+    uuid: 451582da-e192-3bca-8205-3b8d7d688147
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+  - name: 荷兰1[x1|Vmess]@1Gbps
+    type: vmess
+    server: cos-csn-gzg4.friends34369.xyz
+    port: 28116
+    uuid: 451582da-e192-3bca-8205-3b8d7d688147
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+  - name: 西班牙1[x1|Vmess]@200Mbps
+    type: vmess
+    server: cos-csn-gzg4.friends34369.xyz
+    port: 18078
+    uuid: 451582da-e192-3bca-8205-3b8d7d688147
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+  - name: 卢森堡1[x1|Vmess]@200Mbps
+    type: vmess
+    server: cos-csn-gzg4.friends34369.xyz
+    port: 18076
+    uuid: 451582da-e192-3bca-8205-3b8d7d688147
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+  - name: 土耳其1[x1|Vmess]@500Mbps
+    type: vmess
+    server: cos-csn-gzg4.friends34369.xyz
+    port: 18082
+    uuid: 451582da-e192-3bca-8205-3b8d7d688147
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+  - name: 瑞典1[x1|Vmess]@80Mbps
+    type: vmess
+    server: cos-csn-gzg4.friends34369.xyz
+    port: 18084
+    uuid: 451582da-e192-3bca-8205-3b8d7d688147
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+  - name: 乌克兰1[x1|Vmess]@200Mbps
+    type: vmess
+    server: cos-csn-gzg4.friends34369.xyz
+    port: 18074
+    uuid: 451582da-e192-3bca-8205-3b8d7d688147
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+  - name: 以色列1[x1|Vmess]@200Mbps
+    type: vmess
+    server: cos-csn-gzg4.friends34369.xyz
+    port: 18072
+    uuid: 451582da-e192-3bca-8205-3b8d7d688147
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+  - name: 印度1[x1|Vmess]@1Gbps
+    type: vmess
+    server: cos-csn-gzg4.friends34369.xyz
+    port: 18012
+    uuid: 451582da-e192-3bca-8205-3b8d7d688147
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+  - name: 马来西亚1[x1|Vmess]@200Mbps
+    type: vmess
+    server: cos-csn-gzg4.friends34369.xyz
+    port: 18022
+    uuid: 451582da-e192-3bca-8205-3b8d7d688147
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+  - name: 印度尼西亚1[x1|Vmess]@1Gbps
+    type: vmess
+    server: cos-csn-gzg4.friends34369.xyz
+    port: 18036
+    uuid: 451582da-e192-3bca-8205-3b8d7d688147
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+  - name: 菲律宾1[x1|Vmess]@2Gbps
+    type: vmess
+    server: cos-csn-gzg4.friends34369.xyz
+    port: 18014
+    uuid: 451582da-e192-3bca-8205-3b8d7d688147
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+  - name: 泰国1[x1|Vmess]@200Mbps
+    type: vmess
+    server: cos-csn-gzg4.friends34369.xyz
+    port: 18038
+    uuid: 451582da-e192-3bca-8205-3b8d7d688147
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+  - name: 哈萨克斯坦1[x1|Vmess]@200Mbps
+    type: vmess
+    server: cos-csn-gzg4.friends34369.xyz
+    port: 18086
+    uuid: 451582da-e192-3bca-8205-3b8d7d688147
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+  - name: 巴西1[x1|Vmess]@200Mbps
+    type: vmess
+    server: cos-csn-gzg4.friends34369.xyz
+    port: 18044
+    uuid: 451582da-e192-3bca-8205-3b8d7d688147
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+  - name: 阿根廷1[x1|Vmess]@1Gbps
+    type: vmess
+    server: cos-csn-gzg4.friends34369.xyz
+    port: 18042
+    uuid: 451582da-e192-3bca-8205-3b8d7d688147
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+  - name: 香港试用[x1|无SLA|Vmess]@100Mbps
+    type: vmess
+    server: cos-csn-gzg4.friends34369.xyz
+    port: 15342
+    uuid: 451582da-e192-3bca-8205-3b8d7d688147
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+  - name: 日本试用[x1|无SLA|Vmess]@100Mbps
+    type: vmess
+    server: cos-csn-gzg4.friends34369.xyz
+    port: 15344
+    uuid: 451582da-e192-3bca-8205-3b8d7d688147
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+  - name: 新加坡试用[x1|无SLA|Vmess]@100Mbps
+    type: vmess
+    server: cos-csn-gzg4.friends34369.xyz
+    port: 15348
+    uuid: 451582da-e192-3bca-8205-3b8d7d688147
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+proxy-groups:
+  - name: 🚀 节点选择
+    type: select
+    proxies:
+      - ♻️ 自动选择
+      - DIRECT
+      - 微信：gtyz222
+      - 香港BGP1[x1|Vmess]@10Gbps
+      - 香港BGP2[x1|Vmess]@10Gbps
+      - 香港BGP3[x1|Vmess]@10Gbps
+      - 香港BGP4[x1|Vmess]@10Gbps
+      - 香港BGP5[x1|Vmess]@10Gbps
+      - 香港BGP6[x1|Vmess]@10Gbps
+      - 香港BGP7[x1|Vmess]@10Gbps
+      - 香港BGP8[x1|Vmess]@10Gbps
+      - 香港BGP9[x1|Vmess]@10Gbps
+      - 香港BGP10[x1|Vmess]@10Gbps
+      - 日本BGP1[x1|Vmess]@10Gbps
+      - 日本BGP2[x1|Vmess]@10Gbps
+      - 日本BGP3[x1|Vmess]@10Gbps
+      - 日本BGP4[x1|Vmess]@10Gbps
+      - 日本BGP5[x1|Vmess]@10Gbps
+      - 日本BGP6[x1|Vmess]@10Gbps
+      - 日本BGP7[x1|Vmess]@10Gbps
+      - 日本BGP8[x1|Vmess]@10Gbps
+      - 日本BGP9[x1|Vmess]@10Gbps
+      - 日本BGP10[x1|Vmess]@10Gbps
+      - 台湾HiNet1[x1|Vmess]@500Mbps
+      - 台湾HiNet2[x1|Vmess]@500Mbps
+      - 台湾HiNet3[x1|Vmess]@500Mbps
+      - 台湾HiNet4[x1|Vmess]@500Mbps
+      - 台湾HiNet5[x1|Vmess]@500Mbps
+      - 台湾SeedNet1[x1|Vmess]@500Mbps
+      - 台湾SeedNet2[x1|Vmess]@500Mbps
+      - 台湾SeedNet3[x1|Vmess]@500Mbps
+      - 新加坡Linode1[x1|Vmess]@1Gbps
+      - 新加坡Linode2[x1|Vmess]@1Gbps
+      - 新加坡Linode3[x1|Vmess]@1Gbps
+      - 新加坡Linode4[x1|Vmess]@1Gbps
+      - 新加坡Linode5[x1|Vmess]@1Gbps
+      - 新加坡VQ1[x1|Vmess]@1Gbps
+      - 美国BGP1[x1|Vmess]@10Gbps
+      - 美国BGP2[x1|Vmess]@10Gbps
+      - 美国BGP3[x1|Vmess]@10Gbps
+      - 美国BGP4[x1|Vmess]@10Gbps
+      - 美国BGP5[x1|Vmess]@10Gbps
+      - 美国HE1[x1|Vmess]@1Gbps
+      - 美国HE2[x1|Vmess]@1Gbps
+      - 美国HE3[x1|Vmess]@1Gbps
+      - 美国HE4[x1|Vmess]@1Gbps
+      - 美国HE5[x1|Vmess]@1Gbps
+      - 美国OVH1[x0.5|Vmess]@1Gbps
+      - 加拿大1[x1|Vmess]@1Gbps
+      - 澳大利亚1[x1|Vmess]@1Gbps
+      - 俄罗斯伯力1[x1|Vmess]@1Gbps
+      - 德国1[x1|Vmess]@1Gbps
+      - 英国1[x1|Vmess]@1Gbps
+      - 法国1[x1|Vmess]@1Gbps
+      - 意大利1[x1|Vmess]@1Gbps
+      - 荷兰1[x1|Vmess]@1Gbps
+      - 西班牙1[x1|Vmess]@200Mbps
+      - 卢森堡1[x1|Vmess]@200Mbps
+      - 土耳其1[x1|Vmess]@500Mbps
+      - 瑞典1[x1|Vmess]@80Mbps
+      - 乌克兰1[x1|Vmess]@200Mbps
+      - 以色列1[x1|Vmess]@200Mbps
+      - 印度1[x1|Vmess]@1Gbps
+      - 马来西亚1[x1|Vmess]@200Mbps
+      - 印度尼西亚1[x1|Vmess]@1Gbps
+      - 菲律宾1[x1|Vmess]@2Gbps
+      - 泰国1[x1|Vmess]@200Mbps
+      - 哈萨克斯坦1[x1|Vmess]@200Mbps
+      - 巴西1[x1|Vmess]@200Mbps
+      - 阿根廷1[x1|Vmess]@1Gbps
+      - 香港试用[x1|无SLA|Vmess]@100Mbps
+      - 日本试用[x1|无SLA|Vmess]@100Mbps
+      - 新加坡试用[x1|无SLA|Vmess]@100Mbps
+  - name: ♻️ 自动选择
+    type: url-test
+    proxies:
+      - 微信：gtyz222
+      - 香港BGP1[x1|Vmess]@10Gbps
+      - 香港BGP2[x1|Vmess]@10Gbps
+      - 香港BGP3[x1|Vmess]@10Gbps
+      - 香港BGP4[x1|Vmess]@10Gbps
+      - 香港BGP5[x1|Vmess]@10Gbps
+      - 香港BGP6[x1|Vmess]@10Gbps
+      - 香港BGP7[x1|Vmess]@10Gbps
+      - 香港BGP8[x1|Vmess]@10Gbps
+      - 香港BGP9[x1|Vmess]@10Gbps
+      - 香港BGP10[x1|Vmess]@10Gbps
+      - 日本BGP1[x1|Vmess]@10Gbps
+      - 日本BGP2[x1|Vmess]@10Gbps
+      - 日本BGP3[x1|Vmess]@10Gbps
+      - 日本BGP4[x1|Vmess]@10Gbps
+      - 日本BGP5[x1|Vmess]@10Gbps
+      - 日本BGP6[x1|Vmess]@10Gbps
+      - 日本BGP7[x1|Vmess]@10Gbps
+      - 日本BGP8[x1|Vmess]@10Gbps
+      - 日本BGP9[x1|Vmess]@10Gbps
+      - 日本BGP10[x1|Vmess]@10Gbps
+      - 台湾HiNet1[x1|Vmess]@500Mbps
+      - 台湾HiNet2[x1|Vmess]@500Mbps
+      - 台湾HiNet3[x1|Vmess]@500Mbps
+      - 台湾HiNet4[x1|Vmess]@500Mbps
+      - 台湾HiNet5[x1|Vmess]@500Mbps
+      - 台湾SeedNet1[x1|Vmess]@500Mbps
+      - 台湾SeedNet2[x1|Vmess]@500Mbps
+      - 台湾SeedNet3[x1|Vmess]@500Mbps
+      - 新加坡Linode1[x1|Vmess]@1Gbps
+      - 新加坡Linode2[x1|Vmess]@1Gbps
+      - 新加坡Linode3[x1|Vmess]@1Gbps
+      - 新加坡Linode4[x1|Vmess]@1Gbps
+      - 新加坡Linode5[x1|Vmess]@1Gbps
+      - 新加坡VQ1[x1|Vmess]@1Gbps
+      - 美国BGP1[x1|Vmess]@10Gbps
+      - 美国BGP2[x1|Vmess]@10Gbps
+      - 美国BGP3[x1|Vmess]@10Gbps
+      - 美国BGP4[x1|Vmess]@10Gbps
+      - 美国BGP5[x1|Vmess]@10Gbps
+      - 美国HE1[x1|Vmess]@1Gbps
+      - 美国HE2[x1|Vmess]@1Gbps
+      - 美国HE3[x1|Vmess]@1Gbps
+      - 美国HE4[x1|Vmess]@1Gbps
+      - 美国HE5[x1|Vmess]@1Gbps
+      - 美国OVH1[x0.5|Vmess]@1Gbps
+      - 加拿大1[x1|Vmess]@1Gbps
+      - 澳大利亚1[x1|Vmess]@1Gbps
+      - 俄罗斯伯力1[x1|Vmess]@1Gbps
+      - 德国1[x1|Vmess]@1Gbps
+      - 英国1[x1|Vmess]@1Gbps
+      - 法国1[x1|Vmess]@1Gbps
+      - 意大利1[x1|Vmess]@1Gbps
+      - 荷兰1[x1|Vmess]@1Gbps
+      - 西班牙1[x1|Vmess]@200Mbps
+      - 卢森堡1[x1|Vmess]@200Mbps
+      - 土耳其1[x1|Vmess]@500Mbps
+      - 瑞典1[x1|Vmess]@80Mbps
+      - 乌克兰1[x1|Vmess]@200Mbps
+      - 以色列1[x1|Vmess]@200Mbps
+      - 印度1[x1|Vmess]@1Gbps
+      - 马来西亚1[x1|Vmess]@200Mbps
+      - 印度尼西亚1[x1|Vmess]@1Gbps
+      - 菲律宾1[x1|Vmess]@2Gbps
+      - 泰国1[x1|Vmess]@200Mbps
+      - 哈萨克斯坦1[x1|Vmess]@200Mbps
+      - 巴西1[x1|Vmess]@200Mbps
+      - 阿根廷1[x1|Vmess]@1Gbps
+      - 香港试用[x1|无SLA|Vmess]@100Mbps
+      - 日本试用[x1|无SLA|Vmess]@100Mbps
+      - 新加坡试用[x1|无SLA|Vmess]@100Mbps
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    tolerance: 50
+  - name: 🌍 国外媒体
+    type: select
+    proxies:
+      - 🚀 节点选择
+      - ♻️ 自动选择
+      - 🎯 全球直连
+      - 微信：gtyz222
+      - 香港BGP1[x1|Vmess]@10Gbps
+      - 香港BGP2[x1|Vmess]@10Gbps
+      - 香港BGP3[x1|Vmess]@10Gbps
+      - 香港BGP4[x1|Vmess]@10Gbps
+      - 香港BGP5[x1|Vmess]@10Gbps
+      - 香港BGP6[x1|Vmess]@10Gbps
+      - 香港BGP7[x1|Vmess]@10Gbps
+      - 香港BGP8[x1|Vmess]@10Gbps
+      - 香港BGP9[x1|Vmess]@10Gbps
+      - 香港BGP10[x1|Vmess]@10Gbps
+      - 日本BGP1[x1|Vmess]@10Gbps
+      - 日本BGP2[x1|Vmess]@10Gbps
+      - 日本BGP3[x1|Vmess]@10Gbps
+      - 日本BGP4[x1|Vmess]@10Gbps
+      - 日本BGP5[x1|Vmess]@10Gbps
+      - 日本BGP6[x1|Vmess]@10Gbps
+      - 日本BGP7[x1|Vmess]@10Gbps
+      - 日本BGP8[x1|Vmess]@10Gbps
+      - 日本BGP9[x1|Vmess]@10Gbps
+      - 日本BGP10[x1|Vmess]@10Gbps
+      - 台湾HiNet1[x1|Vmess]@500Mbps
+      - 台湾HiNet2[x1|Vmess]@500Mbps
+      - 台湾HiNet3[x1|Vmess]@500Mbps
+      - 台湾HiNet4[x1|Vmess]@500Mbps
+      - 台湾HiNet5[x1|Vmess]@500Mbps
+      - 台湾SeedNet1[x1|Vmess]@500Mbps
+      - 台湾SeedNet2[x1|Vmess]@500Mbps
+      - 台湾SeedNet3[x1|Vmess]@500Mbps
+      - 新加坡Linode1[x1|Vmess]@1Gbps
+      - 新加坡Linode2[x1|Vmess]@1Gbps
+      - 新加坡Linode3[x1|Vmess]@1Gbps
+      - 新加坡Linode4[x1|Vmess]@1Gbps
+      - 新加坡Linode5[x1|Vmess]@1Gbps
+      - 新加坡VQ1[x1|Vmess]@1Gbps
+      - 美国BGP1[x1|Vmess]@10Gbps
+      - 美国BGP2[x1|Vmess]@10Gbps
+      - 美国BGP3[x1|Vmess]@10Gbps
+      - 美国BGP4[x1|Vmess]@10Gbps
+      - 美国BGP5[x1|Vmess]@10Gbps
+      - 美国HE1[x1|Vmess]@1Gbps
+      - 美国HE2[x1|Vmess]@1Gbps
+      - 美国HE3[x1|Vmess]@1Gbps
+      - 美国HE4[x1|Vmess]@1Gbps
+      - 美国HE5[x1|Vmess]@1Gbps
+      - 美国OVH1[x0.5|Vmess]@1Gbps
+      - 加拿大1[x1|Vmess]@1Gbps
+      - 澳大利亚1[x1|Vmess]@1Gbps
+      - 俄罗斯伯力1[x1|Vmess]@1Gbps
+      - 德国1[x1|Vmess]@1Gbps
+      - 英国1[x1|Vmess]@1Gbps
+      - 法国1[x1|Vmess]@1Gbps
+      - 意大利1[x1|Vmess]@1Gbps
+      - 荷兰1[x1|Vmess]@1Gbps
+      - 西班牙1[x1|Vmess]@200Mbps
+      - 卢森堡1[x1|Vmess]@200Mbps
+      - 土耳其1[x1|Vmess]@500Mbps
+      - 瑞典1[x1|Vmess]@80Mbps
+      - 乌克兰1[x1|Vmess]@200Mbps
+      - 以色列1[x1|Vmess]@200Mbps
+      - 印度1[x1|Vmess]@1Gbps
+      - 马来西亚1[x1|Vmess]@200Mbps
+      - 印度尼西亚1[x1|Vmess]@1Gbps
+      - 菲律宾1[x1|Vmess]@2Gbps
+      - 泰国1[x1|Vmess]@200Mbps
+      - 哈萨克斯坦1[x1|Vmess]@200Mbps
+      - 巴西1[x1|Vmess]@200Mbps
+      - 阿根廷1[x1|Vmess]@1Gbps
+      - 香港试用[x1|无SLA|Vmess]@100Mbps
+      - 日本试用[x1|无SLA|Vmess]@100Mbps
+      - 新加坡试用[x1|无SLA|Vmess]@100Mbps
+  - name: 📲 电报信息
+    type: select
+    proxies:
+      - 🚀 节点选择
+      - 🎯 全球直连
+      - 微信：gtyz222
+      - 香港BGP1[x1|Vmess]@10Gbps
+      - 香港BGP2[x1|Vmess]@10Gbps
+      - 香港BGP3[x1|Vmess]@10Gbps
+      - 香港BGP4[x1|Vmess]@10Gbps
+      - 香港BGP5[x1|Vmess]@10Gbps
+      - 香港BGP6[x1|Vmess]@10Gbps
+      - 香港BGP7[x1|Vmess]@10Gbps
+      - 香港BGP8[x1|Vmess]@10Gbps
+      - 香港BGP9[x1|Vmess]@10Gbps
+      - 香港BGP10[x1|Vmess]@10Gbps
+      - 日本BGP1[x1|Vmess]@10Gbps
+      - 日本BGP2[x1|Vmess]@10Gbps
+      - 日本BGP3[x1|Vmess]@10Gbps
+      - 日本BGP4[x1|Vmess]@10Gbps
+      - 日本BGP5[x1|Vmess]@10Gbps
+      - 日本BGP6[x1|Vmess]@10Gbps
+      - 日本BGP7[x1|Vmess]@10Gbps
+      - 日本BGP8[x1|Vmess]@10Gbps
+      - 日本BGP9[x1|Vmess]@10Gbps
+      - 日本BGP10[x1|Vmess]@10Gbps
+      - 台湾HiNet1[x1|Vmess]@500Mbps
+      - 台湾HiNet2[x1|Vmess]@500Mbps
+      - 台湾HiNet3[x1|Vmess]@500Mbps
+      - 台湾HiNet4[x1|Vmess]@500Mbps
+      - 台湾HiNet5[x1|Vmess]@500Mbps
+      - 台湾SeedNet1[x1|Vmess]@500Mbps
+      - 台湾SeedNet2[x1|Vmess]@500Mbps
+      - 台湾SeedNet3[x1|Vmess]@500Mbps
+      - 新加坡Linode1[x1|Vmess]@1Gbps
+      - 新加坡Linode2[x1|Vmess]@1Gbps
+      - 新加坡Linode3[x1|Vmess]@1Gbps
+      - 新加坡Linode4[x1|Vmess]@1Gbps
+      - 新加坡Linode5[x1|Vmess]@1Gbps
+      - 新加坡VQ1[x1|Vmess]@1Gbps
+      - 美国BGP1[x1|Vmess]@10Gbps
+      - 美国BGP2[x1|Vmess]@10Gbps
+      - 美国BGP3[x1|Vmess]@10Gbps
+      - 美国BGP4[x1|Vmess]@10Gbps
+      - 美国BGP5[x1|Vmess]@10Gbps
+      - 美国HE1[x1|Vmess]@1Gbps
+      - 美国HE2[x1|Vmess]@1Gbps
+      - 美国HE3[x1|Vmess]@1Gbps
+      - 美国HE4[x1|Vmess]@1Gbps
+      - 美国HE5[x1|Vmess]@1Gbps
+      - 美国OVH1[x0.5|Vmess]@1Gbps
+      - 加拿大1[x1|Vmess]@1Gbps
+      - 澳大利亚1[x1|Vmess]@1Gbps
+      - 俄罗斯伯力1[x1|Vmess]@1Gbps
+      - 德国1[x1|Vmess]@1Gbps
+      - 英国1[x1|Vmess]@1Gbps
+      - 法国1[x1|Vmess]@1Gbps
+      - 意大利1[x1|Vmess]@1Gbps
+      - 荷兰1[x1|Vmess]@1Gbps
+      - 西班牙1[x1|Vmess]@200Mbps
+      - 卢森堡1[x1|Vmess]@200Mbps
+      - 土耳其1[x1|Vmess]@500Mbps
+      - 瑞典1[x1|Vmess]@80Mbps
+      - 乌克兰1[x1|Vmess]@200Mbps
+      - 以色列1[x1|Vmess]@200Mbps
+      - 印度1[x1|Vmess]@1Gbps
+      - 马来西亚1[x1|Vmess]@200Mbps
+      - 印度尼西亚1[x1|Vmess]@1Gbps
+      - 菲律宾1[x1|Vmess]@2Gbps
+      - 泰国1[x1|Vmess]@200Mbps
+      - 哈萨克斯坦1[x1|Vmess]@200Mbps
+      - 巴西1[x1|Vmess]@200Mbps
+      - 阿根廷1[x1|Vmess]@1Gbps
+      - 香港试用[x1|无SLA|Vmess]@100Mbps
+      - 日本试用[x1|无SLA|Vmess]@100Mbps
+      - 新加坡试用[x1|无SLA|Vmess]@100Mbps
+  - name: Ⓜ️ 微软服务
+    type: select
+    proxies:
+      - 🎯 全球直连
+      - 🚀 节点选择
+      - 微信：gtyz222
+      - 香港BGP1[x1|Vmess]@10Gbps
+      - 香港BGP2[x1|Vmess]@10Gbps
+      - 香港BGP3[x1|Vmess]@10Gbps
+      - 香港BGP4[x1|Vmess]@10Gbps
+      - 香港BGP5[x1|Vmess]@10Gbps
+      - 香港BGP6[x1|Vmess]@10Gbps
+      - 香港BGP7[x1|Vmess]@10Gbps
+      - 香港BGP8[x1|Vmess]@10Gbps
+      - 香港BGP9[x1|Vmess]@10Gbps
+      - 香港BGP10[x1|Vmess]@10Gbps
+      - 日本BGP1[x1|Vmess]@10Gbps
+      - 日本BGP2[x1|Vmess]@10Gbps
+      - 日本BGP3[x1|Vmess]@10Gbps
+      - 日本BGP4[x1|Vmess]@10Gbps
+      - 日本BGP5[x1|Vmess]@10Gbps
+      - 日本BGP6[x1|Vmess]@10Gbps
+      - 日本BGP7[x1|Vmess]@10Gbps
+      - 日本BGP8[x1|Vmess]@10Gbps
+      - 日本BGP9[x1|Vmess]@10Gbps
+      - 日本BGP10[x1|Vmess]@10Gbps
+      - 台湾HiNet1[x1|Vmess]@500Mbps
+      - 台湾HiNet2[x1|Vmess]@500Mbps
+      - 台湾HiNet3[x1|Vmess]@500Mbps
+      - 台湾HiNet4[x1|Vmess]@500Mbps
+      - 台湾HiNet5[x1|Vmess]@500Mbps
+      - 台湾SeedNet1[x1|Vmess]@500Mbps
+      - 台湾SeedNet2[x1|Vmess]@500Mbps
+      - 台湾SeedNet3[x1|Vmess]@500Mbps
+      - 新加坡Linode1[x1|Vmess]@1Gbps
+      - 新加坡Linode2[x1|Vmess]@1Gbps
+      - 新加坡Linode3[x1|Vmess]@1Gbps
+      - 新加坡Linode4[x1|Vmess]@1Gbps
+      - 新加坡Linode5[x1|Vmess]@1Gbps
+      - 新加坡VQ1[x1|Vmess]@1Gbps
+      - 美国BGP1[x1|Vmess]@10Gbps
+      - 美国BGP2[x1|Vmess]@10Gbps
+      - 美国BGP3[x1|Vmess]@10Gbps
+      - 美国BGP4[x1|Vmess]@10Gbps
+      - 美国BGP5[x1|Vmess]@10Gbps
+      - 美国HE1[x1|Vmess]@1Gbps
+      - 美国HE2[x1|Vmess]@1Gbps
+      - 美国HE3[x1|Vmess]@1Gbps
+      - 美国HE4[x1|Vmess]@1Gbps
+      - 美国HE5[x1|Vmess]@1Gbps
+      - 美国OVH1[x0.5|Vmess]@1Gbps
+      - 加拿大1[x1|Vmess]@1Gbps
+      - 澳大利亚1[x1|Vmess]@1Gbps
+      - 俄罗斯伯力1[x1|Vmess]@1Gbps
+      - 德国1[x1|Vmess]@1Gbps
+      - 英国1[x1|Vmess]@1Gbps
+      - 法国1[x1|Vmess]@1Gbps
+      - 意大利1[x1|Vmess]@1Gbps
+      - 荷兰1[x1|Vmess]@1Gbps
+      - 西班牙1[x1|Vmess]@200Mbps
+      - 卢森堡1[x1|Vmess]@200Mbps
+      - 土耳其1[x1|Vmess]@500Mbps
+      - 瑞典1[x1|Vmess]@80Mbps
+      - 乌克兰1[x1|Vmess]@200Mbps
+      - 以色列1[x1|Vmess]@200Mbps
+      - 印度1[x1|Vmess]@1Gbps
+      - 马来西亚1[x1|Vmess]@200Mbps
+      - 印度尼西亚1[x1|Vmess]@1Gbps
+      - 菲律宾1[x1|Vmess]@2Gbps
+      - 泰国1[x1|Vmess]@200Mbps
+      - 哈萨克斯坦1[x1|Vmess]@200Mbps
+      - 巴西1[x1|Vmess]@200Mbps
+      - 阿根廷1[x1|Vmess]@1Gbps
+      - 香港试用[x1|无SLA|Vmess]@100Mbps
+      - 日本试用[x1|无SLA|Vmess]@100Mbps
+      - 新加坡试用[x1|无SLA|Vmess]@100Mbps
+  - name: 🍎 苹果服务
+    type: select
+    proxies:
+      - 🚀 节点选择
+      - 🎯 全球直连
+      - 微信：gtyz222
+      - 香港BGP1[x1|Vmess]@10Gbps
+      - 香港BGP2[x1|Vmess]@10Gbps
+      - 香港BGP3[x1|Vmess]@10Gbps
+      - 香港BGP4[x1|Vmess]@10Gbps
+      - 香港BGP5[x1|Vmess]@10Gbps
+      - 香港BGP6[x1|Vmess]@10Gbps
+      - 香港BGP7[x1|Vmess]@10Gbps
+      - 香港BGP8[x1|Vmess]@10Gbps
+      - 香港BGP9[x1|Vmess]@10Gbps
+      - 香港BGP10[x1|Vmess]@10Gbps
+      - 日本BGP1[x1|Vmess]@10Gbps
+      - 日本BGP2[x1|Vmess]@10Gbps
+      - 日本BGP3[x1|Vmess]@10Gbps
+      - 日本BGP4[x1|Vmess]@10Gbps
+      - 日本BGP5[x1|Vmess]@10Gbps
+      - 日本BGP6[x1|Vmess]@10Gbps
+      - 日本BGP7[x1|Vmess]@10Gbps
+      - 日本BGP8[x1|Vmess]@10Gbps
+      - 日本BGP9[x1|Vmess]@10Gbps
+      - 日本BGP10[x1|Vmess]@10Gbps
+      - 台湾HiNet1[x1|Vmess]@500Mbps
+      - 台湾HiNet2[x1|Vmess]@500Mbps
+      - 台湾HiNet3[x1|Vmess]@500Mbps
+      - 台湾HiNet4[x1|Vmess]@500Mbps
+      - 台湾HiNet5[x1|Vmess]@500Mbps
+      - 台湾SeedNet1[x1|Vmess]@500Mbps
+      - 台湾SeedNet2[x1|Vmess]@500Mbps
+      - 台湾SeedNet3[x1|Vmess]@500Mbps
+      - 新加坡Linode1[x1|Vmess]@1Gbps
+      - 新加坡Linode2[x1|Vmess]@1Gbps
+      - 新加坡Linode3[x1|Vmess]@1Gbps
+      - 新加坡Linode4[x1|Vmess]@1Gbps
+      - 新加坡Linode5[x1|Vmess]@1Gbps
+      - 新加坡VQ1[x1|Vmess]@1Gbps
+      - 美国BGP1[x1|Vmess]@10Gbps
+      - 美国BGP2[x1|Vmess]@10Gbps
+      - 美国BGP3[x1|Vmess]@10Gbps
+      - 美国BGP4[x1|Vmess]@10Gbps
+      - 美国BGP5[x1|Vmess]@10Gbps
+      - 美国HE1[x1|Vmess]@1Gbps
+      - 美国HE2[x1|Vmess]@1Gbps
+      - 美国HE3[x1|Vmess]@1Gbps
+      - 美国HE4[x1|Vmess]@1Gbps
+      - 美国HE5[x1|Vmess]@1Gbps
+      - 美国OVH1[x0.5|Vmess]@1Gbps
+      - 加拿大1[x1|Vmess]@1Gbps
+      - 澳大利亚1[x1|Vmess]@1Gbps
+      - 俄罗斯伯力1[x1|Vmess]@1Gbps
+      - 德国1[x1|Vmess]@1Gbps
+      - 英国1[x1|Vmess]@1Gbps
+      - 法国1[x1|Vmess]@1Gbps
+      - 意大利1[x1|Vmess]@1Gbps
+      - 荷兰1[x1|Vmess]@1Gbps
+      - 西班牙1[x1|Vmess]@200Mbps
+      - 卢森堡1[x1|Vmess]@200Mbps
+      - 土耳其1[x1|Vmess]@500Mbps
+      - 瑞典1[x1|Vmess]@80Mbps
+      - 乌克兰1[x1|Vmess]@200Mbps
+      - 以色列1[x1|Vmess]@200Mbps
+      - 印度1[x1|Vmess]@1Gbps
+      - 马来西亚1[x1|Vmess]@200Mbps
+      - 印度尼西亚1[x1|Vmess]@1Gbps
+      - 菲律宾1[x1|Vmess]@2Gbps
+      - 泰国1[x1|Vmess]@200Mbps
+      - 哈萨克斯坦1[x1|Vmess]@200Mbps
+      - 巴西1[x1|Vmess]@200Mbps
+      - 阿根廷1[x1|Vmess]@1Gbps
+      - 香港试用[x1|无SLA|Vmess]@100Mbps
+      - 日本试用[x1|无SLA|Vmess]@100Mbps
+      - 新加坡试用[x1|无SLA|Vmess]@100Mbps
+  - name: 🎯 全球直连
+    type: select
+    proxies:
+      - DIRECT
+      - 🚀 节点选择
+      - ♻️ 自动选择
+  - name: 🛑 全球拦截
+    type: select
+    proxies:
+      - REJECT
+      - DIRECT
+  - name: 🍃 应用净化
+    type: select
+    proxies:
+      - REJECT
+      - DIRECT
+  - name: 🐟 漏网之鱼
+    type: select
+    proxies:
+      - 🚀 节点选择
+      - 🎯 全球直连
+      - ♻️ 自动选择
+      - 微信：gtyz222
+      - 香港BGP1[x1|Vmess]@10Gbps
+      - 香港BGP2[x1|Vmess]@10Gbps
+      - 香港BGP3[x1|Vmess]@10Gbps
+      - 香港BGP4[x1|Vmess]@10Gbps
+      - 香港BGP5[x1|Vmess]@10Gbps
+      - 香港BGP6[x1|Vmess]@10Gbps
+      - 香港BGP7[x1|Vmess]@10Gbps
+      - 香港BGP8[x1|Vmess]@10Gbps
+      - 香港BGP9[x1|Vmess]@10Gbps
+      - 香港BGP10[x1|Vmess]@10Gbps
+      - 日本BGP1[x1|Vmess]@10Gbps
+      - 日本BGP2[x1|Vmess]@10Gbps
+      - 日本BGP3[x1|Vmess]@10Gbps
+      - 日本BGP4[x1|Vmess]@10Gbps
+      - 日本BGP5[x1|Vmess]@10Gbps
+      - 日本BGP6[x1|Vmess]@10Gbps
+      - 日本BGP7[x1|Vmess]@10Gbps
+      - 日本BGP8[x1|Vmess]@10Gbps
+      - 日本BGP9[x1|Vmess]@10Gbps
+      - 日本BGP10[x1|Vmess]@10Gbps
+      - 台湾HiNet1[x1|Vmess]@500Mbps
+      - 台湾HiNet2[x1|Vmess]@500Mbps
+      - 台湾HiNet3[x1|Vmess]@500Mbps
+      - 台湾HiNet4[x1|Vmess]@500Mbps
+      - 台湾HiNet5[x1|Vmess]@500Mbps
+      - 台湾SeedNet1[x1|Vmess]@500Mbps
+      - 台湾SeedNet2[x1|Vmess]@500Mbps
+      - 台湾SeedNet3[x1|Vmess]@500Mbps
+      - 新加坡Linode1[x1|Vmess]@1Gbps
+      - 新加坡Linode2[x1|Vmess]@1Gbps
+      - 新加坡Linode3[x1|Vmess]@1Gbps
+      - 新加坡Linode4[x1|Vmess]@1Gbps
+      - 新加坡Linode5[x1|Vmess]@1Gbps
+      - 新加坡VQ1[x1|Vmess]@1Gbps
+      - 美国BGP1[x1|Vmess]@10Gbps
+      - 美国BGP2[x1|Vmess]@10Gbps
+      - 美国BGP3[x1|Vmess]@10Gbps
+      - 美国BGP4[x1|Vmess]@10Gbps
+      - 美国BGP5[x1|Vmess]@10Gbps
+      - 美国HE1[x1|Vmess]@1Gbps
+      - 美国HE2[x1|Vmess]@1Gbps
+      - 美国HE3[x1|Vmess]@1Gbps
+      - 美国HE4[x1|Vmess]@1Gbps
+      - 美国HE5[x1|Vmess]@1Gbps
+      - 美国OVH1[x0.5|Vmess]@1Gbps
+      - 加拿大1[x1|Vmess]@1Gbps
+      - 澳大利亚1[x1|Vmess]@1Gbps
+      - 俄罗斯伯力1[x1|Vmess]@1Gbps
+      - 德国1[x1|Vmess]@1Gbps
+      - 英国1[x1|Vmess]@1Gbps
+      - 法国1[x1|Vmess]@1Gbps
+      - 意大利1[x1|Vmess]@1Gbps
+      - 荷兰1[x1|Vmess]@1Gbps
+      - 西班牙1[x1|Vmess]@200Mbps
+      - 卢森堡1[x1|Vmess]@200Mbps
+      - 土耳其1[x1|Vmess]@500Mbps
+      - 瑞典1[x1|Vmess]@80Mbps
+      - 乌克兰1[x1|Vmess]@200Mbps
+      - 以色列1[x1|Vmess]@200Mbps
+      - 印度1[x1|Vmess]@1Gbps
+      - 马来西亚1[x1|Vmess]@200Mbps
+      - 印度尼西亚1[x1|Vmess]@1Gbps
+      - 菲律宾1[x1|Vmess]@2Gbps
+      - 泰国1[x1|Vmess]@200Mbps
+      - 哈萨克斯坦1[x1|Vmess]@200Mbps
+      - 巴西1[x1|Vmess]@200Mbps
+      - 阿根廷1[x1|Vmess]@1Gbps
+      - 香港试用[x1|无SLA|Vmess]@100Mbps
+      - 日本试用[x1|无SLA|Vmess]@100Mbps
+      - 新加坡试用[x1|无SLA|Vmess]@100Mbps
+rule-providers:
+  LocalAreaNetwork:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/LocalAreaNetwork.list
+    path: ./rules/LocalAreaNetwork.yaml
+  BanAD:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/BanAD.list
+    path: ./rules/BanAD.yaml
+  BanProgramAD:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/BanProgramAD.list
+    path: ./rules/BanProgramAD.yaml
+  GoogleCN:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/GoogleCN.list
+    path: ./rules/GoogleCN.yaml
+  SteamCN:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/Ruleset/SteamCN.list
+    path: ./rules/SteamCN.yaml
+  Microsoft:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/Microsoft.list
+    path: ./rules/Microsoft.yaml
+  Apple:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/Apple.list
+    path: ./rules/Apple.yaml
+  ProxyMedia:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/ProxyMedia.list
+    path: ./rules/ProxyMedia.yaml
+  Telegram:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/Telegram.list
+    path: ./rules/Telegram.yaml
+  ProxyLite:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/ProxyLite.list
+    path: ./rules/ProxyLite.yaml
+  ChinaDomain:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/ChinaDomain.list
+    path: ./rules/ChinaDomain.yaml
+  ChinaCompanyIp:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/ChinaCompanyIp.list
+    path: ./rules/ChinaCompanyIp.yaml
+rules:
+  - RULE-SET,LocalAreaNetwork,🎯 全球直连
+  - RULE-SET,BanAD,🛑 全球拦截
+  - RULE-SET,BanProgramAD,🍃 应用净化
+  - RULE-SET,GoogleCN,🎯 全球直连
+  - RULE-SET,SteamCN,🎯 全球直连
+  - RULE-SET,Microsoft,Ⓜ️ 微软服务
+  - RULE-SET,Apple,🍎 苹果服务
+  - RULE-SET,ProxyMedia,🌍 国外媒体
+  - RULE-SET,Telegram,📲 电报信息
+  - RULE-SET,ProxyLite,🚀 节点选择
+  - RULE-SET,ChinaDomain,🎯 全球直连
+  - RULE-SET,ChinaCompanyIp,🎯 全球直连
+  - GEOIP,CN,🎯 全球直连
+  - MATCH,🐟 漏网之鱼
