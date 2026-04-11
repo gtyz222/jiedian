@@ -1,1 +1,1376 @@
-dmxlc3M6Ly8wZGJkMWI3NS01YzYxLTMyZmItOTkyNC1hZGU1ZGE3NWY1N2VAc2NtMS5uYS1sYXgxLWJncDUubm9kZS1mbmYueHl6OjI0MTk5P2VuY3J5cHRpb249bm9uZSZmbG93PXh0bHMtcnByeC12aXNpb24mc2VjdXJpdHk9cmVhbGl0eSZzbmk9ZGxjZG4tcm9nYm94YnUxLmFzdXMuY29tJmZwPWNocm9tZSZwYms9UFdWWjExaVIwQVIyZTU2Mk9EeUNFU1NpWWo4OG5EVzUtUTBTZTVlVGpsSSZzaWQ9NzZmNjEzYzImdHlwZT10Y3AmaGVhZGVyVHlwZT1ub25lIyVFNSVCRSVBRSVFNCVCRiVBMSVFRiVCQyU5QWd0eXoyMjINCnZsZXNzOi8vMGRiZDFiNzUtNWM2MS0zMmZiLTk5MjQtYWRlNWRhNzVmNTdlQHNjbTEubmEtbGF4MS1iZ3AyLm5vZGUtZm5mLnh5ejoyNDE5Mz9lbmNyeXB0aW9uPW5vbmUmZmxvdz14dGxzLXJwcngtdmlzaW9uJnNlY3VyaXR5PXJlYWxpdHkmc25pPWRsY2RuLXJvZ2JveGJ1NC5hc3VzLmNvbSZmcD1jaHJvbWUmcGJrPXA0eEg1M1BDb0prZmp3dWgwOE5VSWNpVWJ6b09iUFctREY5QXFxcE5wQ1Umc2lkPTE1NzcxZjQxJnR5cGU9dGNwJmhlYWRlclR5cGU9bm9uZSMlRTclQkUlOEUlRTUlOUIlQkRCR1AyJTVCeDElN0NWbGVzcyU1RCU0MDEwR2Jwcw0Kdmxlc3M6Ly8wZGJkMWI3NS01YzYxLTMyZmItOTkyNC1hZGU1ZGE3NWY1N2VAc2NtMS5uYS1sYXgxLWJncDMubm9kZS1mbmYueHl6OjI0MTk1P2VuY3J5cHRpb249bm9uZSZmbG93PXh0bHMtcnByeC12aXNpb24mc2VjdXJpdHk9cmVhbGl0eSZzbmk9ZGxjZG4tcm9nYm94YnU0LmFzdXMuY29tJmZwPWNocm9tZSZwYms9eVRuT3hSbmpqV3JGSkdUSF9VYlltRzB4bHZrMTJsV0FRUGtNVDFHWDZUbyZzaWQ9OTNlZGE3MzUmdHlwZT10Y3AmaGVhZGVyVHlwZT1ub25lIyVFNyVCRSU4RSVFNSU5QiVCREJHUDMlNUJ4MSU3Q1ZsZXNzJTVEJTQwMTBHYnBzDQp2bGVzczovLzBkYmQxYjc1LTVjNjEtMzJmYi05OTI0LWFkZTVkYTc1ZjU3ZUBzY20xLm5hLWxheDEtYmdwMS5ub2RlLWZuZi54eXo6MjQxOTE/ZW5jcnlwdGlvbj1ub25lJmZsb3c9eHRscy1ycHJ4LXZpc2lvbiZzZWN1cml0eT1yZWFsaXR5JnNuaT1kbGNkbi1yb2dib3hidTEuYXN1cy5jb20mZnA9Y2hyb21lJnBiaz1lcGV3Q0FFNm5vcWdPNmFpVmtRczJSTUdqS3l1X3lVWXp4R0YzNjd6ekR3JnNpZD03ZmRhMmFmZSZ0eXBlPXRjcCZoZWFkZXJUeXBlPW5vbmUjJUU3JUJFJThFJUU1JTlCJUJEQkdQMSU1QngxJTdDVmxlc3MlNUQlNDAxMEdicHMNCnZsZXNzOi8vMGRiZDFiNzUtNWM2MS0zMmZiLTk5MjQtYWRlNWRhNzVmNTdlQHNjbTEubmEtbGF4MS1iZ3A0Lm5vZGUtZm5mLnh5ejoyNDE5Nz9lbmNyeXB0aW9uPW5vbmUmZmxvdz14dGxzLXJwcngtdmlzaW9uJnNlY3VyaXR5PXJlYWxpdHkmc25pPWRsY2RuLXJvZ2JveGJ1MS5hc3VzLmNvbSZmcD1lZGdlJnBiaz1mbGdGbTVncDRYNkYyTW5NR2xwWkRrb056U0FHd0VwSGdYNF9VNFlPMzFvJnNpZD04M2M3YzUxMCZ0eXBlPXRjcCZoZWFkZXJUeXBlPW5vbmUjJUU3JUJFJThFJUU1JTlCJUJEQkdQNCU1QngxJTdDVmxlc3MlNUQlNDAxMEdicHMNCnZsZXNzOi8vMGRiZDFiNzUtNWM2MS0zMmZiLTk5MjQtYWRlNWRhNzVmNTdlQHNjbTIubmEtbGF4Mi1oZTEubm9kZS1mbmYueHl6OjI0MjAxP2VuY3J5cHRpb249bm9uZSZmbG93PXh0bHMtcnByeC12aXNpb24mc2VjdXJpdHk9cmVhbGl0eSZzbmk9ZGxjZG4tcm9nYm94YnU0LmFzdXMuY29tJmZwPWVkZ2UmcGJrPU45UDd4dG5LR0JpY3pLdmdFSk4yQ1FrS241ODJObF8wWWhYODFuajJFQUkmc2lkPTM3YzY1ZTRkJnR5cGU9dGNwJmhlYWRlclR5cGU9bm9uZSMlRTclQkUlOEUlRTUlOUIlQkRIRTElNUJ4MSU3Q1ZsZXNzJTVEJTQwMUdicHMNCnZsZXNzOi8vMGRiZDFiNzUtNWM2MS0zMmZiLTk5MjQtYWRlNWRhNzVmNTdlQHNjbTIubmEtbGF4Mi1oZTIubm9kZS1mbmYueHl6OjI0MjAzP2VuY3J5cHRpb249bm9uZSZmbG93PXh0bHMtcnByeC12aXNpb24mc2VjdXJpdHk9cmVhbGl0eSZzbmk9ZGxjZG4tcm9nYm94YnUzLmFzdXMuY29tJmZwPWNocm9tZSZwYms9Wk1iNkd4WnBsTlZUZmZEWUk3bEppdUxHOUJhY2Q5THQ0Q3F0cjUtVHh3NCZzaWQ9NDMyNWE5ZjcmdHlwZT10Y3AmaGVhZGVyVHlwZT1ub25lIyVFNyVCRSU4RSVFNSU5QiVCREhFMiU1QngxJTdDVmxlc3MlNUQlNDAxR2Jwcw0Kdmxlc3M6Ly8wZGJkMWI3NS01YzYxLTMyZmItOTkyNC1hZGU1ZGE3NWY1N2VAc2NtMi5uYS1sYXgyLWhlNS5ub2RlLWZuZi54eXo6MjQyMDk/ZW5jcnlwdGlvbj1ub25lJmZsb3c9eHRscy1ycHJ4LXZpc2lvbiZzZWN1cml0eT1yZWFsaXR5JnNuaT1kbGNkbi1yb2dib3hidTQuYXN1cy5jb20mZnA9Y2hyb21lJnBiaz1ZUWg5Zk5heW9aYWtjU250N2xDNVV5ZHlheU8xZTc1T0NHLXJRT1dVWlZzJnNpZD03YTVhOWNiMiZ0eXBlPXRjcCZoZWFkZXJUeXBlPW5vbmUjJUU3JUJFJThFJUU1JTlCJUJESEU1JTVCeDElN0NWbGVzcyU1RCU0MDFHYnBzDQp2bGVzczovLzBkYmQxYjc1LTVjNjEtMzJmYi05OTI0LWFkZTVkYTc1ZjU3ZUBzY20yLm5hLWxheDItaGU0Lm5vZGUtZm5mLnh5ejoyNDIwNz9lbmNyeXB0aW9uPW5vbmUmZmxvdz14dGxzLXJwcngtdmlzaW9uJnNlY3VyaXR5PXJlYWxpdHkmc25pPWRsY2RuLXJvZ2JveGJ1NC5hc3VzLmNvbSZmcD1jaHJvbWUmcGJrPXU4V0xLcUJkak8tYng0WWFDNkxpazJSc2dNMl9RalpQZDVLSGpMV3Q2RUEmc2lkPThjZDAxODU2JnR5cGU9dGNwJmhlYWRlclR5cGU9bm9uZSMlRTclQkUlOEUlRTUlOUIlQkRIRTQlNUJ4MSU3Q1ZsZXNzJTVEJTQwMUdicHMNCnZsZXNzOi8vMGRiZDFiNzUtNWM2MS0zMmZiLTk5MjQtYWRlNWRhNzVmNTdlQHNjbTIuc2EtYnVlMi1hcDEubm9kZS1mbmYueHl6OjI0Mjg3P2VuY3J5cHRpb249bm9uZSZmbG93PXh0bHMtcnByeC12aXNpb24mc2VjdXJpdHk9cmVhbGl0eSZzbmk9ZGxjZG4tcm9nYm94YnUyLmFzdXMuY29tJmZwPWNocm9tZSZwYms9NTFldFRHX0dLWkQ1V1IweTFuUnV3cFowcEpHRmNuYlVjdFZYWUROclNqSSZzaWQ9NjA4MWMzOTQmdHlwZT10Y3AmaGVhZGVyVHlwZT1ub25lIyVFOSU5OCVCRiVFNiVBMCVCOSVFNSVCQiVCNzElNUJ4MSU3Q1ZsZXNzJTVEJTQwMUdicHMNCnZsZXNzOi8vMGRiZDFiNzUtNWM2MS0zMmZiLTk5MjQtYWRlNWRhNzVmNTdlQHNjbTIubmEtbGF4Mi1oZTMubm9kZS1mbmYueHl6OjI0MjA1P2VuY3J5cHRpb249bm9uZSZmbG93PXh0bHMtcnByeC12aXNpb24mc2VjdXJpdHk9cmVhbGl0eSZzbmk9ZGxjZG4tcm9nYm94YnUxLmFzdXMuY29tJmZwPWVkZ2UmcGJrPWlxVFBrUHFXbFlkbkdhaWlSRFRFRUw5OS1SdmZZeFFGempyY01EMWhHRzQmc2lkPTlmNzllZDY0JnR5cGU9dGNwJmhlYWRlclR5cGU9bm9uZSMlRTclQkUlOEUlRTUlOUIlQkRIRTMlNUJ4MSU3Q1ZsZXNzJTVEJTQwMUdicHMNCnZsZXNzOi8vMGRiZDFiNzUtNWM2MS0zMmZiLTk5MjQtYWRlNWRhNzVmNTdlQHNjbTEubmEtbGF4MS1vdmgxLm5vZGUtZm5mLnh5ejoyNDIxMT9lbmNyeXB0aW9uPW5vbmUmZmxvdz14dGxzLXJwcngtdmlzaW9uJnNlY3VyaXR5PXJlYWxpdHkmc25pPWRsY2RuLXJvZ2JveGJ1My5hc3VzLmNvbSZmcD1lZGdlJnBiaz1LeDZoQVVMYWY1U2FxWnQzWUxsclM4dHBLV09aV3ZCN3FjQ1RSdlM5NWtFJnNpZD1hYmEzYTYzNiZ0eXBlPXRjcCZoZWFkZXJUeXBlPW5vbmUjJUU3JUJFJThFJUU1JTlCJUJET1ZIMSU1QngwLjElN0NWbGVzcyU1RCU0MDFHYnBzDQp2bGVzczovLzBkYmQxYjc1LTVjNjEtMzJmYi05OTI0LWFkZTVkYTc1ZjU3ZUBzY20yLm5hLXl0bzItbGkxLm5vZGUtZm5mLnh5ejoyNDIyMT9lbmNyeXB0aW9uPW5vbmUmZmxvdz14dGxzLXJwcngtdmlzaW9uJnNlY3VyaXR5PXJlYWxpdHkmc25pPWRsY2RuLXJvZ2JveGJ1Mi5hc3VzLmNvbSZmcD1lZGdlJnBiaz1qSzBrTVdjVDBHN00zejY4SERlVG4zZmJ3aHZoN1BYcGhGbVp5eUF0UmwwJnNpZD02NDk5ZjI4YSZ0eXBlPXRjcCZoZWFkZXJUeXBlPW5vbmUjJUU1JThBJUEwJUU2JThCJUJGJUU1JUE0JUE3MSU1QngxJTdDVmxlc3MlNUQlNDAxR2Jwcw0Kdmxlc3M6Ly8wZGJkMWI3NS01YzYxLTMyZmItOTkyNC1hZGU1ZGE3NWY1N2VAc2NtMi5hcy10eW8yLWJncDEwLm5vZGUtZm5mLnh5ejoyNDE4OT9lbmNyeXB0aW9uPW5vbmUmZmxvdz14dGxzLXJwcngtdmlzaW9uJnNlY3VyaXR5PXJlYWxpdHkmc25pPWRsY2RuLXJvZ2JveGJ1NS5hc3VzLmNvbSZmcD1lZGdlJnBiaz02MkdZcEJIeHV0ZGxzUkdXMnAzMk1FRjhwREM2RjdkMk8zTkh5MXRRNndZJnNpZD02ZDM3Mjk2NSZ0eXBlPXRjcCZoZWFkZXJUeXBlPW5vbmUjJUU2JTk3JUE1JUU2JTlDJUFDQkdQMTAlNUJ4MSU3Q1ZsZXNzJTVEJTQwMTBHYnBzDQp2bGVzczovLzBkYmQxYjc1LTVjNjEtMzJmYi05OTI0LWFkZTVkYTc1ZjU3ZUBzY20yLmFzLXR5bzItYmdwOC5ub2RlLWZuZi54eXo6MjQxODU/ZW5jcnlwdGlvbj1ub25lJmZsb3c9eHRscy1ycHJ4LXZpc2lvbiZzZWN1cml0eT1yZWFsaXR5JnNuaT1kbGNkbi1yb2dib3hidTEuYXN1cy5jb20mZnA9Y2hyb21lJnBiaz1TM0NYS0Z3c0FFRXp5SHF2c1pOQnc4cTF3ZW9BWUpOWERyNGJGamJBVGdRJnNpZD1mZTAzMjU0MiZ0eXBlPXRjcCZoZWFkZXJUeXBlPW5vbmUjJUU2JTk3JUE1JUU2JTlDJUFDQkdQOCU1QngxJTdDVmxlc3MlNUQlNDAxMEdicHMNCnZsZXNzOi8vMGRiZDFiNzUtNWM2MS0zMmZiLTk5MjQtYWRlNWRhNzVmNTdlQHNjbTEuYXMtdHlvMS1iZ3AxLm5vZGUtZm5mLnh5ejoyNDE3MT9lbmNyeXB0aW9uPW5vbmUmZmxvdz14dGxzLXJwcngtdmlzaW9uJnNlY3VyaXR5PXJlYWxpdHkmc25pPWRsY2RuLXJvZ2JveGJ1MS5hc3VzLmNvbSZmcD1lZGdlJnBiaz1VT1NuVHAzb3pvdU9RbjlaQWZVRXA0VzdiX0k5WUxfOWo4c09VaDZTdFE4JnNpZD03MTVjNmE0NyZ0eXBlPXRjcCZoZWFkZXJUeXBlPW5vbmUjJUU2JTk3JUE1JUU2JTlDJUFDQkdQMSU1QngxJTdDVmxlc3MlNUQlNDAxMEdicHMNCnZsZXNzOi8vMGRiZDFiNzUtNWM2MS0zMmZiLTk5MjQtYWRlNWRhNzVmNTdlQHNjbTIuYXMtdHlvMi1iZ3A5Lm5vZGUtZm5mLnh5ejoyNDE4Nz9lbmNyeXB0aW9uPW5vbmUmZmxvdz14dGxzLXJwcngtdmlzaW9uJnNlY3VyaXR5PXJlYWxpdHkmc25pPWRsY2RuLXJvZ2JveGJ1NC5hc3VzLmNvbSZmcD1jaHJvbWUmcGJrPTNWbnkwSGpHVkR3bzJMS0VuTW01dUQwZERORFgwalRhaDdSOXRMQUtQZ2cmc2lkPWNhOGIyMmIxJnR5cGU9dGNwJmhlYWRlclR5cGU9bm9uZSMlRTYlOTclQTUlRTYlOUMlQUNCR1A5JTVCeDElN0NWbGVzcyU1RCU0MDEwR2Jwcw0Kdmxlc3M6Ly8wZGJkMWI3NS01YzYxLTMyZmItOTkyNC1hZGU1ZGE3NWY1N2VAc2NtMS5hcy10eW8xLWJncDIubm9kZS1mbmYueHl6OjI0MTczP2VuY3J5cHRpb249bm9uZSZmbG93PXh0bHMtcnByeC12aXNpb24mc2VjdXJpdHk9cmVhbGl0eSZzbmk9ZGxjZG4tcm9nYm94YnU1LmFzdXMuY29tJmZwPWVkZ2UmcGJrPXY4T0M2MkFmR3JYQmtWQ1M3c0xUV1VSMm4xdjl0NmVSWmhYVmd5N0UyU0Umc2lkPWU0ODA2NjFiJnR5cGU9dGNwJmhlYWRlclR5cGU9bm9uZSMlRTYlOTclQTUlRTYlOUMlQUNCR1AyJTVCeDElN0NWbGVzcyU1RCU0MDEwR2Jwcw0Kdmxlc3M6Ly8wZGJkMWI3NS01YzYxLTMyZmItOTkyNC1hZGU1ZGE3NWY1N2VAc2NtMS5hcy10eW8xLWJncDQubm9kZS1mbmYueHl6OjI0MTc3P2VuY3J5cHRpb249bm9uZSZmbG93PXh0bHMtcnByeC12aXNpb24mc2VjdXJpdHk9cmVhbGl0eSZzbmk9ZGxjZG4tcm9nYm94YnUzLmFzdXMuY29tJmZwPWVkZ2UmcGJrPS0wWTN0TEdMaDNXQ2JfbUNnRk44dm16ZzRsR2liTUpqWlBwb0x1VjRzQVkmc2lkPWY0MTViZGI4JnR5cGU9dGNwJmhlYWRlclR5cGU9bm9uZSMlRTYlOTclQTUlRTYlOUMlQUNCR1A0JTVCeDElN0NWbGVzcyU1RCU0MDEwR2Jwcw0Kdmxlc3M6Ly8wZGJkMWI3NS01YzYxLTMyZmItOTkyNC1hZGU1ZGE3NWY1N2VAc2NtMi5hcy10eW8yLWJncDcubm9kZS1mbmYueHl6OjI0MTgzP2VuY3J5cHRpb249bm9uZSZmbG93PXh0bHMtcnByeC12aXNpb24mc2VjdXJpdHk9cmVhbGl0eSZzbmk9ZGxjZG4tcm9nYm94YnU0LmFzdXMuY29tJmZwPWVkZ2UmcGJrPVhzaW8zWnRfcy0wa09JdEwxTEVjNUNORDdLZW5kekdONWhkSzJZLVVueDgmc2lkPTNmOTU2OTA5JnR5cGU9dGNwJmhlYWRlclR5cGU9bm9uZSMlRTYlOTclQTUlRTYlOUMlQUNCR1A3JTVCeDElN0NWbGVzcyU1RCU0MDEwR2Jwcw0Kdmxlc3M6Ly8wZGJkMWI3NS01YzYxLTMyZmItOTkyNC1hZGU1ZGE3NWY1N2VAc2NtMS5hcy10eW8xLWJncDMubm9kZS1mbmYueHl6OjI0MTc1P2VuY3J5cHRpb249bm9uZSZmbG93PXh0bHMtcnByeC12aXNpb24mc2VjdXJpdHk9cmVhbGl0eSZzbmk9ZGxjZG4tcm9nYm94YnU1LmFzdXMuY29tJmZwPWVkZ2UmcGJrPTFia3hleW5wZlV0ZTZ3Wnl4YkFXeU42ZXdyQ01mbVdOdkFkR1FFdzVJaHcmc2lkPTY4Yzk5YTAxJnR5cGU9dGNwJmhlYWRlclR5cGU9bm9uZSMlRTYlOTclQTUlRTYlOUMlQUNCR1AzJTVCeDElN0NWbGVzcyU1RCU0MDEwR2Jwcw0Kdmxlc3M6Ly8wZGJkMWI3NS01YzYxLTMyZmItOTkyNC1hZGU1ZGE3NWY1N2VAc2NtMS5hcy10eW8xLWJncDUubm9kZS1mbmYueHl6OjI0MTc5P2VuY3J5cHRpb249bm9uZSZmbG93PXh0bHMtcnByeC12aXNpb24mc2VjdXJpdHk9cmVhbGl0eSZzbmk9ZGxjZG4tcm9nYm94YnU1LmFzdXMuY29tJmZwPWNocm9tZSZwYms9VHJKSk9kSlg5SDZGVm9KWUQ3UVEtTVpuNDRhanc3eHZNcEZ4QWxtdDgzYyZzaWQ9ZGM0YmEwNTgmdHlwZT10Y3AmaGVhZGVyVHlwZT1ub25lIyVFNiU5NyVBNSVFNiU5QyVBQ0JHUDUlNUJ4MSU3Q1ZsZXNzJTVEJTQwMTBHYnBzDQp2bGVzczovLzBkYmQxYjc1LTVjNjEtMzJmYi05OTI0LWFkZTVkYTc1ZjU3ZUBzY20yLmFzLXR5bzItYmdwNi5ub2RlLWZuZi54eXo6MjQxODE/ZW5jcnlwdGlvbj1ub25lJmZsb3c9eHRscy1ycHJ4LXZpc2lvbiZzZWN1cml0eT1yZWFsaXR5JnNuaT1kbGNkbi1yb2dib3hidTUuYXN1cy5jb20mZnA9ZWRnZSZwYms9QnJnMTNHQ2VPTGpvQjVicExHRmk5RkVCa1RSUWV2SUlWTl96M04za0p5WSZzaWQ9ZDgyMGI5NzQmdHlwZT10Y3AmaGVhZGVyVHlwZT1ub25lIyVFNiU5NyVBNSVFNiU5QyVBQ0JHUDYlNUJ4MSU3Q1ZsZXNzJTVEJTQwMTBHYnBzDQp2bGVzczovLzBkYmQxYjc1LTVjNjEtMzJmYi05OTI0LWFkZTVkYTc1ZjU3ZUBzY20xLmFzLXRwZTEtYWthcmkxLm5vZGUtZm5mLnh5ejoyNDEzMT9lbmNyeXB0aW9uPW5vbmUmZmxvdz14dGxzLXJwcngtdmlzaW9uJnNlY3VyaXR5PXJlYWxpdHkmc25pPWRsY2RuLXJvZ2JveGJ1My5hc3VzLmNvbSZmcD1jaHJvbWUmcGJrPThNb1pQbTdPb0hnMDMxekUwMXVfbnZvT0xwLTE2T2xCRldadC1oUkZjQUkmc2lkPTUyY2E2ZjNkJnR5cGU9dGNwJmhlYWRlclR5cGU9bm9uZSMlRTUlOEYlQjAlRTYlQjklQkVCR1AxJTVCeDElN0NWbGVzcyU1RCU0MDEwR2Jwcw0Kdmxlc3M6Ly8wZGJkMWI3NS01YzYxLTMyZmItOTkyNC1hZGU1ZGE3NWY1N2VAc2NtMS5hcy10cGUxLWFrYXJpMi5ub2RlLWZuZi54eXo6MjQxMzM/ZW5jcnlwdGlvbj1ub25lJmZsb3c9eHRscy1ycHJ4LXZpc2lvbiZzZWN1cml0eT1yZWFsaXR5JnNuaT1kbGNkbi1yb2dib3hidTQuYXN1cy5jb20mZnA9Y2hyb21lJnBiaz04SzBjQ1BrRi13VFBTZTByemx3MEIzRm5QU1lGZEladEhLb1ZqQkpzT2lVJnNpZD0xYzUwYWI5MCZ0eXBlPXRjcCZoZWFkZXJUeXBlPW5vbmUjJUU1JThGJUIwJUU2JUI5JUJFQkdQMiU1QngxJTdDVmxlc3MlNUQlNDAxMEdicHMNCnZsZXNzOi8vMGRiZDFiNzUtNWM2MS0zMmZiLTk5MjQtYWRlNWRhNzVmNTdlQHNjbTEuYXMtdHBlMS1ha2FyaTUubm9kZS1mbmYueHl6OjI0MTM5P2VuY3J5cHRpb249bm9uZSZmbG93PXh0bHMtcnByeC12aXNpb24mc2VjdXJpdHk9cmVhbGl0eSZzbmk9ZGxjZG4tcm9nYm94YnUxLmFzdXMuY29tJmZwPWVkZ2UmcGJrPVdBOHpTMnBMRVUwTHdkdEUzaHQtUnd4NVBJX0c2ZUJVWHZCd09PdlBpQ3cmc2lkPWM5NmEzMjk0JnR5cGU9dGNwJmhlYWRlclR5cGU9bm9uZSMlRTUlOEYlQjAlRTYlQjklQkVCR1A1JTVCeDElN0NWbGVzcyU1RCU0MDEwR2Jwcw0Kdmxlc3M6Ly8wZGJkMWI3NS01YzYxLTMyZmItOTkyNC1hZGU1ZGE3NWY1N2VAc2NtMS5hcy10cGUxLWFrYXJpMy5ub2RlLWZuZi54eXo6MjQxMzU/ZW5jcnlwdGlvbj1ub25lJmZsb3c9eHRscy1ycHJ4LXZpc2lvbiZzZWN1cml0eT1yZWFsaXR5JnNuaT1kbGNkbi1yb2dib3hidTUuYXN1cy5jb20mZnA9ZWRnZSZwYms9dzYxMFhzU2FjR2xKLXNuWmJRckJoa2Zhdm1WYzEtcVQ5TjNZeWNTTk9INCZzaWQ9NjJmNjJmZTUmdHlwZT10Y3AmaGVhZGVyVHlwZT1ub25lIyVFNSU4RiVCMCVFNiVCOSVCRUJHUDMlNUJ4MSU3Q1ZsZXNzJTVEJTQwMTBHYnBzDQp2bGVzczovLzBkYmQxYjc1LTVjNjEtMzJmYi05OTI0LWFkZTVkYTc1ZjU3ZUBzY20xLmFzLXRwZTEtYWthcmk0Lm5vZGUtZm5mLnh5ejoyNDEzNz9lbmNyeXB0aW9uPW5vbmUmZmxvdz14dGxzLXJwcngtdmlzaW9uJnNlY3VyaXR5PXJlYWxpdHkmc25pPWRsY2RuLXJvZ2JveGJ1MS5hc3VzLmNvbSZmcD1lZGdlJnBiaz15WEx0TTlDZkdYOHppQ1RLUmhNOXQxWmN3VmJ1YVVsLUJBTXliMWlJbEN3JnNpZD1lMTRlMjViMiZ0eXBlPXRjcCZoZWFkZXJUeXBlPW5vbmUjJUU1JThGJUIwJUU2JUI5JUJFQkdQNCU1QngxJTdDVmxlc3MlNUQlNDAxMEdicHMNCnZsZXNzOi8vMGRiZDFiNzUtNWM2MS0zMmZiLTk5MjQtYWRlNWRhNzVmNTdlQHNjbTIuZXUtbG9uMi1saTEubm9kZS1mbmYueHl6OjI0MjM1P2VuY3J5cHRpb249bm9uZSZmbG93PXh0bHMtcnByeC12aXNpb24mc2VjdXJpdHk9cmVhbGl0eSZzbmk9ZGxjZG4tcm9nYm94YnU1LmFzdXMuY29tJmZwPWNocm9tZSZwYms9TmRxMWpWYjJCQlh6djAwcFNBcFplQmpDUWZOWUhJT1JfVnUyMmlGTjJSYyZzaWQ9ZmI1MWE3NzgmdHlwZT10Y3AmaGVhZGVyVHlwZT1ub25lIyVFOCU4QiVCMSVFNSU5QiVCRDElNUJ4MSU3Q1ZsZXNzJTVEJTQwMUdicHMNCnZsZXNzOi8vMGRiZDFiNzUtNWM2MS0zMmZiLTk5MjQtYWRlNWRhNzVmNTdlQHNjbTIuZXUtYW1zMi1saTEubm9kZS1mbmYueHl6OjI0MjQxP2VuY3J5cHRpb249bm9uZSZmbG93PXh0bHMtcnByeC12aXNpb24mc2VjdXJpdHk9cmVhbGl0eSZzbmk9ZGxjZG4tcm9nYm94YnUxLmFzdXMuY29tJmZwPWVkZ2UmcGJrPWtUWl9JYXNRZHh5SVJwQkVrT3NYcUVlNzlaZ2pwRnVJV2dsenpsLTk1Z0Umc2lkPWI4ZmViNDVkJnR5cGU9dGNwJmhlYWRlclR5cGU9bm9uZSMlRTglOEQlQjclRTUlODUlQjAxJTVCeDElN0NWbGVzcyU1RCU0MDFHYnBzDQp2bGVzczovLzBkYmQxYjc1LTVjNjEtMzJmYi05OTI0LWFkZTVkYTc1ZjU3ZUBzY20xLmFzLWhrZzEtYmdwMS5ub2RlLWZuZi54eXo6MjQxMDE/ZW5jcnlwdGlvbj1ub25lJmZsb3c9eHRscy1ycHJ4LXZpc2lvbiZzZWN1cml0eT1yZWFsaXR5JnNuaT1kbGNkbi1yb2dib3hidTEuYXN1cy5jb20mZnA9Y2hyb21lJnBiaz1OZ0R0cWduQmJXQnl2ZzNzSVVycTlSUV9RSG5ESUxBZzRXOU5YOXBib1djJnNpZD0yZWY1NWVlMyZ0eXBlPXRjcCZoZWFkZXJUeXBlPW5vbmUjJUU5JUE2JTk5JUU2JUI4JUFGQkdQMSU1QngxJTdDVmxlc3MlNUQlNDAxMEdicHMNCnZsZXNzOi8vMGRiZDFiNzUtNWM2MS0zMmZiLTk5MjQtYWRlNWRhNzVmNTdlQHNjbTEuYXMtaGtnMS1iZ3AzLm5vZGUtZm5mLnh5ejoyNDEwNT9lbmNyeXB0aW9uPW5vbmUmZmxvdz14dGxzLXJwcngtdmlzaW9uJnNlY3VyaXR5PXJlYWxpdHkmc25pPWRsY2RuLXJvZ2JveGJ1Mi5hc3VzLmNvbSZmcD1lZGdlJnBiaz1RZWVZNFNDeGV5Y3FKOUhsTkUwbzZ1Ym12Rm16aVlxbnBIa05CYkRKY21FJnNpZD01ZWVkZmRkZSZ0eXBlPXRjcCZoZWFkZXJUeXBlPW5vbmUjJUU5JUE2JTk5JUU2JUI4JUFGQkdQMyU1QngxJTdDVmxlc3MlNUQlNDAxMEdicHMNCnZsZXNzOi8vMGRiZDFiNzUtNWM2MS0zMmZiLTk5MjQtYWRlNWRhNzVmNTdlQHNjbTIuZXUtcGFyMi1saTEubm9kZS1mbmYueHl6OjI0MjM3P2VuY3J5cHRpb249bm9uZSZmbG93PXh0bHMtcnByeC12aXNpb24mc2VjdXJpdHk9cmVhbGl0eSZzbmk9ZGxjZG4tcm9nYm94YnU1LmFzdXMuY29tJmZwPWNocm9tZSZwYms9WVI0d2JZb3dBSVRjdDZEcFktV0VHSEZXS3pjWjBfQU9NNFZsTjV2N3ZrOCZzaWQ9YzIwOWI5MTAmdHlwZT10Y3AmaGVhZGVyVHlwZT1ub25lIyVFNiVCMyU5NSVFNSU5QiVCRDElNUJ4MSU3Q1ZsZXNzJTVEJTQwMUdicHMNCnZsZXNzOi8vMGRiZDFiNzUtNWM2MS0zMmZiLTk5MjQtYWRlNWRhNzVmNTdlQHNjbTEuYXMtaGtnMS1iZ3A0Lm5vZGUtZm5mLnh5ejoyNDEwNz9lbmNyeXB0aW9uPW5vbmUmZmxvdz14dGxzLXJwcngtdmlzaW9uJnNlY3VyaXR5PXJlYWxpdHkmc25pPWRsY2RuLXJvZ2JveGJ1NS5hc3VzLmNvbSZmcD1jaHJvbWUmcGJrPXFFVlBRdGVsODBjS1dodjBFTDEwaDBKVHNhQWlub1FtcEFwblRvbmZWMHMmc2lkPTBjZTljMTFjJnR5cGU9dGNwJmhlYWRlclR5cGU9bm9uZSMlRTklQTYlOTklRTYlQjglQUZCR1A0JTVCeDElN0NWbGVzcyU1RCU0MDEwR2Jwcw0Kdmxlc3M6Ly8wZGJkMWI3NS01YzYxLTMyZmItOTkyNC1hZGU1ZGE3NWY1N2VAc2NtMS5hcy1oa2cxLWJncDUubm9kZS1mbmYueHl6OjI0MTA5P2VuY3J5cHRpb249bm9uZSZmbG93PXh0bHMtcnByeC12aXNpb24mc2VjdXJpdHk9cmVhbGl0eSZzbmk9ZGxjZG4tcm9nYm94YnUxLmFzdXMuY29tJmZwPWVkZ2UmcGJrPVhjT1Q0eWhuNUptNVdaRDhraG50TmtEX0ZTTVFlS0s4d0pRVGRHSV9uMEUmc2lkPWE5YjExYzlhJnR5cGU9dGNwJmhlYWRlclR5cGU9bm9uZSMlRTklQTYlOTklRTYlQjglQUZCR1A1JTVCeDElN0NWbGVzcyU1RCU0MDEwR2Jwcw0Kdmxlc3M6Ly8wZGJkMWI3NS01YzYxLTMyZmItOTkyNC1hZGU1ZGE3NWY1N2VAc2NtMS5hcy1oa2cxLWJncDIubm9kZS1mbmYueHl6OjI0MTAzP2VuY3J5cHRpb249bm9uZSZmbG93PXh0bHMtcnByeC12aXNpb24mc2VjdXJpdHk9cmVhbGl0eSZzbmk9ZGxjZG4tcm9nYm94YnUzLmFzdXMuY29tJmZwPWNocm9tZSZwYms9aDFQQ1BUeVpIeFRaeXQxaVk3NEhTb0xRc1EyZWZnSzl3MU9NQURPWHlBYyZzaWQ9MTZkZWVkNzgmdHlwZT10Y3AmaGVhZGVyVHlwZT1ub25lIyVFOSVBNiU5OSVFNiVCOCVBRkJHUDIlNUJ4MSU3Q1ZsZXNzJTVEJTQwMTBHYnBzDQp2bGVzczovLzBkYmQxYjc1LTVjNjEtMzJmYi05OTI0LWFkZTVkYTc1ZjU3ZUBzY20yLmFzLWhrZzItYmdwNi5ub2RlLWZuZi54eXo6MjQxMTE/ZW5jcnlwdGlvbj1ub25lJmZsb3c9eHRscy1ycHJ4LXZpc2lvbiZzZWN1cml0eT1yZWFsaXR5JnNuaT1kbGNkbi1yb2dib3hidTQuYXN1cy5jb20mZnA9Y2hyb21lJnBiaz1OQl82SE9FVjE1VGZPQTdHQ0dGVlFMMVFFRE5aT2pzaTZTM3ZmRUktUm13JnNpZD0yZDZiZWU5MiZ0eXBlPXRjcCZoZWFkZXJUeXBlPW5vbmUjJUU5JUE2JTk5JUU2JUI4JUFGQkdQNiU1QngxJTdDVmxlc3MlNUQlNDAxMEdicHMNCnZsZXNzOi8vMGRiZDFiNzUtNWM2MS0zMmZiLTk5MjQtYWRlNWRhNzVmNTdlQHNjbTIuZXUtbWFkMi1nYzEubm9kZS1mbmYueHl6OjI0MjQ3P2VuY3J5cHRpb249bm9uZSZmbG93PXh0bHMtcnByeC12aXNpb24mc2VjdXJpdHk9cmVhbGl0eSZzbmk9ZGxjZG4tcm9nYm94YnUyLmFzdXMuY29tJmZwPWNocm9tZSZwYms9ZTB3M09GekN1VG1TSEFhWjMyTWtIX19faFFGdXdEdlAxd2dZYUljQk1udyZzaWQ9OTEyOWUzZWUmdHlwZT10Y3AmaGVhZGVyVHlwZT1ub25lIyVFOCVBNSVCRiVFNyU4RiVBRCVFNyU4OSU5OTElNUJ4MSU3Q1ZsZXNzJTVEJTQwMjAwTWJwcw0Kdmxlc3M6Ly8wZGJkMWI3NS01YzYxLTMyZmItOTkyNC1hZGU1ZGE3NWY1N2VAc2NtMi5hcy1oa2cyLWJncDEwLm5vZGUtZm5mLnh5ejoyNDExOT9lbmNyeXB0aW9uPW5vbmUmZmxvdz14dGxzLXJwcngtdmlzaW9uJnNlY3VyaXR5PXJlYWxpdHkmc25pPWRsY2RuLXJvZ2JveGJ1MS5hc3VzLmNvbSZmcD1jaHJvbWUmcGJrPUo5ejRELW5OeW1DWnhXX3RHT0tiWTRoc2ZSN3UtSFBrNGFYaHVSdzBRME0mc2lkPWQxYWUzNGFhJnR5cGU9dGNwJmhlYWRlclR5cGU9bm9uZSMlRTklQTYlOTklRTYlQjglQUZCR1AxMCU1QngxJTdDVmxlc3MlNUQlNDAxMEdicHMNCnZsZXNzOi8vMGRiZDFiNzUtNWM2MS0zMmZiLTk5MjQtYWRlNWRhNzVmNTdlQHNjbTIuZXUtZnJhMi1saTEubm9kZS1mbmYueHl6OjI0MjMzP2VuY3J5cHRpb249bm9uZSZmbG93PXh0bHMtcnByeC12aXNpb24mc2VjdXJpdHk9cmVhbGl0eSZzbmk9ZGxjZG4tcm9nYm94YnU1LmFzdXMuY29tJmZwPWVkZ2UmcGJrPTJ2bmwtbDVMbTlkTHpZTkltVmJIeFhVRHJFa0NnZ21tZlZHWk0yZzEwV2Mmc2lkPWE2ZDQxYTEzJnR5cGU9dGNwJmhlYWRlclR5cGU9bm9uZSMlRTUlQkUlQjclRTUlOUIlQkQxJTVCeDElN0NWbGVzcyU1RCU0MDFHYnBzDQp2bGVzczovLzBkYmQxYjc1LTVjNjEtMzJmYi05OTI0LWFkZTVkYTc1ZjU3ZUBzY20yLmFzLWhrZzItYmdwOC5ub2RlLWZuZi54eXo6MjQxMTU/ZW5jcnlwdGlvbj1ub25lJmZsb3c9eHRscy1ycHJ4LXZpc2lvbiZzZWN1cml0eT1yZWFsaXR5JnNuaT1kbGNkbi1yb2dib3hidTEuYXN1cy5jb20mZnA9ZWRnZSZwYms9d25aUTAyMWNlN1JWZ0VtdFdwbUpBc0lwTnduejR1bWlIbGM5Uk5WX25DayZzaWQ9MmQ0M2IyMjQmdHlwZT10Y3AmaGVhZGVyVHlwZT1ub25lIyVFOSVBNiU5OSVFNiVCOCVBRkJHUDglNUJ4MSU3Q1ZsZXNzJTVEJTQwMTBHYnBzDQp2bGVzczovLzBkYmQxYjc1LTVjNjEtMzJmYi05OTI0LWFkZTVkYTc1ZjU3ZUBzY20yLmFzLWhrZzItYmdwOS5ub2RlLWZuZi54eXo6MjQxMTc/ZW5jcnlwdGlvbj1ub25lJmZsb3c9eHRscy1ycHJ4LXZpc2lvbiZzZWN1cml0eT1yZWFsaXR5JnNuaT1kbGNkbi1yb2dib3hidTIuYXN1cy5jb20mZnA9ZWRnZSZwYms9akdHME1KQjNFNGFXREhDSnhXc0tRQTA3M1lBa2lVLWlZc19IMWsydkZFWSZzaWQ9NjBlNTUzMDkmdHlwZT10Y3AmaGVhZGVyVHlwZT1ub25lIyVFOSVBNiU5OSVFNiVCOCVBRkJHUDklNUJ4MSU3Q1ZsZXNzJTVEJTQwMTBHYnBzDQp2bGVzczovLzBkYmQxYjc1LTVjNjEtMzJmYi05OTI0LWFkZTVkYTc1ZjU3ZUBzY20yLmV1LWFybjIteHgxLm5vZGUtZm5mLnh5ejoyNDI0OT9lbmNyeXB0aW9uPW5vbmUmZmxvdz14dGxzLXJwcngtdmlzaW9uJnNlY3VyaXR5PXJlYWxpdHkmc25pPWRsY2RuLXJvZ2JveGJ1Mi5hc3VzLmNvbSZmcD1jaHJvbWUmcGJrPXcyUi1MU0xiQWQyT2M5bmEwd2NzODhJMVZkVHpiZ3NHX3IwWVI5aXV0WEEmc2lkPTZhMTViYzc2JnR5cGU9dGNwJmhlYWRlclR5cGU9bm9uZSMlRTclOTElOUUlRTUlODUlQjgxJTVCeDElN0NWbGVzcyU1RCU0MDgwTWJwcw0Kdmxlc3M6Ly8wZGJkMWI3NS01YzYxLTMyZmItOTkyNC1hZGU1ZGE3NWY1N2VAc2NtMi5ldS1taWwyLWxpMS5ub2RlLWZuZi54eXo6MjQyMzk/ZW5jcnlwdGlvbj1ub25lJmZsb3c9eHRscy1ycHJ4LXZpc2lvbiZzZWN1cml0eT1yZWFsaXR5JnNuaT1kbGNkbi1yb2dib3hidTQuYXN1cy5jb20mZnA9ZWRnZSZwYms9NHZzdzFRc0YtMVBRV2pNeG1zNTM4b1VSVFhfSzI5bkRVYV9FVlg0b3lYdyZzaWQ9MzhmODJhOWImdHlwZT10Y3AmaGVhZGVyVHlwZT1ub25lIyVFNiU4NCU4RiVFNSVBNCVBNyVFNSU4OCVBOTElNUJ4MSU3Q1ZsZXNzJTVEJTQwMUdicHMNCnZsZXNzOi8vMGRiZDFiNzUtNWM2MS0zMmZiLTk5MjQtYWRlNWRhNzVmNTdlQHNjbTIuZXUtbHV4Mi1nYzEubm9kZS1mbmYueHl6OjI0MjQ1P2VuY3J5cHRpb249bm9uZSZmbG93PXh0bHMtcnByeC12aXNpb24mc2VjdXJpdHk9cmVhbGl0eSZzbmk9ZGxjZG4tcm9nYm94YnUxLmFzdXMuY29tJmZwPWNocm9tZSZwYms9cWdmQ0YwSHNiNmJQN1N2d21JcmN4LXlEVHl5X0VMWktEbmc0ajluYXVUYyZzaWQ9NjkzMzRkNzImdHlwZT10Y3AmaGVhZGVyVHlwZT1ub25lIyVFNSU4RCVBMiVFNiVBMyVBRSVFNSVBMCVBMTElNUJ4MSU3Q1ZsZXNzJTVEJTQwMjAwTWJwcw0Kdmxlc3M6Ly8wZGJkMWI3NS01YzYxLTMyZmItOTkyNC1hZGU1ZGE3NWY1N2VAc2NtMi5hcy1oa2cyLWJncDcubm9kZS1mbmYueHl6OjI0MTEzP2VuY3J5cHRpb249bm9uZSZmbG93PXh0bHMtcnByeC12aXNpb24mc2VjdXJpdHk9cmVhbGl0eSZzbmk9ZGxjZG4tcm9nYm94YnU1LmFzdXMuY29tJmZwPWVkZ2UmcGJrPUdVaHlKSzV6cXFjTllDVXRpLUtwcU00SWVodjdOVzNWdXdma2FCTFF0MjAmc2lkPWI2ZWNjNWYzJnR5cGU9dGNwJmhlYWRlclR5cGU9bm9uZSMlRTklQTYlOTklRTYlQjglQUZCR1A3JTVCeDElN0NWbGVzcyU1RCU0MDEwR2Jwcw0Kdmxlc3M6Ly8wZGJkMWI3NS01YzYxLTMyZmItOTkyNC1hZGU1ZGE3NWY1N2VAc2NtMS5hcy1zaW4xLWFrYXJpNC5ub2RlLWZuZi54eXo6MjQxNTk/ZW5jcnlwdGlvbj1ub25lJmZsb3c9eHRscy1ycHJ4LXZpc2lvbiZzZWN1cml0eT1yZWFsaXR5JnNuaT1kbGNkbi1yb2dib3hidTEuYXN1cy5jb20mZnA9Y2hyb21lJnBiaz1SNmJQS0lKakV2Y2pKVWVfRUlhQ3RTc0Y4RFRBbjJ1ekZsaURsM1ZQc0RRJnNpZD0yZDZkZWQ4YyZ0eXBlPXRjcCZoZWFkZXJUeXBlPW5vbmUjJUU2JTk2JUIwJUU1JThBJUEwJUU1JTlEJUExQkdQNCU1QngxJTdDVmxlc3MlNUQlNDAxMEdicHMNCnZsZXNzOi8vMGRiZDFiNzUtNWM2MS0zMmZiLTk5MjQtYWRlNWRhNzVmNTdlQHNjbTEuYXMtc2luMS1ha2FyaTUubm9kZS1mbmYueHl6OjI0MTYxP2VuY3J5cHRpb249bm9uZSZmbG93PXh0bHMtcnByeC12aXNpb24mc2VjdXJpdHk9cmVhbGl0eSZzbmk9ZGxjZG4tcm9nYm94YnUxLmFzdXMuY29tJmZwPWNocm9tZSZwYms9V2RwRlpWOGFER2dCdTdPbGNXMW85X0F2R2x2VVhLZTllMFY1WWZsUHlrTSZzaWQ9ZjU1M2Y1YzQmdHlwZT10Y3AmaGVhZGVyVHlwZT1ub25lIyVFNiU5NiVCMCVFNSU4QSVBMCVFNSU5RCVBMUJHUDUlNUJ4MSU3Q1ZsZXNzJTVEJTQwMTBHYnBzDQp2bGVzczovLzBkYmQxYjc1LTVjNjEtMzJmYi05OTI0LWFkZTVkYTc1ZjU3ZUBzY20xLmFzLXNpbjEtYWthcmkxLm5vZGUtZm5mLnh5ejoyNDE1Mz9lbmNyeXB0aW9uPW5vbmUmZmxvdz14dGxzLXJwcngtdmlzaW9uJnNlY3VyaXR5PXJlYWxpdHkmc25pPWRsY2RuLXJvZ2JveGJ1My5hc3VzLmNvbSZmcD1jaHJvbWUmcGJrPXBYWHpQakRpaEk1UG1OWUpjbzR1THBtZklBYk9RLTQtNm1Bem1Ud3FBaEkmc2lkPTc0Njk0MzE1JnR5cGU9dGNwJmhlYWRlclR5cGU9bm9uZSMlRTYlOTYlQjAlRTUlOEElQTAlRTUlOUQlQTFCR1AxJTVCeDElN0NWbGVzcyU1RCU0MDEwR2Jwcw0Kdmxlc3M6Ly8wZGJkMWI3NS01YzYxLTMyZmItOTkyNC1hZGU1ZGE3NWY1N2VAc2NtMS5hcy1zaW4xLWFrYXJpMy5ub2RlLWZuZi54eXo6MjQxNTc/ZW5jcnlwdGlvbj1ub25lJmZsb3c9eHRscy1ycHJ4LXZpc2lvbiZzZWN1cml0eT1yZWFsaXR5JnNuaT1kbGNkbi1yb2dib3hidTEuYXN1cy5jb20mZnA9ZWRnZSZwYms9dXJHV2Nta2dVME5uOE5EM0tKNTl0M0Z1MHpKMnZkTllTVDQ2Y3UwUXYwMCZzaWQ9MmE2NTE5OGUmdHlwZT10Y3AmaGVhZGVyVHlwZT1ub25lIyVFNiU5NiVCMCVFNSU4QSVBMCVFNSU5RCVBMUJHUDMlNUJ4MSU3Q1ZsZXNzJTVEJTQwMTBHYnBzDQp2bGVzczovLzBkYmQxYjc1LTVjNjEtMzJmYi05OTI0LWFkZTVkYTc1ZjU3ZUBzY20xLmFzLXNpbjEtYWthcmkyLm5vZGUtZm5mLnh5ejoyNDE1NT9lbmNyeXB0aW9uPW5vbmUmZmxvdz14dGxzLXJwcngtdmlzaW9uJnNlY3VyaXR5PXJlYWxpdHkmc25pPWRsY2RuLXJvZ2JveGJ1NS5hc3VzLmNvbSZmcD1jaHJvbWUmcGJrPWpwVVQ3V3g1RWdnY0tFcVlTZmdCSTBhc2lSUWFSTlc3YjBzMXhzTmREaVUmc2lkPWMyMDFhYTRhJnR5cGU9dGNwJmhlYWRlclR5cGU9bm9uZSMlRTYlOTYlQjAlRTUlOEElQTAlRTUlOUQlQTFCR1AyJTVCeDElN0NWbGVzcyU1RCU0MDEwR2Jwcw0Kdmxlc3M6Ly8wZGJkMWI3NS01YzYxLTMyZmItOTkyNC1hZGU1ZGE3NWY1N2VAc2NtMi5vYy1zeWQyLWFwMS5ub2RlLWZuZi54eXo6MjQyODE/ZW5jcnlwdGlvbj1ub25lJmZsb3c9eHRscy1ycHJ4LXZpc2lvbiZzZWN1cml0eT1yZWFsaXR5JnNuaT1kbGNkbi1yb2dib3hidTIuYXN1cy5jb20mZnA9ZWRnZSZwYms9N1NRQnYxZlE4YWUwZUxCM0p1X2R0b2ViQm9FaDZyNUNIX0c2Q0F4Y1lYdyZzaWQ9MWUxNDczZmMmdHlwZT10Y3AmaGVhZGVyVHlwZT1ub25lIyVFNiVCRSVCMyVFNSVBNCVBNyVFNSU4OCVBOSVFNCVCQSU5QTElNUJ4MSU3Q1ZsZXNzJTVEJTQwMUdicHMNCnZsZXNzOi8vMGRiZDFiNzUtNWM2MS0zMmZiLTk5MjQtYWRlNWRhNzVmNTdlQHNjbTIuc2Etc2FvMi1nYzEubm9kZS1mbmYueHl6OjI0Mjg5P2VuY3J5cHRpb249bm9uZSZmbG93PXh0bHMtcnByeC12aXNpb24mc2VjdXJpdHk9cmVhbGl0eSZzbmk9ZGxjZG4tcm9nYm94YnU1LmFzdXMuY29tJmZwPWVkZ2UmcGJrPXhlTFoxVTJrWDFlRVAzeUVCaG9LeHIxWHpzWEU2c2ZaSF91SVdteTRmbFUmc2lkPWU0Y2MzNjJiJnR5cGU9dGNwJmhlYWRlclR5cGU9bm9uZSMlRTUlQjclQjQlRTglQTUlQkYxJTVCeDElN0NWbGVzcyU1RCU0MDIwME1icHMNCnZsZXNzOi8vMGRiZDFiNzUtNWM2MS0zMmZiLTk5MjQtYWRlNWRhNzVmNTdlQHNjbTIuYXMtbW5sMi14eDEubm9kZS1mbmYueHl6OjI0MjYzP2VuY3J5cHRpb249bm9uZSZmbG93PXh0bHMtcnByeC12aXNpb24mc2VjdXJpdHk9cmVhbGl0eSZzbmk9ZGxjZG4tcm9nYm94YnUyLmFzdXMuY29tJmZwPWNocm9tZSZwYms9NmNiaFBRQzdOOEVQWlZuM1FFazIwRmx3Nzk0V3lrN1hMMnh6S09HWlRGdyZzaWQ9ZGE5MmQ0ODcmdHlwZT10Y3AmaGVhZGVyVHlwZT1ub25lIyVFOCU4RiVCMiVFNSVCRSU4QiVFNSVBRSVCRTElNUJ4MSU3Q1ZsZXNzJTVEJTQwMkdicHMNCnZsZXNzOi8vMGRiZDFiNzUtNWM2MS0zMmZiLTk5MjQtYWRlNWRhNzVmNTdlQHNjbTIuZXUtaWV2Mi1nYzEubm9kZS1mbmYueHl6OjI0MjQzP2VuY3J5cHRpb249bm9uZSZmbG93PXh0bHMtcnByeC12aXNpb24mc2VjdXJpdHk9cmVhbGl0eSZzbmk9ZGxjZG4tcm9nYm94YnUxLmFzdXMuY29tJmZwPWVkZ2UmcGJrPUNDaFoxWWoyc0tfV0pleGhuYTduZDluTk1QRHBUX0U3QXA0UXAwYWxOQUkmc2lkPWZiYWE1OTE1JnR5cGU9dGNwJmhlYWRlclR5cGU9bm9uZSMlRTQlQjklOEMlRTUlODUlOEIlRTUlODUlQjAxJTVCeDElN0NWbGVzcyU1RCU0MDIwME1icHMNCnZsZXNzOi8vMGRiZDFiNzUtNWM2MS0zMmZiLTk5MjQtYWRlNWRhNzVmNTdlQHNjbTIuZXUtdGx2Mi1nYzEubm9kZS1mbmYueHl6OjI0Mjg1P2VuY3J5cHRpb249bm9uZSZmbG93PXh0bHMtcnByeC12aXNpb24mc2VjdXJpdHk9cmVhbGl0eSZzbmk9ZGxjZG4tcm9nYm94YnUyLmFzdXMuY29tJmZwPWNocm9tZSZwYms9NS1LbHNvcDVBMDFiRDk3bG9pSy1PQmZicFgtdklPWV9ZbW5YMFQta3pBcyZzaWQ9MjZmZWVmNmQmdHlwZT10Y3AmaGVhZGVyVHlwZT1ub25lIyVFNCVCQiVBNSVFOCU4OSVCMiVFNSU4OCU5NzElNUJ4MSU3Q1ZsZXNzJTVEJTQwMjAwTWJwcw0Kdmxlc3M6Ly8wZGJkMWI3NS01YzYxLTMyZmItOTkyNC1hZGU1ZGE3NWY1N2VAc2NtMi5hcy1ia2syLXh4MS5ub2RlLWZuZi54eXo6MjQyNjk/ZW5jcnlwdGlvbj1ub25lJmZsb3c9eHRscy1ycHJ4LXZpc2lvbiZzZWN1cml0eT1yZWFsaXR5JnNuaT1kbGNkbi1yb2dib3hidTMuYXN1cy5jb20mZnA9Y2hyb21lJnBiaz11anZKNUR0X2N6RTgxdUlfTGxlZkZPOUJUMlRGS2diTlZaV3ZQVzN1ekFnJnNpZD1lM2M1MjIzNSZ0eXBlPXRjcCZoZWFkZXJUeXBlPW5vbmUjJUU2JUIzJUIwJUU1JTlCJUJEMSU1QngxJTdDVmxlc3MlNUQlNDAyMDBNYnBzDQp2bGVzczovLzBkYmQxYjc1LTVjNjEtMzJmYi05OTI0LWFkZTVkYTc1ZjU3ZUBzY20yLmFzLWlzdDIteHgxLm5vZGUtZm5mLnh5ejoyNDI1MT9lbmNyeXB0aW9uPW5vbmUmZmxvdz14dGxzLXJwcngtdmlzaW9uJnNlY3VyaXR5PXJlYWxpdHkmc25pPWRsY2RuLXJvZ2JveGJ1NS5hc3VzLmNvbSZmcD1lZGdlJnBiaz1WMzFxR2JXNGM2b1hDQUx1c0lpTkxKTS1vVUZNTU1vc0NsUW9wVlZ3QXdVJnNpZD01OWRjZWMyNiZ0eXBlPXRjcCZoZWFkZXJUeXBlPW5vbmUjJUU1JTlDJTlGJUU4JTgwJUIzJUU1JTg1JUI2MSU1QngxJTdDVmxlc3MlNUQlNDA1MDBNYnBzDQp2bGVzczovLzBkYmQxYjc1LTVjNjEtMzJmYi05OTI0LWFkZTVkYTc1ZjU3ZUBzY20yLmFzLWprdDIteHgxLm5vZGUtZm5mLnh5ejoyNDI2Nz9lbmNyeXB0aW9uPW5vbmUmZmxvdz14dGxzLXJwcngtdmlzaW9uJnNlY3VyaXR5PXJlYWxpdHkmc25pPWRsY2RuLXJvZ2JveGJ1MS5hc3VzLmNvbSZmcD1jaHJvbWUmcGJrPXFTN1JtMlBKUnREWjY2Y0cybmVXdnFycXZPUVI4VERiVnA4Y0VCRVFOQjgmc2lkPTMyMTg1MzlmJnR5cGU9dGNwJmhlYWRlclR5cGU9bm9uZSMlRTUlOEQlQjAlRTUlQkElQTYlRTUlQjAlQkMlRTglQTUlQkYlRTQlQkElOUExJTVCeDElN0NWbGVzcyU1RCU0MDFHYnBzDQp2bGVzczovLzBkYmQxYjc1LTVjNjEtMzJmYi05OTI0LWFkZTVkYTc1ZjU3ZUBzY20yLmFzLWJvbTItbGkxLm5vZGUtZm5mLnh5ejoyNDI2MT9lbmNyeXB0aW9uPW5vbmUmZmxvdz14dGxzLXJwcngtdmlzaW9uJnNlY3VyaXR5PXJlYWxpdHkmc25pPWRsY2RuLXJvZ2JveGJ1MS5hc3VzLmNvbSZmcD1lZGdlJnBiaz1YbXkzUExBYU1OOW92QnRGeDA5WVZnQ1h3Y2w0Y05RbWpZQWZEYzc4NDBJJnNpZD01NDRjZTEwNCZ0eXBlPXRjcCZoZWFkZXJUeXBlPW5vbmUjJUU1JThEJUIwJUU1JUJBJUE2MSU1QngxJTdDVmxlc3MlNUQlNDAxR2Jwcw0Kdmxlc3M6Ly8wZGJkMWI3NS01YzYxLTMyZmItOTkyNC1hZGU1ZGE3NWY1N2VAc2NtMi5hcy1hbGEyLWdjMS5ub2RlLWZuZi54eXo6MjQyOTE/ZW5jcnlwdGlvbj1ub25lJmZsb3c9eHRscy1ycHJ4LXZpc2lvbiZzZWN1cml0eT1yZWFsaXR5JnNuaT1kbGNkbi1yb2dib3hidTQuYXN1cy5jb20mZnA9ZWRnZSZwYms9eVNkS3RqNFBUb1ZScWFGUXJjb3ZaZXpTT1pCMHVYNm1ZRkw4RlI0cXJTRSZzaWQ9NTQ5MGM5OGYmdHlwZT10Y3AmaGVhZGVyVHlwZT1ub25lIyVFNSU5MyU4OCVFOCU5MCVBOCVFNSU4NSU4QiVFNiU5NiVBRiVFNSU5RCVBNjElNUJ4MSU3Q1ZsZXNzJTVEJTQwMjAwTWJwcw0Kdmxlc3M6Ly8wZGJkMWI3NS01YzYxLTMyZmItOTkyNC1hZGU1ZGE3NWY1N2VAc2NtMi5ldS1raGEyLXh4MS5ub2RlLWZuZi54eXo6MjQyMzE/ZW5jcnlwdGlvbj1ub25lJmZsb3c9eHRscy1ycHJ4LXZpc2lvbiZzZWN1cml0eT1yZWFsaXR5JnNuaT1kbGNkbi1yb2dib3hidTUuYXN1cy5jb20mZnA9ZWRnZSZwYms9em54LVpWbXhVbnYwMDhudnl1TFRrbW5SLWZzWnJhczdDS2k2NzY4cF9TayZzaWQ9YWI4ZGUyMGQmdHlwZT10Y3AmaGVhZGVyVHlwZT1ub25lIyVFNCVCRiU4NCVFNyVCRCU5NyVFNiU5NiVBRiVFNCVCQyVBRiVFNSU4QSU5QjElNUJ4MSU3Q1ZsZXNzJTVEJTQwMUdicHMNCnZsZXNzOi8vMGRiZDFiNzUtNWM2MS0zMmZiLTk5MjQtYWRlNWRhNzVmNTdlQHNjbTIuYXMta3VsMi14eDEubm9kZS1mbmYueHl6OjI0MjY1P2VuY3J5cHRpb249bm9uZSZmbG93PXh0bHMtcnByeC12aXNpb24mc2VjdXJpdHk9cmVhbGl0eSZzbmk9ZGxjZG4tcm9nYm94YnU1LmFzdXMuY29tJmZwPWNocm9tZSZwYms9TEV1ODN4Y0RXMGtLUXRCempiS3h6bW55UXZTTW9XQ3diNHBld2JkSDhEWSZzaWQ9MGM4NTFlZWUmdHlwZT10Y3AmaGVhZGVyVHlwZT1ub25lIyVFOSVBOSVBQyVFNiU5RCVBNSVFOCVBNSVCRiVFNCVCQSU5QTElNUJ4MSU3Q1ZsZXNzJTVEJTQwMjAwTWJwcw0K
+mixed-port: 7890
+allow-lan: true
+mode: rule
+log-level: info
+ipv6: false
+external-controller: 0.0.0.0:9090
+dns:
+  enable: true
+  listen: 0.0.0.0:53
+  ipv6: false
+  default-nameserver:
+    - 223.5.5.5
+    - 114.114.114.114
+  nameserver:
+    - 223.5.5.5
+    - 114.114.114.114
+    - 119.29.29.29
+    - 180.76.76.76
+  enhanced-mode: fake-ip
+  fake-ip-range: 198.18.0.1/16
+  fake-ip-filter:
+    - "*.lan"
+    - "*.localdomain"
+    - "*.example"
+    - "*.invalid"
+    - "*.localhost"
+    - "*.test"
+    - "*.local"
+    - "*.home.arpa"
+    - router.asus.com
+    - localhost.sec.qq.com
+    - localhost.ptlogin2.qq.com
+    - +.msftconnecttest.com
+tun:
+  enable: true
+  stack: system
+  auto-route: true
+  auto-detect-interface: true
+  dns-hijack:
+    - 114.114.114.114
+    - 180.76.76.76
+    - 119.29.29.29
+    - 223.5.5.5
+    - 8.8.8.8
+    - 8.8.4.4
+    - 1.1.1.1
+    - 1.0.0.1
+proxies:
+  - name: 微信：gtyz222
+    type: vless
+    server: scm1.na-lax1-bgp5.node-fnf.xyz
+    port: 24199
+    uuid: 0dbd1b75-5c61-32fb-9924-ade5da75f57e
+    servername: dlcdn-rogboxbu1.asus.com
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: PWVZ11iR0AR2e562ODyCESSiYj88nDW5-Q0Se5eTjlI
+      short-id: 76f613c2
+  - name: 美国BGP2[x1|Vless]@10Gbps
+    type: vless
+    server: scm1.na-lax1-bgp2.node-fnf.xyz
+    port: 24193
+    uuid: 0dbd1b75-5c61-32fb-9924-ade5da75f57e
+    servername: dlcdn-rogboxbu4.asus.com
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: p4xH53PCoJkfjwuh08NUIciUbzoObPW-DF9AqqpNpCU
+      short-id: 15771f41
+  - name: 美国BGP3[x1|Vless]@10Gbps
+    type: vless
+    server: scm1.na-lax1-bgp3.node-fnf.xyz
+    port: 24195
+    uuid: 0dbd1b75-5c61-32fb-9924-ade5da75f57e
+    servername: dlcdn-rogboxbu4.asus.com
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: yTnOxRnjjWrFJGTH_UbYmG0xlvk12lWAQPkMT1GX6To
+      short-id: 93eda735
+  - name: 美国BGP1[x1|Vless]@10Gbps
+    type: vless
+    server: scm1.na-lax1-bgp1.node-fnf.xyz
+    port: 24191
+    uuid: 0dbd1b75-5c61-32fb-9924-ade5da75f57e
+    servername: dlcdn-rogboxbu1.asus.com
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: epewCAE6noqgO6aiVkQs2RMGjKyu_yUYzxGF367zzDw
+      short-id: 7fda2afe
+  - name: 美国BGP4[x1|Vless]@10Gbps
+    type: vless
+    server: scm1.na-lax1-bgp4.node-fnf.xyz
+    port: 24197
+    uuid: 0dbd1b75-5c61-32fb-9924-ade5da75f57e
+    servername: dlcdn-rogboxbu1.asus.com
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: edge
+    reality-opts:
+      public-key: flgFm5gp4X6F2MnMGlpZDkoNzSAGwEpHgX4_U4YO31o
+      short-id: 83c7c510
+  - name: 美国HE1[x1|Vless]@1Gbps
+    type: vless
+    server: scm2.na-lax2-he1.node-fnf.xyz
+    port: 24201
+    uuid: 0dbd1b75-5c61-32fb-9924-ade5da75f57e
+    servername: dlcdn-rogboxbu4.asus.com
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: edge
+    reality-opts:
+      public-key: N9P7xtnKGBiczKvgEJN2CQkKn582Nl_0YhX81nj2EAI
+      short-id: 37c65e4d
+  - name: 美国HE2[x1|Vless]@1Gbps
+    type: vless
+    server: scm2.na-lax2-he2.node-fnf.xyz
+    port: 24203
+    uuid: 0dbd1b75-5c61-32fb-9924-ade5da75f57e
+    servername: dlcdn-rogboxbu3.asus.com
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: ZMb6GxZplNVTffDYI7lJiuLG9Bacd9Lt4Cqtr5-Txw4
+      short-id: 4325a9f7
+  - name: 美国HE5[x1|Vless]@1Gbps
+    type: vless
+    server: scm2.na-lax2-he5.node-fnf.xyz
+    port: 24209
+    uuid: 0dbd1b75-5c61-32fb-9924-ade5da75f57e
+    servername: dlcdn-rogboxbu4.asus.com
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: YQh9fNayoZakcSnt7lC5UydyayO1e75OCG-rQOWUZVs
+      short-id: 7a5a9cb2
+  - name: 美国HE4[x1|Vless]@1Gbps
+    type: vless
+    server: scm2.na-lax2-he4.node-fnf.xyz
+    port: 24207
+    uuid: 0dbd1b75-5c61-32fb-9924-ade5da75f57e
+    servername: dlcdn-rogboxbu4.asus.com
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: u8WLKqBdjO-bx4YaC6Lik2RsgM2_QjZPd5KHjLWt6EA
+      short-id: 8cd01856
+  - name: 阿根廷1[x1|Vless]@1Gbps
+    type: vless
+    server: scm2.sa-bue2-ap1.node-fnf.xyz
+    port: 24287
+    uuid: 0dbd1b75-5c61-32fb-9924-ade5da75f57e
+    servername: dlcdn-rogboxbu2.asus.com
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: 51etTG_GKZD5WR0y1nRuwpZ0pJGFcnbUctVXYDNrSjI
+      short-id: 6081c394
+  - name: 美国HE3[x1|Vless]@1Gbps
+    type: vless
+    server: scm2.na-lax2-he3.node-fnf.xyz
+    port: 24205
+    uuid: 0dbd1b75-5c61-32fb-9924-ade5da75f57e
+    servername: dlcdn-rogboxbu1.asus.com
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: edge
+    reality-opts:
+      public-key: iqTPkPqWlYdnGaiiRDTEEL99-RvfYxQFzjrcMD1hGG4
+      short-id: 9f79ed64
+  - name: 美国OVH1[x0.1|Vless]@1Gbps
+    type: vless
+    server: scm1.na-lax1-ovh1.node-fnf.xyz
+    port: 24211
+    uuid: 0dbd1b75-5c61-32fb-9924-ade5da75f57e
+    servername: dlcdn-rogboxbu3.asus.com
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: edge
+    reality-opts:
+      public-key: Kx6hAULaf5SaqZt3YLlrS8tpKWOZWvB7qcCTRvS95kE
+      short-id: aba3a636
+  - name: 加拿大1[x1|Vless]@1Gbps
+    type: vless
+    server: scm2.na-yto2-li1.node-fnf.xyz
+    port: 24221
+    uuid: 0dbd1b75-5c61-32fb-9924-ade5da75f57e
+    servername: dlcdn-rogboxbu2.asus.com
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: edge
+    reality-opts:
+      public-key: jK0kMWcT0G7M3z68HDeTn3fbwhvh7PXphFmZyyAtRl0
+      short-id: 6499f28a
+  - name: 日本BGP10[x1|Vless]@10Gbps
+    type: vless
+    server: scm2.as-tyo2-bgp10.node-fnf.xyz
+    port: 24189
+    uuid: 0dbd1b75-5c61-32fb-9924-ade5da75f57e
+    servername: dlcdn-rogboxbu5.asus.com
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: edge
+    reality-opts:
+      public-key: 62GYpBHxutdlsRGW2p32MEF8pDC6F7d2O3NHy1tQ6wY
+      short-id: 6d372965
+  - name: 日本BGP8[x1|Vless]@10Gbps
+    type: vless
+    server: scm2.as-tyo2-bgp8.node-fnf.xyz
+    port: 24185
+    uuid: 0dbd1b75-5c61-32fb-9924-ade5da75f57e
+    servername: dlcdn-rogboxbu1.asus.com
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: S3CXKFwsAEEzyHqvsZNBw8q1weoAYJNXDr4bFjbATgQ
+      short-id: fe032542
+  - name: 日本BGP1[x1|Vless]@10Gbps
+    type: vless
+    server: scm1.as-tyo1-bgp1.node-fnf.xyz
+    port: 24171
+    uuid: 0dbd1b75-5c61-32fb-9924-ade5da75f57e
+    servername: dlcdn-rogboxbu1.asus.com
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: edge
+    reality-opts:
+      public-key: UOSnTp3ozouOQn9ZAfUEp4W7b_I9YL_9j8sOUh6StQ8
+      short-id: 715c6a47
+  - name: 日本BGP9[x1|Vless]@10Gbps
+    type: vless
+    server: scm2.as-tyo2-bgp9.node-fnf.xyz
+    port: 24187
+    uuid: 0dbd1b75-5c61-32fb-9924-ade5da75f57e
+    servername: dlcdn-rogboxbu4.asus.com
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: 3Vny0HjGVDwo2LKEnMm5uD0dDNDX0jTah7R9tLAKPgg
+      short-id: ca8b22b1
+  - name: 日本BGP2[x1|Vless]@10Gbps
+    type: vless
+    server: scm1.as-tyo1-bgp2.node-fnf.xyz
+    port: 24173
+    uuid: 0dbd1b75-5c61-32fb-9924-ade5da75f57e
+    servername: dlcdn-rogboxbu5.asus.com
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: edge
+    reality-opts:
+      public-key: v8OC62AfGrXBkVCS7sLTWUR2n1v9t6eRZhXVgy7E2SE
+      short-id: e480661b
+  - name: 日本BGP4[x1|Vless]@10Gbps
+    type: vless
+    server: scm1.as-tyo1-bgp4.node-fnf.xyz
+    port: 24177
+    uuid: 0dbd1b75-5c61-32fb-9924-ade5da75f57e
+    servername: dlcdn-rogboxbu3.asus.com
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: edge
+    reality-opts:
+      public-key: -0Y3tLGLh3WCb_mCgFN8vmzg4lGibMJjZPpoLuV4sAY
+      short-id: f415bdb8
+  - name: 日本BGP7[x1|Vless]@10Gbps
+    type: vless
+    server: scm2.as-tyo2-bgp7.node-fnf.xyz
+    port: 24183
+    uuid: 0dbd1b75-5c61-32fb-9924-ade5da75f57e
+    servername: dlcdn-rogboxbu4.asus.com
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: edge
+    reality-opts:
+      public-key: Xsio3Zt_s-0kOItL1LEc5CND7KendzGN5hdK2Y-Unx8
+      short-id: 3f956909
+  - name: 日本BGP3[x1|Vless]@10Gbps
+    type: vless
+    server: scm1.as-tyo1-bgp3.node-fnf.xyz
+    port: 24175
+    uuid: 0dbd1b75-5c61-32fb-9924-ade5da75f57e
+    servername: dlcdn-rogboxbu5.asus.com
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: edge
+    reality-opts:
+      public-key: 1bkxeynpfUte6wZyxbAWyN6ewrCMfmWNvAdGQEw5Ihw
+      short-id: 68c99a01
+  - name: 日本BGP5[x1|Vless]@10Gbps
+    type: vless
+    server: scm1.as-tyo1-bgp5.node-fnf.xyz
+    port: 24179
+    uuid: 0dbd1b75-5c61-32fb-9924-ade5da75f57e
+    servername: dlcdn-rogboxbu5.asus.com
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: TrJJOdJX9H6FVoJYD7QQ-MZn44ajw7xvMpFxAlmt83c
+      short-id: dc4ba058
+  - name: 日本BGP6[x1|Vless]@10Gbps
+    type: vless
+    server: scm2.as-tyo2-bgp6.node-fnf.xyz
+    port: 24181
+    uuid: 0dbd1b75-5c61-32fb-9924-ade5da75f57e
+    servername: dlcdn-rogboxbu5.asus.com
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: edge
+    reality-opts:
+      public-key: Brg13GCeOLjoB5bpLGFi9FEBkTRQevIIVN_z3N3kJyY
+      short-id: d820b974
+  - name: 台湾BGP1[x1|Vless]@10Gbps
+    type: vless
+    server: scm1.as-tpe1-akari1.node-fnf.xyz
+    port: 24131
+    uuid: 0dbd1b75-5c61-32fb-9924-ade5da75f57e
+    servername: dlcdn-rogboxbu3.asus.com
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: 8MoZPm7OoHg031zE01u_nvoOLp-16OlBFWZt-hRFcAI
+      short-id: 52ca6f3d
+  - name: 台湾BGP2[x1|Vless]@10Gbps
+    type: vless
+    server: scm1.as-tpe1-akari2.node-fnf.xyz
+    port: 24133
+    uuid: 0dbd1b75-5c61-32fb-9924-ade5da75f57e
+    servername: dlcdn-rogboxbu4.asus.com
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: 8K0cCPkF-wTPSe0rzlw0B3FnPSYFdIZtHKoVjBJsOiU
+      short-id: 1c50ab90
+  - name: 台湾BGP5[x1|Vless]@10Gbps
+    type: vless
+    server: scm1.as-tpe1-akari5.node-fnf.xyz
+    port: 24139
+    uuid: 0dbd1b75-5c61-32fb-9924-ade5da75f57e
+    servername: dlcdn-rogboxbu1.asus.com
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: edge
+    reality-opts:
+      public-key: WA8zS2pLEU0LwdtE3ht-Rwx5PI_G6eBUXvBwOOvPiCw
+      short-id: c96a3294
+  - name: 台湾BGP3[x1|Vless]@10Gbps
+    type: vless
+    server: scm1.as-tpe1-akari3.node-fnf.xyz
+    port: 24135
+    uuid: 0dbd1b75-5c61-32fb-9924-ade5da75f57e
+    servername: dlcdn-rogboxbu5.asus.com
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: edge
+    reality-opts:
+      public-key: w610XsSacGlJ-snZbQrBhkfavmVc1-qT9N3YycSNOH4
+      short-id: 62f62fe5
+  - name: 台湾BGP4[x1|Vless]@10Gbps
+    type: vless
+    server: scm1.as-tpe1-akari4.node-fnf.xyz
+    port: 24137
+    uuid: 0dbd1b75-5c61-32fb-9924-ade5da75f57e
+    servername: dlcdn-rogboxbu1.asus.com
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: edge
+    reality-opts:
+      public-key: yXLtM9CfGX8ziCTKRhM9t1ZcwVbuaUl-BAMyb1iIlCw
+      short-id: e14e25b2
+  - name: 英国1[x1|Vless]@1Gbps
+    type: vless
+    server: scm2.eu-lon2-li1.node-fnf.xyz
+    port: 24235
+    uuid: 0dbd1b75-5c61-32fb-9924-ade5da75f57e
+    servername: dlcdn-rogboxbu5.asus.com
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: Ndq1jVb2BBXzv00pSApZeBjCQfNYHIOR_Vu22iFN2Rc
+      short-id: fb51a778
+  - name: 荷兰1[x1|Vless]@1Gbps
+    type: vless
+    server: scm2.eu-ams2-li1.node-fnf.xyz
+    port: 24241
+    uuid: 0dbd1b75-5c61-32fb-9924-ade5da75f57e
+    servername: dlcdn-rogboxbu1.asus.com
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: edge
+    reality-opts:
+      public-key: kTZ_IasQdxyIRpBEkOsXqEe79ZgjpFuIWglzzl-95gE
+      short-id: b8feb45d
+  - name: 香港BGP1[x1|Vless]@10Gbps
+    type: vless
+    server: scm1.as-hkg1-bgp1.node-fnf.xyz
+    port: 24101
+    uuid: 0dbd1b75-5c61-32fb-9924-ade5da75f57e
+    servername: dlcdn-rogboxbu1.asus.com
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: NgDtqgnBbWByvg3sIUrq9RQ_QHnDILAg4W9NX9pboWc
+      short-id: 2ef55ee3
+  - name: 香港BGP3[x1|Vless]@10Gbps
+    type: vless
+    server: scm1.as-hkg1-bgp3.node-fnf.xyz
+    port: 24105
+    uuid: 0dbd1b75-5c61-32fb-9924-ade5da75f57e
+    servername: dlcdn-rogboxbu2.asus.com
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: edge
+    reality-opts:
+      public-key: QeeY4SCxeycqJ9HlNE0o6ubmvFmziYqnpHkNBbDJcmE
+      short-id: 5eedfdde
+  - name: 法国1[x1|Vless]@1Gbps
+    type: vless
+    server: scm2.eu-par2-li1.node-fnf.xyz
+    port: 24237
+    uuid: 0dbd1b75-5c61-32fb-9924-ade5da75f57e
+    servername: dlcdn-rogboxbu5.asus.com
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: YR4wbYowAITct6DpY-WEGHFWKzcZ0_AOM4VlN5v7vk8
+      short-id: c209b910
+  - name: 香港BGP4[x1|Vless]@10Gbps
+    type: vless
+    server: scm1.as-hkg1-bgp4.node-fnf.xyz
+    port: 24107
+    uuid: 0dbd1b75-5c61-32fb-9924-ade5da75f57e
+    servername: dlcdn-rogboxbu5.asus.com
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: qEVPQtel80cKWhv0EL10h0JTsaAinoQmpApnTonfV0s
+      short-id: 0ce9c11c
+  - name: 香港BGP5[x1|Vless]@10Gbps
+    type: vless
+    server: scm1.as-hkg1-bgp5.node-fnf.xyz
+    port: 24109
+    uuid: 0dbd1b75-5c61-32fb-9924-ade5da75f57e
+    servername: dlcdn-rogboxbu1.asus.com
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: edge
+    reality-opts:
+      public-key: XcOT4yhn5Jm5WZD8khntNkD_FSMQeKK8wJQTdGI_n0E
+      short-id: a9b11c9a
+  - name: 香港BGP2[x1|Vless]@10Gbps
+    type: vless
+    server: scm1.as-hkg1-bgp2.node-fnf.xyz
+    port: 24103
+    uuid: 0dbd1b75-5c61-32fb-9924-ade5da75f57e
+    servername: dlcdn-rogboxbu3.asus.com
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: h1PCPTyZHxTZyt1iY74HSoLQsQ2efgK9w1OMADOXyAc
+      short-id: 16deed78
+  - name: 香港BGP6[x1|Vless]@10Gbps
+    type: vless
+    server: scm2.as-hkg2-bgp6.node-fnf.xyz
+    port: 24111
+    uuid: 0dbd1b75-5c61-32fb-9924-ade5da75f57e
+    servername: dlcdn-rogboxbu4.asus.com
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: NB_6HOEV15TfOA7GCGFVQL1QEDNZOjsi6S3vfEI-Rmw
+      short-id: 2d6bee92
+  - name: 西班牙1[x1|Vless]@200Mbps
+    type: vless
+    server: scm2.eu-mad2-gc1.node-fnf.xyz
+    port: 24247
+    uuid: 0dbd1b75-5c61-32fb-9924-ade5da75f57e
+    servername: dlcdn-rogboxbu2.asus.com
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: e0w3OFzCuTmSHAaZ32MkH___hQFuwDvP1wgYaIcBMnw
+      short-id: 9129e3ee
+  - name: 香港BGP10[x1|Vless]@10Gbps
+    type: vless
+    server: scm2.as-hkg2-bgp10.node-fnf.xyz
+    port: 24119
+    uuid: 0dbd1b75-5c61-32fb-9924-ade5da75f57e
+    servername: dlcdn-rogboxbu1.asus.com
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: J9z4D-nNymCZxW_tGOKbY4hsfR7u-HPk4aXhuRw0Q0M
+      short-id: d1ae34aa
+  - name: 德国1[x1|Vless]@1Gbps
+    type: vless
+    server: scm2.eu-fra2-li1.node-fnf.xyz
+    port: 24233
+    uuid: 0dbd1b75-5c61-32fb-9924-ade5da75f57e
+    servername: dlcdn-rogboxbu5.asus.com
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: edge
+    reality-opts:
+      public-key: 2vnl-l5Lm9dLzYNImVbHxXUDrEkCggmmfVGZM2g10Wc
+      short-id: a6d41a13
+  - name: 香港BGP8[x1|Vless]@10Gbps
+    type: vless
+    server: scm2.as-hkg2-bgp8.node-fnf.xyz
+    port: 24115
+    uuid: 0dbd1b75-5c61-32fb-9924-ade5da75f57e
+    servername: dlcdn-rogboxbu1.asus.com
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: edge
+    reality-opts:
+      public-key: wnZQ021ce7RVgEmtWpmJAsIpNwnz4umiHlc9RNV_nCk
+      short-id: 2d43b224
+  - name: 香港BGP9[x1|Vless]@10Gbps
+    type: vless
+    server: scm2.as-hkg2-bgp9.node-fnf.xyz
+    port: 24117
+    uuid: 0dbd1b75-5c61-32fb-9924-ade5da75f57e
+    servername: dlcdn-rogboxbu2.asus.com
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: edge
+    reality-opts:
+      public-key: jGG0MJB3E4aWDHCJxWsKQA073YAkiU-iYs_H1k2vFEY
+      short-id: "60e55309"
+  - name: 瑞典1[x1|Vless]@80Mbps
+    type: vless
+    server: scm2.eu-arn2-xx1.node-fnf.xyz
+    port: 24249
+    uuid: 0dbd1b75-5c61-32fb-9924-ade5da75f57e
+    servername: dlcdn-rogboxbu2.asus.com
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: w2R-LSLbAd2Oc9na0wcs88I1VdTzbgsG_r0YR9iutXA
+      short-id: 6a15bc76
+  - name: 意大利1[x1|Vless]@1Gbps
+    type: vless
+    server: scm2.eu-mil2-li1.node-fnf.xyz
+    port: 24239
+    uuid: 0dbd1b75-5c61-32fb-9924-ade5da75f57e
+    servername: dlcdn-rogboxbu4.asus.com
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: edge
+    reality-opts:
+      public-key: 4vsw1QsF-1PQWjMxms538oURTX_K29nDUa_EVX4oyXw
+      short-id: 38f82a9b
+  - name: 卢森堡1[x1|Vless]@200Mbps
+    type: vless
+    server: scm2.eu-lux2-gc1.node-fnf.xyz
+    port: 24245
+    uuid: 0dbd1b75-5c61-32fb-9924-ade5da75f57e
+    servername: dlcdn-rogboxbu1.asus.com
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: qgfCF0Hsb6bP7SvwmIrcx-yDTyy_ELZKDng4j9nauTc
+      short-id: 69334d72
+  - name: 香港BGP7[x1|Vless]@10Gbps
+    type: vless
+    server: scm2.as-hkg2-bgp7.node-fnf.xyz
+    port: 24113
+    uuid: 0dbd1b75-5c61-32fb-9924-ade5da75f57e
+    servername: dlcdn-rogboxbu5.asus.com
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: edge
+    reality-opts:
+      public-key: GUhyJK5zqqcNYCUti-KpqM4Iehv7NW3VuwfkaBLQt20
+      short-id: b6ecc5f3
+  - name: 新加坡BGP4[x1|Vless]@10Gbps
+    type: vless
+    server: scm1.as-sin1-akari4.node-fnf.xyz
+    port: 24159
+    uuid: 0dbd1b75-5c61-32fb-9924-ade5da75f57e
+    servername: dlcdn-rogboxbu1.asus.com
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: R6bPKIJjEvcjJUe_EIaCtSsF8DTAn2uzFliDl3VPsDQ
+      short-id: 2d6ded8c
+  - name: 新加坡BGP5[x1|Vless]@10Gbps
+    type: vless
+    server: scm1.as-sin1-akari5.node-fnf.xyz
+    port: 24161
+    uuid: 0dbd1b75-5c61-32fb-9924-ade5da75f57e
+    servername: dlcdn-rogboxbu1.asus.com
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: WdpFZV8aDGgBu7OlcW1o9_AvGlvUXKe9e0V5YflPykM
+      short-id: f553f5c4
+  - name: 新加坡BGP1[x1|Vless]@10Gbps
+    type: vless
+    server: scm1.as-sin1-akari1.node-fnf.xyz
+    port: 24153
+    uuid: 0dbd1b75-5c61-32fb-9924-ade5da75f57e
+    servername: dlcdn-rogboxbu3.asus.com
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: pXXzPjDihI5PmNYJco4uLpmfIAbOQ-4-6mAzmTwqAhI
+      short-id: "74694315"
+  - name: 新加坡BGP3[x1|Vless]@10Gbps
+    type: vless
+    server: scm1.as-sin1-akari3.node-fnf.xyz
+    port: 24157
+    uuid: 0dbd1b75-5c61-32fb-9924-ade5da75f57e
+    servername: dlcdn-rogboxbu1.asus.com
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: edge
+    reality-opts:
+      public-key: urGWcmkgU0Nn8ND3KJ59t3Fu0zJ2vdNYST46cu0Qv00
+      short-id: 2a65198e
+  - name: 新加坡BGP2[x1|Vless]@10Gbps
+    type: vless
+    server: scm1.as-sin1-akari2.node-fnf.xyz
+    port: 24155
+    uuid: 0dbd1b75-5c61-32fb-9924-ade5da75f57e
+    servername: dlcdn-rogboxbu5.asus.com
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: jpUT7Wx5EggcKEqYSfgBI0asiRQaRNW7b0s1xsNdDiU
+      short-id: c201aa4a
+  - name: 澳大利亚1[x1|Vless]@1Gbps
+    type: vless
+    server: scm2.oc-syd2-ap1.node-fnf.xyz
+    port: 24281
+    uuid: 0dbd1b75-5c61-32fb-9924-ade5da75f57e
+    servername: dlcdn-rogboxbu2.asus.com
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: edge
+    reality-opts:
+      public-key: 7SQBv1fQ8ae0eLB3Ju_dtoebBoEh6r5CH_G6CAxcYXw
+      short-id: 1e1473fc
+  - name: 巴西1[x1|Vless]@200Mbps
+    type: vless
+    server: scm2.sa-sao2-gc1.node-fnf.xyz
+    port: 24289
+    uuid: 0dbd1b75-5c61-32fb-9924-ade5da75f57e
+    servername: dlcdn-rogboxbu5.asus.com
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: edge
+    reality-opts:
+      public-key: xeLZ1U2kX1eEP3yEBhoKxr1XzsXE6sfZH_uIWmy4flU
+      short-id: e4cc362b
+  - name: 菲律宾1[x1|Vless]@2Gbps
+    type: vless
+    server: scm2.as-mnl2-xx1.node-fnf.xyz
+    port: 24263
+    uuid: 0dbd1b75-5c61-32fb-9924-ade5da75f57e
+    servername: dlcdn-rogboxbu2.asus.com
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: 6cbhPQC7N8EPZVn3QEk20Flw794Wyk7XL2xzKOGZTFw
+      short-id: da92d487
+  - name: 乌克兰1[x1|Vless]@200Mbps
+    type: vless
+    server: scm2.eu-iev2-gc1.node-fnf.xyz
+    port: 24243
+    uuid: 0dbd1b75-5c61-32fb-9924-ade5da75f57e
+    servername: dlcdn-rogboxbu1.asus.com
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: edge
+    reality-opts:
+      public-key: CChZ1Yj2sK_WJexhna7nd9nNMPDpT_E7Ap4Qp0alNAI
+      short-id: fbaa5915
+  - name: 以色列1[x1|Vless]@200Mbps
+    type: vless
+    server: scm2.eu-tlv2-gc1.node-fnf.xyz
+    port: 24285
+    uuid: 0dbd1b75-5c61-32fb-9924-ade5da75f57e
+    servername: dlcdn-rogboxbu2.asus.com
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: 5-Klsop5A01bD97loiK-OBfbpX-vIOY_YmnX0T-kzAs
+      short-id: 26feef6d
+  - name: 泰国1[x1|Vless]@200Mbps
+    type: vless
+    server: scm2.as-bkk2-xx1.node-fnf.xyz
+    port: 24269
+    uuid: 0dbd1b75-5c61-32fb-9924-ade5da75f57e
+    servername: dlcdn-rogboxbu3.asus.com
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: ujvJ5Dt_czE81uI_LlefFO9BT2TFKgbNVZWvPW3uzAg
+      short-id: e3c52235
+  - name: 土耳其1[x1|Vless]@500Mbps
+    type: vless
+    server: scm2.as-ist2-xx1.node-fnf.xyz
+    port: 24251
+    uuid: 0dbd1b75-5c61-32fb-9924-ade5da75f57e
+    servername: dlcdn-rogboxbu5.asus.com
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: edge
+    reality-opts:
+      public-key: V31qGbW4c6oXCALusIiNLJM-oUFMMMosClQopVVwAwU
+      short-id: 59dcec26
+  - name: 印度尼西亚1[x1|Vless]@1Gbps
+    type: vless
+    server: scm2.as-jkt2-xx1.node-fnf.xyz
+    port: 24267
+    uuid: 0dbd1b75-5c61-32fb-9924-ade5da75f57e
+    servername: dlcdn-rogboxbu1.asus.com
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: qS7Rm2PJRtDZ66cG2neWvqrqvOQR8TDbVp8cEBEQNB8
+      short-id: 3218539f
+  - name: 印度1[x1|Vless]@1Gbps
+    type: vless
+    server: scm2.as-bom2-li1.node-fnf.xyz
+    port: 24261
+    uuid: 0dbd1b75-5c61-32fb-9924-ade5da75f57e
+    servername: dlcdn-rogboxbu1.asus.com
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: edge
+    reality-opts:
+      public-key: Xmy3PLAaMN9ovBtFx09YVgCXwcl4cNQmjYAfDc7840I
+      short-id: 544ce104
+  - name: 哈萨克斯坦1[x1|Vless]@200Mbps
+    type: vless
+    server: scm2.as-ala2-gc1.node-fnf.xyz
+    port: 24291
+    uuid: 0dbd1b75-5c61-32fb-9924-ade5da75f57e
+    servername: dlcdn-rogboxbu4.asus.com
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: edge
+    reality-opts:
+      public-key: ySdKtj4PToVRqaFQrcovZezSOZB0uX6mYFL8FR4qrSE
+      short-id: 5490c98f
+  - name: 俄罗斯伯力1[x1|Vless]@1Gbps
+    type: vless
+    server: scm2.eu-kha2-xx1.node-fnf.xyz
+    port: 24231
+    uuid: 0dbd1b75-5c61-32fb-9924-ade5da75f57e
+    servername: dlcdn-rogboxbu5.asus.com
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: edge
+    reality-opts:
+      public-key: znx-ZVmxUnv008nvyuLTkmnR-fsZras7CKi6768p_Sk
+      short-id: ab8de20d
+  - name: 马来西亚1[x1|Vless]@200Mbps
+    type: vless
+    server: scm2.as-kul2-xx1.node-fnf.xyz
+    port: 24265
+    uuid: 0dbd1b75-5c61-32fb-9924-ade5da75f57e
+    servername: dlcdn-rogboxbu5.asus.com
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: LEu83xcDW0kKQtBzjbKxzmnyQvSMoWCwb4pewbdH8DY
+      short-id: 0c851eee
+proxy-groups:
+  - name: 🚀 节点选择
+    type: select
+    proxies:
+      - ♻️ 自动选择
+      - DIRECT
+      - 微信：gtyz222
+      - 美国BGP2[x1|Vless]@10Gbps
+      - 美国BGP3[x1|Vless]@10Gbps
+      - 美国BGP1[x1|Vless]@10Gbps
+      - 美国BGP4[x1|Vless]@10Gbps
+      - 美国HE1[x1|Vless]@1Gbps
+      - 美国HE2[x1|Vless]@1Gbps
+      - 美国HE5[x1|Vless]@1Gbps
+      - 美国HE4[x1|Vless]@1Gbps
+      - 阿根廷1[x1|Vless]@1Gbps
+      - 美国HE3[x1|Vless]@1Gbps
+      - 美国OVH1[x0.1|Vless]@1Gbps
+      - 加拿大1[x1|Vless]@1Gbps
+      - 日本BGP10[x1|Vless]@10Gbps
+      - 日本BGP8[x1|Vless]@10Gbps
+      - 日本BGP1[x1|Vless]@10Gbps
+      - 日本BGP9[x1|Vless]@10Gbps
+      - 日本BGP2[x1|Vless]@10Gbps
+      - 日本BGP4[x1|Vless]@10Gbps
+      - 日本BGP7[x1|Vless]@10Gbps
+      - 日本BGP3[x1|Vless]@10Gbps
+      - 日本BGP5[x1|Vless]@10Gbps
+      - 日本BGP6[x1|Vless]@10Gbps
+      - 台湾BGP1[x1|Vless]@10Gbps
+      - 台湾BGP2[x1|Vless]@10Gbps
+      - 台湾BGP5[x1|Vless]@10Gbps
+      - 台湾BGP3[x1|Vless]@10Gbps
+      - 台湾BGP4[x1|Vless]@10Gbps
+      - 英国1[x1|Vless]@1Gbps
+      - 荷兰1[x1|Vless]@1Gbps
+      - 香港BGP1[x1|Vless]@10Gbps
+      - 香港BGP3[x1|Vless]@10Gbps
+      - 法国1[x1|Vless]@1Gbps
+      - 香港BGP4[x1|Vless]@10Gbps
+      - 香港BGP5[x1|Vless]@10Gbps
+      - 香港BGP2[x1|Vless]@10Gbps
+      - 香港BGP6[x1|Vless]@10Gbps
+      - 西班牙1[x1|Vless]@200Mbps
+      - 香港BGP10[x1|Vless]@10Gbps
+      - 德国1[x1|Vless]@1Gbps
+      - 香港BGP8[x1|Vless]@10Gbps
+      - 香港BGP9[x1|Vless]@10Gbps
+      - 瑞典1[x1|Vless]@80Mbps
+      - 意大利1[x1|Vless]@1Gbps
+      - 卢森堡1[x1|Vless]@200Mbps
+      - 香港BGP7[x1|Vless]@10Gbps
+      - 新加坡BGP4[x1|Vless]@10Gbps
+      - 新加坡BGP5[x1|Vless]@10Gbps
+      - 新加坡BGP1[x1|Vless]@10Gbps
+      - 新加坡BGP3[x1|Vless]@10Gbps
+      - 新加坡BGP2[x1|Vless]@10Gbps
+      - 澳大利亚1[x1|Vless]@1Gbps
+      - 巴西1[x1|Vless]@200Mbps
+      - 菲律宾1[x1|Vless]@2Gbps
+      - 乌克兰1[x1|Vless]@200Mbps
+      - 以色列1[x1|Vless]@200Mbps
+      - 泰国1[x1|Vless]@200Mbps
+      - 土耳其1[x1|Vless]@500Mbps
+      - 印度尼西亚1[x1|Vless]@1Gbps
+      - 印度1[x1|Vless]@1Gbps
+      - 哈萨克斯坦1[x1|Vless]@200Mbps
+      - 俄罗斯伯力1[x1|Vless]@1Gbps
+      - 马来西亚1[x1|Vless]@200Mbps
+  - name: ♻️ 自动选择
+    type: url-test
+    proxies:
+      - 微信：gtyz222
+      - 美国BGP2[x1|Vless]@10Gbps
+      - 美国BGP3[x1|Vless]@10Gbps
+      - 美国BGP1[x1|Vless]@10Gbps
+      - 美国BGP4[x1|Vless]@10Gbps
+      - 美国HE1[x1|Vless]@1Gbps
+      - 美国HE2[x1|Vless]@1Gbps
+      - 美国HE5[x1|Vless]@1Gbps
+      - 美国HE4[x1|Vless]@1Gbps
+      - 阿根廷1[x1|Vless]@1Gbps
+      - 美国HE3[x1|Vless]@1Gbps
+      - 美国OVH1[x0.1|Vless]@1Gbps
+      - 加拿大1[x1|Vless]@1Gbps
+      - 日本BGP10[x1|Vless]@10Gbps
+      - 日本BGP8[x1|Vless]@10Gbps
+      - 日本BGP1[x1|Vless]@10Gbps
+      - 日本BGP9[x1|Vless]@10Gbps
+      - 日本BGP2[x1|Vless]@10Gbps
+      - 日本BGP4[x1|Vless]@10Gbps
+      - 日本BGP7[x1|Vless]@10Gbps
+      - 日本BGP3[x1|Vless]@10Gbps
+      - 日本BGP5[x1|Vless]@10Gbps
+      - 日本BGP6[x1|Vless]@10Gbps
+      - 台湾BGP1[x1|Vless]@10Gbps
+      - 台湾BGP2[x1|Vless]@10Gbps
+      - 台湾BGP5[x1|Vless]@10Gbps
+      - 台湾BGP3[x1|Vless]@10Gbps
+      - 台湾BGP4[x1|Vless]@10Gbps
+      - 英国1[x1|Vless]@1Gbps
+      - 荷兰1[x1|Vless]@1Gbps
+      - 香港BGP1[x1|Vless]@10Gbps
+      - 香港BGP3[x1|Vless]@10Gbps
+      - 法国1[x1|Vless]@1Gbps
+      - 香港BGP4[x1|Vless]@10Gbps
+      - 香港BGP5[x1|Vless]@10Gbps
+      - 香港BGP2[x1|Vless]@10Gbps
+      - 香港BGP6[x1|Vless]@10Gbps
+      - 西班牙1[x1|Vless]@200Mbps
+      - 香港BGP10[x1|Vless]@10Gbps
+      - 德国1[x1|Vless]@1Gbps
+      - 香港BGP8[x1|Vless]@10Gbps
+      - 香港BGP9[x1|Vless]@10Gbps
+      - 瑞典1[x1|Vless]@80Mbps
+      - 意大利1[x1|Vless]@1Gbps
+      - 卢森堡1[x1|Vless]@200Mbps
+      - 香港BGP7[x1|Vless]@10Gbps
+      - 新加坡BGP4[x1|Vless]@10Gbps
+      - 新加坡BGP5[x1|Vless]@10Gbps
+      - 新加坡BGP1[x1|Vless]@10Gbps
+      - 新加坡BGP3[x1|Vless]@10Gbps
+      - 新加坡BGP2[x1|Vless]@10Gbps
+      - 澳大利亚1[x1|Vless]@1Gbps
+      - 巴西1[x1|Vless]@200Mbps
+      - 菲律宾1[x1|Vless]@2Gbps
+      - 乌克兰1[x1|Vless]@200Mbps
+      - 以色列1[x1|Vless]@200Mbps
+      - 泰国1[x1|Vless]@200Mbps
+      - 土耳其1[x1|Vless]@500Mbps
+      - 印度尼西亚1[x1|Vless]@1Gbps
+      - 印度1[x1|Vless]@1Gbps
+      - 哈萨克斯坦1[x1|Vless]@200Mbps
+      - 俄罗斯伯力1[x1|Vless]@1Gbps
+      - 马来西亚1[x1|Vless]@200Mbps
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    tolerance: 50
+  - name: 🌍 国外媒体
+    type: select
+    proxies:
+      - 🚀 节点选择
+      - ♻️ 自动选择
+      - 🎯 全球直连
+      - 微信：gtyz222
+      - 美国BGP2[x1|Vless]@10Gbps
+      - 美国BGP3[x1|Vless]@10Gbps
+      - 美国BGP1[x1|Vless]@10Gbps
+      - 美国BGP4[x1|Vless]@10Gbps
+      - 美国HE1[x1|Vless]@1Gbps
+      - 美国HE2[x1|Vless]@1Gbps
+      - 美国HE5[x1|Vless]@1Gbps
+      - 美国HE4[x1|Vless]@1Gbps
+      - 阿根廷1[x1|Vless]@1Gbps
+      - 美国HE3[x1|Vless]@1Gbps
+      - 美国OVH1[x0.1|Vless]@1Gbps
+      - 加拿大1[x1|Vless]@1Gbps
+      - 日本BGP10[x1|Vless]@10Gbps
+      - 日本BGP8[x1|Vless]@10Gbps
+      - 日本BGP1[x1|Vless]@10Gbps
+      - 日本BGP9[x1|Vless]@10Gbps
+      - 日本BGP2[x1|Vless]@10Gbps
+      - 日本BGP4[x1|Vless]@10Gbps
+      - 日本BGP7[x1|Vless]@10Gbps
+      - 日本BGP3[x1|Vless]@10Gbps
+      - 日本BGP5[x1|Vless]@10Gbps
+      - 日本BGP6[x1|Vless]@10Gbps
+      - 台湾BGP1[x1|Vless]@10Gbps
+      - 台湾BGP2[x1|Vless]@10Gbps
+      - 台湾BGP5[x1|Vless]@10Gbps
+      - 台湾BGP3[x1|Vless]@10Gbps
+      - 台湾BGP4[x1|Vless]@10Gbps
+      - 英国1[x1|Vless]@1Gbps
+      - 荷兰1[x1|Vless]@1Gbps
+      - 香港BGP1[x1|Vless]@10Gbps
+      - 香港BGP3[x1|Vless]@10Gbps
+      - 法国1[x1|Vless]@1Gbps
+      - 香港BGP4[x1|Vless]@10Gbps
+      - 香港BGP5[x1|Vless]@10Gbps
+      - 香港BGP2[x1|Vless]@10Gbps
+      - 香港BGP6[x1|Vless]@10Gbps
+      - 西班牙1[x1|Vless]@200Mbps
+      - 香港BGP10[x1|Vless]@10Gbps
+      - 德国1[x1|Vless]@1Gbps
+      - 香港BGP8[x1|Vless]@10Gbps
+      - 香港BGP9[x1|Vless]@10Gbps
+      - 瑞典1[x1|Vless]@80Mbps
+      - 意大利1[x1|Vless]@1Gbps
+      - 卢森堡1[x1|Vless]@200Mbps
+      - 香港BGP7[x1|Vless]@10Gbps
+      - 新加坡BGP4[x1|Vless]@10Gbps
+      - 新加坡BGP5[x1|Vless]@10Gbps
+      - 新加坡BGP1[x1|Vless]@10Gbps
+      - 新加坡BGP3[x1|Vless]@10Gbps
+      - 新加坡BGP2[x1|Vless]@10Gbps
+      - 澳大利亚1[x1|Vless]@1Gbps
+      - 巴西1[x1|Vless]@200Mbps
+      - 菲律宾1[x1|Vless]@2Gbps
+      - 乌克兰1[x1|Vless]@200Mbps
+      - 以色列1[x1|Vless]@200Mbps
+      - 泰国1[x1|Vless]@200Mbps
+      - 土耳其1[x1|Vless]@500Mbps
+      - 印度尼西亚1[x1|Vless]@1Gbps
+      - 印度1[x1|Vless]@1Gbps
+      - 哈萨克斯坦1[x1|Vless]@200Mbps
+      - 俄罗斯伯力1[x1|Vless]@1Gbps
+      - 马来西亚1[x1|Vless]@200Mbps
+  - name: 📲 电报信息
+    type: select
+    proxies:
+      - 🚀 节点选择
+      - 🎯 全球直连
+      - 微信：gtyz222
+      - 美国BGP2[x1|Vless]@10Gbps
+      - 美国BGP3[x1|Vless]@10Gbps
+      - 美国BGP1[x1|Vless]@10Gbps
+      - 美国BGP4[x1|Vless]@10Gbps
+      - 美国HE1[x1|Vless]@1Gbps
+      - 美国HE2[x1|Vless]@1Gbps
+      - 美国HE5[x1|Vless]@1Gbps
+      - 美国HE4[x1|Vless]@1Gbps
+      - 阿根廷1[x1|Vless]@1Gbps
+      - 美国HE3[x1|Vless]@1Gbps
+      - 美国OVH1[x0.1|Vless]@1Gbps
+      - 加拿大1[x1|Vless]@1Gbps
+      - 日本BGP10[x1|Vless]@10Gbps
+      - 日本BGP8[x1|Vless]@10Gbps
+      - 日本BGP1[x1|Vless]@10Gbps
+      - 日本BGP9[x1|Vless]@10Gbps
+      - 日本BGP2[x1|Vless]@10Gbps
+      - 日本BGP4[x1|Vless]@10Gbps
+      - 日本BGP7[x1|Vless]@10Gbps
+      - 日本BGP3[x1|Vless]@10Gbps
+      - 日本BGP5[x1|Vless]@10Gbps
+      - 日本BGP6[x1|Vless]@10Gbps
+      - 台湾BGP1[x1|Vless]@10Gbps
+      - 台湾BGP2[x1|Vless]@10Gbps
+      - 台湾BGP5[x1|Vless]@10Gbps
+      - 台湾BGP3[x1|Vless]@10Gbps
+      - 台湾BGP4[x1|Vless]@10Gbps
+      - 英国1[x1|Vless]@1Gbps
+      - 荷兰1[x1|Vless]@1Gbps
+      - 香港BGP1[x1|Vless]@10Gbps
+      - 香港BGP3[x1|Vless]@10Gbps
+      - 法国1[x1|Vless]@1Gbps
+      - 香港BGP4[x1|Vless]@10Gbps
+      - 香港BGP5[x1|Vless]@10Gbps
+      - 香港BGP2[x1|Vless]@10Gbps
+      - 香港BGP6[x1|Vless]@10Gbps
+      - 西班牙1[x1|Vless]@200Mbps
+      - 香港BGP10[x1|Vless]@10Gbps
+      - 德国1[x1|Vless]@1Gbps
+      - 香港BGP8[x1|Vless]@10Gbps
+      - 香港BGP9[x1|Vless]@10Gbps
+      - 瑞典1[x1|Vless]@80Mbps
+      - 意大利1[x1|Vless]@1Gbps
+      - 卢森堡1[x1|Vless]@200Mbps
+      - 香港BGP7[x1|Vless]@10Gbps
+      - 新加坡BGP4[x1|Vless]@10Gbps
+      - 新加坡BGP5[x1|Vless]@10Gbps
+      - 新加坡BGP1[x1|Vless]@10Gbps
+      - 新加坡BGP3[x1|Vless]@10Gbps
+      - 新加坡BGP2[x1|Vless]@10Gbps
+      - 澳大利亚1[x1|Vless]@1Gbps
+      - 巴西1[x1|Vless]@200Mbps
+      - 菲律宾1[x1|Vless]@2Gbps
+      - 乌克兰1[x1|Vless]@200Mbps
+      - 以色列1[x1|Vless]@200Mbps
+      - 泰国1[x1|Vless]@200Mbps
+      - 土耳其1[x1|Vless]@500Mbps
+      - 印度尼西亚1[x1|Vless]@1Gbps
+      - 印度1[x1|Vless]@1Gbps
+      - 哈萨克斯坦1[x1|Vless]@200Mbps
+      - 俄罗斯伯力1[x1|Vless]@1Gbps
+      - 马来西亚1[x1|Vless]@200Mbps
+  - name: Ⓜ️ 微软服务
+    type: select
+    proxies:
+      - 🎯 全球直连
+      - 🚀 节点选择
+      - 微信：gtyz222
+      - 美国BGP2[x1|Vless]@10Gbps
+      - 美国BGP3[x1|Vless]@10Gbps
+      - 美国BGP1[x1|Vless]@10Gbps
+      - 美国BGP4[x1|Vless]@10Gbps
+      - 美国HE1[x1|Vless]@1Gbps
+      - 美国HE2[x1|Vless]@1Gbps
+      - 美国HE5[x1|Vless]@1Gbps
+      - 美国HE4[x1|Vless]@1Gbps
+      - 阿根廷1[x1|Vless]@1Gbps
+      - 美国HE3[x1|Vless]@1Gbps
+      - 美国OVH1[x0.1|Vless]@1Gbps
+      - 加拿大1[x1|Vless]@1Gbps
+      - 日本BGP10[x1|Vless]@10Gbps
+      - 日本BGP8[x1|Vless]@10Gbps
+      - 日本BGP1[x1|Vless]@10Gbps
+      - 日本BGP9[x1|Vless]@10Gbps
+      - 日本BGP2[x1|Vless]@10Gbps
+      - 日本BGP4[x1|Vless]@10Gbps
+      - 日本BGP7[x1|Vless]@10Gbps
+      - 日本BGP3[x1|Vless]@10Gbps
+      - 日本BGP5[x1|Vless]@10Gbps
+      - 日本BGP6[x1|Vless]@10Gbps
+      - 台湾BGP1[x1|Vless]@10Gbps
+      - 台湾BGP2[x1|Vless]@10Gbps
+      - 台湾BGP5[x1|Vless]@10Gbps
+      - 台湾BGP3[x1|Vless]@10Gbps
+      - 台湾BGP4[x1|Vless]@10Gbps
+      - 英国1[x1|Vless]@1Gbps
+      - 荷兰1[x1|Vless]@1Gbps
+      - 香港BGP1[x1|Vless]@10Gbps
+      - 香港BGP3[x1|Vless]@10Gbps
+      - 法国1[x1|Vless]@1Gbps
+      - 香港BGP4[x1|Vless]@10Gbps
+      - 香港BGP5[x1|Vless]@10Gbps
+      - 香港BGP2[x1|Vless]@10Gbps
+      - 香港BGP6[x1|Vless]@10Gbps
+      - 西班牙1[x1|Vless]@200Mbps
+      - 香港BGP10[x1|Vless]@10Gbps
+      - 德国1[x1|Vless]@1Gbps
+      - 香港BGP8[x1|Vless]@10Gbps
+      - 香港BGP9[x1|Vless]@10Gbps
+      - 瑞典1[x1|Vless]@80Mbps
+      - 意大利1[x1|Vless]@1Gbps
+      - 卢森堡1[x1|Vless]@200Mbps
+      - 香港BGP7[x1|Vless]@10Gbps
+      - 新加坡BGP4[x1|Vless]@10Gbps
+      - 新加坡BGP5[x1|Vless]@10Gbps
+      - 新加坡BGP1[x1|Vless]@10Gbps
+      - 新加坡BGP3[x1|Vless]@10Gbps
+      - 新加坡BGP2[x1|Vless]@10Gbps
+      - 澳大利亚1[x1|Vless]@1Gbps
+      - 巴西1[x1|Vless]@200Mbps
+      - 菲律宾1[x1|Vless]@2Gbps
+      - 乌克兰1[x1|Vless]@200Mbps
+      - 以色列1[x1|Vless]@200Mbps
+      - 泰国1[x1|Vless]@200Mbps
+      - 土耳其1[x1|Vless]@500Mbps
+      - 印度尼西亚1[x1|Vless]@1Gbps
+      - 印度1[x1|Vless]@1Gbps
+      - 哈萨克斯坦1[x1|Vless]@200Mbps
+      - 俄罗斯伯力1[x1|Vless]@1Gbps
+      - 马来西亚1[x1|Vless]@200Mbps
+  - name: 🍎 苹果服务
+    type: select
+    proxies:
+      - 🚀 节点选择
+      - 🎯 全球直连
+      - 微信：gtyz222
+      - 美国BGP2[x1|Vless]@10Gbps
+      - 美国BGP3[x1|Vless]@10Gbps
+      - 美国BGP1[x1|Vless]@10Gbps
+      - 美国BGP4[x1|Vless]@10Gbps
+      - 美国HE1[x1|Vless]@1Gbps
+      - 美国HE2[x1|Vless]@1Gbps
+      - 美国HE5[x1|Vless]@1Gbps
+      - 美国HE4[x1|Vless]@1Gbps
+      - 阿根廷1[x1|Vless]@1Gbps
+      - 美国HE3[x1|Vless]@1Gbps
+      - 美国OVH1[x0.1|Vless]@1Gbps
+      - 加拿大1[x1|Vless]@1Gbps
+      - 日本BGP10[x1|Vless]@10Gbps
+      - 日本BGP8[x1|Vless]@10Gbps
+      - 日本BGP1[x1|Vless]@10Gbps
+      - 日本BGP9[x1|Vless]@10Gbps
+      - 日本BGP2[x1|Vless]@10Gbps
+      - 日本BGP4[x1|Vless]@10Gbps
+      - 日本BGP7[x1|Vless]@10Gbps
+      - 日本BGP3[x1|Vless]@10Gbps
+      - 日本BGP5[x1|Vless]@10Gbps
+      - 日本BGP6[x1|Vless]@10Gbps
+      - 台湾BGP1[x1|Vless]@10Gbps
+      - 台湾BGP2[x1|Vless]@10Gbps
+      - 台湾BGP5[x1|Vless]@10Gbps
+      - 台湾BGP3[x1|Vless]@10Gbps
+      - 台湾BGP4[x1|Vless]@10Gbps
+      - 英国1[x1|Vless]@1Gbps
+      - 荷兰1[x1|Vless]@1Gbps
+      - 香港BGP1[x1|Vless]@10Gbps
+      - 香港BGP3[x1|Vless]@10Gbps
+      - 法国1[x1|Vless]@1Gbps
+      - 香港BGP4[x1|Vless]@10Gbps
+      - 香港BGP5[x1|Vless]@10Gbps
+      - 香港BGP2[x1|Vless]@10Gbps
+      - 香港BGP6[x1|Vless]@10Gbps
+      - 西班牙1[x1|Vless]@200Mbps
+      - 香港BGP10[x1|Vless]@10Gbps
+      - 德国1[x1|Vless]@1Gbps
+      - 香港BGP8[x1|Vless]@10Gbps
+      - 香港BGP9[x1|Vless]@10Gbps
+      - 瑞典1[x1|Vless]@80Mbps
+      - 意大利1[x1|Vless]@1Gbps
+      - 卢森堡1[x1|Vless]@200Mbps
+      - 香港BGP7[x1|Vless]@10Gbps
+      - 新加坡BGP4[x1|Vless]@10Gbps
+      - 新加坡BGP5[x1|Vless]@10Gbps
+      - 新加坡BGP1[x1|Vless]@10Gbps
+      - 新加坡BGP3[x1|Vless]@10Gbps
+      - 新加坡BGP2[x1|Vless]@10Gbps
+      - 澳大利亚1[x1|Vless]@1Gbps
+      - 巴西1[x1|Vless]@200Mbps
+      - 菲律宾1[x1|Vless]@2Gbps
+      - 乌克兰1[x1|Vless]@200Mbps
+      - 以色列1[x1|Vless]@200Mbps
+      - 泰国1[x1|Vless]@200Mbps
+      - 土耳其1[x1|Vless]@500Mbps
+      - 印度尼西亚1[x1|Vless]@1Gbps
+      - 印度1[x1|Vless]@1Gbps
+      - 哈萨克斯坦1[x1|Vless]@200Mbps
+      - 俄罗斯伯力1[x1|Vless]@1Gbps
+      - 马来西亚1[x1|Vless]@200Mbps
+  - name: 🎯 全球直连
+    type: select
+    proxies:
+      - DIRECT
+      - 🚀 节点选择
+      - ♻️ 自动选择
+  - name: 🛑 全球拦截
+    type: select
+    proxies:
+      - REJECT
+      - DIRECT
+  - name: 🍃 应用净化
+    type: select
+    proxies:
+      - REJECT
+      - DIRECT
+  - name: 🐟 漏网之鱼
+    type: select
+    proxies:
+      - 🚀 节点选择
+      - 🎯 全球直连
+      - ♻️ 自动选择
+      - 微信：gtyz222
+      - 美国BGP2[x1|Vless]@10Gbps
+      - 美国BGP3[x1|Vless]@10Gbps
+      - 美国BGP1[x1|Vless]@10Gbps
+      - 美国BGP4[x1|Vless]@10Gbps
+      - 美国HE1[x1|Vless]@1Gbps
+      - 美国HE2[x1|Vless]@1Gbps
+      - 美国HE5[x1|Vless]@1Gbps
+      - 美国HE4[x1|Vless]@1Gbps
+      - 阿根廷1[x1|Vless]@1Gbps
+      - 美国HE3[x1|Vless]@1Gbps
+      - 美国OVH1[x0.1|Vless]@1Gbps
+      - 加拿大1[x1|Vless]@1Gbps
+      - 日本BGP10[x1|Vless]@10Gbps
+      - 日本BGP8[x1|Vless]@10Gbps
+      - 日本BGP1[x1|Vless]@10Gbps
+      - 日本BGP9[x1|Vless]@10Gbps
+      - 日本BGP2[x1|Vless]@10Gbps
+      - 日本BGP4[x1|Vless]@10Gbps
+      - 日本BGP7[x1|Vless]@10Gbps
+      - 日本BGP3[x1|Vless]@10Gbps
+      - 日本BGP5[x1|Vless]@10Gbps
+      - 日本BGP6[x1|Vless]@10Gbps
+      - 台湾BGP1[x1|Vless]@10Gbps
+      - 台湾BGP2[x1|Vless]@10Gbps
+      - 台湾BGP5[x1|Vless]@10Gbps
+      - 台湾BGP3[x1|Vless]@10Gbps
+      - 台湾BGP4[x1|Vless]@10Gbps
+      - 英国1[x1|Vless]@1Gbps
+      - 荷兰1[x1|Vless]@1Gbps
+      - 香港BGP1[x1|Vless]@10Gbps
+      - 香港BGP3[x1|Vless]@10Gbps
+      - 法国1[x1|Vless]@1Gbps
+      - 香港BGP4[x1|Vless]@10Gbps
+      - 香港BGP5[x1|Vless]@10Gbps
+      - 香港BGP2[x1|Vless]@10Gbps
+      - 香港BGP6[x1|Vless]@10Gbps
+      - 西班牙1[x1|Vless]@200Mbps
+      - 香港BGP10[x1|Vless]@10Gbps
+      - 德国1[x1|Vless]@1Gbps
+      - 香港BGP8[x1|Vless]@10Gbps
+      - 香港BGP9[x1|Vless]@10Gbps
+      - 瑞典1[x1|Vless]@80Mbps
+      - 意大利1[x1|Vless]@1Gbps
+      - 卢森堡1[x1|Vless]@200Mbps
+      - 香港BGP7[x1|Vless]@10Gbps
+      - 新加坡BGP4[x1|Vless]@10Gbps
+      - 新加坡BGP5[x1|Vless]@10Gbps
+      - 新加坡BGP1[x1|Vless]@10Gbps
+      - 新加坡BGP3[x1|Vless]@10Gbps
+      - 新加坡BGP2[x1|Vless]@10Gbps
+      - 澳大利亚1[x1|Vless]@1Gbps
+      - 巴西1[x1|Vless]@200Mbps
+      - 菲律宾1[x1|Vless]@2Gbps
+      - 乌克兰1[x1|Vless]@200Mbps
+      - 以色列1[x1|Vless]@200Mbps
+      - 泰国1[x1|Vless]@200Mbps
+      - 土耳其1[x1|Vless]@500Mbps
+      - 印度尼西亚1[x1|Vless]@1Gbps
+      - 印度1[x1|Vless]@1Gbps
+      - 哈萨克斯坦1[x1|Vless]@200Mbps
+      - 俄罗斯伯力1[x1|Vless]@1Gbps
+      - 马来西亚1[x1|Vless]@200Mbps
+rule-providers:
+  LocalAreaNetwork:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/LocalAreaNetwork.list
+    path: ./rules/LocalAreaNetwork.yaml
+  BanAD:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/BanAD.list
+    path: ./rules/BanAD.yaml
+  BanProgramAD:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/BanProgramAD.list
+    path: ./rules/BanProgramAD.yaml
+  GoogleCN:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/GoogleCN.list
+    path: ./rules/GoogleCN.yaml
+  SteamCN:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/Ruleset/SteamCN.list
+    path: ./rules/SteamCN.yaml
+  Microsoft:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/Microsoft.list
+    path: ./rules/Microsoft.yaml
+  Apple:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/Apple.list
+    path: ./rules/Apple.yaml
+  ProxyMedia:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/ProxyMedia.list
+    path: ./rules/ProxyMedia.yaml
+  Telegram:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/Telegram.list
+    path: ./rules/Telegram.yaml
+  ProxyLite:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/ProxyLite.list
+    path: ./rules/ProxyLite.yaml
+  ChinaDomain:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/ChinaDomain.list
+    path: ./rules/ChinaDomain.yaml
+  ChinaCompanyIp:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/ChinaCompanyIp.list
+    path: ./rules/ChinaCompanyIp.yaml
+rules:
+  - RULE-SET,LocalAreaNetwork,🎯 全球直连
+  - RULE-SET,BanAD,🛑 全球拦截
+  - RULE-SET,BanProgramAD,🍃 应用净化
+  - RULE-SET,GoogleCN,🎯 全球直连
+  - RULE-SET,SteamCN,🎯 全球直连
+  - RULE-SET,Microsoft,Ⓜ️ 微软服务
+  - RULE-SET,Apple,🍎 苹果服务
+  - RULE-SET,ProxyMedia,🌍 国外媒体
+  - RULE-SET,Telegram,📲 电报信息
+  - RULE-SET,ProxyLite,🚀 节点选择
+  - RULE-SET,ChinaDomain,🎯 全球直连
+  - RULE-SET,ChinaCompanyIp,🎯 全球直连
+  - GEOIP,CN,🎯 全球直连
+  - MATCH,🐟 漏网之鱼
