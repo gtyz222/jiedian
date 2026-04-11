@@ -46,115 +46,31 @@ tun:
     - 1.1.1.1
     - 1.0.0.1
 proxies:
-  - name: 🇭🇰 IEPL-香港4
-    type: ss
-    server: junp.kuaileiduanko.com
-    port: 36087
-    cipher: aes-128-gcm
-    password: 6fa4b1f4-1fb3-4e39-83c7-06614619a046
-  - name: 🇭🇰 IEPL-香港1
-    type: ss
-    server: junp.kuaileiduanko.com
-    port: 36084
-    cipher: aes-128-gcm
-    password: 6fa4b1f4-1fb3-4e39-83c7-06614619a046
-  - name: 🇭🇰 IEPL-香港2
-    type: ss
-    server: junp.kuaileiduanko.com
-    port: 36083
-    cipher: aes-128-gcm
-    password: 6fa4b1f4-1fb3-4e39-83c7-06614619a046
-  - name: 🇭🇰 IEPL-香港动态家宽
-    type: ss
-    server: junp.kuaileiduanko.com
-    port: 36123
-    cipher: aes-128-gcm
-    password: 6fa4b1f4-1fb3-4e39-83c7-06614619a046
-  - name: 🇹🇼 IEPL-台湾1
-    type: ss
-    server: junp.kuaileiduanko.com
-    port: 36064
-    cipher: aes-128-gcm
-    password: 6fa4b1f4-1fb3-4e39-83c7-06614619a046
-  - name: 🇸🇬  IEPL-新加坡3
-    type: ss
-    server: junp.kuaileiduanko.com
-    port: 36073
-    cipher: aes-128-gcm
-    password: 6fa4b1f4-1fb3-4e39-83c7-06614619a046
-  - name: 🇸🇬  IEPL-新加坡2
-    type: ss
-    server: junp.kuaileiduanko.com
-    port: 36075
-    cipher: aes-128-gcm
-    password: 6fa4b1f4-1fb3-4e39-83c7-06614619a046
-  - name: 🇯🇵  IEPL-日本2
-    type: ss
-    server: junp.kuaileiduanko.com
-    port: 36080
-    cipher: aes-128-gcm
-    password: 6fa4b1f4-1fb3-4e39-83c7-06614619a046
-  - name: 🇹🇼 IEPL-台湾动态家宽
-    type: ss
-    server: junp.kuaileiduanko.com
-    port: 36163
-    cipher: aes-128-gcm
-    password: 6fa4b1f4-1fb3-4e39-83c7-06614619a046
-  - name: 🇲🇾 IEPL-马来西亚1
-    type: ss
-    server: junp.kuaileiduanko.com
-    port: 36066
-    cipher: aes-128-gcm
-    password: 6fa4b1f4-1fb3-4e39-83c7-06614619a046
-  - name: 🇲🇾 IEPL-马来西亚2
-    type: ss
-    server: junp.kuaileiduanko.com
-    port: 36065
-    cipher: aes-128-gcm
-    password: 6fa4b1f4-1fb3-4e39-83c7-06614619a046
-  - name: 🇻🇳 IEPL-越南
-    type: ss
-    server: junp.kuaileiduanko.com
-    port: 36052
-    cipher: aes-128-gcm
-    password: 6fa4b1f4-1fb3-4e39-83c7-06614619a046
-  - name: 🇹🇭 IEPL-泰国
-    type: ss
-    server: junp.kuaileiduanko.com
-    port: 36061
-    cipher: aes-128-gcm
-    password: 6fa4b1f4-1fb3-4e39-83c7-06614619a046
-  - name: 🇮🇳 IEPL-印度
-    type: ss
-    server: junp.kuaileiduanko.com
-    port: 36067
-    cipher: aes-128-gcm
-    password: 6fa4b1f4-1fb3-4e39-83c7-06614619a046
-  - name: 🇦🇺 IEPL-澳大利亚
-    type: ss
-    server: junp.kuaileiduanko.com
-    port: 36068
-    cipher: aes-128-gcm
-    password: 6fa4b1f4-1fb3-4e39-83c7-06614619a046
-  - name: 🇺🇸  IEPL-美国1
-    type: ss
-    server: junp.kuaileiduanko.com
-    port: 36072
-    cipher: aes-128-gcm
-    password: 6fa4b1f4-1fb3-4e39-83c7-06614619a046
-  - name: 🇺🇸  IEPL-美国2
-    type: ss
-    server: junp.kuaileiduanko.com
-    port: 36071
-    cipher: aes-128-gcm
-    password: 6fa4b1f4-1fb3-4e39-83c7-06614619a046
-  - name: 🇺🇸  IEPL-美国3
-    type: ss
-    server: junp.kuaileiduanko.com
-    port: 36070
-    cipher: aes-128-gcm
-    password: 6fa4b1f4-1fb3-4e39-83c7-06614619a046
-  - name: 🇺🇸+直连-美国
+  - name: 微信：gtyz222
+    type: vless
+    server: gm-us16.aiwowo.xyz
+    port: 30062
+    uuid: 6fa4b1f4-1fb3-4e39-83c7-06614619a046
+    servername: www.apple.com
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: firefox
+    reality-opts:
+      public-key: Z8tJYAjotKrLI4LMnXPYWZZBgJgvNjiD0rtmcUJt-R0
+      short-id: ac1c6898c4bac999
+  - name: 🇺🇸+直连-美国4++IPv6
+    type: vless
+    server: gm-jp078.aiwowo.xyz
+    port: 20076
+    uuid: 6fa4b1f4-1fb3-4e39-83c7-06614619a046
+    servername: www.apple.com
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: firefox
+    reality-opts:
+      public-key: Z8tJYAjotKrLI4LMnXPYWZZBgJgvNjiD0rtmcUJt-R0
+      short-id: ac1c6898c4bac169
+  - name: 🇺🇸+直连-美国1
     type: vless
     server: gm-us06.aiwowo.xyz
     port: 30062
@@ -162,11 +78,521 @@ proxies:
     servername: www.apple.com
     tls: true
     flow: xtls-rprx-vision
-    client-fingerprint: edge
+    client-fingerprint: qq
     reality-opts:
       public-key: Z8tJYAjotKrLI4LMnXPYWZZBgJgvNjiD0rtmcUJt-R0
       short-id: ac1c6898c4bac129
-  - name: 🇯🇵+直连-日本
+  - name: 🇩🇪+直连-德国
+    type: vless
+    server: gm-de09.aiwowo.xyz
+    port: 20076
+    uuid: 6fa4b1f4-1fb3-4e39-83c7-06614619a046
+    servername: www.apple.com
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: safari
+    reality-opts:
+      public-key: Z8tJYAjotKrLI4LMnXPYWZZBgJgvNjiD0rtmcUJt-R0
+      short-id: ac1c6898c4bac649
+  - name: 🇭🇰 香港1|BGP优化
+    type: anytls
+    server: hkzz.yuyan.vin
+    port: 10001
+    password: 0b81822e-db0e-4cd0-809a-28447a7f4b3e
+    sni: hk1.yuyan.vin
+    skip-cert-verify: false
+    tls: true
+    udp: false
+  - name: 🇭🇰 香港B|BGP优化
+    type: anytls
+    server: hkzz.yuyan.vin
+    port: 11002
+    password: 0b81822e-db0e-4cd0-809a-28447a7f4b3e
+    skip-cert-verify: true
+    tls: true
+    udp: false
+  - name: 🇭🇰 香港C|BGP优化
+    type: anytls
+    server: hkzz.yuyan.vin
+    port: 11003
+    password: 0b81822e-db0e-4cd0-809a-28447a7f4b3e
+    skip-cert-verify: true
+    tls: true
+    udp: false
+  - name: 🇭🇰 香港D|BGP优化
+    type: anytls
+    server: hkzz.yuyan.vin
+    port: 11004
+    password: 0b81822e-db0e-4cd0-809a-28447a7f4b3e
+    sni: hkd.yuyan.vin
+    skip-cert-verify: false
+    tls: true
+    udp: false
+  - name: 🇭🇰 香港2|BGP优化
+    type: anytls
+    server: hkzz.yuyan.vin
+    port: 10005
+    password: 0b81822e-db0e-4cd0-809a-28447a7f4b3e
+    sni: hk2.yuyan.vin
+    skip-cert-verify: false
+    tls: true
+    udp: false
+  - name: 🇭🇰 香港3|BGP优化
+    type: anytls
+    server: hkzz.yuyan.vin
+    port: 10010
+    password: 0b81822e-db0e-4cd0-809a-28447a7f4b3e
+    sni: hk3.yuyan.vin
+    skip-cert-verify: false
+    tls: true
+    udp: false
+  - name: 🇭🇰 香港5|BGP优化
+    type: anytls
+    server: hkzz.yuyan.vin
+    port: 10022
+    password: 0b81822e-db0e-4cd0-809a-28447a7f4b3e
+    sni: hk5.yuyan.vin
+    skip-cert-verify: false
+    tls: true
+    udp: false
+  - name: 🇭🇰 香港E|BGP优化
+    type: anytls
+    server: hkzz.yuyan.vin
+    port: 10029
+    password: 0b81822e-db0e-4cd0-809a-28447a7f4b3e
+    sni: hke.yuyan.vin
+    skip-cert-verify: false
+    tls: true
+    udp: false
+  - name: 🇭🇰 香港4|BGP优化
+    type: anytls
+    server: hkzz.yuyan.vin
+    port: 10002
+    password: 0b81822e-db0e-4cd0-809a-28447a7f4b3e
+    sni: hk4.yuyan.vin
+    skip-cert-verify: false
+    tls: true
+    udp: false
+  - name: 🇭🇰 香港A|BGP优化
+    type: anytls
+    server: hkzz.yuyan.vin
+    port: 11001
+    password: 0b81822e-db0e-4cd0-809a-28447a7f4b3e
+    skip-cert-verify: true
+    tls: true
+    udp: false
+  - name: 🇭🇰+直连-香港
+    type: vless
+    server: gm-hk111.aiwowo.xyz
+    port: 20076
+    uuid: 6fa4b1f4-1fb3-4e39-83c7-06614619a046
+    servername: www.apple.com
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: safari
+    reality-opts:
+      public-key: Z8tJYAjotKrLI4LMnXPYWZZBgJgvNjiD0rtmcUJt-R0
+      short-id: ac1c6898c4bac539
+  - name: 🇨🇳 台湾3|BGP优化
+    type: anytls
+    server: hkzz.yuyan.vin
+    port: 10013
+    password: 0b81822e-db0e-4cd0-809a-28447a7f4b3e
+    sni: tw3.yuyan.vin
+    skip-cert-verify: false
+    tls: true
+    udp: false
+  - name: 🇨🇳 台湾4|BGP优化
+    type: anytls
+    server: hkzz.yuyan.vin
+    port: 10038
+    password: 0b81822e-db0e-4cd0-809a-28447a7f4b3e
+    sni: tw4.yuyan.vin
+    skip-cert-verify: false
+    tls: true
+    udp: false
+  - name: 🇨🇳 台湾2|BGP优化
+    type: anytls
+    server: hkzz.yuyan.vin
+    port: 10027
+    password: 0b81822e-db0e-4cd0-809a-28447a7f4b3e
+    sni: tw2.yuyan.vin
+    skip-cert-verify: false
+    tls: true
+    udp: false
+  - name: 🇨🇳 台湾1|BGP优化
+    type: anytls
+    server: hkzz.yuyan.vin
+    port: 10028
+    password: 0b81822e-db0e-4cd0-809a-28447a7f4b3e
+    sni: tw1.yuyan.vin
+    skip-cert-verify: false
+    tls: true
+    udp: false
+  - name: 🇸🇬 新加坡2|BGP优化
+    type: anytls
+    server: hkzz.yuyan.vin
+    port: 10030
+    password: 0b81822e-db0e-4cd0-809a-28447a7f4b3e
+    sni: sg2.yuyan.vin
+    skip-cert-verify: false
+    tls: true
+    udp: false
+  - name: 🇸🇬 新加坡1|BGP优化
+    type: anytls
+    server: hkzz.yuyan.vin
+    port: 10033
+    password: 0b81822e-db0e-4cd0-809a-28447a7f4b3e
+    sni: sg1.yuyan.vin
+    skip-cert-verify: false
+    tls: true
+    udp: false
+  - name: 🇸🇬 新加坡4|BGP优化
+    type: anytls
+    server: hkzz.yuyan.vin
+    port: 10012
+    password: 0b81822e-db0e-4cd0-809a-28447a7f4b3e
+    sni: sg4.yuyan.vin
+    skip-cert-verify: true
+    tls: true
+    udp: false
+  - name: 🇸🇬 新加坡5|BGP优化
+    type: anytls
+    server: hkzz.yuyan.vin
+    port: 10047
+    password: 0b81822e-db0e-4cd0-809a-28447a7f4b3e
+    sni: sg5.yuyan.vin
+    skip-cert-verify: false
+    tls: true
+    udp: false
+  - name: 🇸🇬 新加坡6|BGP优化
+    type: anytls
+    server: hkzz.yuyan.vin
+    port: 10048
+    password: 0b81822e-db0e-4cd0-809a-28447a7f4b3e
+    sni: sg6.yuyan.vin
+    skip-cert-verify: false
+    tls: true
+    udp: false
+  - name: 🇸🇬 新加坡3|BGP优化
+    type: anytls
+    server: hkzz.yuyan.vin
+    port: 10011
+    password: 0b81822e-db0e-4cd0-809a-28447a7f4b3e
+    sni: sg3.yuyan.vin
+    skip-cert-verify: false
+    tls: true
+    udp: false
+  - name: 🇲🇾 马来西亚1|BGP优化
+    type: anytls
+    server: hkzz.yuyan.vin
+    port: 10006
+    password: 0b81822e-db0e-4cd0-809a-28447a7f4b3e
+    sni: my1.yuyan.vin
+    skip-cert-verify: false
+    tls: true
+    udp: false
+  - name: 🇲🇾 马来西亚3|BGP优化
+    type: anytls
+    server: hkzz.yuyan.vin
+    port: 10035
+    password: 0b81822e-db0e-4cd0-809a-28447a7f4b3e
+    sni: my3.yuyan.vin
+    skip-cert-verify: false
+    tls: true
+    udp: false
+  - name: 🇻🇳 越南|BGP优化
+    type: anytls
+    server: hkzz.yuyan.vin
+    port: 10050
+    password: 0b81822e-db0e-4cd0-809a-28447a7f4b3e
+    sni: vn1.yuyan.vin
+    skip-cert-verify: false
+    tls: true
+    udp: false
+  - name: 🇵🇰 菲律宾|BGP优化
+    type: anytls
+    server: hkzz.yuyan.vin
+    port: 10032
+    password: 0b81822e-db0e-4cd0-809a-28447a7f4b3e
+    sni: ph.yuyan.vin
+    skip-cert-verify: false
+    tls: true
+    udp: false
+  - name: 🇲🇾 马来西亚2|BGP优化
+    type: anytls
+    server: hkzz.yuyan.vin
+    port: 10054
+    password: 0b81822e-db0e-4cd0-809a-28447a7f4b3e
+    sni: my2.yuyan.vin
+    skip-cert-verify: false
+    tls: true
+    udp: false
+  - name: 🇯🇵 日本2|BGP优化
+    type: anytls
+    server: hkzz.yuyan.vin
+    port: 10039
+    password: 0b81822e-db0e-4cd0-809a-28447a7f4b3e
+    sni: jp2.yuyan.vin
+    skip-cert-verify: false
+    tls: true
+    udp: false
+  - name: 🇯🇵 日本3|BGP优化
+    type: anytls
+    server: hkzz.yuyan.vin
+    port: 10008
+    password: 0b81822e-db0e-4cd0-809a-28447a7f4b3e
+    sni: jp3.yuyan.vin
+    skip-cert-verify: false
+    tls: true
+    udp: false
+  - name: 🇯🇵 日本5|BGP优化
+    type: anytls
+    server: hkzz.yuyan.vin
+    port: 10009
+    password: 0b81822e-db0e-4cd0-809a-28447a7f4b3e
+    sni: jp5.yuyan.vin
+    skip-cert-verify: false
+    tls: true
+    udp: false
+  - name: 🇯🇵 日本7|BGP优化
+    type: anytls
+    server: hkzz.yuyan.vin
+    port: 10024
+    password: 0b81822e-db0e-4cd0-809a-28447a7f4b3e
+    sni: jp7.yuyan.vin
+    skip-cert-verify: true
+    tls: true
+    udp: false
+  - name: 🇯🇵 日本4|BGP优化
+    type: anytls
+    server: hkzz.yuyan.vin
+    port: 10007
+    password: 0b81822e-db0e-4cd0-809a-28447a7f4b3e
+    sni: jp4.yuyan.vin
+    skip-cert-verify: false
+    tls: true
+    udp: false
+  - name: 🇯🇵 日本6|BGP优化
+    type: anytls
+    server: hkzz.yuyan.vin
+    port: 10045
+    password: 0b81822e-db0e-4cd0-809a-28447a7f4b3e
+    sni: jp6.yuyan.vin
+    skip-cert-verify: false
+    tls: true
+    udp: false
+  - name: 🇯🇵 日本1|BGP优化
+    type: anytls
+    server: hkzz.yuyan.vin
+    port: 10017
+    password: 0b81822e-db0e-4cd0-809a-28447a7f4b3e
+    sni: jp1.yuyan.vin
+    skip-cert-verify: false
+    tls: true
+    udp: false
+  - name: 🇯🇵 日本8|BGP优化
+    type: anytls
+    server: hkzz.yuyan.vin
+    port: 10044
+    password: 0b81822e-db0e-4cd0-809a-28447a7f4b3e
+    sni: jp8.yuyan.vin
+    skip-cert-verify: false
+    tls: true
+    udp: false
+  - name: 🇹🇭 泰国|BGP优化
+    type: anytls
+    server: hkzz.yuyan.vin
+    port: 10040
+    password: 0b81822e-db0e-4cd0-809a-28447a7f4b3e
+    sni: th.yuyan.vin
+    skip-cert-verify: false
+    tls: true
+    udp: false
+  - name: 🇮🇩 印尼|BGP优化
+    type: anytls
+    server: hkzz.yuyan.vin
+    port: 10041
+    password: 0b81822e-db0e-4cd0-809a-28447a7f4b3e
+    sni: id.yuyan.vin
+    skip-cert-verify: false
+    tls: true
+    udp: false
+  - name: 🇰🇷 韩国|BGP优化
+    type: anytls
+    server: hkzz.yuyan.vin
+    port: 10019
+    password: 0b81822e-db0e-4cd0-809a-28447a7f4b3e
+    sni: kr.yuyan.vin
+    skip-cert-verify: false
+    tls: true
+    udp: false
+  - name: 🇺🇸 美国6|BGP优化
+    type: anytls
+    server: hkzz.yuyan.vin
+    port: 10014
+    password: 0b81822e-db0e-4cd0-809a-28447a7f4b3e
+    sni: us6.yuyan.vin
+    skip-cert-verify: false
+    tls: true
+    udp: false
+  - name: 🇺🇸 美国1|BGP优化
+    type: anytls
+    server: hkzz.yuyan.vin
+    port: 10025
+    password: 0b81822e-db0e-4cd0-809a-28447a7f4b3e
+    sni: us1.yuyan.vin
+    skip-cert-verify: false
+    tls: true
+    udp: false
+  - name: 🇺🇸 美国3|BGP优化
+    type: anytls
+    server: hkzz.yuyan.vin
+    port: 10026
+    password: 0b81822e-db0e-4cd0-809a-28447a7f4b3e
+    sni: us3.yuyan.vin
+    skip-cert-verify: false
+    tls: true
+    udp: false
+  - name: 🇺🇸 美国2|BGP优化
+    type: anytls
+    server: hkzz.yuyan.vin
+    port: 10016
+    password: 0b81822e-db0e-4cd0-809a-28447a7f4b3e
+    sni: us2.yuyan.vin
+    skip-cert-verify: false
+    tls: true
+    udp: false
+  - name: 🇺🇸 美国4|BGP优化
+    type: anytls
+    server: hkzz.yuyan.vin
+    port: 10018
+    password: 0b81822e-db0e-4cd0-809a-28447a7f4b3e
+    sni: us4.yuyan.vin
+    skip-cert-verify: false
+    tls: true
+    udp: false
+  - name: 🇺🇸 美国5|BGP优化
+    type: anytls
+    server: hkzz.yuyan.vin
+    port: 10015
+    password: 0b81822e-db0e-4cd0-809a-28447a7f4b3e
+    sni: us5.yuyan.vin
+    skip-cert-verify: false
+    tls: true
+    udp: false
+  - name: 🇩🇪 德国|BGP优化
+    type: anytls
+    server: hkzz.yuyan.vin
+    port: 10023
+    password: 0b81822e-db0e-4cd0-809a-28447a7f4b3e
+    sni: de.yuyan.vin
+    skip-cert-verify: false
+    tls: true
+    udp: false
+  - name: 🇵🇰 巴基斯坦|BGP优化
+    type: anytls
+    server: hkzz.yuyan.vin
+    port: 10034
+    password: 0b81822e-db0e-4cd0-809a-28447a7f4b3e
+    sni: pk.yuyan.vin
+    skip-cert-verify: false
+    tls: true
+    udp: false
+  - name: 🇫🇷 法国|BGP优化
+    type: anytls
+    server: hkzz.yuyan.vin
+    port: 10003
+    password: 0b81822e-db0e-4cd0-809a-28447a7f4b3e
+    sni: fr.yuyan.vin
+    skip-cert-verify: false
+    tls: true
+    udp: false
+  - name: 🇳🇱 荷兰|BGP优化
+    type: anytls
+    server: hkzz.yuyan.vin
+    port: 10037
+    password: 0b81822e-db0e-4cd0-809a-28447a7f4b3e
+    sni: nl.yuyan.vin
+    skip-cert-verify: false
+    tls: true
+    udp: false
+  - name: 🇹🇷 土耳其|BGP优化
+    type: anytls
+    server: hkzz.yuyan.vin
+    port: 10053
+    password: 0b81822e-db0e-4cd0-809a-28447a7f4b3e
+    sni: tr.yuyan.vin
+    skip-cert-verify: false
+    tls: true
+    udp: false
+  - name: 🇬🇧 英国|BGP优化
+    type: anytls
+    server: hkzz.yuyan.vin
+    port: 10052
+    password: 0b81822e-db0e-4cd0-809a-28447a7f4b3e
+    sni: uk.yuyan.vin
+    skip-cert-verify: false
+    tls: true
+    udp: false
+  - name: 🇳🇬 尼日利亚|BGP优化
+    type: anytls
+    server: hkzz.yuyan.vin
+    port: 10046
+    password: 0b81822e-db0e-4cd0-809a-28447a7f4b3e
+    sni: ng.yuyan.vin
+    skip-cert-verify: false
+    tls: true
+    udp: false
+  - name: 🇭🇰 IEPL-香港1
+    type: ss
+    server: junp.kuaileiduanko.com
+    port: 36091
+    cipher: 2022-blake3-aes-128-gcm
+    password: ZDc2YTMxZTgwMGFmNjhlMg==:NmZhNGIxZjQtMWZiMy00ZQ==
+  - name: 🇭🇰 IEPL-香港2
+    type: ss
+    server: 6688.rkkuailei.cc
+    port: 36092
+    cipher: 2022-blake3-aes-128-gcm
+    password: ZDc2YTMxZTgwMGFmNjhlMg==:NmZhNGIxZjQtMWZiMy00ZQ==
+  - name: 🇭🇰 IEPL-香港3
+    type: ss
+    server: 6688.rkkuailei.cc
+    port: 36093
+    cipher: 2022-blake3-aes-128-gcm
+    password: ZDc2YTMxZTgwMGFmNjhlMg==:NmZhNGIxZjQtMWZiMy00ZQ==
+  - name: 🇭🇰 IEPL-香港动态家宽
+    type: ss
+    server: junp.kuaileiduanko.com
+    port: 36123
+    cipher: aes-128-gcm
+    password: 6fa4b1f4-1fb3-4e39-83c7-06614619a046
+  - name: 🇯🇵 IEPL-日本1
+    type: ss
+    server: junp.kuaileiduanko.com
+    port: 36098
+    cipher: 2022-blake3-aes-128-gcm
+    password: ZDc2YTMxZTgwMGFmNjhlMg==:NmZhNGIxZjQtMWZiMy00ZQ==
+  - name: 🇯🇵 IEPL-日本2
+    type: ss
+    server: junp.kuaileiduanko.com
+    port: 36125
+    cipher: aes-128-gcm
+    password: 6fa4b1f4-1fb3-4e39-83c7-06614619a046
+  - name: 🇯🇵  IEPL-日本3
+    type: ss
+    server: junp.kuaileiduanko.com
+    port: 36079
+    cipher: 2022-blake3-aes-128-gcm
+    password: NDkyYzk4YTY3Yjg0NjViMQ==:NmZhNGIxZjQtMWZiMy00ZQ==
+  - name: 🇯🇵  IEPL-日本4
+    type: ss
+    server: junp.kuaileiduanko.com
+    port: 36078
+    cipher: aes-128-gcm
+    password: 6fa4b1f4-1fb3-4e39-83c7-06614619a046
+  - name: 🇯🇵+直连-日本1
     type: vless
     server: gm-jp066.aiwowo.xyz
     port: 20076
@@ -178,108 +604,30 @@ proxies:
     reality-opts:
       public-key: Z8tJYAjotKrLI4LMnXPYWZZBgJgvNjiD0rtmcUJt-R0
       short-id: ac1c6898c4bac119
-  - name: 🇬🇧 IEPL-英国静态家宽
+  - name: 🇸🇬 IEPL-新加坡1
     type: ss
     server: junp.kuaileiduanko.com
-    port: 36122
-    cipher: aes-128-gcm
-    password: 6fa4b1f4-1fb3-4e39-83c7-06614619a046
-  - name: 🇭🇰 IEPL-香港3
+    port: 36088
+    cipher: 2022-blake3-aes-128-gcm
+    password: ZDc2YTMxZTgwMGFmNjhlMg==:NmZhNGIxZjQtMWZiMy00ZQ==
+  - name: 🇸🇬  IEPL-新加坡2
     type: ss
     server: junp.kuaileiduanko.com
-    port: 36082
+    port: 36075
     cipher: aes-128-gcm
     password: 6fa4b1f4-1fb3-4e39-83c7-06614619a046
-  - name: 🇩🇪 IEPL-德国
+  - name: 🇸🇬  IEPL-新加坡3
     type: ss
     server: junp.kuaileiduanko.com
-    port: 36060
+    port: 36073
     cipher: aes-128-gcm
     password: 6fa4b1f4-1fb3-4e39-83c7-06614619a046
-  - name: 🇳🇱 IEPL-荷兰
+  - name: 🇸🇬  IEPL-新加坡4
     type: ss
     server: junp.kuaileiduanko.com
-    port: 36057
-    cipher: aes-128-gcm
-    password: 6fa4b1f4-1fb3-4e39-83c7-06614619a046
-  - name: 🇮🇩 IEPL-印度尼西亚
-    type: ss
-    server: junp.kuaileiduanko.com
-    port: 36051
-    cipher: aes-128-gcm
-    password: 6fa4b1f4-1fb3-4e39-83c7-06614619a046
-  - name: 🇭🇰 官网  133vp.cc
-    type: ss
-    server: junp.kuaileiduanko.com
-    port: 36085
-    cipher: aes-128-gcm
-    password: 6fa4b1f4-1fb3-4e39-83c7-06614619a046
-  - name: 🇪🇸 IEPL-西班牙
-    type: ss
-    server: junp.kuaileiduanko.com
-    port: 36053
-    cipher: aes-128-gcm
-    password: 6fa4b1f4-1fb3-4e39-83c7-06614619a046
-  - name: 🇬🇧 IEPL-英国
-    type: ss
-    server: junp.kuaileiduanko.com
-    port: 36059
-    cipher: aes-128-gcm
-    password: 6fa4b1f4-1fb3-4e39-83c7-06614619a046
-  - name: 🇨🇭 IEPL-瑞士
-    type: ss
-    server: junp.kuaileiduanko.com
-    port: 36058
-    cipher: aes-128-gcm
-    password: 6fa4b1f4-1fb3-4e39-83c7-06614619a046
-  - name: 🇮🇱 IEPL-以色列
-    type: ss
-    server: junp.kuaileiduanko.com
-    port: 36056
-    cipher: aes-128-gcm
-    password: 6fa4b1f4-1fb3-4e39-83c7-06614619a046
-  - name: 🇦🇪IEPL-阿联酋
-    type: ss
-    server: junp.kuaileiduanko.com
-    port: 36055
-    cipher: aes-128-gcm
-    password: 6fa4b1f4-1fb3-4e39-83c7-06614619a046
-  - name: 🇨🇦 IEPL-加拿大
-    type: ss
-    server: junp.kuaileiduanko.com
-    port: 36050
-    cipher: aes-128-gcm
-    password: 6fa4b1f4-1fb3-4e39-83c7-06614619a046
-  - name: 🇹🇼 IEPL-台湾2
-    type: ss
-    server: junp.kuaileiduanko.com
-    port: 36063
-    cipher: aes-128-gcm
-    password: 6fa4b1f4-1fb3-4e39-83c7-06614619a046
-  - name: 🇧🇷 IEPL-巴西
-    type: ss
-    server: junp.kuaileiduanko.com
-    port: 36054
-    cipher: aes-128-gcm
-    password: 6fa4b1f4-1fb3-4e39-83c7-06614619a046
-  - name: 🇺🇸  IEPL-美国静态家宽
-    type: ss
-    server: junp.kuaileiduanko.com
-    port: 36165
-    cipher: aes-128-gcm
-    password: 6fa4b1f4-1fb3-4e39-83c7-06614619a046
-  - name: 🇯🇵  IEPL-日本4
-    type: ss
-    server: junp.kuaileiduanko.com
-    port: 36078
-    cipher: aes-128-gcm
-    password: 6fa4b1f4-1fb3-4e39-83c7-06614619a046
-  - name: 🇯🇵  IEPL-日本1
-    type: ss
-    server: junp.kuaileiduanko.com
-    port: 36081
-    cipher: aes-128-gcm
-    password: 6fa4b1f4-1fb3-4e39-83c7-06614619a046
+    port: 36450
+    cipher: 2022-blake3-aes-128-gcm
+    password: NjgxY2FhMzYwOTRhZjA4NQ==:NmZhNGIxZjQtMWZiMy00ZQ==
   - name: 🇸🇬 直连-新加坡
     type: vmess
     server: gm-sg06.aiwowo.xyz
@@ -294,99 +642,386 @@ proxies:
       path: /cctv13/hd.m3u8
       headers:
         Host: gm-sg06.aiwowo.xyz
+  - name: 🇺🇸  IEPL-美国1
+    type: ss
+    server: junp.kuaileiduanko.com
+    port: 36072
+    cipher: aes-128-gcm
+    password: 6fa4b1f4-1fb3-4e39-83c7-06614619a046
+  - name: 🇺🇸  IEPL-美国2
+    type: ss
+    server: junp.kuaileiduanko.com
+    port: 36071
+    cipher: aes-128-gcm
+    password: 6fa4b1f4-1fb3-4e39-83c7-06614619a046
+  - name: 🇺🇸  IEPL-美国3
+    type: ss
+    server: 6688.rkkuailei.cc
+    port: 36070
+    cipher: aes-128-gcm
+    password: 6fa4b1f4-1fb3-4e39-83c7-06614619a046
+  - name: 🇺🇸  IEPL-美国4
+    type: ss
+    server: junp.kuaileiduanko.com
+    port: 36069
+    cipher: 2022-blake3-aes-128-gcm
+    password: NjgxY2FhMzYwOTRhZjA4NQ==:NmZhNGIxZjQtMWZiMy00ZQ==
+  - name: 🇺🇸  IEPL-美国静态家宽
+    type: ss
+    server: junp.kuaileiduanko.com
+    port: 36165
+    cipher: aes-128-gcm
+    password: 6fa4b1f4-1fb3-4e39-83c7-06614619a046
+  - name: 🇦🇺 IEPL-澳大利亚
+    type: ss
+    server: junp.kuaileiduanko.com
+    port: 36097
+    cipher: 2022-blake3-aes-128-gcm
+    password: YmExMzViMzFhOTY3OTEwYw==:NmZhNGIxZjQtMWZiMy00ZQ==
+  - name: 🇲🇾 IEPL-马来西亚1
+    type: ss
+    server: junp.kuaileiduanko.com
+    port: 36066
+    cipher: aes-128-gcm
+    password: 6fa4b1f4-1fb3-4e39-83c7-06614619a046
+  - name: 🇲🇾 IEPL-马来西亚2
+    type: ss
+    server: 6688.rkkuailei.cc
+    port: 36065
+    cipher: aes-128-gcm
+    password: 6fa4b1f4-1fb3-4e39-83c7-06614619a046
+  - name: 🇻🇳 IEPL-越南
+    type: ss
+    server: junp.kuaileiduanko.com
+    port: 36096
+    cipher: 2022-blake3-aes-128-gcm
+    password: YmExMzViMzFhOTY3OTEwYw==:NmZhNGIxZjQtMWZiMy00ZQ==
+  - name: 🇹🇼 IEPL-台湾1
+    type: ss
+    server: junp.kuaileiduanko.com
+    port: 36064
+    cipher: aes-128-gcm
+    password: 6fa4b1f4-1fb3-4e39-83c7-06614619a046
+  - name: 🇹🇼 IEPL-台湾2
+    type: ss
+    server: 6688.rkkuailei.cc
+    port: 36063
+    cipher: aes-128-gcm
+    password: 6fa4b1f4-1fb3-4e39-83c7-06614619a046
+  - name: 🇹🇼 IEPL-台湾动态家宽
+    type: ss
+    server: junp.kuaileiduanko.com
+    port: 36163
+    cipher: aes-128-gcm
+    password: 6fa4b1f4-1fb3-4e39-83c7-06614619a046
   - name: 🇰🇷 IEPL-韩国静态家宽
     type: ss
     server: junp.kuaileiduanko.com
     port: 36062
     cipher: aes-128-gcm
     password: 6fa4b1f4-1fb3-4e39-83c7-06614619a046
+  - name: 🇹🇭 IEPL-泰国
+    type: ss
+    server: junp.kuaileiduanko.com
+    port: 36061
+    cipher: aes-128-gcm
+    password: 6fa4b1f4-1fb3-4e39-83c7-06614619a046
+  - name: 🇩🇪 IEPL-德国
+    type: ss
+    server: junp.kuaileiduanko.com
+    port: 36060
+    cipher: aes-128-gcm
+    password: 6fa4b1f4-1fb3-4e39-83c7-06614619a046
+  - name: 🇬🇧 IEPL-英国
+    type: ss
+    server: junp.kuaileiduanko.com
+    port: 36059
+    cipher: aes-128-gcm
+    password: 6fa4b1f4-1fb3-4e39-83c7-06614619a046
+  - name: 🇬🇧 IEPL-英国静态家宽
+    type: ss
+    server: junp.kuaileiduanko.com
+    port: 36122
+    cipher: aes-128-gcm
+    password: 6fa4b1f4-1fb3-4e39-83c7-06614619a046
+  - name: 🇨🇭 IEPL-瑞士
+    type: ss
+    server: junp.kuaileiduanko.com
+    port: 36058
+    cipher: aes-128-gcm
+    password: 6fa4b1f4-1fb3-4e39-83c7-06614619a046
+  - name: 🇳🇱 IEPL-荷兰
+    type: ss
+    server: junp.kuaileiduanko.com
+    port: 36057
+    cipher: aes-128-gcm
+    password: 6fa4b1f4-1fb3-4e39-83c7-06614619a046
+  - name: 🇮🇱 IEPL-以色列
+    type: ss
+    server: junp.kuaileiduanko.com
+    port: 36056
+    cipher: aes-128-gcm
+    password: 6fa4b1f4-1fb3-4e39-83c7-06614619a046
+  - name: 🇦🇪IEPL-阿联酋
+    type: ss
+    server: junp.kuaileiduanko.com
+    port: 36055
+    cipher: aes-128-gcm
+    password: 6fa4b1f4-1fb3-4e39-83c7-06614619a046
+  - name: 🇮🇳 IEPL-印度
+    type: ss
+    server: junp.kuaileiduanko.com
+    port: 36067
+    cipher: aes-128-gcm
+    password: 6fa4b1f4-1fb3-4e39-83c7-06614619a046
+  - name: 🇧🇷 IEPL-巴西
+    type: ss
+    server: junp.kuaileiduanko.com
+    port: 36054
+    cipher: aes-128-gcm
+    password: 6fa4b1f4-1fb3-4e39-83c7-06614619a046
+  - name: 🇪🇸 IEPL-西班牙
+    type: ss
+    server: junp.kuaileiduanko.com
+    port: 36053
+    cipher: aes-128-gcm
+    password: 6fa4b1f4-1fb3-4e39-83c7-06614619a046
+  - name: 🇮🇩 IEPL-印度尼西亚
+    type: ss
+    server: junp.kuaileiduanko.com
+    port: 36051
+    cipher: aes-128-gcm
+    password: 6fa4b1f4-1fb3-4e39-83c7-06614619a046
+  - name: 🇨🇦 IEPL-加拿大
+    type: ss
+    server: junp.kuaileiduanko.com
+    port: 36050
+    cipher: aes-128-gcm
+    password: 6fa4b1f4-1fb3-4e39-83c7-06614619a046
+  - name: "官网: 雨燕云.com"
+    type: ss
+    server: 1.1.1.1
+    port: 10001
+    cipher: chacha20-ietf-poly1305
+    password: 0b81822e-db0e-4cd0-809a-28447a7f4b3e
+  - name: 请立即查看官网公告
+    type: ss
+    server: 1.1.1.1
+    port: 443
+    cipher: 2022-blake3-aes-128-gcm
+    password: Y2M1NmY3MWE2OWJjODliMg==:MGI4MTgyMmUtZGIwZS00Yw==
+  - name: 🇨🇦 加拿大|BGP优化
+    type: anytls
+    server: hkzz.yuyan.vin
+    port: 10021
+    password: 0b81822e-db0e-4cd0-809a-28447a7f4b3e
+    sni: ca.yuyan.vin
+    skip-cert-verify: false
+    tls: true
+    udp: false
 proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - DIRECT
-      - 🇭🇰 IEPL-香港4
+      - 微信：gtyz222
+      - 🇺🇸+直连-美国4++IPv6
+      - 🇺🇸+直连-美国1
+      - 🇩🇪+直连-德国
+      - 🇭🇰 香港1|BGP优化
+      - 🇭🇰 香港B|BGP优化
+      - 🇭🇰 香港C|BGP优化
+      - 🇭🇰 香港D|BGP优化
+      - 🇭🇰 香港2|BGP优化
+      - 🇭🇰 香港3|BGP优化
+      - 🇭🇰 香港5|BGP优化
+      - 🇭🇰 香港E|BGP优化
+      - 🇭🇰 香港4|BGP优化
+      - 🇭🇰 香港A|BGP优化
+      - 🇭🇰+直连-香港
+      - 🇨🇳 台湾3|BGP优化
+      - 🇨🇳 台湾4|BGP优化
+      - 🇨🇳 台湾2|BGP优化
+      - 🇨🇳 台湾1|BGP优化
+      - 🇸🇬 新加坡2|BGP优化
+      - 🇸🇬 新加坡1|BGP优化
+      - 🇸🇬 新加坡4|BGP优化
+      - 🇸🇬 新加坡5|BGP优化
+      - 🇸🇬 新加坡6|BGP优化
+      - 🇸🇬 新加坡3|BGP优化
+      - 🇲🇾 马来西亚1|BGP优化
+      - 🇲🇾 马来西亚3|BGP优化
+      - 🇻🇳 越南|BGP优化
+      - 🇵🇰 菲律宾|BGP优化
+      - 🇲🇾 马来西亚2|BGP优化
+      - 🇯🇵 日本2|BGP优化
+      - 🇯🇵 日本3|BGP优化
+      - 🇯🇵 日本5|BGP优化
+      - 🇯🇵 日本7|BGP优化
+      - 🇯🇵 日本4|BGP优化
+      - 🇯🇵 日本6|BGP优化
+      - 🇯🇵 日本1|BGP优化
+      - 🇯🇵 日本8|BGP优化
+      - 🇹🇭 泰国|BGP优化
+      - 🇮🇩 印尼|BGP优化
+      - 🇰🇷 韩国|BGP优化
+      - 🇺🇸 美国6|BGP优化
+      - 🇺🇸 美国1|BGP优化
+      - 🇺🇸 美国3|BGP优化
+      - 🇺🇸 美国2|BGP优化
+      - 🇺🇸 美国4|BGP优化
+      - 🇺🇸 美国5|BGP优化
+      - 🇩🇪 德国|BGP优化
+      - 🇵🇰 巴基斯坦|BGP优化
+      - 🇫🇷 法国|BGP优化
+      - 🇳🇱 荷兰|BGP优化
+      - 🇹🇷 土耳其|BGP优化
+      - 🇬🇧 英国|BGP优化
+      - 🇳🇬 尼日利亚|BGP优化
       - 🇭🇰 IEPL-香港1
       - 🇭🇰 IEPL-香港2
+      - 🇭🇰 IEPL-香港3
       - 🇭🇰 IEPL-香港动态家宽
-      - 🇹🇼 IEPL-台湾1
-      - 🇸🇬  IEPL-新加坡3
+      - 🇯🇵 IEPL-日本1
+      - 🇯🇵 IEPL-日本2
+      - 🇯🇵  IEPL-日本3
+      - 🇯🇵  IEPL-日本4
+      - 🇯🇵+直连-日本1
+      - 🇸🇬 IEPL-新加坡1
       - 🇸🇬  IEPL-新加坡2
-      - 🇯🇵  IEPL-日本2
-      - 🇹🇼 IEPL-台湾动态家宽
-      - 🇲🇾 IEPL-马来西亚1
-      - 🇲🇾 IEPL-马来西亚2
-      - 🇻🇳 IEPL-越南
-      - 🇹🇭 IEPL-泰国
-      - 🇮🇳 IEPL-印度
-      - 🇦🇺 IEPL-澳大利亚
+      - 🇸🇬  IEPL-新加坡3
+      - 🇸🇬  IEPL-新加坡4
+      - 🇸🇬 直连-新加坡
       - 🇺🇸  IEPL-美国1
       - 🇺🇸  IEPL-美国2
       - 🇺🇸  IEPL-美国3
-      - 🇺🇸+直连-美国
-      - 🇯🇵+直连-日本
-      - 🇬🇧 IEPL-英国静态家宽
-      - 🇭🇰 IEPL-香港3
+      - 🇺🇸  IEPL-美国4
+      - 🇺🇸  IEPL-美国静态家宽
+      - 🇦🇺 IEPL-澳大利亚
+      - 🇲🇾 IEPL-马来西亚1
+      - 🇲🇾 IEPL-马来西亚2
+      - 🇻🇳 IEPL-越南
+      - 🇹🇼 IEPL-台湾1
+      - 🇹🇼 IEPL-台湾2
+      - 🇹🇼 IEPL-台湾动态家宽
+      - 🇰🇷 IEPL-韩国静态家宽
+      - 🇹🇭 IEPL-泰国
       - 🇩🇪 IEPL-德国
-      - 🇳🇱 IEPL-荷兰
-      - 🇮🇩 IEPL-印度尼西亚
-      - 🇭🇰 官网  133vp.cc
-      - 🇪🇸 IEPL-西班牙
       - 🇬🇧 IEPL-英国
+      - 🇬🇧 IEPL-英国静态家宽
       - 🇨🇭 IEPL-瑞士
+      - 🇳🇱 IEPL-荷兰
       - 🇮🇱 IEPL-以色列
       - 🇦🇪IEPL-阿联酋
-      - 🇨🇦 IEPL-加拿大
-      - 🇹🇼 IEPL-台湾2
+      - 🇮🇳 IEPL-印度
       - 🇧🇷 IEPL-巴西
-      - 🇺🇸  IEPL-美国静态家宽
-      - 🇯🇵  IEPL-日本4
-      - 🇯🇵  IEPL-日本1
-      - 🇸🇬 直连-新加坡
-      - 🇰🇷 IEPL-韩国静态家宽
+      - 🇪🇸 IEPL-西班牙
+      - 🇮🇩 IEPL-印度尼西亚
+      - 🇨🇦 IEPL-加拿大
+      - "官网: 雨燕云.com"
+      - 请立即查看官网公告
+      - 🇨🇦 加拿大|BGP优化
   - name: ♻️ 自动选择
     type: url-test
     proxies:
-      - 🇭🇰 IEPL-香港4
+      - 微信：gtyz222
+      - 🇺🇸+直连-美国4++IPv6
+      - 🇺🇸+直连-美国1
+      - 🇩🇪+直连-德国
+      - 🇭🇰 香港1|BGP优化
+      - 🇭🇰 香港B|BGP优化
+      - 🇭🇰 香港C|BGP优化
+      - 🇭🇰 香港D|BGP优化
+      - 🇭🇰 香港2|BGP优化
+      - 🇭🇰 香港3|BGP优化
+      - 🇭🇰 香港5|BGP优化
+      - 🇭🇰 香港E|BGP优化
+      - 🇭🇰 香港4|BGP优化
+      - 🇭🇰 香港A|BGP优化
+      - 🇭🇰+直连-香港
+      - 🇨🇳 台湾3|BGP优化
+      - 🇨🇳 台湾4|BGP优化
+      - 🇨🇳 台湾2|BGP优化
+      - 🇨🇳 台湾1|BGP优化
+      - 🇸🇬 新加坡2|BGP优化
+      - 🇸🇬 新加坡1|BGP优化
+      - 🇸🇬 新加坡4|BGP优化
+      - 🇸🇬 新加坡5|BGP优化
+      - 🇸🇬 新加坡6|BGP优化
+      - 🇸🇬 新加坡3|BGP优化
+      - 🇲🇾 马来西亚1|BGP优化
+      - 🇲🇾 马来西亚3|BGP优化
+      - 🇻🇳 越南|BGP优化
+      - 🇵🇰 菲律宾|BGP优化
+      - 🇲🇾 马来西亚2|BGP优化
+      - 🇯🇵 日本2|BGP优化
+      - 🇯🇵 日本3|BGP优化
+      - 🇯🇵 日本5|BGP优化
+      - 🇯🇵 日本7|BGP优化
+      - 🇯🇵 日本4|BGP优化
+      - 🇯🇵 日本6|BGP优化
+      - 🇯🇵 日本1|BGP优化
+      - 🇯🇵 日本8|BGP优化
+      - 🇹🇭 泰国|BGP优化
+      - 🇮🇩 印尼|BGP优化
+      - 🇰🇷 韩国|BGP优化
+      - 🇺🇸 美国6|BGP优化
+      - 🇺🇸 美国1|BGP优化
+      - 🇺🇸 美国3|BGP优化
+      - 🇺🇸 美国2|BGP优化
+      - 🇺🇸 美国4|BGP优化
+      - 🇺🇸 美国5|BGP优化
+      - 🇩🇪 德国|BGP优化
+      - 🇵🇰 巴基斯坦|BGP优化
+      - 🇫🇷 法国|BGP优化
+      - 🇳🇱 荷兰|BGP优化
+      - 🇹🇷 土耳其|BGP优化
+      - 🇬🇧 英国|BGP优化
+      - 🇳🇬 尼日利亚|BGP优化
       - 🇭🇰 IEPL-香港1
       - 🇭🇰 IEPL-香港2
+      - 🇭🇰 IEPL-香港3
       - 🇭🇰 IEPL-香港动态家宽
-      - 🇹🇼 IEPL-台湾1
-      - 🇸🇬  IEPL-新加坡3
+      - 🇯🇵 IEPL-日本1
+      - 🇯🇵 IEPL-日本2
+      - 🇯🇵  IEPL-日本3
+      - 🇯🇵  IEPL-日本4
+      - 🇯🇵+直连-日本1
+      - 🇸🇬 IEPL-新加坡1
       - 🇸🇬  IEPL-新加坡2
-      - 🇯🇵  IEPL-日本2
-      - 🇹🇼 IEPL-台湾动态家宽
-      - 🇲🇾 IEPL-马来西亚1
-      - 🇲🇾 IEPL-马来西亚2
-      - 🇻🇳 IEPL-越南
-      - 🇹🇭 IEPL-泰国
-      - 🇮🇳 IEPL-印度
-      - 🇦🇺 IEPL-澳大利亚
+      - 🇸🇬  IEPL-新加坡3
+      - 🇸🇬  IEPL-新加坡4
+      - 🇸🇬 直连-新加坡
       - 🇺🇸  IEPL-美国1
       - 🇺🇸  IEPL-美国2
       - 🇺🇸  IEPL-美国3
-      - 🇺🇸+直连-美国
-      - 🇯🇵+直连-日本
-      - 🇬🇧 IEPL-英国静态家宽
-      - 🇭🇰 IEPL-香港3
+      - 🇺🇸  IEPL-美国4
+      - 🇺🇸  IEPL-美国静态家宽
+      - 🇦🇺 IEPL-澳大利亚
+      - 🇲🇾 IEPL-马来西亚1
+      - 🇲🇾 IEPL-马来西亚2
+      - 🇻🇳 IEPL-越南
+      - 🇹🇼 IEPL-台湾1
+      - 🇹🇼 IEPL-台湾2
+      - 🇹🇼 IEPL-台湾动态家宽
+      - 🇰🇷 IEPL-韩国静态家宽
+      - 🇹🇭 IEPL-泰国
       - 🇩🇪 IEPL-德国
-      - 🇳🇱 IEPL-荷兰
-      - 🇮🇩 IEPL-印度尼西亚
-      - 🇭🇰 官网  133vp.cc
-      - 🇪🇸 IEPL-西班牙
       - 🇬🇧 IEPL-英国
+      - 🇬🇧 IEPL-英国静态家宽
       - 🇨🇭 IEPL-瑞士
+      - 🇳🇱 IEPL-荷兰
       - 🇮🇱 IEPL-以色列
       - 🇦🇪IEPL-阿联酋
-      - 🇨🇦 IEPL-加拿大
-      - 🇹🇼 IEPL-台湾2
+      - 🇮🇳 IEPL-印度
       - 🇧🇷 IEPL-巴西
-      - 🇺🇸  IEPL-美国静态家宽
-      - 🇯🇵  IEPL-日本4
-      - 🇯🇵  IEPL-日本1
-      - 🇸🇬 直连-新加坡
-      - 🇰🇷 IEPL-韩国静态家宽
+      - 🇪🇸 IEPL-西班牙
+      - 🇮🇩 IEPL-印度尼西亚
+      - 🇨🇦 IEPL-加拿大
+      - "官网: 雨燕云.com"
+      - 请立即查看官网公告
+      - 🇨🇦 加拿大|BGP优化
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
@@ -396,177 +1031,409 @@ proxy-groups:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 🇭🇰 IEPL-香港4
+      - 微信：gtyz222
+      - 🇺🇸+直连-美国4++IPv6
+      - 🇺🇸+直连-美国1
+      - 🇩🇪+直连-德国
+      - 🇭🇰 香港1|BGP优化
+      - 🇭🇰 香港B|BGP优化
+      - 🇭🇰 香港C|BGP优化
+      - 🇭🇰 香港D|BGP优化
+      - 🇭🇰 香港2|BGP优化
+      - 🇭🇰 香港3|BGP优化
+      - 🇭🇰 香港5|BGP优化
+      - 🇭🇰 香港E|BGP优化
+      - 🇭🇰 香港4|BGP优化
+      - 🇭🇰 香港A|BGP优化
+      - 🇭🇰+直连-香港
+      - 🇨🇳 台湾3|BGP优化
+      - 🇨🇳 台湾4|BGP优化
+      - 🇨🇳 台湾2|BGP优化
+      - 🇨🇳 台湾1|BGP优化
+      - 🇸🇬 新加坡2|BGP优化
+      - 🇸🇬 新加坡1|BGP优化
+      - 🇸🇬 新加坡4|BGP优化
+      - 🇸🇬 新加坡5|BGP优化
+      - 🇸🇬 新加坡6|BGP优化
+      - 🇸🇬 新加坡3|BGP优化
+      - 🇲🇾 马来西亚1|BGP优化
+      - 🇲🇾 马来西亚3|BGP优化
+      - 🇻🇳 越南|BGP优化
+      - 🇵🇰 菲律宾|BGP优化
+      - 🇲🇾 马来西亚2|BGP优化
+      - 🇯🇵 日本2|BGP优化
+      - 🇯🇵 日本3|BGP优化
+      - 🇯🇵 日本5|BGP优化
+      - 🇯🇵 日本7|BGP优化
+      - 🇯🇵 日本4|BGP优化
+      - 🇯🇵 日本6|BGP优化
+      - 🇯🇵 日本1|BGP优化
+      - 🇯🇵 日本8|BGP优化
+      - 🇹🇭 泰国|BGP优化
+      - 🇮🇩 印尼|BGP优化
+      - 🇰🇷 韩国|BGP优化
+      - 🇺🇸 美国6|BGP优化
+      - 🇺🇸 美国1|BGP优化
+      - 🇺🇸 美国3|BGP优化
+      - 🇺🇸 美国2|BGP优化
+      - 🇺🇸 美国4|BGP优化
+      - 🇺🇸 美国5|BGP优化
+      - 🇩🇪 德国|BGP优化
+      - 🇵🇰 巴基斯坦|BGP优化
+      - 🇫🇷 法国|BGP优化
+      - 🇳🇱 荷兰|BGP优化
+      - 🇹🇷 土耳其|BGP优化
+      - 🇬🇧 英国|BGP优化
+      - 🇳🇬 尼日利亚|BGP优化
       - 🇭🇰 IEPL-香港1
       - 🇭🇰 IEPL-香港2
+      - 🇭🇰 IEPL-香港3
       - 🇭🇰 IEPL-香港动态家宽
-      - 🇹🇼 IEPL-台湾1
-      - 🇸🇬  IEPL-新加坡3
+      - 🇯🇵 IEPL-日本1
+      - 🇯🇵 IEPL-日本2
+      - 🇯🇵  IEPL-日本3
+      - 🇯🇵  IEPL-日本4
+      - 🇯🇵+直连-日本1
+      - 🇸🇬 IEPL-新加坡1
       - 🇸🇬  IEPL-新加坡2
-      - 🇯🇵  IEPL-日本2
-      - 🇹🇼 IEPL-台湾动态家宽
-      - 🇲🇾 IEPL-马来西亚1
-      - 🇲🇾 IEPL-马来西亚2
-      - 🇻🇳 IEPL-越南
-      - 🇹🇭 IEPL-泰国
-      - 🇮🇳 IEPL-印度
-      - 🇦🇺 IEPL-澳大利亚
+      - 🇸🇬  IEPL-新加坡3
+      - 🇸🇬  IEPL-新加坡4
+      - 🇸🇬 直连-新加坡
       - 🇺🇸  IEPL-美国1
       - 🇺🇸  IEPL-美国2
       - 🇺🇸  IEPL-美国3
-      - 🇺🇸+直连-美国
-      - 🇯🇵+直连-日本
-      - 🇬🇧 IEPL-英国静态家宽
-      - 🇭🇰 IEPL-香港3
+      - 🇺🇸  IEPL-美国4
+      - 🇺🇸  IEPL-美国静态家宽
+      - 🇦🇺 IEPL-澳大利亚
+      - 🇲🇾 IEPL-马来西亚1
+      - 🇲🇾 IEPL-马来西亚2
+      - 🇻🇳 IEPL-越南
+      - 🇹🇼 IEPL-台湾1
+      - 🇹🇼 IEPL-台湾2
+      - 🇹🇼 IEPL-台湾动态家宽
+      - 🇰🇷 IEPL-韩国静态家宽
+      - 🇹🇭 IEPL-泰国
       - 🇩🇪 IEPL-德国
-      - 🇳🇱 IEPL-荷兰
-      - 🇮🇩 IEPL-印度尼西亚
-      - 🇭🇰 官网  133vp.cc
-      - 🇪🇸 IEPL-西班牙
       - 🇬🇧 IEPL-英国
+      - 🇬🇧 IEPL-英国静态家宽
       - 🇨🇭 IEPL-瑞士
+      - 🇳🇱 IEPL-荷兰
       - 🇮🇱 IEPL-以色列
       - 🇦🇪IEPL-阿联酋
-      - 🇨🇦 IEPL-加拿大
-      - 🇹🇼 IEPL-台湾2
+      - 🇮🇳 IEPL-印度
       - 🇧🇷 IEPL-巴西
-      - 🇺🇸  IEPL-美国静态家宽
-      - 🇯🇵  IEPL-日本4
-      - 🇯🇵  IEPL-日本1
-      - 🇸🇬 直连-新加坡
-      - 🇰🇷 IEPL-韩国静态家宽
+      - 🇪🇸 IEPL-西班牙
+      - 🇮🇩 IEPL-印度尼西亚
+      - 🇨🇦 IEPL-加拿大
+      - "官网: 雨燕云.com"
+      - 请立即查看官网公告
+      - 🇨🇦 加拿大|BGP优化
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - 🇭🇰 IEPL-香港4
+      - 微信：gtyz222
+      - 🇺🇸+直连-美国4++IPv6
+      - 🇺🇸+直连-美国1
+      - 🇩🇪+直连-德国
+      - 🇭🇰 香港1|BGP优化
+      - 🇭🇰 香港B|BGP优化
+      - 🇭🇰 香港C|BGP优化
+      - 🇭🇰 香港D|BGP优化
+      - 🇭🇰 香港2|BGP优化
+      - 🇭🇰 香港3|BGP优化
+      - 🇭🇰 香港5|BGP优化
+      - 🇭🇰 香港E|BGP优化
+      - 🇭🇰 香港4|BGP优化
+      - 🇭🇰 香港A|BGP优化
+      - 🇭🇰+直连-香港
+      - 🇨🇳 台湾3|BGP优化
+      - 🇨🇳 台湾4|BGP优化
+      - 🇨🇳 台湾2|BGP优化
+      - 🇨🇳 台湾1|BGP优化
+      - 🇸🇬 新加坡2|BGP优化
+      - 🇸🇬 新加坡1|BGP优化
+      - 🇸🇬 新加坡4|BGP优化
+      - 🇸🇬 新加坡5|BGP优化
+      - 🇸🇬 新加坡6|BGP优化
+      - 🇸🇬 新加坡3|BGP优化
+      - 🇲🇾 马来西亚1|BGP优化
+      - 🇲🇾 马来西亚3|BGP优化
+      - 🇻🇳 越南|BGP优化
+      - 🇵🇰 菲律宾|BGP优化
+      - 🇲🇾 马来西亚2|BGP优化
+      - 🇯🇵 日本2|BGP优化
+      - 🇯🇵 日本3|BGP优化
+      - 🇯🇵 日本5|BGP优化
+      - 🇯🇵 日本7|BGP优化
+      - 🇯🇵 日本4|BGP优化
+      - 🇯🇵 日本6|BGP优化
+      - 🇯🇵 日本1|BGP优化
+      - 🇯🇵 日本8|BGP优化
+      - 🇹🇭 泰国|BGP优化
+      - 🇮🇩 印尼|BGP优化
+      - 🇰🇷 韩国|BGP优化
+      - 🇺🇸 美国6|BGP优化
+      - 🇺🇸 美国1|BGP优化
+      - 🇺🇸 美国3|BGP优化
+      - 🇺🇸 美国2|BGP优化
+      - 🇺🇸 美国4|BGP优化
+      - 🇺🇸 美国5|BGP优化
+      - 🇩🇪 德国|BGP优化
+      - 🇵🇰 巴基斯坦|BGP优化
+      - 🇫🇷 法国|BGP优化
+      - 🇳🇱 荷兰|BGP优化
+      - 🇹🇷 土耳其|BGP优化
+      - 🇬🇧 英国|BGP优化
+      - 🇳🇬 尼日利亚|BGP优化
       - 🇭🇰 IEPL-香港1
       - 🇭🇰 IEPL-香港2
+      - 🇭🇰 IEPL-香港3
       - 🇭🇰 IEPL-香港动态家宽
-      - 🇹🇼 IEPL-台湾1
-      - 🇸🇬  IEPL-新加坡3
+      - 🇯🇵 IEPL-日本1
+      - 🇯🇵 IEPL-日本2
+      - 🇯🇵  IEPL-日本3
+      - 🇯🇵  IEPL-日本4
+      - 🇯🇵+直连-日本1
+      - 🇸🇬 IEPL-新加坡1
       - 🇸🇬  IEPL-新加坡2
-      - 🇯🇵  IEPL-日本2
-      - 🇹🇼 IEPL-台湾动态家宽
-      - 🇲🇾 IEPL-马来西亚1
-      - 🇲🇾 IEPL-马来西亚2
-      - 🇻🇳 IEPL-越南
-      - 🇹🇭 IEPL-泰国
-      - 🇮🇳 IEPL-印度
-      - 🇦🇺 IEPL-澳大利亚
+      - 🇸🇬  IEPL-新加坡3
+      - 🇸🇬  IEPL-新加坡4
+      - 🇸🇬 直连-新加坡
       - 🇺🇸  IEPL-美国1
       - 🇺🇸  IEPL-美国2
       - 🇺🇸  IEPL-美国3
-      - 🇺🇸+直连-美国
-      - 🇯🇵+直连-日本
-      - 🇬🇧 IEPL-英国静态家宽
-      - 🇭🇰 IEPL-香港3
+      - 🇺🇸  IEPL-美国4
+      - 🇺🇸  IEPL-美国静态家宽
+      - 🇦🇺 IEPL-澳大利亚
+      - 🇲🇾 IEPL-马来西亚1
+      - 🇲🇾 IEPL-马来西亚2
+      - 🇻🇳 IEPL-越南
+      - 🇹🇼 IEPL-台湾1
+      - 🇹🇼 IEPL-台湾2
+      - 🇹🇼 IEPL-台湾动态家宽
+      - 🇰🇷 IEPL-韩国静态家宽
+      - 🇹🇭 IEPL-泰国
       - 🇩🇪 IEPL-德国
-      - 🇳🇱 IEPL-荷兰
-      - 🇮🇩 IEPL-印度尼西亚
-      - 🇭🇰 官网  133vp.cc
-      - 🇪🇸 IEPL-西班牙
       - 🇬🇧 IEPL-英国
+      - 🇬🇧 IEPL-英国静态家宽
       - 🇨🇭 IEPL-瑞士
+      - 🇳🇱 IEPL-荷兰
       - 🇮🇱 IEPL-以色列
       - 🇦🇪IEPL-阿联酋
-      - 🇨🇦 IEPL-加拿大
-      - 🇹🇼 IEPL-台湾2
+      - 🇮🇳 IEPL-印度
       - 🇧🇷 IEPL-巴西
-      - 🇺🇸  IEPL-美国静态家宽
-      - 🇯🇵  IEPL-日本4
-      - 🇯🇵  IEPL-日本1
-      - 🇸🇬 直连-新加坡
-      - 🇰🇷 IEPL-韩国静态家宽
+      - 🇪🇸 IEPL-西班牙
+      - 🇮🇩 IEPL-印度尼西亚
+      - 🇨🇦 IEPL-加拿大
+      - "官网: 雨燕云.com"
+      - 请立即查看官网公告
+      - 🇨🇦 加拿大|BGP优化
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
-      - 🇭🇰 IEPL-香港4
+      - 微信：gtyz222
+      - 🇺🇸+直连-美国4++IPv6
+      - 🇺🇸+直连-美国1
+      - 🇩🇪+直连-德国
+      - 🇭🇰 香港1|BGP优化
+      - 🇭🇰 香港B|BGP优化
+      - 🇭🇰 香港C|BGP优化
+      - 🇭🇰 香港D|BGP优化
+      - 🇭🇰 香港2|BGP优化
+      - 🇭🇰 香港3|BGP优化
+      - 🇭🇰 香港5|BGP优化
+      - 🇭🇰 香港E|BGP优化
+      - 🇭🇰 香港4|BGP优化
+      - 🇭🇰 香港A|BGP优化
+      - 🇭🇰+直连-香港
+      - 🇨🇳 台湾3|BGP优化
+      - 🇨🇳 台湾4|BGP优化
+      - 🇨🇳 台湾2|BGP优化
+      - 🇨🇳 台湾1|BGP优化
+      - 🇸🇬 新加坡2|BGP优化
+      - 🇸🇬 新加坡1|BGP优化
+      - 🇸🇬 新加坡4|BGP优化
+      - 🇸🇬 新加坡5|BGP优化
+      - 🇸🇬 新加坡6|BGP优化
+      - 🇸🇬 新加坡3|BGP优化
+      - 🇲🇾 马来西亚1|BGP优化
+      - 🇲🇾 马来西亚3|BGP优化
+      - 🇻🇳 越南|BGP优化
+      - 🇵🇰 菲律宾|BGP优化
+      - 🇲🇾 马来西亚2|BGP优化
+      - 🇯🇵 日本2|BGP优化
+      - 🇯🇵 日本3|BGP优化
+      - 🇯🇵 日本5|BGP优化
+      - 🇯🇵 日本7|BGP优化
+      - 🇯🇵 日本4|BGP优化
+      - 🇯🇵 日本6|BGP优化
+      - 🇯🇵 日本1|BGP优化
+      - 🇯🇵 日本8|BGP优化
+      - 🇹🇭 泰国|BGP优化
+      - 🇮🇩 印尼|BGP优化
+      - 🇰🇷 韩国|BGP优化
+      - 🇺🇸 美国6|BGP优化
+      - 🇺🇸 美国1|BGP优化
+      - 🇺🇸 美国3|BGP优化
+      - 🇺🇸 美国2|BGP优化
+      - 🇺🇸 美国4|BGP优化
+      - 🇺🇸 美国5|BGP优化
+      - 🇩🇪 德国|BGP优化
+      - 🇵🇰 巴基斯坦|BGP优化
+      - 🇫🇷 法国|BGP优化
+      - 🇳🇱 荷兰|BGP优化
+      - 🇹🇷 土耳其|BGP优化
+      - 🇬🇧 英国|BGP优化
+      - 🇳🇬 尼日利亚|BGP优化
       - 🇭🇰 IEPL-香港1
       - 🇭🇰 IEPL-香港2
+      - 🇭🇰 IEPL-香港3
       - 🇭🇰 IEPL-香港动态家宽
-      - 🇹🇼 IEPL-台湾1
-      - 🇸🇬  IEPL-新加坡3
+      - 🇯🇵 IEPL-日本1
+      - 🇯🇵 IEPL-日本2
+      - 🇯🇵  IEPL-日本3
+      - 🇯🇵  IEPL-日本4
+      - 🇯🇵+直连-日本1
+      - 🇸🇬 IEPL-新加坡1
       - 🇸🇬  IEPL-新加坡2
-      - 🇯🇵  IEPL-日本2
-      - 🇹🇼 IEPL-台湾动态家宽
-      - 🇲🇾 IEPL-马来西亚1
-      - 🇲🇾 IEPL-马来西亚2
-      - 🇻🇳 IEPL-越南
-      - 🇹🇭 IEPL-泰国
-      - 🇮🇳 IEPL-印度
-      - 🇦🇺 IEPL-澳大利亚
+      - 🇸🇬  IEPL-新加坡3
+      - 🇸🇬  IEPL-新加坡4
+      - 🇸🇬 直连-新加坡
       - 🇺🇸  IEPL-美国1
       - 🇺🇸  IEPL-美国2
       - 🇺🇸  IEPL-美国3
-      - 🇺🇸+直连-美国
-      - 🇯🇵+直连-日本
-      - 🇬🇧 IEPL-英国静态家宽
-      - 🇭🇰 IEPL-香港3
+      - 🇺🇸  IEPL-美国4
+      - 🇺🇸  IEPL-美国静态家宽
+      - 🇦🇺 IEPL-澳大利亚
+      - 🇲🇾 IEPL-马来西亚1
+      - 🇲🇾 IEPL-马来西亚2
+      - 🇻🇳 IEPL-越南
+      - 🇹🇼 IEPL-台湾1
+      - 🇹🇼 IEPL-台湾2
+      - 🇹🇼 IEPL-台湾动态家宽
+      - 🇰🇷 IEPL-韩国静态家宽
+      - 🇹🇭 IEPL-泰国
       - 🇩🇪 IEPL-德国
-      - 🇳🇱 IEPL-荷兰
-      - 🇮🇩 IEPL-印度尼西亚
-      - 🇭🇰 官网  133vp.cc
-      - 🇪🇸 IEPL-西班牙
       - 🇬🇧 IEPL-英国
+      - 🇬🇧 IEPL-英国静态家宽
       - 🇨🇭 IEPL-瑞士
+      - 🇳🇱 IEPL-荷兰
       - 🇮🇱 IEPL-以色列
       - 🇦🇪IEPL-阿联酋
-      - 🇨🇦 IEPL-加拿大
-      - 🇹🇼 IEPL-台湾2
+      - 🇮🇳 IEPL-印度
       - 🇧🇷 IEPL-巴西
-      - 🇺🇸  IEPL-美国静态家宽
-      - 🇯🇵  IEPL-日本4
-      - 🇯🇵  IEPL-日本1
-      - 🇸🇬 直连-新加坡
-      - 🇰🇷 IEPL-韩国静态家宽
+      - 🇪🇸 IEPL-西班牙
+      - 🇮🇩 IEPL-印度尼西亚
+      - 🇨🇦 IEPL-加拿大
+      - "官网: 雨燕云.com"
+      - 请立即查看官网公告
+      - 🇨🇦 加拿大|BGP优化
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - 🇭🇰 IEPL-香港4
+      - 微信：gtyz222
+      - 🇺🇸+直连-美国4++IPv6
+      - 🇺🇸+直连-美国1
+      - 🇩🇪+直连-德国
+      - 🇭🇰 香港1|BGP优化
+      - 🇭🇰 香港B|BGP优化
+      - 🇭🇰 香港C|BGP优化
+      - 🇭🇰 香港D|BGP优化
+      - 🇭🇰 香港2|BGP优化
+      - 🇭🇰 香港3|BGP优化
+      - 🇭🇰 香港5|BGP优化
+      - 🇭🇰 香港E|BGP优化
+      - 🇭🇰 香港4|BGP优化
+      - 🇭🇰 香港A|BGP优化
+      - 🇭🇰+直连-香港
+      - 🇨🇳 台湾3|BGP优化
+      - 🇨🇳 台湾4|BGP优化
+      - 🇨🇳 台湾2|BGP优化
+      - 🇨🇳 台湾1|BGP优化
+      - 🇸🇬 新加坡2|BGP优化
+      - 🇸🇬 新加坡1|BGP优化
+      - 🇸🇬 新加坡4|BGP优化
+      - 🇸🇬 新加坡5|BGP优化
+      - 🇸🇬 新加坡6|BGP优化
+      - 🇸🇬 新加坡3|BGP优化
+      - 🇲🇾 马来西亚1|BGP优化
+      - 🇲🇾 马来西亚3|BGP优化
+      - 🇻🇳 越南|BGP优化
+      - 🇵🇰 菲律宾|BGP优化
+      - 🇲🇾 马来西亚2|BGP优化
+      - 🇯🇵 日本2|BGP优化
+      - 🇯🇵 日本3|BGP优化
+      - 🇯🇵 日本5|BGP优化
+      - 🇯🇵 日本7|BGP优化
+      - 🇯🇵 日本4|BGP优化
+      - 🇯🇵 日本6|BGP优化
+      - 🇯🇵 日本1|BGP优化
+      - 🇯🇵 日本8|BGP优化
+      - 🇹🇭 泰国|BGP优化
+      - 🇮🇩 印尼|BGP优化
+      - 🇰🇷 韩国|BGP优化
+      - 🇺🇸 美国6|BGP优化
+      - 🇺🇸 美国1|BGP优化
+      - 🇺🇸 美国3|BGP优化
+      - 🇺🇸 美国2|BGP优化
+      - 🇺🇸 美国4|BGP优化
+      - 🇺🇸 美国5|BGP优化
+      - 🇩🇪 德国|BGP优化
+      - 🇵🇰 巴基斯坦|BGP优化
+      - 🇫🇷 法国|BGP优化
+      - 🇳🇱 荷兰|BGP优化
+      - 🇹🇷 土耳其|BGP优化
+      - 🇬🇧 英国|BGP优化
+      - 🇳🇬 尼日利亚|BGP优化
       - 🇭🇰 IEPL-香港1
       - 🇭🇰 IEPL-香港2
+      - 🇭🇰 IEPL-香港3
       - 🇭🇰 IEPL-香港动态家宽
-      - 🇹🇼 IEPL-台湾1
-      - 🇸🇬  IEPL-新加坡3
+      - 🇯🇵 IEPL-日本1
+      - 🇯🇵 IEPL-日本2
+      - 🇯🇵  IEPL-日本3
+      - 🇯🇵  IEPL-日本4
+      - 🇯🇵+直连-日本1
+      - 🇸🇬 IEPL-新加坡1
       - 🇸🇬  IEPL-新加坡2
-      - 🇯🇵  IEPL-日本2
-      - 🇹🇼 IEPL-台湾动态家宽
-      - 🇲🇾 IEPL-马来西亚1
-      - 🇲🇾 IEPL-马来西亚2
-      - 🇻🇳 IEPL-越南
-      - 🇹🇭 IEPL-泰国
-      - 🇮🇳 IEPL-印度
-      - 🇦🇺 IEPL-澳大利亚
+      - 🇸🇬  IEPL-新加坡3
+      - 🇸🇬  IEPL-新加坡4
+      - 🇸🇬 直连-新加坡
       - 🇺🇸  IEPL-美国1
       - 🇺🇸  IEPL-美国2
       - 🇺🇸  IEPL-美国3
-      - 🇺🇸+直连-美国
-      - 🇯🇵+直连-日本
-      - 🇬🇧 IEPL-英国静态家宽
-      - 🇭🇰 IEPL-香港3
+      - 🇺🇸  IEPL-美国4
+      - 🇺🇸  IEPL-美国静态家宽
+      - 🇦🇺 IEPL-澳大利亚
+      - 🇲🇾 IEPL-马来西亚1
+      - 🇲🇾 IEPL-马来西亚2
+      - 🇻🇳 IEPL-越南
+      - 🇹🇼 IEPL-台湾1
+      - 🇹🇼 IEPL-台湾2
+      - 🇹🇼 IEPL-台湾动态家宽
+      - 🇰🇷 IEPL-韩国静态家宽
+      - 🇹🇭 IEPL-泰国
       - 🇩🇪 IEPL-德国
-      - 🇳🇱 IEPL-荷兰
-      - 🇮🇩 IEPL-印度尼西亚
-      - 🇭🇰 官网  133vp.cc
-      - 🇪🇸 IEPL-西班牙
       - 🇬🇧 IEPL-英国
+      - 🇬🇧 IEPL-英国静态家宽
       - 🇨🇭 IEPL-瑞士
+      - 🇳🇱 IEPL-荷兰
       - 🇮🇱 IEPL-以色列
       - 🇦🇪IEPL-阿联酋
-      - 🇨🇦 IEPL-加拿大
-      - 🇹🇼 IEPL-台湾2
+      - 🇮🇳 IEPL-印度
       - 🇧🇷 IEPL-巴西
-      - 🇺🇸  IEPL-美国静态家宽
-      - 🇯🇵  IEPL-日本4
-      - 🇯🇵  IEPL-日本1
-      - 🇸🇬 直连-新加坡
-      - 🇰🇷 IEPL-韩国静态家宽
+      - 🇪🇸 IEPL-西班牙
+      - 🇮🇩 IEPL-印度尼西亚
+      - 🇨🇦 IEPL-加拿大
+      - "官网: 雨燕云.com"
+      - 请立即查看官网公告
+      - 🇨🇦 加拿大|BGP优化
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -589,45 +1456,103 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - 🇭🇰 IEPL-香港4
+      - 微信：gtyz222
+      - 🇺🇸+直连-美国4++IPv6
+      - 🇺🇸+直连-美国1
+      - 🇩🇪+直连-德国
+      - 🇭🇰 香港1|BGP优化
+      - 🇭🇰 香港B|BGP优化
+      - 🇭🇰 香港C|BGP优化
+      - 🇭🇰 香港D|BGP优化
+      - 🇭🇰 香港2|BGP优化
+      - 🇭🇰 香港3|BGP优化
+      - 🇭🇰 香港5|BGP优化
+      - 🇭🇰 香港E|BGP优化
+      - 🇭🇰 香港4|BGP优化
+      - 🇭🇰 香港A|BGP优化
+      - 🇭🇰+直连-香港
+      - 🇨🇳 台湾3|BGP优化
+      - 🇨🇳 台湾4|BGP优化
+      - 🇨🇳 台湾2|BGP优化
+      - 🇨🇳 台湾1|BGP优化
+      - 🇸🇬 新加坡2|BGP优化
+      - 🇸🇬 新加坡1|BGP优化
+      - 🇸🇬 新加坡4|BGP优化
+      - 🇸🇬 新加坡5|BGP优化
+      - 🇸🇬 新加坡6|BGP优化
+      - 🇸🇬 新加坡3|BGP优化
+      - 🇲🇾 马来西亚1|BGP优化
+      - 🇲🇾 马来西亚3|BGP优化
+      - 🇻🇳 越南|BGP优化
+      - 🇵🇰 菲律宾|BGP优化
+      - 🇲🇾 马来西亚2|BGP优化
+      - 🇯🇵 日本2|BGP优化
+      - 🇯🇵 日本3|BGP优化
+      - 🇯🇵 日本5|BGP优化
+      - 🇯🇵 日本7|BGP优化
+      - 🇯🇵 日本4|BGP优化
+      - 🇯🇵 日本6|BGP优化
+      - 🇯🇵 日本1|BGP优化
+      - 🇯🇵 日本8|BGP优化
+      - 🇹🇭 泰国|BGP优化
+      - 🇮🇩 印尼|BGP优化
+      - 🇰🇷 韩国|BGP优化
+      - 🇺🇸 美国6|BGP优化
+      - 🇺🇸 美国1|BGP优化
+      - 🇺🇸 美国3|BGP优化
+      - 🇺🇸 美国2|BGP优化
+      - 🇺🇸 美国4|BGP优化
+      - 🇺🇸 美国5|BGP优化
+      - 🇩🇪 德国|BGP优化
+      - 🇵🇰 巴基斯坦|BGP优化
+      - 🇫🇷 法国|BGP优化
+      - 🇳🇱 荷兰|BGP优化
+      - 🇹🇷 土耳其|BGP优化
+      - 🇬🇧 英国|BGP优化
+      - 🇳🇬 尼日利亚|BGP优化
       - 🇭🇰 IEPL-香港1
       - 🇭🇰 IEPL-香港2
+      - 🇭🇰 IEPL-香港3
       - 🇭🇰 IEPL-香港动态家宽
-      - 🇹🇼 IEPL-台湾1
-      - 🇸🇬  IEPL-新加坡3
+      - 🇯🇵 IEPL-日本1
+      - 🇯🇵 IEPL-日本2
+      - 🇯🇵  IEPL-日本3
+      - 🇯🇵  IEPL-日本4
+      - 🇯🇵+直连-日本1
+      - 🇸🇬 IEPL-新加坡1
       - 🇸🇬  IEPL-新加坡2
-      - 🇯🇵  IEPL-日本2
-      - 🇹🇼 IEPL-台湾动态家宽
-      - 🇲🇾 IEPL-马来西亚1
-      - 🇲🇾 IEPL-马来西亚2
-      - 🇻🇳 IEPL-越南
-      - 🇹🇭 IEPL-泰国
-      - 🇮🇳 IEPL-印度
-      - 🇦🇺 IEPL-澳大利亚
+      - 🇸🇬  IEPL-新加坡3
+      - 🇸🇬  IEPL-新加坡4
+      - 🇸🇬 直连-新加坡
       - 🇺🇸  IEPL-美国1
       - 🇺🇸  IEPL-美国2
       - 🇺🇸  IEPL-美国3
-      - 🇺🇸+直连-美国
-      - 🇯🇵+直连-日本
-      - 🇬🇧 IEPL-英国静态家宽
-      - 🇭🇰 IEPL-香港3
+      - 🇺🇸  IEPL-美国4
+      - 🇺🇸  IEPL-美国静态家宽
+      - 🇦🇺 IEPL-澳大利亚
+      - 🇲🇾 IEPL-马来西亚1
+      - 🇲🇾 IEPL-马来西亚2
+      - 🇻🇳 IEPL-越南
+      - 🇹🇼 IEPL-台湾1
+      - 🇹🇼 IEPL-台湾2
+      - 🇹🇼 IEPL-台湾动态家宽
+      - 🇰🇷 IEPL-韩国静态家宽
+      - 🇹🇭 IEPL-泰国
       - 🇩🇪 IEPL-德国
-      - 🇳🇱 IEPL-荷兰
-      - 🇮🇩 IEPL-印度尼西亚
-      - 🇭🇰 官网  133vp.cc
-      - 🇪🇸 IEPL-西班牙
       - 🇬🇧 IEPL-英国
+      - 🇬🇧 IEPL-英国静态家宽
       - 🇨🇭 IEPL-瑞士
+      - 🇳🇱 IEPL-荷兰
       - 🇮🇱 IEPL-以色列
       - 🇦🇪IEPL-阿联酋
-      - 🇨🇦 IEPL-加拿大
-      - 🇹🇼 IEPL-台湾2
+      - 🇮🇳 IEPL-印度
       - 🇧🇷 IEPL-巴西
-      - 🇺🇸  IEPL-美国静态家宽
-      - 🇯🇵  IEPL-日本4
-      - 🇯🇵  IEPL-日本1
-      - 🇸🇬 直连-新加坡
-      - 🇰🇷 IEPL-韩国静态家宽
+      - 🇪🇸 IEPL-西班牙
+      - 🇮🇩 IEPL-印度尼西亚
+      - 🇨🇦 IEPL-加拿大
+      - "官网: 雨燕云.com"
+      - 请立即查看官网公告
+      - 🇨🇦 加拿大|BGP优化
 rule-providers:
   LocalAreaNetwork:
     type: http
