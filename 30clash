@@ -1,1095 +1,346 @@
-# ;不要随意改变关键字，否则会导致出错
-# ;acl4SSR规则
-# ;去广告：支持
-# ;自动测速：支持
-# ;微软分流：不支持
-# ;苹果分流：不支持
-# ;增强中国IP段：不支持
-# ;增强国外GFW：不支持
-# ;ruleset=🎯 全球直连,[]GEOIP,LAN
-
 mixed-port: 7890
-allow-lan: false
+allow-lan: true
 mode: rule
-ipv6: false
 log-level: info
-external-controller: 0.0.0.0:9090
+ipv6: true
+external-controller: 127.0.0.1:9090
 dns:
   enable: true
-  listen: 0.0.0.0:53
-  ipv6: false
-  default-nameserver:
-    - 223.5.5.5
-    - 114.114.114.114
-  nameserver:
-    - 223.5.5.5
-    - 114.114.114.114
-    - 119.29.29.29
-    - 180.76.76.76
+  listen: 0.0.0.0:1053
+  ipv6: true
   enhanced-mode: fake-ip
   fake-ip-range: 198.18.0.1/16
-  fake-ip-filter:
-    - "*.lan"
-    - "*.localdomain"
-    - "*.example"
-    - "*.invalid"
-    - "*.localhost"
-    - "*.test"
-    - "*.local"
-    - "*.home.arpa"
-    - router.asus.com
-    - localhost.sec.qq.com
-    - localhost.ptlogin2.qq.com
-    - +.msftconnecttest.com
-tun:
-  enable: true
-  stack: system
-  auto-route: true
-  auto-detect-interface: true
-  dns-hijack:
-    - 114.114.114.114
-    - 180.76.76.76
-    - 119.29.29.29
+  default-nameserver:
     - 223.5.5.5
-    - 8.8.8.8
-    - 8.8.4.4
-    - 1.1.1.1
-    - 1.0.0.1
-
-
+    - 119.29.29.29
+  nameserver:
+    - https://dns.alidns.com/dns-query
+    - https://doh.pub/dns-query
 proxies:
-  - type: trojan
-    name: 微信：gtyz222
-    server: hxfz940e90d9.bdytul.com
-    port: 12221
-    password: fb688788-be48-4ae2-8bc1-724a8ca254bc
-    network: tcp
-    sni: v1-dy.ixigua.com
-    skip-cert-verify: true
+  - name: 微信：gtyz222
+    type: ss
+    server: junp.kuaileiduanko.com
+    port: 36086
+    cipher: aes-128-gcm
+    password: 424e85f2-41ef-4c0b-8885-68b9db145b5d
+  - name: 🇭🇰 IEPL-香港1
+    type: ss
+    server: junp.kuaileiduanko.com
+    port: 36084
+    cipher: aes-128-gcm
+    password: 424e85f2-41ef-4c0b-8885-68b9db145b5d
+  - name: 🇭🇰 IEPL-香港2
+    type: ss
+    server: junp.kuaileiduanko.com
+    port: 36083
+    cipher: aes-128-gcm
+    password: 424e85f2-41ef-4c0b-8885-68b9db145b5d
+  - name: 🇭🇰 IEPL-香港3
+    type: ss
+    server: junp.kuaileiduanko.com
+    port: 36082
+    cipher: aes-128-gcm
+    password: 424e85f2-41ef-4c0b-8885-68b9db145b5d
+  - name: 🇭🇰 IEPL-香港4
+    type: ss
+    server: junp.kuaileiduanko.com
+    port: 36087
+    cipher: aes-128-gcm
+    password: 424e85f2-41ef-4c0b-8885-68b9db145b5d
+  - name: 🇭🇰 IEPL-香港动态家宽
+    type: ss
+    server: junp.kuaileiduanko.com
+    port: 36123
+    cipher: aes-128-gcm
+    password: 424e85f2-41ef-4c0b-8885-68b9db145b5d
+  - name: 🇭🇰+直连-香港
+    type: vless
+    server: gm-hk111.aiwowo.xyz
+    port: 20076
+    uuid: 424e85f2-41ef-4c0b-8885-68b9db145b5d
+    servername: www.apple.com
     tls: true
-  - type: ss
-    name: 泰国
-    server: sg04.dns-node.top
-    port: 45621
+    flow: xtls-rprx-vision
+    client-fingerprint: edge
+    reality-opts:
+      public-key: Z8tJYAjotKrLI4LMnXPYWZZBgJgvNjiD0rtmcUJt-R0
+      short-id: ac1c6898c4bac539
+  - name: 🇯🇵  IEPL-日本1
+    type: ss
+    server: junp.kuaileiduanko.com
+    port: 36081
     cipher: aes-128-gcm
-    password: ba0debc2-1c7e-4638-b8c1-13f052ba0ad3
-  - type: ss
-    name: 柬埔寨
-    server: sg03.dns-node.top
-    port: 46335
+    password: 424e85f2-41ef-4c0b-8885-68b9db145b5d
+  - name: 🇯🇵  IEPL-日本2
+    type: ss
+    server: junp.kuaileiduanko.com
+    port: 36080
     cipher: aes-128-gcm
-    password: ba0debc2-1c7e-4638-b8c1-13f052ba0ad3
-  - type: ss
-    name: 老挝
-    server: sg04.dns-node.top
-    port: 45622
+    password: 424e85f2-41ef-4c0b-8885-68b9db145b5d
+  - name: 🇯🇵  IEPL-日本3
+    type: ss
+    server: junp.kuaileiduanko.com
+    port: 36079
+    cipher: 2022-blake3-aes-128-gcm
+    password: NDkyYzk4YTY3Yjg0NjViMQ==:NDI0ZTg1ZjItNDFlZi00Yw==
+  - name: 🇯🇵  IEPL-日本4
+    type: ss
+    server: junp.kuaileiduanko.com
+    port: 36078
     cipher: aes-128-gcm
-    password: ba0debc2-1c7e-4638-b8c1-13f052ba0ad3
-  - type: ss
-    name: 缅甸
-    server: sg03.dns-node.top
-    port: 46333
-    cipher: aes-128-gcm
-    password: ba0debc2-1c7e-4638-b8c1-13f052ba0ad3
-  - type: ss
-    name: 孟加拉国
-    server: sg04.dns-node.top
-    port: 46338
-    cipher: aes-128-gcm
-    password: ba0debc2-1c7e-4638-b8c1-13f052ba0ad3
-  - type: ss
-    name: 斯里兰卡
-    server: sg04.dns-node.top
-    port: 45624
-    cipher: aes-128-gcm
-    password: ba0debc2-1c7e-4638-b8c1-13f052ba0ad3
-  - type: ss
-    name: 蒙古
-    server: sg03.dns-node.top
-    port: 46334
-    cipher: aes-128-gcm
-    password: ba0debc2-1c7e-4638-b8c1-13f052ba0ad3
-  - type: ss
-    name: 台湾
-    server: tw01.dns-node.top
-    port: 45571
-    cipher: aes-128-gcm
-    password: ba0debc2-1c7e-4638-b8c1-13f052ba0ad3
-  - type: ss
-    name: 尼泊尔
-    server: sg04.dns-node.top
-    port: 45623
-    cipher: aes-128-gcm
-    password: ba0debc2-1c7e-4638-b8c1-13f052ba0ad3
-  - type: ss
-    name: 新加坡
-    server: sg04.dns-node.top
-    port: 45609
-    cipher: aes-128-gcm
-    password: ba0debc2-1c7e-4638-b8c1-13f052ba0ad3
-  - type: trojan
-    name: 🇭🇰 香港中转 - 东莞
-    server: hxdwa7a919e0.bdytul.com
-    port: 12221
-    password: fb688788-be48-4ae2-8bc1-724a8ca254bc
-    network: tcp
-    sni: v1-dy.ixigua.com
-    skip-cert-verify: true
+    password: 424e85f2-41ef-4c0b-8885-68b9db145b5d
+  - name: 🇯🇵+直连-日本1
+    type: vless
+    server: gm-jp0666.aiwowo.xyz
+    port: 20076
+    uuid: 424e85f2-41ef-4c0b-8885-68b9db145b5d
+    servername: www.e-gov.go.jp
     tls: true
-  - type: ss
-    name: 巴基斯坦
-    server: sg03.dns-node.top
-    port: 45800
-    cipher: aes-128-gcm
-    password: ba0debc2-1c7e-4638-b8c1-13f052ba0ad3
-  - type: ss
-    name: 马来西亚
-    server: sg04.dns-node.top
-    port: 45610
-    cipher: aes-128-gcm
-    password: ba0debc2-1c7e-4638-b8c1-13f052ba0ad3
-  - type: ss
-    name: 印度尼西亚
-    server: sg03.dns-node.top
-    port: 45608
-    cipher: aes-128-gcm
-    password: ba0debc2-1c7e-4638-b8c1-13f052ba0ad3
-  - type: trojan
-    name: 🇨🇳 台湾中转
-    server: hxfz940e90d9.bdytul.com
-    port: 42765
-    password: fb688788-be48-4ae2-8bc1-724a8ca254bc
-    network: tcp
-    sni: v1-dy.ixigua.com
-    skip-cert-verify: true
+    flow: xtls-rprx-vision
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: Z8tJYAjotKrLI4LMnXPYWZZBgJgvNjiD0rtmcUJt-R0
+      short-id: ac1c6898c4bac119
+  - name: 🇯🇵+直连-日本2
+    type: vless
+    server: gm-jp0444.aiwowo.xyz
+    port: 10001
+    uuid: 424e85f2-41ef-4c0b-8885-68b9db145b5d
+    servername: www.e-gov.go.jp
     tls: true
-  - type: trojan
-    name: 🇸🇬 新加坡中转 - 广州
-    server: hxsz6a2b8299.bdytul.com
-    port: 18489
-    password: fb688788-be48-4ae2-8bc1-724a8ca254bc
-    network: tcp
-    sni: v1-dy.ixigua.com
-    skip-cert-verify: true
+    flow: xtls-rprx-vision
+    client-fingerprint: qq
+    reality-opts:
+      public-key: Z8tJYAjotKrLI4LMnXPYWZZBgJgvNjiD0rtmcUJt-R0
+      short-id: ac1c6898c4bac112
+  - name: 🇩🇪+直连-德国
+    type: vless
+    server: gm-de09.aiwowo.xyz
+    port: 20076
+    uuid: 424e85f2-41ef-4c0b-8885-68b9db145b5d
+    servername: www.apple.com
     tls: true
-  - type: ss
-    name: 越南
-    server: sg04.dns-node.top
-    port: 46115
+    flow: xtls-rprx-vision
+    client-fingerprint: ios
+    reality-opts:
+      public-key: Z8tJYAjotKrLI4LMnXPYWZZBgJgvNjiD0rtmcUJt-R0
+      short-id: ac1c6898c4bac649
+  - name: 🇸🇬  IEPL-新加坡1
+    type: ss
+    server: junp.kuaileiduanko.com
+    port: 36076
+    cipher: 2022-blake3-aes-128-gcm
+    password: ZDc2YTMxZTgwMGFmNjhlMg==:NDI0ZTg1ZjItNDFlZi00Yw==
+  - name: 🇸🇬  IEPL-新加坡2
+    type: ss
+    server: junp.kuaileiduanko.com
+    port: 36075
     cipher: aes-128-gcm
-    password: ba0debc2-1c7e-4638-b8c1-13f052ba0ad3
-  - type: trojan
-    name: 🇸🇬 新加坡中转 - 东莞
-    server: hxdwa7a919e0.bdytul.com
-    port: 18489
-    password: fb688788-be48-4ae2-8bc1-724a8ca254bc
-    network: tcp
-    sni: v1-dy.ixigua.com
-    skip-cert-verify: true
+    password: 424e85f2-41ef-4c0b-8885-68b9db145b5d
+  - name: 🇸🇬  IEPL-新加坡3
+    type: ss
+    server: junp.kuaileiduanko.com
+    port: 36073
+    cipher: aes-128-gcm
+    password: 424e85f2-41ef-4c0b-8885-68b9db145b5d
+  - name: 🇸🇬  IEPL-新加坡4
+    type: ss
+    server: junp.kuaileiduanko.com
+    port: 36450
+    cipher: 2022-blake3-aes-128-gcm
+    password: NjgxY2FhMzYwOTRhZjA4NQ==:NDI0ZTg1ZjItNDFlZi00Yw==
+  - name: 🇺🇸  IEPL-美国1
+    type: ss
+    server: junp.kuaileiduanko.com
+    port: 36072
+    cipher: aes-128-gcm
+    password: 424e85f2-41ef-4c0b-8885-68b9db145b5d
+  - name: 🇺🇸  IEPL-美国2
+    type: ss
+    server: junp.kuaileiduanko.com
+    port: 36071
+    cipher: aes-128-gcm
+    password: 424e85f2-41ef-4c0b-8885-68b9db145b5d
+  - name: 🇺🇸  IEPL-美国3
+    type: ss
+    server: 6688.rkkuailei.cc
+    port: 36070
+    cipher: aes-128-gcm
+    password: 424e85f2-41ef-4c0b-8885-68b9db145b5d
+  - name: 🇺🇸  IEPL-美国4
+    type: ss
+    server: junp.kuaileiduanko.com
+    port: 36069
+    cipher: 2022-blake3-aes-128-gcm
+    password: NjgxY2FhMzYwOTRhZjA4NQ==:NDI0ZTg1ZjItNDFlZi00Yw==
+  - name: 🇺🇸  IEPL-美国静态家宽
+    type: ss
+    server: junp.kuaileiduanko.com
+    port: 36165
+    cipher: aes-128-gcm
+    password: 424e85f2-41ef-4c0b-8885-68b9db145b5d
+  - name: 🇺🇸+直连-美国1
+    type: vless
+    server: gm-us055.aiwowo.xyz
+    port: 30062
+    uuid: 424e85f2-41ef-4c0b-8885-68b9db145b5d
+    servername: www.usa.gov
     tls: true
-  - type: trojan
-    name: 🇯🇵 日本中转 - 东莞
-    server: hxdwa7a919e0.bdytul.com
-    port: 28713
-    password: fb688788-be48-4ae2-8bc1-724a8ca254bc
-    network: tcp
-    sni: v1-dy.ixigua.com
-    skip-cert-verify: true
+    flow: xtls-rprx-vision
+    client-fingerprint: ios
+    reality-opts:
+      public-key: Z8tJYAjotKrLI4LMnXPYWZZBgJgvNjiD0rtmcUJt-R0
+      short-id: ac1c6898c4bac129
+  - name: 🇺🇸+直连-美国2+IPV6
+    type: vless
+    server: gm-jp079.aiwowo.xyz
+    port: 30062
+    uuid: 424e85f2-41ef-4c0b-8885-68b9db145b5d
+    servername: www.apple.com
     tls: true
-  - type: trojan
-    name: 🇵🇭 菲律宾
-    server: hxfz940e90d9.bdytul.com
-    port: 58947
-    password: fb688788-be48-4ae2-8bc1-724a8ca254bc
-    network: tcp
-    sni: v1-dy.ixigua.com
-    skip-cert-verify: true
+    flow: xtls-rprx-vision
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: Z8tJYAjotKrLI4LMnXPYWZZBgJgvNjiD0rtmcUJt-R0
+      short-id: ac1c6898c4bac999
+  - name: 🇺🇸+直连-美国3++IPv6
+    type: vless
+    server: gm-jp078.aiwowo.xyz
+    port: 20076
+    uuid: 424e85f2-41ef-4c0b-8885-68b9db145b5d
+    servername: www.apple.com
     tls: true
-  - type: trojan
-    name: 🇮🇩 印度尼西亚
-    server: hxfz940e90d9.bdytul.com
-    port: 40391
-    password: fb688788-be48-4ae2-8bc1-724a8ca254bc
-    network: tcp
-    sni: v1-dy.ixigua.com
-    skip-cert-verify: true
-    tls: true
-  - type: trojan
-    name: 🇨🇳 台湾中转 - 广州
-    server: hxsz6a2b8299.bdytul.com
-    port: 42765
-    password: fb688788-be48-4ae2-8bc1-724a8ca254bc
-    network: tcp
-    sni: v1-dy.ixigua.com
-    skip-cert-verify: true
-    tls: true
-  - type: ss
-    name: 韩国
-    server: jp01.dns-node.top
-    port: 45572
-    cipher: aes-128-gcm
-    password: ba0debc2-1c7e-4638-b8c1-13f052ba0ad3
-  - type: trojan
-    name: 🇮🇳 印度-西部
-    server: hxfz940e90d9.bdytul.com
-    port: 33243
-    password: fb688788-be48-4ae2-8bc1-724a8ca254bc
-    network: tcp
-    sni: v1-dy.ixigua.com
-    skip-cert-verify: true
-    tls: true
-  - type: trojan
-    name: 🇯🇵 日本中转 - 广州
-    server: hxsz6a2b8299.bdytul.com
-    port: 28713
-    password: fb688788-be48-4ae2-8bc1-724a8ca254bc
-    network: tcp
-    sni: v1-dy.ixigua.com
-    skip-cert-verify: true
-    tls: true
-  - type: trojan
-    name: 🇨🇳 台湾中转 - 东莞
-    server: hxdwa7a919e0.bdytul.com
-    port: 42765
-    password: fb688788-be48-4ae2-8bc1-724a8ca254bc
-    network: tcp
-    sni: v1-dy.ixigua.com
-    skip-cert-verify: true
-    tls: true
-  - type: ss
-    name: 日本
-    server: jp01.dns-node.top
-    port: 45612
-    cipher: aes-128-gcm
-    password: ba0debc2-1c7e-4638-b8c1-13f052ba0ad3
-  - type: trojan
-    name: 🇦🇺 澳大利亚
-    server: hxfz940e90d9.bdytul.com
-    port: 50757
-    password: fb688788-be48-4ae2-8bc1-724a8ca254bc
-    network: tcp
-    sni: v1-dy.ixigua.com
-    skip-cert-verify: true
-    tls: true
-  - type: ss
-    name: 阿联酋
-    server: sg04.dns-node.top
-    port: 46340
-    cipher: aes-128-gcm
-    password: ba0debc2-1c7e-4638-b8c1-13f052ba0ad3
-  - type: trojan
-    name: 🇵🇰 巴基斯坦
-    server: hxfz940e90d9.bdytul.com
-    port: 14747
-    password: fb688788-be48-4ae2-8bc1-724a8ca254bc
-    network: tcp
-    sni: v1-dy.ixigua.com
-    skip-cert-verify: true
-    tls: true
-  - type: ss
-    name: 美国
-    server: us01.dns-node.top
-    port: 45581
-    cipher: aes-128-gcm
-    password: ba0debc2-1c7e-4638-b8c1-13f052ba0ad3
-  - type: ss
-    name: 澳大利亚
-    server: sg03.dns-node.top
-    port: 45607
-    cipher: aes-128-gcm
-    password: ba0debc2-1c7e-4638-b8c1-13f052ba0ad3
-  - type: trojan
-    name: 🇺🇸 美国中转 - 广州
-    server: hxsz6a2b8299.bdytul.com
-    port: 21489
-    password: fb688788-be48-4ae2-8bc1-724a8ca254bc
-    network: tcp
-    sni: v1-dy.ixigua.com
-    skip-cert-verify: true
-    tls: true
-  - type: trojan
-    name: 🇭🇰 香港中转 - 广州
-    server: hxsz6a2b8299.bdytul.com
-    port: 12221
-    password: fb688788-be48-4ae2-8bc1-724a8ca254bc
-    network: tcp
-    sni: v1-dy.ixigua.com
-    skip-cert-verify: true
-    tls: true
-  - type: ss
-    name: 英国
-    server: uk01.dns-node.top
-    port: 45615
-    cipher: aes-128-gcm
-    password: ba0debc2-1c7e-4638-b8c1-13f052ba0ad3
-  - type: ss
-    name: 新西兰
-    server: sg04.dns-node.top
-    port: 45611
-    cipher: aes-128-gcm
-    password: ba0debc2-1c7e-4638-b8c1-13f052ba0ad3
-  - type: trojan
-    name: 🇰🇷 韩国
-    server: hxfz940e90d9.bdytul.com
-    port: 43457
-    password: fb688788-be48-4ae2-8bc1-724a8ca254bc
-    network: tcp
-    sni: v1-dy.ixigua.com
-    skip-cert-verify: true
-    tls: true
-  - type: ss
-    name: 哈萨克斯坦
-    server: sg04.dns-node.top
-    port: 46339
-    cipher: aes-128-gcm
-    password: ba0debc2-1c7e-4638-b8c1-13f052ba0ad3
-  - type: ss
-    name: 菲律宾
-    server: sg03.dns-node.top
-    port: 45661
-    cipher: aes-128-gcm
-    password: ba0debc2-1c7e-4638-b8c1-13f052ba0ad3
-  - type: trojan
-    name: 🇳🇱 荷兰
-    server: hxfz940e90d9.bdytul.com
-    port: 39851
-    password: fb688788-be48-4ae2-8bc1-724a8ca254bc
-    network: tcp
-    sni: v1-dy.ixigua.com
-    skip-cert-verify: true
-    tls: true
-  - type: trojan
-    name: 🇩🇪 德国
-    server: hxfz940e90d9.bdytul.com
-    port: 21463
-    password: fb688788-be48-4ae2-8bc1-724a8ca254bc
-    network: tcp
-    sni: v1-dy.ixigua.com
-    skip-cert-verify: true
-    tls: true
-  - type: trojan
-    name: 🇲🇽 墨西哥
-    server: hxfz940e90d9.bdytul.com
-    port: 14571
-    password: fb688788-be48-4ae2-8bc1-724a8ca254bc
-    network: tcp
-    sni: v1-dy.ixigua.com
-    skip-cert-verify: true
-    tls: true
-  - type: ss
-    name: 巴拿马
-    server: us04.dns-node.top
-    port: 46320
-    cipher: aes-128-gcm
-    password: ba0debc2-1c7e-4638-b8c1-13f052ba0ad3
-  - type: trojan
-    name: 🇨🇦 加拿大
-    server: hxfz940e90d9.bdytul.com
-    port: 50121
-    password: fb688788-be48-4ae2-8bc1-724a8ca254bc
-    network: tcp
-    sni: v1-dy.ixigua.com
-    skip-cert-verify: true
-    tls: true
-  - type: ss
-    name: 乌兹别克斯坦
-    server: eu2.dns-node.top
-    port: 46491
-    cipher: aes-128-gcm
-    password: ba0debc2-1c7e-4638-b8c1-13f052ba0ad3
-  - type: trojan
-    name: 🇸🇦 沙特阿拉伯
-    server: hxfz940e90d9.bdytul.com
-    port: 59137
-    password: fb688788-be48-4ae2-8bc1-724a8ca254bc
-    network: tcp
-    sni: v1-dy.ixigua.com
-    skip-cert-verify: true
-    tls: true
-  - type: ss
-    name: 开曼群岛
-    server: us04.dns-node.top
-    port: 46319
-    cipher: aes-128-gcm
-    password: ba0debc2-1c7e-4638-b8c1-13f052ba0ad3
-  - type: ss
-    name: 列支敦士登
-    server: de01.dns-node.top
-    port: 46161
-    cipher: aes-128-gcm
-    password: ba0debc2-1c7e-4638-b8c1-13f052ba0ad3
-  - type: trojan
-    name: 🇫🇷 法国
-    server: hxfz940e90d9.bdytul.com
-    port: 14651
-    password: fb688788-be48-4ae2-8bc1-724a8ca254bc
-    network: tcp
-    sni: v1-dy.ixigua.com
-    skip-cert-verify: true
-    tls: true
-  - type: trojan
-    name: 🇸🇪 瑞典
-    server: hxfz940e90d9.bdytul.com
-    port: 59225
-    password: fb688788-be48-4ae2-8bc1-724a8ca254bc
-    network: tcp
-    sni: v1-dy.ixigua.com
-    skip-cert-verify: true
-    tls: true
-  - type: ss
-    name: 瑞士
-    server: eu3.dns-node.top
-    port: 46315
-    cipher: aes-128-gcm
-    password: ba0debc2-1c7e-4638-b8c1-13f052ba0ad3
-  - type: trojan
-    name: 🇹🇷 土耳其
-    server: hxfz940e90d9.bdytul.com
-    port: 49569
-    password: fb688788-be48-4ae2-8bc1-724a8ca254bc
-    network: tcp
-    sni: v1-dy.ixigua.com
-    skip-cert-verify: true
-    tls: true
-  - type: ss
-    name: 比利时
-    server: eu2.dns-node.top
-    port: 46301
-    cipher: aes-128-gcm
-    password: ba0debc2-1c7e-4638-b8c1-13f052ba0ad3
-  - type: ss
-    name: 肯尼亚
-    server: eu3.dns-node.top
-    port: 46318
-    cipher: aes-128-gcm
-    password: ba0debc2-1c7e-4638-b8c1-13f052ba0ad3
-  - type: ss
-    name: 卢森堡
-    server: de01.dns-node.top
-    port: 46162
-    cipher: aes-128-gcm
-    password: ba0debc2-1c7e-4638-b8c1-13f052ba0ad3
-  - type: ss
-    name: 荷兰
-    server: eu3.dns-node.top
-    port: 46311
-    cipher: aes-128-gcm
-    password: ba0debc2-1c7e-4638-b8c1-13f052ba0ad3
-  - type: ss
-    name: 墨西哥
-    server: us_nord.dns-node.top
-    port: 45590
-    cipher: aes-128-gcm
-    password: ba0debc2-1c7e-4638-b8c1-13f052ba0ad3
-  - type: trojan
-    name: 🇨🇭 瑞士
-    server: hxfz940e90d9.bdytul.com
-    port: 50140
-    password: fb688788-be48-4ae2-8bc1-724a8ca254bc
-    network: tcp
-    sni: v1-dy.ixigua.com
-    skip-cert-verify: true
-    tls: true
-  - type: ss
-    name: 英属泽西岛
-    server: de01.dns-node.top
-    port: 46158
-    cipher: aes-128-gcm
-    password: ba0debc2-1c7e-4638-b8c1-13f052ba0ad3
-  - type: ss
-    name: 奥地利
-    server: de01.dns-node.top
-    port: 46159
-    cipher: aes-128-gcm
-    password: ba0debc2-1c7e-4638-b8c1-13f052ba0ad3
-  - type: ss
-    name: 加拿大
-    server: us03.dns-node.top
-    port: 45586
-    cipher: aes-128-gcm
-    password: ba0debc2-1c7e-4638-b8c1-13f052ba0ad3
-  - type: ss
-    name: 马耳他
-    server: de01.dns-node.top
-    port: 46163
-    cipher: aes-128-gcm
-    password: ba0debc2-1c7e-4638-b8c1-13f052ba0ad3
-  - type: ss
-    name: 哥斯达黎加
-    server: us_nord.dns-node.top
-    port: 46594
-    cipher: aes-128-gcm
-    password: ba0debc2-1c7e-4638-b8c1-13f052ba0ad3
-  - type: ss
-    name: 克罗地亚
-    server: eu2.dns-node.top
-    port: 46304
-    cipher: aes-128-gcm
-    password: ba0debc2-1c7e-4638-b8c1-13f052ba0ad3
-  - type: ss
-    name: 瑞典
-    server: eu2.dns-node.top
-    port: 46305
-    cipher: aes-128-gcm
-    password: ba0debc2-1c7e-4638-b8c1-13f052ba0ad3
-  - type: ss
-    name: 匈牙利
-    server: de01.dns-node.top
-    port: 46157
-    cipher: aes-128-gcm
-    password: ba0debc2-1c7e-4638-b8c1-13f052ba0ad3
-  - type: trojan
-    name: 🇬🇷 希腊
-    server: hxfz940e90d9.bdytul.com
-    port: 37473
-    password: fb688788-be48-4ae2-8bc1-724a8ca254bc
-    network: tcp
-    sni: v1-dy.ixigua.com
-    skip-cert-verify: true
-    tls: true
-  - type: ss
-    name: 安道尔
-    server: de01.dns-node.top
-    port: 46152
-    cipher: aes-128-gcm
-    password: ba0debc2-1c7e-4638-b8c1-13f052ba0ad3
-  - type: ss
-    name: 土耳其
-    server: eu.dns-node.top
-    port: 45602
-    cipher: aes-128-gcm
-    password: ba0debc2-1c7e-4638-b8c1-13f052ba0ad3
-  - type: ss
-    name: 摩洛哥
-    server: eu3.dns-node.top
-    port: 46317
-    cipher: aes-128-gcm
-    password: ba0debc2-1c7e-4638-b8c1-13f052ba0ad3
-  - type: ss
-    name: 法国
-    server: eu.dns-node.top
-    port: 45597
-    cipher: aes-128-gcm
-    password: ba0debc2-1c7e-4638-b8c1-13f052ba0ad3
-  - type: ss
-    name: 意大利
-    server: de01.dns-node.top
-    port: 45599
-    cipher: aes-128-gcm
-    password: ba0debc2-1c7e-4638-b8c1-13f052ba0ad3
-  - type: trojan
-    name: 🇨🇴 哥伦比亚
-    server: hxfz940e90d9.bdytul.com
-    port: 55799
-    password: fb688788-be48-4ae2-8bc1-724a8ca254bc
-    network: tcp
-    sni: v1-dy.ixigua.com
-    skip-cert-verify: true
-    tls: true
-  - type: ss
-    name: 德国
-    server: eu.dns-node.top
-    port: 45594
-    cipher: aes-128-gcm
-    password: ba0debc2-1c7e-4638-b8c1-13f052ba0ad3
-  - type: ss
-    name: 爱尔兰
-    server: eu2.dns-node.top
-    port: 46308
-    cipher: aes-128-gcm
-    password: ba0debc2-1c7e-4638-b8c1-13f052ba0ad3
-  - type: ss
-    name: 埃及
-    server: eu.dns-node.top
-    port: 45595
-    cipher: aes-128-gcm
-    password: ba0debc2-1c7e-4638-b8c1-13f052ba0ad3
-  - type: ss
-    name: 乌克兰
-    server: de01.dns-node.top
-    port: 45603
-    cipher: aes-128-gcm
-    password: ba0debc2-1c7e-4638-b8c1-13f052ba0ad3
-  - type: ss
-    name: 拉脱维亚
-    server: de01.dns-node.top
-    port: 46160
-    cipher: aes-128-gcm
-    password: ba0debc2-1c7e-4638-b8c1-13f052ba0ad3
-  - type: ss
-    name: 丹麦
-    server: eu2.dns-node.top
-    port: 46302
-    cipher: aes-128-gcm
-    password: ba0debc2-1c7e-4638-b8c1-13f052ba0ad3
-  - type: ss
-    name: 阿尔及利亚
-    server: eu2.dns-node.top
-    port: 46492
-    cipher: aes-128-gcm
-    password: ba0debc2-1c7e-4638-b8c1-13f052ba0ad3
-  - type: ss
-    name: 百慕大
-    server: us_nord.dns-node.top
-    port: 45593
-    cipher: aes-128-gcm
-    password: ba0debc2-1c7e-4638-b8c1-13f052ba0ad3
-  - type: ss
-    name: 芬兰
-    server: eu2.dns-node.top
-    port: 46303
-    cipher: aes-128-gcm
-    password: ba0debc2-1c7e-4638-b8c1-13f052ba0ad3
-  - type: trojan
-    name: 🇸🇬 新加坡中转
-    server: hxfz940e90d9.bdytul.com
-    port: 48291
-    password: fb688788-be48-4ae2-8bc1-724a8ca254bc
-    network: tcp
-    sni: v1-dy.ixigua.com
-    skip-cert-verify: true
-    tls: true
-  - type: ss
-    name: 黑山
-    server: de01.dns-node.top
-    port: 46166
-    cipher: aes-128-gcm
-    password: ba0debc2-1c7e-4638-b8c1-13f052ba0ad3
-  - type: trojan
-    name: 🇯🇵 日本中转
-    server: hxfz940e90d9.bdytul.com
-    port: 28713
-    password: fb688788-be48-4ae2-8bc1-724a8ca254bc
-    network: tcp
-    sni: v1-dy.ixigua.com
-    skip-cert-verify: true
-    tls: true
-  - type: ss
-    name: 波兰
-    server: eu3.dns-node.top
-    port: 46316
-    cipher: aes-128-gcm
-    password: ba0debc2-1c7e-4638-b8c1-13f052ba0ad3
-  - type: ss
-    name: 挪威
-    server: eu3.dns-node.top
-    port: 46313
-    cipher: aes-128-gcm
-    password: ba0debc2-1c7e-4638-b8c1-13f052ba0ad3
-  - type: trojan
-    name: 🇪🇸 西班牙
-    server: hxfz940e90d9.bdytul.com
-    port: 34249
-    password: fb688788-be48-4ae2-8bc1-724a8ca254bc
-    network: tcp
-    sni: v1-dy.ixigua.com
-    skip-cert-verify: true
-    tls: true
-  - type: ss
-    name: 阿尔巴尼亚
-    server: de01.dns-node.top
-    port: 46101
-    cipher: aes-128-gcm
-    password: ba0debc2-1c7e-4638-b8c1-13f052ba0ad3
-  - type: ss
-    name: 葡萄牙
-    server: eu3.dns-node.top
-    port: 46314
-    cipher: aes-128-gcm
-    password: ba0debc2-1c7e-4638-b8c1-13f052ba0ad3
-  - type: ss
-    name: 波黑
-    server: de01.dns-node.top
-    port: 46153
-    cipher: aes-128-gcm
-    password: ba0debc2-1c7e-4638-b8c1-13f052ba0ad3
-  - type: ss
-    name: 保加利亚
-    server: de01.dns-node.top
-    port: 46154
-    cipher: aes-128-gcm
-    password: ba0debc2-1c7e-4638-b8c1-13f052ba0ad3
-  - type: ss
-    name: 摩尔多瓦
-    server: de01.dns-node.top
-    port: 46164
-    cipher: aes-128-gcm
-    password: ba0debc2-1c7e-4638-b8c1-13f052ba0ad3
-  - type: ss
-    name: 希腊
-    server: eu2.dns-node.top
-    port: 46306
-    cipher: aes-128-gcm
-    password: ba0debc2-1c7e-4638-b8c1-13f052ba0ad3
-  - type: ss
-    name: 乌拉圭
-    server: us04.dns-node.top
-    port: 46321
-    cipher: aes-128-gcm
-    password: ba0debc2-1c7e-4638-b8c1-13f052ba0ad3
-  - type: ss
-    name: 爱沙尼亚
-    server: de01.dns-node.top
-    port: 46156
-    cipher: aes-128-gcm
-    password: ba0debc2-1c7e-4638-b8c1-13f052ba0ad3
-  - type: ss
-    name: 立陶宛
-    server: eu2.dns-node.top
-    port: 46309
-    cipher: aes-128-gcm
-    password: ba0debc2-1c7e-4638-b8c1-13f052ba0ad3
-  - type: trojan
-    name: 🇳🇬 尼日利亚
-    server: hxfz940e90d9.bdytul.com
-    port: 34183
-    password: fb688788-be48-4ae2-8bc1-724a8ca254bc
-    network: tcp
-    sni: v1-dy.ixigua.com
-    skip-cert-verify: true
-    tls: true
-  - type: ss
-    name: 巴西
-    server: us03.dns-node.top
-    port: 45585
-    cipher: aes-128-gcm
-    password: ba0debc2-1c7e-4638-b8c1-13f052ba0ad3
-  - type: ss
-    name: 多米尼加
-    server: us_nord.dns-node.top
-    port: 46595
-    cipher: aes-128-gcm
-    password: ba0debc2-1c7e-4638-b8c1-13f052ba0ad3
-  - type: ss
-    name: 阿根廷
-    server: us03.dns-node.top
-    port: 45583
-    cipher: aes-128-gcm
-    password: ba0debc2-1c7e-4638-b8c1-13f052ba0ad3
-  - type: trojan
-    name: 🇿🇦 南非
-    server: hxfz940e90d9.bdytul.com
-    port: 53759
-    password: fb688788-be48-4ae2-8bc1-724a8ca254bc
-    network: tcp
-    sni: v1-dy.ixigua.com
-    skip-cert-verify: true
-    tls: true
-  - type: trojan
-    name: 🇹🇭 泰国
-    server: hxfz940e90d9.bdytul.com
-    port: 43855
-    password: fb688788-be48-4ae2-8bc1-724a8ca254bc
-    network: tcp
-    sni: v1-dy.ixigua.com
-    skip-cert-verify: true
-    tls: true
-  - type: trojan
-    name: 🇺🇸 美国中转
-    server: hxfz940e90d9.bdytul.com
-    port: 21489
-    password: fb688788-be48-4ae2-8bc1-724a8ca254bc
-    network: tcp
-    sni: v1-dy.ixigua.com
-    skip-cert-verify: true
-    tls: true
-  - type: ss
-    name: 南非
-    server: de01.dns-node.top
-    port: 46102
-    cipher: aes-128-gcm
-    password: ba0debc2-1c7e-4638-b8c1-13f052ba0ad3
-  - type: trojan
-    name: 🇦🇪 迪拜
-    server: hxfz940e90d9.bdytul.com
-    port: 47621
-    password: fb688788-be48-4ae2-8bc1-724a8ca254bc
-    network: tcp
-    sni: v1-dy.ixigua.com
-    skip-cert-verify: true
-    tls: true
-  - type: ss
-    name: 尼日利亚
-    server: eu.dns-node.top
-    port: 45601
-    cipher: aes-128-gcm
-    password: ba0debc2-1c7e-4638-b8c1-13f052ba0ad3
-  - type: trojan
-    name: 🇷🇺 莫斯科
-    server: hxfz940e90d9.bdytul.com
-    port: 16783
-    password: fb688788-be48-4ae2-8bc1-724a8ca254bc
-    network: tcp
-    sni: v1-dy.ixigua.com
-    skip-cert-verify: true
-    tls: true
-  - type: trojan
-    name: 🇮🇱 以色列
-    server: hxfz940e90d9.bdytul.com
-    port: 20783
-    password: fb688788-be48-4ae2-8bc1-724a8ca254bc
-    network: tcp
-    sni: v1-dy.ixigua.com
-    skip-cert-verify: true
-    tls: true
-  - type: trojan
-    name: 🇬🇧 英国
-    server: hxfz940e90d9.bdytul.com
-    port: 59358
-    password: fb688788-be48-4ae2-8bc1-724a8ca254bc
-    network: tcp
-    sni: v1-dy.ixigua.com
-    skip-cert-verify: true
-    tls: true
-  - type: trojan
-    name: 🇺🇸 美国中转原生
-    server: hxfz940e90d9.bdytul.com
-    port: 53547
-    password: fb688788-be48-4ae2-8bc1-724a8ca254bc
-    network: tcp
-    sni: v1-dy.ixigua.com
-    skip-cert-verify: true
-    tls: true
-  - type: trojan
-    name: 🇧🇷 巴西
-    server: hxfz940e90d9.bdytul.com
-    port: 28499
-    password: fb688788-be48-4ae2-8bc1-724a8ca254bc
-    network: tcp
-    sni: v1-dy.ixigua.com
-    skip-cert-verify: true
-    tls: true
-  - type: trojan
-    name: 🇲🇲 缅甸
-    server: hxfz940e90d9.bdytul.com
-    port: 19797
-    password: fb688788-be48-4ae2-8bc1-724a8ca254bc
-    network: tcp
-    sni: v1-dy.ixigua.com
-    skip-cert-verify: true
-    tls: true
-  - type: ss
-    name: 安哥拉
-    server: eu2.dns-node.top
-    port: 46493
-    cipher: aes-128-gcm
-    password: ba0debc2-1c7e-4638-b8c1-13f052ba0ad3
-  - type: ss
-    name: 捷克
-    server: de01.dns-node.top
-    port: 46155
-    cipher: aes-128-gcm
-    password: ba0debc2-1c7e-4638-b8c1-13f052ba0ad3
-  - type: ss
-    name: 西班牙
-    server: de01.dns-node.top
-    port: 45596
-    cipher: aes-128-gcm
-    password: ba0debc2-1c7e-4638-b8c1-13f052ba0ad3
-  - type: trojan
-    name: 应急专用(JP)
-    server: jppro01.tmdns-sing.top
-    port: 29913
-    password: ba0debc2-1c7e-4638-b8c1-13f052ba0ad3
-    network: tcp
-    sni: jppro01.tmdns-sing.top
-    skip-cert-verify: true
-    tls: true
-  - type: ss
-    name: 香港
-    server: hkg01.dns-node.top
-    port: 45573
-    cipher: aes-128-gcm
-    password: ba0debc2-1c7e-4638-b8c1-13f052ba0ad3
-  - type: ss
-    name: 摩纳哥
-    server: de01.dns-node.top
-    port: 46165
-    cipher: aes-128-gcm
-    password: ba0debc2-1c7e-4638-b8c1-13f052ba0ad3
-  - type: ss
-    name: 印度
-    server: eu.dns-node.top
-    port: 45598
-    cipher: aes-128-gcm
-    password: ba0debc2-1c7e-4638-b8c1-13f052ba0ad3
-  - type: ss
-    name: 冰岛
-    server: eu2.dns-node.top
-    port: 46307
-    cipher: aes-128-gcm
-    password: ba0debc2-1c7e-4638-b8c1-13f052ba0ad3
-  - type: ss
-    name: 巴哈马
-    server: us_nord.dns-node.top
-    port: 45591
-    cipher: aes-128-gcm
-    password: ba0debc2-1c7e-4638-b8c1-13f052ba0ad3
-  - type: ss
-    name: 伯利兹
-    server: us_nord.dns-node.top
-    port: 45592
-    cipher: aes-128-gcm
-    password: ba0debc2-1c7e-4638-b8c1-13f052ba0ad3
-  - type: trojan
-    name: 日本【新疆|俄罗斯专用】
-    server: sj01.zxywaq.com
-    port: 21912
-    password: ba0debc2-1c7e-4638-b8c1-13f052ba0ad3
-    network: tcp
-    skip-cert-verify: true
-    tls: true
-  - type: trojan
-    name: 🇺🇸 美国中转 - 东莞
-    server: hxdwa7a919e0.bdytul.com
-    port: 21489
-    password: fb688788-be48-4ae2-8bc1-724a8ca254bc
-    network: tcp
-    sni: v1-dy.ixigua.com
-    skip-cert-verify: true
-    tls: true
-  - type: hysteria2
-    name: 🇭🇰 香港直连1 - 0.5倍率
-    server: hxzlaws.redapricotcandy.com
-    port: 20461
-    password: fb688788-be48-4ae2-8bc1-724a8ca254bc
-    skip-cert-verify: true
-    sni: www.bing.com
-  - type: hysteria2
-    name: 🇭🇰 香港直连2 - 0.5倍率
-    server: hxzlaws.redapricotcandy.com
-    port: 20461
-    password: fb688788-be48-4ae2-8bc1-724a8ca254bc
-    skip-cert-verify: true
-    sni: www.bing.com
-  - type: hysteria2
-    name: 🇨🇳 台湾直连1 - 0.5倍率
-    server: hxzlaws.redapricotcandy.com
-    port: 48597
-    password: fb688788-be48-4ae2-8bc1-724a8ca254bc
-    skip-cert-verify: true
-    sni: www.bing.com
-  - type: hysteria2
-    name: 🇨🇳 台湾直连2 - 0.5倍率
-    server: hxzlaws.redapricotcandy.com
-    port: 48597
-    password: fb688788-be48-4ae2-8bc1-724a8ca254bc
-    skip-cert-verify: true
-    sni: www.bing.com
-  - type: hysteria2
-    name: 🇸🇬 新加坡直连1 - 0.5倍率
-    server: hxzlaws.redapricotcandy.com
-    port: 31183
-    password: fb688788-be48-4ae2-8bc1-724a8ca254bc
-    skip-cert-verify: true
-    sni: www.bing.com
-  - type: hysteria2
-    name: 🇸🇬 新加坡直连2 - 0.5倍率
-    server: hxzlaws.redapricotcandy.com
-    port: 31183
-    password: fb688788-be48-4ae2-8bc1-724a8ca254bc
-    skip-cert-verify: true
-    sni: www.bing.com
-  - type: hysteria2
-    name: 🇯🇵 日本直连1 - 0.5倍率
-    server: hxzlaws.redapricotcandy.com
-    port: 17371
-    password: fb688788-be48-4ae2-8bc1-724a8ca254bc
-    skip-cert-verify: true
-    sni: www.bing.com
-  - type: hysteria2
-    name: 🇯🇵 日本直连2 - 0.5倍率
-    server: hxzlaws.redapricotcandy.com
-    port: 17371
-    password: fb688788-be48-4ae2-8bc1-724a8ca254bc
-    skip-cert-verify: true
-    sni: www.bing.com
-  - type: hysteria2
-    name: 🇺🇸 美国直连1 - 0.5倍率
-    server: hxzlaws.redapricotcandy.com
-    port: 56449
-    password: fb688788-be48-4ae2-8bc1-724a8ca254bc
-    skip-cert-verify: true
-    sni: www.bing.com
-  - type: hysteria2
-    name: 🇺🇸 美国直连2 - 0.5倍率
-    server: hxzlaws.redapricotcandy.com
-    port: 56449
-    password: fb688788-be48-4ae2-8bc1-724a8ca254bc
-    skip-cert-verify: true
-    sni: www.bing.com
-  - type: trojan
-    name: 🇭🇰香港 IPV6
-    server: hxipv6.hongxingdl.vip
-    port: 12221
-    password: fb688788-be48-4ae2-8bc1-724a8ca254bc
-    network: tcp
-    sni: v1-dy.ixigua.com
-    skip-cert-verify: true
-    tls: true
-  - type: trojan
-    name: 🇨🇳 台湾 IPV6
-    server: hxipv6.hongxingdl.vip
-    port: 42765
-    password: fb688788-be48-4ae2-8bc1-724a8ca254bc
-    network: tcp
-    sni: v1-dy.ixigua.com
-    skip-cert-verify: true
-    tls: true
-  - type: trojan
-    name: 🇸🇬 新加坡 IPV6
-    server: hxipv6.hongxingdl.vip
-    port: 48291
-    password: fb688788-be48-4ae2-8bc1-724a8ca254bc
-    network: tcp
-    sni: v1-dy.ixigua.com
-    skip-cert-verify: true
-    tls: true
-  - type: trojan
-    name: 🇯🇵 日本 IPV6
-    server: hxipv6.hongxingdl.vip
-    port: 28713
-    password: fb688788-be48-4ae2-8bc1-724a8ca254bc
-    network: tcp
-    sni: v1-dy.ixigua.com
-    skip-cert-verify: true
-    tls: true
-  - type: trojan
-    name: 🇺🇸 美国 IPV6
-    server: hxipv6.hongxingdl.vip
-    port: 21489
-    password: fb688788-be48-4ae2-8bc1-724a8ca254bc
-    network: tcp
-    sni: v1-dy.ixigua.com
-    skip-cert-verify: true
-    tls: true
-  - type: trojan
-    name: 🇨🇱 智利
-    server: hxfz940e90d9.bdytul.com
-    port: 54031
-    password: fb688788-be48-4ae2-8bc1-724a8ca254bc
-    network: tcp
-    sni: v1-dy.ixigua.com
-    skip-cert-verify: true
-    tls: true
-  - type: trojan
-    name: 🇻🇳 越南
-    server: hxfz940e90d9.bdytul.com
-    port: 59009
-    password: fb688788-be48-4ae2-8bc1-724a8ca254bc
-    network: tcp
-    sni: v1-dy.ixigua.com
-    skip-cert-verify: true
-    tls: true
-  - type: trojan
-    name: 🇲🇾 马来西亚
-    server: hxfz940e90d9.bdytul.com
-    port: 30383
-    password: fb688788-be48-4ae2-8bc1-724a8ca254bc
-    network: tcp
-    sni: v1-dy.ixigua.com
-    skip-cert-verify: true
-    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: Z8tJYAjotKrLI4LMnXPYWZZBgJgvNjiD0rtmcUJt-R0
+      short-id: ac1c6898c4bac169
+  - name: 🇦🇺 IEPL-澳大利亚
+    type: ss
+    server: junp.kuaileiduanko.com
+    port: 36097
+    cipher: 2022-blake3-aes-128-gcm
+    password: YmExMzViMzFhOTY3OTEwYw==:NDI0ZTg1ZjItNDFlZi00Yw==
+  - name: 🇲🇾 IEPL-马来西亚1
+    type: ss
+    server: junp.kuaileiduanko.com
+    port: 36066
+    cipher: aes-128-gcm
+    password: 424e85f2-41ef-4c0b-8885-68b9db145b5d
+  - name: 🇲🇾 IEPL-马来西亚2
+    type: ss
+    server: 6688.rkkuailei.cc
+    port: 36065
+    cipher: aes-128-gcm
+    password: 424e85f2-41ef-4c0b-8885-68b9db145b5d
+  - name: 🇻🇳 IEPL-越南
+    type: ss
+    server: junp.kuaileiduanko.com
+    port: 36096
+    cipher: 2022-blake3-aes-128-gcm
+    password: YmExMzViMzFhOTY3OTEwYw==:NDI0ZTg1ZjItNDFlZi00Yw==
+  - name: 🇹🇼 IEPL-台湾1
+    type: ss
+    server: junp.kuaileiduanko.com
+    port: 36064
+    cipher: aes-128-gcm
+    password: 424e85f2-41ef-4c0b-8885-68b9db145b5d
+  - name: 🇹🇼 IEPL-台湾2
+    type: ss
+    server: 6688.rkkuailei.cc
+    port: 36063
+    cipher: aes-128-gcm
+    password: 424e85f2-41ef-4c0b-8885-68b9db145b5d
+  - name: 🇹🇼 IEPL-台湾动态家宽
+    type: ss
+    server: junp.kuaileiduanko.com
+    port: 36163
+    cipher: aes-128-gcm
+    password: 424e85f2-41ef-4c0b-8885-68b9db145b5d
+  - name: 🇰🇷 IEPL-韩国静态家宽
+    type: ss
+    server: junp.kuaileiduanko.com
+    port: 36062
+    cipher: aes-128-gcm
+    password: 424e85f2-41ef-4c0b-8885-68b9db145b5d
+  - name: 🇹🇭 IEPL-泰国
+    type: ss
+    server: junp.kuaileiduanko.com
+    port: 36061
+    cipher: aes-128-gcm
+    password: 424e85f2-41ef-4c0b-8885-68b9db145b5d
+  - name: 🇩🇪 IEPL-德国
+    type: ss
+    server: junp.kuaileiduanko.com
+    port: 36060
+    cipher: aes-128-gcm
+    password: 424e85f2-41ef-4c0b-8885-68b9db145b5d
+  - name: 🇬🇧 IEPL-英国
+    type: ss
+    server: junp.kuaileiduanko.com
+    port: 36059
+    cipher: aes-128-gcm
+    password: 424e85f2-41ef-4c0b-8885-68b9db145b5d
+  - name: 🇬🇧 IEPL-英国静态家宽
+    type: ss
+    server: junp.kuaileiduanko.com
+    port: 36122
+    cipher: aes-128-gcm
+    password: 424e85f2-41ef-4c0b-8885-68b9db145b5d
+  - name: 🇨🇭 IEPL-瑞士
+    type: ss
+    server: junp.kuaileiduanko.com
+    port: 36058
+    cipher: aes-128-gcm
+    password: 424e85f2-41ef-4c0b-8885-68b9db145b5d
+  - name: 🇳🇱 IEPL-荷兰
+    type: ss
+    server: junp.kuaileiduanko.com
+    port: 36057
+    cipher: aes-128-gcm
+    password: 424e85f2-41ef-4c0b-8885-68b9db145b5d
+  - name: 🇮🇱 IEPL-以色列
+    type: ss
+    server: junp.kuaileiduanko.com
+    port: 36056
+    cipher: aes-128-gcm
+    password: 424e85f2-41ef-4c0b-8885-68b9db145b5d
+  - name: 🇦🇪 IEPL-阿联酋
+    type: ss
+    server: junp.kuaileiduanko.com
+    port: 36055
+    cipher: aes-128-gcm
+    password: 424e85f2-41ef-4c0b-8885-68b9db145b5d
+  - name: 🇮🇳 IEPL-印度
+    type: ss
+    server: junp.kuaileiduanko.com
+    port: 36067
+    cipher: aes-128-gcm
+    password: 424e85f2-41ef-4c0b-8885-68b9db145b5d
+  - name: 🇧🇷 IEPL-巴西
+    type: ss
+    server: junp.kuaileiduanko.com
+    port: 36054
+    cipher: aes-128-gcm
+    password: 424e85f2-41ef-4c0b-8885-68b9db145b5d
+  - name: 🇪🇸 IEPL-西班牙
+    type: ss
+    server: junp.kuaileiduanko.com
+    port: 36053
+    cipher: aes-128-gcm
+    password: 424e85f2-41ef-4c0b-8885-68b9db145b5d
+  - name: 🇮🇩 IEPL-印度尼西亚
+    type: ss
+    server: junp.kuaileiduanko.com
+    port: 36051
+    cipher: aes-128-gcm
+    password: 424e85f2-41ef-4c0b-8885-68b9db145b5d
+  - name: 🇨🇦 IEPL-加拿大
+    type: ss
+    server: junp.kuaileiduanko.com
+    port: 36050
+    cipher: aes-128-gcm
+    password: 424e85f2-41ef-4c0b-8885-68b9db145b5d
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -1097,298 +348,314 @@ proxy-groups:
       - ♻️ 自动选择
       - DIRECT
       - 微信：gtyz222
-      - 泰国
-      - 柬埔寨
-      - 老挝
-      - 缅甸
-      - 孟加拉国
-      - 斯里兰卡
-      - 蒙古
-      - 台湾
-      - 尼泊尔
-      - 新加坡
-      - 🇭🇰 香港中转 - 东莞
-      - 巴基斯坦
-      - 马来西亚
-      - 印度尼西亚
-      - 🇨🇳 台湾中转
-      - 🇸🇬 新加坡中转 - 广州
-      - 越南
-      - 🇸🇬 新加坡中转 - 东莞
-      - 🇯🇵 日本中转 - 东莞
-      - 🇵🇭 菲律宾
-      - 🇮🇩 印度尼西亚
-      - 🇨🇳 台湾中转 - 广州
-      - 韩国
-      - 🇮🇳 印度-西部
-      - 🇯🇵 日本中转 - 广州
-      - 🇨🇳 台湾中转 - 东莞
-      - 日本
-      - 🇦🇺 澳大利亚
-      - 阿联酋
-      - 🇵🇰 巴基斯坦
-      - 美国
-      - 澳大利亚
-      - 🇺🇸 美国中转 - 广州
-      - 🇭🇰 香港中转 - 广州
-      - 英国
-      - 新西兰
-      - 🇰🇷 韩国
-      - 哈萨克斯坦
-      - 菲律宾
-      - 🇳🇱 荷兰
-      - 🇩🇪 德国
-      - 🇲🇽 墨西哥
-      - 巴拿马
-      - 🇨🇦 加拿大
-      - 乌兹别克斯坦
-      - 🇸🇦 沙特阿拉伯
-      - 开曼群岛
-      - 列支敦士登
-      - 🇫🇷 法国
-      - 🇸🇪 瑞典
-      - 瑞士
-      - 🇹🇷 土耳其
-      - 比利时
-      - 肯尼亚
-      - 卢森堡
-      - 荷兰
-      - 墨西哥
-      - 🇨🇭 瑞士
-      - 英属泽西岛
-      - 奥地利
-      - 加拿大
-      - 马耳他
-      - 哥斯达黎加
-      - 克罗地亚
-      - 瑞典
-      - 匈牙利
-      - 🇬🇷 希腊
-      - 安道尔
-      - 土耳其
-      - 摩洛哥
-      - 法国
-      - 意大利
-      - 🇨🇴 哥伦比亚
-      - 德国
-      - 爱尔兰
-      - 埃及
-      - 乌克兰
-      - 拉脱维亚
-      - 丹麦
-      - 阿尔及利亚
-      - 百慕大
-      - 芬兰
-      - 🇸🇬 新加坡中转
-      - 黑山
-      - 🇯🇵 日本中转
-      - 波兰
-      - 挪威
-      - 🇪🇸 西班牙
-      - 阿尔巴尼亚
-      - 葡萄牙
-      - 波黑
-      - 保加利亚
-      - 摩尔多瓦
-      - 希腊
-      - 乌拉圭
-      - 爱沙尼亚
-      - 立陶宛
-      - 🇳🇬 尼日利亚
-      - 巴西
-      - 多米尼加
-      - 阿根廷
-      - 🇿🇦 南非
-      - 🇹🇭 泰国
-      - 🇺🇸 美国中转
-      - 南非
-      - 🇦🇪 迪拜
-      - 尼日利亚
-      - 🇷🇺 莫斯科
-      - 🇮🇱 以色列
-      - 🇬🇧 英国
-      - 🇺🇸 美国中转原生
-      - 🇧🇷 巴西
-      - 🇲🇲 缅甸
-      - 安哥拉
-      - 捷克
-      - 西班牙
-      - 应急专用(JP)
-      - 香港
-      - 摩纳哥
-      - 印度
-      - 冰岛
-      - 巴哈马
-      - 伯利兹
-      - 日本【新疆|俄罗斯专用】
-      - 🇺🇸 美国中转 - 东莞
-      - 🇭🇰 香港直连1 - 0.5倍率
-      - 🇭🇰 香港直连2 - 0.5倍率
-      - 🇨🇳 台湾直连1 - 0.5倍率
-      - 🇨🇳 台湾直连2 - 0.5倍率
-      - 🇸🇬 新加坡直连1 - 0.5倍率
-      - 🇸🇬 新加坡直连2 - 0.5倍率
-      - 🇯🇵 日本直连1 - 0.5倍率
-      - 🇯🇵 日本直连2 - 0.5倍率
-      - 🇺🇸 美国直连1 - 0.5倍率
-      - 🇺🇸 美国直连2 - 0.5倍率
-      - 🇭🇰香港 IPV6
-      - 🇨🇳 台湾 IPV6
-      - 🇸🇬 新加坡 IPV6
-      - 🇯🇵 日本 IPV6
-      - 🇺🇸 美国 IPV6
-      - 🇨🇱 智利
-      - 🇻🇳 越南
-      - 🇲🇾 马来西亚
+      - 🇭🇰 IEPL-香港1
+      - 🇭🇰 IEPL-香港2
+      - 🇭🇰 IEPL-香港3
+      - 🇭🇰 IEPL-香港4
+      - 🇭🇰 IEPL-香港动态家宽
+      - 🇭🇰+直连-香港
+      - 🇯🇵  IEPL-日本1
+      - 🇯🇵  IEPL-日本2
+      - 🇯🇵  IEPL-日本3
+      - 🇯🇵  IEPL-日本4
+      - 🇯🇵+直连-日本1
+      - 🇯🇵+直连-日本2
+      - 🇩🇪+直连-德国
+      - 🇸🇬  IEPL-新加坡1
+      - 🇸🇬  IEPL-新加坡2
+      - 🇸🇬  IEPL-新加坡3
+      - 🇸🇬  IEPL-新加坡4
+      - 🇺🇸  IEPL-美国1
+      - 🇺🇸  IEPL-美国2
+      - 🇺🇸  IEPL-美国3
+      - 🇺🇸  IEPL-美国4
+      - 🇺🇸  IEPL-美国静态家宽
+      - 🇺🇸+直连-美国1
+      - 🇺🇸+直连-美国2+IPV6
+      - 🇺🇸+直连-美国3++IPv6
+      - 🇦🇺 IEPL-澳大利亚
+      - 🇲🇾 IEPL-马来西亚1
+      - 🇲🇾 IEPL-马来西亚2
+      - 🇻🇳 IEPL-越南
+      - 🇹🇼 IEPL-台湾1
+      - 🇹🇼 IEPL-台湾2
+      - 🇹🇼 IEPL-台湾动态家宽
+      - 🇰🇷 IEPL-韩国静态家宽
+      - 🇹🇭 IEPL-泰国
+      - 🇩🇪 IEPL-德国
+      - 🇬🇧 IEPL-英国
+      - 🇬🇧 IEPL-英国静态家宽
+      - 🇨🇭 IEPL-瑞士
+      - 🇳🇱 IEPL-荷兰
+      - 🇮🇱 IEPL-以色列
+      - 🇦🇪 IEPL-阿联酋
+      - 🇮🇳 IEPL-印度
+      - 🇧🇷 IEPL-巴西
+      - 🇪🇸 IEPL-西班牙
+      - 🇮🇩 IEPL-印度尼西亚
+      - 🇨🇦 IEPL-加拿大
   - name: ♻️ 自动选择
     type: url-test
     proxies:
       - 微信：gtyz222
-      - 泰国
-      - 柬埔寨
-      - 老挝
-      - 缅甸
-      - 孟加拉国
-      - 斯里兰卡
-      - 蒙古
-      - 台湾
-      - 尼泊尔
-      - 新加坡
-      - 🇭🇰 香港中转 - 东莞
-      - 巴基斯坦
-      - 马来西亚
-      - 印度尼西亚
-      - 🇨🇳 台湾中转
-      - 🇸🇬 新加坡中转 - 广州
-      - 越南
-      - 🇸🇬 新加坡中转 - 东莞
-      - 🇯🇵 日本中转 - 东莞
-      - 🇵🇭 菲律宾
-      - 🇮🇩 印度尼西亚
-      - 🇨🇳 台湾中转 - 广州
-      - 韩国
-      - 🇮🇳 印度-西部
-      - 🇯🇵 日本中转 - 广州
-      - 🇨🇳 台湾中转 - 东莞
-      - 日本
-      - 🇦🇺 澳大利亚
-      - 阿联酋
-      - 🇵🇰 巴基斯坦
-      - 美国
-      - 澳大利亚
-      - 🇺🇸 美国中转 - 广州
-      - 🇭🇰 香港中转 - 广州
-      - 英国
-      - 新西兰
-      - 🇰🇷 韩国
-      - 哈萨克斯坦
-      - 菲律宾
-      - 🇳🇱 荷兰
-      - 🇩🇪 德国
-      - 🇲🇽 墨西哥
-      - 巴拿马
-      - 🇨🇦 加拿大
-      - 乌兹别克斯坦
-      - 🇸🇦 沙特阿拉伯
-      - 开曼群岛
-      - 列支敦士登
-      - 🇫🇷 法国
-      - 🇸🇪 瑞典
-      - 瑞士
-      - 🇹🇷 土耳其
-      - 比利时
-      - 肯尼亚
-      - 卢森堡
-      - 荷兰
-      - 墨西哥
-      - 🇨🇭 瑞士
-      - 英属泽西岛
-      - 奥地利
-      - 加拿大
-      - 马耳他
-      - 哥斯达黎加
-      - 克罗地亚
-      - 瑞典
-      - 匈牙利
-      - 🇬🇷 希腊
-      - 安道尔
-      - 土耳其
-      - 摩洛哥
-      - 法国
-      - 意大利
-      - 🇨🇴 哥伦比亚
-      - 德国
-      - 爱尔兰
-      - 埃及
-      - 乌克兰
-      - 拉脱维亚
-      - 丹麦
-      - 阿尔及利亚
-      - 百慕大
-      - 芬兰
-      - 🇸🇬 新加坡中转
-      - 黑山
-      - 🇯🇵 日本中转
-      - 波兰
-      - 挪威
-      - 🇪🇸 西班牙
-      - 阿尔巴尼亚
-      - 葡萄牙
-      - 波黑
-      - 保加利亚
-      - 摩尔多瓦
-      - 希腊
-      - 乌拉圭
-      - 爱沙尼亚
-      - 立陶宛
-      - 🇳🇬 尼日利亚
-      - 巴西
-      - 多米尼加
-      - 阿根廷
-      - 🇿🇦 南非
-      - 🇹🇭 泰国
-      - 🇺🇸 美国中转
-      - 南非
-      - 🇦🇪 迪拜
-      - 尼日利亚
-      - 🇷🇺 莫斯科
-      - 🇮🇱 以色列
-      - 🇬🇧 英国
-      - 🇺🇸 美国中转原生
-      - 🇧🇷 巴西
-      - 🇲🇲 缅甸
-      - 安哥拉
-      - 捷克
-      - 西班牙
-      - 应急专用(JP)
-      - 香港
-      - 摩纳哥
-      - 印度
-      - 冰岛
-      - 巴哈马
-      - 伯利兹
-      - 日本【新疆|俄罗斯专用】
-      - 🇺🇸 美国中转 - 东莞
-      - 🇭🇰 香港直连1 - 0.5倍率
-      - 🇭🇰 香港直连2 - 0.5倍率
-      - 🇨🇳 台湾直连1 - 0.5倍率
-      - 🇨🇳 台湾直连2 - 0.5倍率
-      - 🇸🇬 新加坡直连1 - 0.5倍率
-      - 🇸🇬 新加坡直连2 - 0.5倍率
-      - 🇯🇵 日本直连1 - 0.5倍率
-      - 🇯🇵 日本直连2 - 0.5倍率
-      - 🇺🇸 美国直连1 - 0.5倍率
-      - 🇺🇸 美国直连2 - 0.5倍率
-      - 🇭🇰香港 IPV6
-      - 🇨🇳 台湾 IPV6
-      - 🇸🇬 新加坡 IPV6
-      - 🇯🇵 日本 IPV6
-      - 🇺🇸 美国 IPV6
-      - 🇨🇱 智利
-      - 🇻🇳 越南
-      - 🇲🇾 马来西亚
+      - 🇭🇰 IEPL-香港1
+      - 🇭🇰 IEPL-香港2
+      - 🇭🇰 IEPL-香港3
+      - 🇭🇰 IEPL-香港4
+      - 🇭🇰 IEPL-香港动态家宽
+      - 🇭🇰+直连-香港
+      - 🇯🇵  IEPL-日本1
+      - 🇯🇵  IEPL-日本2
+      - 🇯🇵  IEPL-日本3
+      - 🇯🇵  IEPL-日本4
+      - 🇯🇵+直连-日本1
+      - 🇯🇵+直连-日本2
+      - 🇩🇪+直连-德国
+      - 🇸🇬  IEPL-新加坡1
+      - 🇸🇬  IEPL-新加坡2
+      - 🇸🇬  IEPL-新加坡3
+      - 🇸🇬  IEPL-新加坡4
+      - 🇺🇸  IEPL-美国1
+      - 🇺🇸  IEPL-美国2
+      - 🇺🇸  IEPL-美国3
+      - 🇺🇸  IEPL-美国4
+      - 🇺🇸  IEPL-美国静态家宽
+      - 🇺🇸+直连-美国1
+      - 🇺🇸+直连-美国2+IPV6
+      - 🇺🇸+直连-美国3++IPv6
+      - 🇦🇺 IEPL-澳大利亚
+      - 🇲🇾 IEPL-马来西亚1
+      - 🇲🇾 IEPL-马来西亚2
+      - 🇻🇳 IEPL-越南
+      - 🇹🇼 IEPL-台湾1
+      - 🇹🇼 IEPL-台湾2
+      - 🇹🇼 IEPL-台湾动态家宽
+      - 🇰🇷 IEPL-韩国静态家宽
+      - 🇹🇭 IEPL-泰国
+      - 🇩🇪 IEPL-德国
+      - 🇬🇧 IEPL-英国
+      - 🇬🇧 IEPL-英国静态家宽
+      - 🇨🇭 IEPL-瑞士
+      - 🇳🇱 IEPL-荷兰
+      - 🇮🇱 IEPL-以色列
+      - 🇦🇪 IEPL-阿联酋
+      - 🇮🇳 IEPL-印度
+      - 🇧🇷 IEPL-巴西
+      - 🇪🇸 IEPL-西班牙
+      - 🇮🇩 IEPL-印度尼西亚
+      - 🇨🇦 IEPL-加拿大
     url: http://www.gstatic.com/generate_204
     interval: 300
+    tolerance: 50
+  - name: 🌍 国外媒体
+    type: select
+    proxies:
+      - 🚀 节点选择
+      - ♻️ 自动选择
+      - 🎯 全球直连
+      - 微信：gtyz222
+      - 🇭🇰 IEPL-香港1
+      - 🇭🇰 IEPL-香港2
+      - 🇭🇰 IEPL-香港3
+      - 🇭🇰 IEPL-香港4
+      - 🇭🇰 IEPL-香港动态家宽
+      - 🇭🇰+直连-香港
+      - 🇯🇵  IEPL-日本1
+      - 🇯🇵  IEPL-日本2
+      - 🇯🇵  IEPL-日本3
+      - 🇯🇵  IEPL-日本4
+      - 🇯🇵+直连-日本1
+      - 🇯🇵+直连-日本2
+      - 🇩🇪+直连-德国
+      - 🇸🇬  IEPL-新加坡1
+      - 🇸🇬  IEPL-新加坡2
+      - 🇸🇬  IEPL-新加坡3
+      - 🇸🇬  IEPL-新加坡4
+      - 🇺🇸  IEPL-美国1
+      - 🇺🇸  IEPL-美国2
+      - 🇺🇸  IEPL-美国3
+      - 🇺🇸  IEPL-美国4
+      - 🇺🇸  IEPL-美国静态家宽
+      - 🇺🇸+直连-美国1
+      - 🇺🇸+直连-美国2+IPV6
+      - 🇺🇸+直连-美国3++IPv6
+      - 🇦🇺 IEPL-澳大利亚
+      - 🇲🇾 IEPL-马来西亚1
+      - 🇲🇾 IEPL-马来西亚2
+      - 🇻🇳 IEPL-越南
+      - 🇹🇼 IEPL-台湾1
+      - 🇹🇼 IEPL-台湾2
+      - 🇹🇼 IEPL-台湾动态家宽
+      - 🇰🇷 IEPL-韩国静态家宽
+      - 🇹🇭 IEPL-泰国
+      - 🇩🇪 IEPL-德国
+      - 🇬🇧 IEPL-英国
+      - 🇬🇧 IEPL-英国静态家宽
+      - 🇨🇭 IEPL-瑞士
+      - 🇳🇱 IEPL-荷兰
+      - 🇮🇱 IEPL-以色列
+      - 🇦🇪 IEPL-阿联酋
+      - 🇮🇳 IEPL-印度
+      - 🇧🇷 IEPL-巴西
+      - 🇪🇸 IEPL-西班牙
+      - 🇮🇩 IEPL-印度尼西亚
+      - 🇨🇦 IEPL-加拿大
+  - name: 📲 电报信息
+    type: select
+    proxies:
+      - 🚀 节点选择
+      - 🎯 全球直连
+      - 微信：gtyz222
+      - 🇭🇰 IEPL-香港1
+      - 🇭🇰 IEPL-香港2
+      - 🇭🇰 IEPL-香港3
+      - 🇭🇰 IEPL-香港4
+      - 🇭🇰 IEPL-香港动态家宽
+      - 🇭🇰+直连-香港
+      - 🇯🇵  IEPL-日本1
+      - 🇯🇵  IEPL-日本2
+      - 🇯🇵  IEPL-日本3
+      - 🇯🇵  IEPL-日本4
+      - 🇯🇵+直连-日本1
+      - 🇯🇵+直连-日本2
+      - 🇩🇪+直连-德国
+      - 🇸🇬  IEPL-新加坡1
+      - 🇸🇬  IEPL-新加坡2
+      - 🇸🇬  IEPL-新加坡3
+      - 🇸🇬  IEPL-新加坡4
+      - 🇺🇸  IEPL-美国1
+      - 🇺🇸  IEPL-美国2
+      - 🇺🇸  IEPL-美国3
+      - 🇺🇸  IEPL-美国4
+      - 🇺🇸  IEPL-美国静态家宽
+      - 🇺🇸+直连-美国1
+      - 🇺🇸+直连-美国2+IPV6
+      - 🇺🇸+直连-美国3++IPv6
+      - 🇦🇺 IEPL-澳大利亚
+      - 🇲🇾 IEPL-马来西亚1
+      - 🇲🇾 IEPL-马来西亚2
+      - 🇻🇳 IEPL-越南
+      - 🇹🇼 IEPL-台湾1
+      - 🇹🇼 IEPL-台湾2
+      - 🇹🇼 IEPL-台湾动态家宽
+      - 🇰🇷 IEPL-韩国静态家宽
+      - 🇹🇭 IEPL-泰国
+      - 🇩🇪 IEPL-德国
+      - 🇬🇧 IEPL-英国
+      - 🇬🇧 IEPL-英国静态家宽
+      - 🇨🇭 IEPL-瑞士
+      - 🇳🇱 IEPL-荷兰
+      - 🇮🇱 IEPL-以色列
+      - 🇦🇪 IEPL-阿联酋
+      - 🇮🇳 IEPL-印度
+      - 🇧🇷 IEPL-巴西
+      - 🇪🇸 IEPL-西班牙
+      - 🇮🇩 IEPL-印度尼西亚
+      - 🇨🇦 IEPL-加拿大
+  - name: Ⓜ️ 微软服务
+    type: select
+    proxies:
+      - 🎯 全球直连
+      - 🚀 节点选择
+      - 微信：gtyz222
+      - 🇭🇰 IEPL-香港1
+      - 🇭🇰 IEPL-香港2
+      - 🇭🇰 IEPL-香港3
+      - 🇭🇰 IEPL-香港4
+      - 🇭🇰 IEPL-香港动态家宽
+      - 🇭🇰+直连-香港
+      - 🇯🇵  IEPL-日本1
+      - 🇯🇵  IEPL-日本2
+      - 🇯🇵  IEPL-日本3
+      - 🇯🇵  IEPL-日本4
+      - 🇯🇵+直连-日本1
+      - 🇯🇵+直连-日本2
+      - 🇩🇪+直连-德国
+      - 🇸🇬  IEPL-新加坡1
+      - 🇸🇬  IEPL-新加坡2
+      - 🇸🇬  IEPL-新加坡3
+      - 🇸🇬  IEPL-新加坡4
+      - 🇺🇸  IEPL-美国1
+      - 🇺🇸  IEPL-美国2
+      - 🇺🇸  IEPL-美国3
+      - 🇺🇸  IEPL-美国4
+      - 🇺🇸  IEPL-美国静态家宽
+      - 🇺🇸+直连-美国1
+      - 🇺🇸+直连-美国2+IPV6
+      - 🇺🇸+直连-美国3++IPv6
+      - 🇦🇺 IEPL-澳大利亚
+      - 🇲🇾 IEPL-马来西亚1
+      - 🇲🇾 IEPL-马来西亚2
+      - 🇻🇳 IEPL-越南
+      - 🇹🇼 IEPL-台湾1
+      - 🇹🇼 IEPL-台湾2
+      - 🇹🇼 IEPL-台湾动态家宽
+      - 🇰🇷 IEPL-韩国静态家宽
+      - 🇹🇭 IEPL-泰国
+      - 🇩🇪 IEPL-德国
+      - 🇬🇧 IEPL-英国
+      - 🇬🇧 IEPL-英国静态家宽
+      - 🇨🇭 IEPL-瑞士
+      - 🇳🇱 IEPL-荷兰
+      - 🇮🇱 IEPL-以色列
+      - 🇦🇪 IEPL-阿联酋
+      - 🇮🇳 IEPL-印度
+      - 🇧🇷 IEPL-巴西
+      - 🇪🇸 IEPL-西班牙
+      - 🇮🇩 IEPL-印度尼西亚
+      - 🇨🇦 IEPL-加拿大
+  - name: 🍎 苹果服务
+    type: select
+    proxies:
+      - 🚀 节点选择
+      - 🎯 全球直连
+      - 微信：gtyz222
+      - 🇭🇰 IEPL-香港1
+      - 🇭🇰 IEPL-香港2
+      - 🇭🇰 IEPL-香港3
+      - 🇭🇰 IEPL-香港4
+      - 🇭🇰 IEPL-香港动态家宽
+      - 🇭🇰+直连-香港
+      - 🇯🇵  IEPL-日本1
+      - 🇯🇵  IEPL-日本2
+      - 🇯🇵  IEPL-日本3
+      - 🇯🇵  IEPL-日本4
+      - 🇯🇵+直连-日本1
+      - 🇯🇵+直连-日本2
+      - 🇩🇪+直连-德国
+      - 🇸🇬  IEPL-新加坡1
+      - 🇸🇬  IEPL-新加坡2
+      - 🇸🇬  IEPL-新加坡3
+      - 🇸🇬  IEPL-新加坡4
+      - 🇺🇸  IEPL-美国1
+      - 🇺🇸  IEPL-美国2
+      - 🇺🇸  IEPL-美国3
+      - 🇺🇸  IEPL-美国4
+      - 🇺🇸  IEPL-美国静态家宽
+      - 🇺🇸+直连-美国1
+      - 🇺🇸+直连-美国2+IPV6
+      - 🇺🇸+直连-美国3++IPv6
+      - 🇦🇺 IEPL-澳大利亚
+      - 🇲🇾 IEPL-马来西亚1
+      - 🇲🇾 IEPL-马来西亚2
+      - 🇻🇳 IEPL-越南
+      - 🇹🇼 IEPL-台湾1
+      - 🇹🇼 IEPL-台湾2
+      - 🇹🇼 IEPL-台湾动态家宽
+      - 🇰🇷 IEPL-韩国静态家宽
+      - 🇹🇭 IEPL-泰国
+      - 🇩🇪 IEPL-德国
+      - 🇬🇧 IEPL-英国
+      - 🇬🇧 IEPL-英国静态家宽
+      - 🇨🇭 IEPL-瑞士
+      - 🇳🇱 IEPL-荷兰
+      - 🇮🇱 IEPL-以色列
+      - 🇦🇪 IEPL-阿联酋
+      - 🇮🇳 IEPL-印度
+      - 🇧🇷 IEPL-巴西
+      - 🇪🇸 IEPL-西班牙
+      - 🇮🇩 IEPL-印度尼西亚
+      - 🇨🇦 IEPL-加拿大
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -1400,6 +667,11 @@ proxy-groups:
     proxies:
       - REJECT
       - DIRECT
+  - name: 🍃 应用净化
+    type: select
+    proxies:
+      - REJECT
+      - DIRECT
   - name: 🐟 漏网之鱼
     type: select
     proxies:
@@ -1407,219 +679,123 @@ proxy-groups:
       - 🎯 全球直连
       - ♻️ 自动选择
       - 微信：gtyz222
-      - 泰国
-      - 柬埔寨
-      - 老挝
-      - 缅甸
-      - 孟加拉国
-      - 斯里兰卡
-      - 蒙古
-      - 台湾
-      - 尼泊尔
-      - 新加坡
-      - 🇭🇰 香港中转 - 东莞
-      - 巴基斯坦
-      - 马来西亚
-      - 印度尼西亚
-      - 🇨🇳 台湾中转
-      - 🇸🇬 新加坡中转 - 广州
-      - 越南
-      - 🇸🇬 新加坡中转 - 东莞
-      - 🇯🇵 日本中转 - 东莞
-      - 🇵🇭 菲律宾
-      - 🇮🇩 印度尼西亚
-      - 🇨🇳 台湾中转 - 广州
-      - 韩国
-      - 🇮🇳 印度-西部
-      - 🇯🇵 日本中转 - 广州
-      - 🇨🇳 台湾中转 - 东莞
-      - 日本
-      - 🇦🇺 澳大利亚
-      - 阿联酋
-      - 🇵🇰 巴基斯坦
-      - 美国
-      - 澳大利亚
-      - 🇺🇸 美国中转 - 广州
-      - 🇭🇰 香港中转 - 广州
-      - 英国
-      - 新西兰
-      - 🇰🇷 韩国
-      - 哈萨克斯坦
-      - 菲律宾
-      - 🇳🇱 荷兰
-      - 🇩🇪 德国
-      - 🇲🇽 墨西哥
-      - 巴拿马
-      - 🇨🇦 加拿大
-      - 乌兹别克斯坦
-      - 🇸🇦 沙特阿拉伯
-      - 开曼群岛
-      - 列支敦士登
-      - 🇫🇷 法国
-      - 🇸🇪 瑞典
-      - 瑞士
-      - 🇹🇷 土耳其
-      - 比利时
-      - 肯尼亚
-      - 卢森堡
-      - 荷兰
-      - 墨西哥
-      - 🇨🇭 瑞士
-      - 英属泽西岛
-      - 奥地利
-      - 加拿大
-      - 马耳他
-      - 哥斯达黎加
-      - 克罗地亚
-      - 瑞典
-      - 匈牙利
-      - 🇬🇷 希腊
-      - 安道尔
-      - 土耳其
-      - 摩洛哥
-      - 法国
-      - 意大利
-      - 🇨🇴 哥伦比亚
-      - 德国
-      - 爱尔兰
-      - 埃及
-      - 乌克兰
-      - 拉脱维亚
-      - 丹麦
-      - 阿尔及利亚
-      - 百慕大
-      - 芬兰
-      - 🇸🇬 新加坡中转
-      - 黑山
-      - 🇯🇵 日本中转
-      - 波兰
-      - 挪威
-      - 🇪🇸 西班牙
-      - 阿尔巴尼亚
-      - 葡萄牙
-      - 波黑
-      - 保加利亚
-      - 摩尔多瓦
-      - 希腊
-      - 乌拉圭
-      - 爱沙尼亚
-      - 立陶宛
-      - 🇳🇬 尼日利亚
-      - 巴西
-      - 多米尼加
-      - 阿根廷
-      - 🇿🇦 南非
-      - 🇹🇭 泰国
-      - 🇺🇸 美国中转
-      - 南非
-      - 🇦🇪 迪拜
-      - 尼日利亚
-      - 🇷🇺 莫斯科
-      - 🇮🇱 以色列
-      - 🇬🇧 英国
-      - 🇺🇸 美国中转原生
-      - 🇧🇷 巴西
-      - 🇲🇲 缅甸
-      - 安哥拉
-      - 捷克
-      - 西班牙
-      - 应急专用(JP)
-      - 香港
-      - 摩纳哥
-      - 印度
-      - 冰岛
-      - 巴哈马
-      - 伯利兹
-      - 日本【新疆|俄罗斯专用】
-      - 🇺🇸 美国中转 - 东莞
-      - 🇭🇰 香港直连1 - 0.5倍率
-      - 🇭🇰 香港直连2 - 0.5倍率
-      - 🇨🇳 台湾直连1 - 0.5倍率
-      - 🇨🇳 台湾直连2 - 0.5倍率
-      - 🇸🇬 新加坡直连1 - 0.5倍率
-      - 🇸🇬 新加坡直连2 - 0.5倍率
-      - 🇯🇵 日本直连1 - 0.5倍率
-      - 🇯🇵 日本直连2 - 0.5倍率
-      - 🇺🇸 美国直连1 - 0.5倍率
-      - 🇺🇸 美国直连2 - 0.5倍率
-      - 🇭🇰香港 IPV6
-      - 🇨🇳 台湾 IPV6
-      - 🇸🇬 新加坡 IPV6
-      - 🇯🇵 日本 IPV6
-      - 🇺🇸 美国 IPV6
-      - 🇨🇱 智利
-      - 🇻🇳 越南
-      - 🇲🇾 马来西亚
+      - 🇭🇰 IEPL-香港1
+      - 🇭🇰 IEPL-香港2
+      - 🇭🇰 IEPL-香港3
+      - 🇭🇰 IEPL-香港4
+      - 🇭🇰 IEPL-香港动态家宽
+      - 🇭🇰+直连-香港
+      - 🇯🇵  IEPL-日本1
+      - 🇯🇵  IEPL-日本2
+      - 🇯🇵  IEPL-日本3
+      - 🇯🇵  IEPL-日本4
+      - 🇯🇵+直连-日本1
+      - 🇯🇵+直连-日本2
+      - 🇩🇪+直连-德国
+      - 🇸🇬  IEPL-新加坡1
+      - 🇸🇬  IEPL-新加坡2
+      - 🇸🇬  IEPL-新加坡3
+      - 🇸🇬  IEPL-新加坡4
+      - 🇺🇸  IEPL-美国1
+      - 🇺🇸  IEPL-美国2
+      - 🇺🇸  IEPL-美国3
+      - 🇺🇸  IEPL-美国4
+      - 🇺🇸  IEPL-美国静态家宽
+      - 🇺🇸+直连-美国1
+      - 🇺🇸+直连-美国2+IPV6
+      - 🇺🇸+直连-美国3++IPv6
+      - 🇦🇺 IEPL-澳大利亚
+      - 🇲🇾 IEPL-马来西亚1
+      - 🇲🇾 IEPL-马来西亚2
+      - 🇻🇳 IEPL-越南
+      - 🇹🇼 IEPL-台湾1
+      - 🇹🇼 IEPL-台湾2
+      - 🇹🇼 IEPL-台湾动态家宽
+      - 🇰🇷 IEPL-韩国静态家宽
+      - 🇹🇭 IEPL-泰国
+      - 🇩🇪 IEPL-德国
+      - 🇬🇧 IEPL-英国
+      - 🇬🇧 IEPL-英国静态家宽
+      - 🇨🇭 IEPL-瑞士
+      - 🇳🇱 IEPL-荷兰
+      - 🇮🇱 IEPL-以色列
+      - 🇦🇪 IEPL-阿联酋
+      - 🇮🇳 IEPL-印度
+      - 🇧🇷 IEPL-巴西
+      - 🇪🇸 IEPL-西班牙
+      - 🇮🇩 IEPL-印度尼西亚
+      - 🇨🇦 IEPL-加拿大
 rule-providers:
   LocalAreaNetwork:
     type: http
     behavior: classical
-    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/LocalAreaNetwork.list
-    path: ./rules/providers/LocalAreaNetwork.list
-    interval: 86400
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/LocalAreaNetwork.list
+    path: ./rules/LocalAreaNetwork.yaml
   BanAD:
     type: http
     behavior: classical
-    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanAD.list
-    path: ./rules/providers/BanAD.list
-    interval: 86400
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/BanAD.list
+    path: ./rules/BanAD.yaml
   BanProgramAD:
     type: http
     behavior: classical
-    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanProgramAD.list
-    path: ./rules/providers/BanProgramAD.list
-    interval: 86400
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/BanProgramAD.list
+    path: ./rules/BanProgramAD.yaml
   GoogleCN:
     type: http
     behavior: classical
-    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/GoogleCN.list
-    path: ./rules/providers/GoogleCN.list
-    interval: 86400
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/GoogleCN.list
+    path: ./rules/GoogleCN.yaml
   SteamCN:
     type: http
     behavior: classical
-    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/SteamCN.list
-    path: ./rules/providers/SteamCN.list
-    interval: 86400
-  Telegram:
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/Ruleset/SteamCN.list
+    path: ./rules/SteamCN.yaml
+  Microsoft:
     type: http
     behavior: classical
-    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Telegram.list
-    path: ./rules/providers/Telegram.list
-    interval: 86400
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/Microsoft.list
+    path: ./rules/Microsoft.yaml
+  Apple:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/Apple.list
+    path: ./rules/Apple.yaml
   ProxyMedia:
     type: http
     behavior: classical
-    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ProxyMedia.list
-    path: ./rules/providers/ProxyMedia.list
-    interval: 86400
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/ProxyMedia.list
+    path: ./rules/ProxyMedia.yaml
+  Telegram:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/Telegram.list
+    path: ./rules/Telegram.yaml
   ProxyLite:
     type: http
     behavior: classical
-    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ProxyLite.list
-    path: ./rules/providers/ProxyLite.list
-    interval: 86400
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/ProxyLite.list
+    path: ./rules/ProxyLite.yaml
   ChinaDomain:
     type: http
     behavior: classical
-    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaDomain.list
-    path: ./rules/providers/ChinaDomain.list
-    interval: 86400
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/ChinaDomain.list
+    path: ./rules/ChinaDomain.yaml
   ChinaCompanyIp:
     type: http
     behavior: classical
-    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaCompanyIp.list
-    path: ./rules/providers/ChinaCompanyIp.list
-    interval: 86400
-
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/ChinaCompanyIp.list
+    path: ./rules/ChinaCompanyIp.yaml
 rules:
   - RULE-SET,LocalAreaNetwork,🎯 全球直连
   - RULE-SET,BanAD,🛑 全球拦截
-  - RULE-SET,BanProgramAD,🛑 全球拦截
+  - RULE-SET,BanProgramAD,🍃 应用净化
   - RULE-SET,GoogleCN,🎯 全球直连
   - RULE-SET,SteamCN,🎯 全球直连
-  - RULE-SET,Telegram,🚀 节点选择
-  - RULE-SET,ProxyMedia,🚀 节点选择
+  - RULE-SET,Microsoft,Ⓜ️ 微软服务
+  - RULE-SET,Apple,🍎 苹果服务
+  - RULE-SET,ProxyMedia,🌍 国外媒体
+  - RULE-SET,Telegram,📲 电报信息
   - RULE-SET,ProxyLite,🚀 节点选择
   - RULE-SET,ChinaDomain,🎯 全球直连
   - RULE-SET,ChinaCompanyIp,🎯 全球直连
