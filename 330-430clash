@@ -2,378 +2,27 @@ mixed-port: 7890
 allow-lan: true
 mode: rule
 log-level: info
-ipv6: false
-external-controller: 0.0.0.0:9090
+ipv6: true
+external-controller: 127.0.0.1:9090
 dns:
   enable: true
-  listen: 0.0.0.0:53
-  ipv6: false
-  default-nameserver:
-    - 223.5.5.5
-    - 114.114.114.114
-  nameserver:
-    - 223.5.5.5
-    - 114.114.114.114
-    - 119.29.29.29
-    - 180.76.76.76
+  listen: 0.0.0.0:1053
+  ipv6: true
   enhanced-mode: fake-ip
   fake-ip-range: 198.18.0.1/16
-  fake-ip-filter:
-    - "*.lan"
-    - "*.localdomain"
-    - "*.example"
-    - "*.invalid"
-    - "*.localhost"
-    - "*.test"
-    - "*.local"
-    - "*.home.arpa"
-    - router.asus.com
-    - localhost.sec.qq.com
-    - localhost.ptlogin2.qq.com
-    - +.msftconnecttest.com
-tun:
-  enable: true
-  stack: system
-  auto-route: true
-  auto-detect-interface: true
-  dns-hijack:
-    - 114.114.114.114
-    - 180.76.76.76
-    - 119.29.29.29
+  default-nameserver:
     - 223.5.5.5
-    - 8.8.8.8
-    - 8.8.4.4
-    - 1.1.1.1
-    - 1.0.0.1
+    - 119.29.29.29
+  nameserver:
+    - https://dns.alidns.com/dns-query
+    - https://doh.pub/dns-query
 proxies:
   - name: 微信：gtyz222
-    type: vless
-    server: gm-jp078.aiwowo.xyz
-    port: 20076
-    uuid: 424e85f2-41ef-4c0b-8885-68b9db145b5d
-    servername: www.apple.com
-    tls: true
-    flow: xtls-rprx-vision
-    client-fingerprint: edge
-    reality-opts:
-      public-key: Z8tJYAjotKrLI4LMnXPYWZZBgJgvNjiD0rtmcUJt-R0
-      short-id: ac1c6898c4bac169
-  - name: 🇺🇸+直连-美国2
-    type: vless
-    server: gm-us16.aiwowo.xyz
-    port: 30062
-    uuid: 424e85f2-41ef-4c0b-8885-68b9db145b5d
-    servername: www.apple.com
-    tls: true
-    flow: xtls-rprx-vision
-    client-fingerprint: firefox
-    reality-opts:
-      public-key: Z8tJYAjotKrLI4LMnXPYWZZBgJgvNjiD0rtmcUJt-R0
-      short-id: ac1c6898c4bac999
-  - name: 🇺🇸+直连-美国1
-    type: vless
-    server: gm-us06.aiwowo.xyz
-    port: 30062
-    uuid: 424e85f2-41ef-4c0b-8885-68b9db145b5d
-    servername: www.apple.com
-    tls: true
-    flow: xtls-rprx-vision
-    client-fingerprint: safari
-    reality-opts:
-      public-key: Z8tJYAjotKrLI4LMnXPYWZZBgJgvNjiD0rtmcUJt-R0
-      short-id: ac1c6898c4bac129
-  - name: 🇯🇵+直连-日本1
-    type: vless
-    server: gm-jp066.aiwowo.xyz
-    port: 20076
-    uuid: 424e85f2-41ef-4c0b-8885-68b9db145b5d
-    servername: www.apple.com
-    tls: true
-    flow: xtls-rprx-vision
-    client-fingerprint: edge
-    reality-opts:
-      public-key: Z8tJYAjotKrLI4LMnXPYWZZBgJgvNjiD0rtmcUJt-R0
-      short-id: ac1c6898c4bac119
-  - name: 🇭🇰+直连-香港
-    type: vless
-    server: gm-hk111.aiwowo.xyz
-    port: 20076
-    uuid: 424e85f2-41ef-4c0b-8885-68b9db145b5d
-    servername: www.apple.com
-    tls: true
-    flow: xtls-rprx-vision
-    client-fingerprint: chrome
-    reality-opts:
-      public-key: Z8tJYAjotKrLI4LMnXPYWZZBgJgvNjiD0rtmcUJt-R0
-      short-id: ac1c6898c4bac539
-  - name: 🇭🇰香港+03
-    type: vless
-    server: qsybgp2-1-1000ws.iptests.net
-    port: 80
-    uuid: 353ec0bf-aa4d-412a-903b-10a1101b1458
-    network: ws
-    tls: false
-    ws-opts:
-      path: /grpchongkong2/?ed=2560
-      headers:
-        Host: 1000ws39.iptests.net
-  - name: 🇭🇰香港+05
-    type: vless
-    server: qsybgp3-1000ws.iptests.net
-    port: 80
-    uuid: 353ec0bf-aa4d-412a-903b-10a1101b1458
-    network: ws
-    tls: false
-    ws-opts:
-      path: /grpchongkong2/
-      headers:
-        Host: 1000ws34.iptests.net
-  - name: 🇭🇰香港+08
-    type: vless
-    server: qsybgp3-1000ws.iptests.net
-    port: 80
-    uuid: 353ec0bf-aa4d-412a-903b-10a1101b1458
-    network: ws
-    tls: false
-    ws-opts:
-      path: /grpcsg2/?ed=2560
-      headers:
-        Host: 1000ws39.iptests.net
-  - name: 🇭🇰香港+01
-    type: vless
-    server: qsybgp1-1-1000ws.iptests.net
-    port: 80
-    uuid: 353ec0bf-aa4d-412a-903b-10a1101b1458
-    network: ws
-    tls: false
-    ws-opts:
-      path: /grpchongkong2/?ed=2560
-      headers:
-        Host: 1000ws39.iptests.net
-  - name: 🇭🇰香港+02
-    type: vless
-    server: qsybgp1-1-1000ws.iptests.net
-    port: 80
-    uuid: 353ec0bf-aa4d-412a-903b-10a1101b1458
-    network: ws
-    tls: false
-    ws-opts:
-      path: /grpchongkong2/?ed=2560
-      headers:
-        Host: 1000ws34.iptests.net
-  - name: 🇭🇰香港+04
-    type: vless
-    server: qsybgp3-1000ws.iptests.net
-    port: 80
-    uuid: 353ec0bf-aa4d-412a-903b-10a1101b1458
-    network: ws
-    tls: false
-    ws-opts:
-      path: /grpchongkong2/?ed=2560
-      headers:
-        Host: 1000ws34.iptests.net
-  - name: 🇭🇰香港+07
-    type: vless
-    server: qsybgp2-1-1000ws.iptests.net
-    port: 80
-    uuid: 353ec0bf-aa4d-412a-903b-10a1101b1458
-    network: ws
-    tls: false
-    ws-opts:
-      path: /grpcsg2/
-      headers:
-        Host: 1000ws39.iptests.net
-  - name: 🇭🇰香港+06
-    type: vless
-    server: qsybgp1-1-1000ws.iptests.net
-    port: 80
-    uuid: 353ec0bf-aa4d-412a-903b-10a1101b1458
-    network: ws
-    tls: false
-    ws-opts:
-      path: /grpcsg2/
-      headers:
-        Host: 1000ws34.iptests.net
-  - name: 🇸🇬 直连-新加坡
-    type: vmess
-    server: gm-sg06.aiwowo.xyz
-    port: 10001
-    uuid: 424e85f2-41ef-4c0b-8885-68b9db145b5d
-    alterId: 0
-    cipher: auto
-    tls: false
-    skip-cert-verify: false
-    network: ws
-    ws-opts:
-      path: /cctv13/hd.m3u8
-      headers:
-        Host: gm-sg06.aiwowo.xyz
-  - name: 🇹🇼台湾+02
-    type: vless
-    server: qsybgp2-1-1000ws.iptests.net
-    port: 80
-    uuid: 353ec0bf-aa4d-412a-903b-10a1101b1458
-    network: ws
-    tls: false
-    ws-opts:
-      path: /grpchongkong1/
-      headers:
-        Host: 1000ws39.iptests.net
-  - name: 🇹🇼台湾+03
-    type: vless
-    server: qsybgp3-1000ws.iptests.net
-    port: 80
-    uuid: 353ec0bf-aa4d-412a-903b-10a1101b1458
-    network: ws
-    tls: false
-    ws-opts:
-      path: /grpchongkong1/
-      headers:
-        Host: 1000ws34.iptests.net
-  - name: 🇩🇪+直连-德国
-    type: vless
-    server: gm-de09.aiwowo.xyz
-    port: 20076
-    uuid: 424e85f2-41ef-4c0b-8885-68b9db145b5d
-    servername: www.apple.com
-    tls: true
-    flow: xtls-rprx-vision
-    client-fingerprint: firefox
-    reality-opts:
-      public-key: Z8tJYAjotKrLI4LMnXPYWZZBgJgvNjiD0rtmcUJt-R0
-      short-id: ac1c6898c4bac649
-  - name: 🇹🇼台湾+01
-    type: vless
-    server: qsybgp1-1-1000ws.iptests.net
-    port: 80
-    uuid: 353ec0bf-aa4d-412a-903b-10a1101b1458
-    network: ws
-    tls: false
-    ws-opts:
-      path: /grpchongkong1/
-      headers:
-        Host: 1000ws34.iptests.net
-  - name: 🇯🇵日本+01
-    type: vless
-    server: qsybgp1-1-1000ws.iptests.net
-    port: 80
-    uuid: 353ec0bf-aa4d-412a-903b-10a1101b1458
-    network: ws
-    tls: false
-    ws-opts:
-      path: /grpcjapan2/?ed=2560
-      headers:
-        Host: 1000ws34.iptests.net
-  - name: 🇯🇵日本+04
-    type: vless
-    server: qsybgp3-1000ws.iptests.net
-    port: 80
-    uuid: 353ec0bf-aa4d-412a-903b-10a1101b1458
-    network: ws
-    tls: false
-    ws-opts:
-      path: /grpcjapan2/?ed=2560
-      headers:
-        Host: 1000ws39.iptests.net
-  - name: 🇯🇵日本+02
-    type: vless
-    server: qsybgp2-1-1000ws.iptests.net
-    port: 80
-    uuid: 353ec0bf-aa4d-412a-903b-10a1101b1458
-    network: ws
-    tls: false
-    ws-opts:
-      path: /grpcjapan2/?ed=2560
-      headers:
-        Host: 1000ws39.iptests.net
-  - name: 🇯🇵日本+03
-    type: vless
-    server: qsybgp3-1000ws.iptests.net
-    port: 80
-    uuid: 353ec0bf-aa4d-412a-903b-10a1101b1458
-    network: ws
-    tls: false
-    ws-opts:
-      path: /grpcjapan2/?ed=2560
-      headers:
-        Host: 1000ws34.iptests.net
-  - name: 🇸🇬新加坡+02
-    type: vless
-    server: qsybgp2-1-1000ws.iptests.net
-    port: 80
-    uuid: 353ec0bf-aa4d-412a-903b-10a1101b1458
-    network: ws
-    tls: false
-    ws-opts:
-      path: /grpchongkong3/
-      headers:
-        Host: 1000ws34.iptests.net
-  - name: 🇸🇬新加坡+03
-    type: vless
-    server: qsybgp3-1000ws.iptests.net
-    port: 80
-    uuid: 353ec0bf-aa4d-412a-903b-10a1101b1458
-    network: ws
-    tls: false
-    ws-opts:
-      path: /grpchongkong3/
-      headers:
-        Host: 1000ws39.iptests.net
-  - name: 🇲🇴澳门+01
-    type: vless
-    server: qsybgp3-1000ws.iptests.net
-    port: 80
-    uuid: 353ec0bf-aa4d-412a-903b-10a1101b1458
-    network: ws
-    tls: false
-    ws-opts:
-      path: /grpchongkong3/?ed=2560
-      headers:
-        Host: 1000ws34.iptests.net
-  - name: 🇸🇬新加坡+01
-    type: vless
-    server: qsybgp1-1-1000ws.iptests.net
-    port: 80
-    uuid: 353ec0bf-aa4d-412a-903b-10a1101b1458
-    network: ws
-    tls: false
-    ws-opts:
-      path: /grpchongkong3/
-      headers:
-        Host: 1000ws39.iptests.net
-  - name: 🇺🇸美国+01
-    type: vless
-    server: qsybgp1-1-1000ws.iptests.net
-    port: 80
-    uuid: 353ec0bf-aa4d-412a-903b-10a1101b1458
-    network: ws
-    tls: false
-    ws-opts:
-      path: /grpcus1/
-      headers:
-        Host: 1000ws34.iptests.net
-  - name: 🇺🇸美国+03
-    type: vless
-    server: qsybgp3-1000ws.iptests.net
-    port: 80
-    uuid: 353ec0bf-aa4d-412a-903b-10a1101b1458
-    network: ws
-    tls: false
-    ws-opts:
-      path: /grpcus1/
-      headers:
-        Host: 1000ws34.iptests.net
-  - name: 🇺🇸美国+02
-    type: vless
-    server: qsybgp2-1-1000ws.iptests.net
-    port: 80
-    uuid: 353ec0bf-aa4d-412a-903b-10a1101b1458
-    network: ws
-    tls: false
-    ws-opts:
-      path: /grpcus1/
-      headers:
-        Host: 1000ws39.iptests.net
+    type: ss
+    server: junp.kuaileiduanko.com
+    port: 36086
+    cipher: aes-128-gcm
+    password: 424e85f2-41ef-4c0b-8885-68b9db145b5d
   - name: 🇭🇰 IEPL-香港1
     type: ss
     server: junp.kuaileiduanko.com
@@ -388,13 +37,13 @@ proxies:
     password: 424e85f2-41ef-4c0b-8885-68b9db145b5d
   - name: 🇭🇰 IEPL-香港3
     type: ss
-    server: 6688.rkkuailei.cc
+    server: junp.kuaileiduanko.com
     port: 36082
     cipher: aes-128-gcm
     password: 424e85f2-41ef-4c0b-8885-68b9db145b5d
   - name: 🇭🇰 IEPL-香港4
     type: ss
-    server: 6688.rkkuailei.cc
+    server: junp.kuaileiduanko.com
     port: 36087
     cipher: aes-128-gcm
     password: 424e85f2-41ef-4c0b-8885-68b9db145b5d
@@ -404,6 +53,18 @@ proxies:
     port: 36123
     cipher: aes-128-gcm
     password: 424e85f2-41ef-4c0b-8885-68b9db145b5d
+  - name: 🇭🇰+直连-香港
+    type: vless
+    server: gm-hk111.aiwowo.xyz
+    port: 20076
+    uuid: 424e85f2-41ef-4c0b-8885-68b9db145b5d
+    servername: www.apple.com
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: edge
+    reality-opts:
+      public-key: Z8tJYAjotKrLI4LMnXPYWZZBgJgvNjiD0rtmcUJt-R0
+      short-id: ac1c6898c4bac539
   - name: 🇯🇵  IEPL-日本1
     type: ss
     server: junp.kuaileiduanko.com
@@ -428,6 +89,42 @@ proxies:
     port: 36078
     cipher: aes-128-gcm
     password: 424e85f2-41ef-4c0b-8885-68b9db145b5d
+  - name: 🇯🇵+直连-日本1
+    type: vless
+    server: gm-jp0666.aiwowo.xyz
+    port: 20076
+    uuid: 424e85f2-41ef-4c0b-8885-68b9db145b5d
+    servername: www.e-gov.go.jp
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: Z8tJYAjotKrLI4LMnXPYWZZBgJgvNjiD0rtmcUJt-R0
+      short-id: ac1c6898c4bac119
+  - name: 🇯🇵+直连-日本2
+    type: vless
+    server: gm-jp0444.aiwowo.xyz
+    port: 10001
+    uuid: 424e85f2-41ef-4c0b-8885-68b9db145b5d
+    servername: www.e-gov.go.jp
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: qq
+    reality-opts:
+      public-key: Z8tJYAjotKrLI4LMnXPYWZZBgJgvNjiD0rtmcUJt-R0
+      short-id: ac1c6898c4bac112
+  - name: 🇩🇪+直连-德国
+    type: vless
+    server: gm-de09.aiwowo.xyz
+    port: 20076
+    uuid: 424e85f2-41ef-4c0b-8885-68b9db145b5d
+    servername: www.apple.com
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: ios
+    reality-opts:
+      public-key: Z8tJYAjotKrLI4LMnXPYWZZBgJgvNjiD0rtmcUJt-R0
+      short-id: ac1c6898c4bac649
   - name: 🇸🇬  IEPL-新加坡1
     type: ss
     server: junp.kuaileiduanko.com
@@ -482,6 +179,42 @@ proxies:
     port: 36165
     cipher: aes-128-gcm
     password: 424e85f2-41ef-4c0b-8885-68b9db145b5d
+  - name: 🇺🇸+直连-美国1
+    type: vless
+    server: gm-us055.aiwowo.xyz
+    port: 30062
+    uuid: 424e85f2-41ef-4c0b-8885-68b9db145b5d
+    servername: www.usa.gov
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: ios
+    reality-opts:
+      public-key: Z8tJYAjotKrLI4LMnXPYWZZBgJgvNjiD0rtmcUJt-R0
+      short-id: ac1c6898c4bac129
+  - name: 🇺🇸+直连-美国2+IPV6
+    type: vless
+    server: gm-jp079.aiwowo.xyz
+    port: 30062
+    uuid: 424e85f2-41ef-4c0b-8885-68b9db145b5d
+    servername: www.apple.com
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: Z8tJYAjotKrLI4LMnXPYWZZBgJgvNjiD0rtmcUJt-R0
+      short-id: ac1c6898c4bac999
+  - name: 🇺🇸+直连-美国3++IPv6
+    type: vless
+    server: gm-jp078.aiwowo.xyz
+    port: 20076
+    uuid: 424e85f2-41ef-4c0b-8885-68b9db145b5d
+    servername: www.apple.com
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: Z8tJYAjotKrLI4LMnXPYWZZBgJgvNjiD0rtmcUJt-R0
+      short-id: ac1c6898c4bac169
   - name: 🇦🇺 IEPL-澳大利亚
     type: ss
     server: junp.kuaileiduanko.com
@@ -572,7 +305,7 @@ proxies:
     port: 36056
     cipher: aes-128-gcm
     password: 424e85f2-41ef-4c0b-8885-68b9db145b5d
-  - name: 🇦🇪IEPL-阿联酋
+  - name: 🇦🇪 IEPL-阿联酋
     type: ss
     server: junp.kuaileiduanko.com
     port: 36055
@@ -608,28 +341,6 @@ proxies:
     port: 36050
     cipher: aes-128-gcm
     password: 424e85f2-41ef-4c0b-8885-68b9db145b5d
-  - name: 🇭🇰香港+09+[0.5X]
-    type: vless
-    server: qsynode-01.iptests.net
-    port: 80
-    uuid: 353ec0bf-aa4d-412a-903b-10a1101b1458
-    network: ws
-    tls: false
-    ws-opts:
-      path: /grpchongkong3/
-      headers:
-        Host: 1000ws35.iptests.net
-  - name: 🇲🇴澳门+02
-    type: vless
-    server: qsybgp1-1-1000ws.iptests.net
-    port: 80
-    uuid: 353ec0bf-aa4d-412a-903b-10a1101b1458
-    network: ws
-    tls: false
-    ws-opts:
-      path: /grpchongkong4/?ed=2560
-      headers:
-        Host: 1000ws39.iptests.net
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -637,43 +348,19 @@ proxy-groups:
       - ♻️ 自动选择
       - DIRECT
       - 微信：gtyz222
-      - 🇺🇸+直连-美国2
-      - 🇺🇸+直连-美国1
-      - 🇯🇵+直连-日本1
-      - 🇭🇰+直连-香港
-      - 🇭🇰香港+03
-      - 🇭🇰香港+05
-      - 🇭🇰香港+08
-      - 🇭🇰香港+01
-      - 🇭🇰香港+02
-      - 🇭🇰香港+04
-      - 🇭🇰香港+07
-      - 🇭🇰香港+06
-      - 🇸🇬 直连-新加坡
-      - 🇹🇼台湾+02
-      - 🇹🇼台湾+03
-      - 🇩🇪+直连-德国
-      - 🇹🇼台湾+01
-      - 🇯🇵日本+01
-      - 🇯🇵日本+04
-      - 🇯🇵日本+02
-      - 🇯🇵日本+03
-      - 🇸🇬新加坡+02
-      - 🇸🇬新加坡+03
-      - 🇲🇴澳门+01
-      - 🇸🇬新加坡+01
-      - 🇺🇸美国+01
-      - 🇺🇸美国+03
-      - 🇺🇸美国+02
       - 🇭🇰 IEPL-香港1
       - 🇭🇰 IEPL-香港2
       - 🇭🇰 IEPL-香港3
       - 🇭🇰 IEPL-香港4
       - 🇭🇰 IEPL-香港动态家宽
+      - 🇭🇰+直连-香港
       - 🇯🇵  IEPL-日本1
       - 🇯🇵  IEPL-日本2
       - 🇯🇵  IEPL-日本3
       - 🇯🇵  IEPL-日本4
+      - 🇯🇵+直连-日本1
+      - 🇯🇵+直连-日本2
+      - 🇩🇪+直连-德国
       - 🇸🇬  IEPL-新加坡1
       - 🇸🇬  IEPL-新加坡2
       - 🇸🇬  IEPL-新加坡3
@@ -683,6 +370,9 @@ proxy-groups:
       - 🇺🇸  IEPL-美国3
       - 🇺🇸  IEPL-美国4
       - 🇺🇸  IEPL-美国静态家宽
+      - 🇺🇸+直连-美国1
+      - 🇺🇸+直连-美国2+IPV6
+      - 🇺🇸+直连-美国3++IPv6
       - 🇦🇺 IEPL-澳大利亚
       - 🇲🇾 IEPL-马来西亚1
       - 🇲🇾 IEPL-马来西亚2
@@ -698,55 +388,29 @@ proxy-groups:
       - 🇨🇭 IEPL-瑞士
       - 🇳🇱 IEPL-荷兰
       - 🇮🇱 IEPL-以色列
-      - 🇦🇪IEPL-阿联酋
+      - 🇦🇪 IEPL-阿联酋
       - 🇮🇳 IEPL-印度
       - 🇧🇷 IEPL-巴西
       - 🇪🇸 IEPL-西班牙
       - 🇮🇩 IEPL-印度尼西亚
       - 🇨🇦 IEPL-加拿大
-      - 🇭🇰香港+09+[0.5X]
-      - 🇲🇴澳门+02
   - name: ♻️ 自动选择
     type: url-test
     proxies:
       - 微信：gtyz222
-      - 🇺🇸+直连-美国2
-      - 🇺🇸+直连-美国1
-      - 🇯🇵+直连-日本1
-      - 🇭🇰+直连-香港
-      - 🇭🇰香港+03
-      - 🇭🇰香港+05
-      - 🇭🇰香港+08
-      - 🇭🇰香港+01
-      - 🇭🇰香港+02
-      - 🇭🇰香港+04
-      - 🇭🇰香港+07
-      - 🇭🇰香港+06
-      - 🇸🇬 直连-新加坡
-      - 🇹🇼台湾+02
-      - 🇹🇼台湾+03
-      - 🇩🇪+直连-德国
-      - 🇹🇼台湾+01
-      - 🇯🇵日本+01
-      - 🇯🇵日本+04
-      - 🇯🇵日本+02
-      - 🇯🇵日本+03
-      - 🇸🇬新加坡+02
-      - 🇸🇬新加坡+03
-      - 🇲🇴澳门+01
-      - 🇸🇬新加坡+01
-      - 🇺🇸美国+01
-      - 🇺🇸美国+03
-      - 🇺🇸美国+02
       - 🇭🇰 IEPL-香港1
       - 🇭🇰 IEPL-香港2
       - 🇭🇰 IEPL-香港3
       - 🇭🇰 IEPL-香港4
       - 🇭🇰 IEPL-香港动态家宽
+      - 🇭🇰+直连-香港
       - 🇯🇵  IEPL-日本1
       - 🇯🇵  IEPL-日本2
       - 🇯🇵  IEPL-日本3
       - 🇯🇵  IEPL-日本4
+      - 🇯🇵+直连-日本1
+      - 🇯🇵+直连-日本2
+      - 🇩🇪+直连-德国
       - 🇸🇬  IEPL-新加坡1
       - 🇸🇬  IEPL-新加坡2
       - 🇸🇬  IEPL-新加坡3
@@ -756,6 +420,9 @@ proxy-groups:
       - 🇺🇸  IEPL-美国3
       - 🇺🇸  IEPL-美国4
       - 🇺🇸  IEPL-美国静态家宽
+      - 🇺🇸+直连-美国1
+      - 🇺🇸+直连-美国2+IPV6
+      - 🇺🇸+直连-美国3++IPv6
       - 🇦🇺 IEPL-澳大利亚
       - 🇲🇾 IEPL-马来西亚1
       - 🇲🇾 IEPL-马来西亚2
@@ -771,14 +438,12 @@ proxy-groups:
       - 🇨🇭 IEPL-瑞士
       - 🇳🇱 IEPL-荷兰
       - 🇮🇱 IEPL-以色列
-      - 🇦🇪IEPL-阿联酋
+      - 🇦🇪 IEPL-阿联酋
       - 🇮🇳 IEPL-印度
       - 🇧🇷 IEPL-巴西
       - 🇪🇸 IEPL-西班牙
       - 🇮🇩 IEPL-印度尼西亚
       - 🇨🇦 IEPL-加拿大
-      - 🇭🇰香港+09+[0.5X]
-      - 🇲🇴澳门+02
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
@@ -789,43 +454,19 @@ proxy-groups:
       - ♻️ 自动选择
       - 🎯 全球直连
       - 微信：gtyz222
-      - 🇺🇸+直连-美国2
-      - 🇺🇸+直连-美国1
-      - 🇯🇵+直连-日本1
-      - 🇭🇰+直连-香港
-      - 🇭🇰香港+03
-      - 🇭🇰香港+05
-      - 🇭🇰香港+08
-      - 🇭🇰香港+01
-      - 🇭🇰香港+02
-      - 🇭🇰香港+04
-      - 🇭🇰香港+07
-      - 🇭🇰香港+06
-      - 🇸🇬 直连-新加坡
-      - 🇹🇼台湾+02
-      - 🇹🇼台湾+03
-      - 🇩🇪+直连-德国
-      - 🇹🇼台湾+01
-      - 🇯🇵日本+01
-      - 🇯🇵日本+04
-      - 🇯🇵日本+02
-      - 🇯🇵日本+03
-      - 🇸🇬新加坡+02
-      - 🇸🇬新加坡+03
-      - 🇲🇴澳门+01
-      - 🇸🇬新加坡+01
-      - 🇺🇸美国+01
-      - 🇺🇸美国+03
-      - 🇺🇸美国+02
       - 🇭🇰 IEPL-香港1
       - 🇭🇰 IEPL-香港2
       - 🇭🇰 IEPL-香港3
       - 🇭🇰 IEPL-香港4
       - 🇭🇰 IEPL-香港动态家宽
+      - 🇭🇰+直连-香港
       - 🇯🇵  IEPL-日本1
       - 🇯🇵  IEPL-日本2
       - 🇯🇵  IEPL-日本3
       - 🇯🇵  IEPL-日本4
+      - 🇯🇵+直连-日本1
+      - 🇯🇵+直连-日本2
+      - 🇩🇪+直连-德国
       - 🇸🇬  IEPL-新加坡1
       - 🇸🇬  IEPL-新加坡2
       - 🇸🇬  IEPL-新加坡3
@@ -835,6 +476,9 @@ proxy-groups:
       - 🇺🇸  IEPL-美国3
       - 🇺🇸  IEPL-美国4
       - 🇺🇸  IEPL-美国静态家宽
+      - 🇺🇸+直连-美国1
+      - 🇺🇸+直连-美国2+IPV6
+      - 🇺🇸+直连-美国3++IPv6
       - 🇦🇺 IEPL-澳大利亚
       - 🇲🇾 IEPL-马来西亚1
       - 🇲🇾 IEPL-马来西亚2
@@ -850,57 +494,31 @@ proxy-groups:
       - 🇨🇭 IEPL-瑞士
       - 🇳🇱 IEPL-荷兰
       - 🇮🇱 IEPL-以色列
-      - 🇦🇪IEPL-阿联酋
+      - 🇦🇪 IEPL-阿联酋
       - 🇮🇳 IEPL-印度
       - 🇧🇷 IEPL-巴西
       - 🇪🇸 IEPL-西班牙
       - 🇮🇩 IEPL-印度尼西亚
       - 🇨🇦 IEPL-加拿大
-      - 🇭🇰香港+09+[0.5X]
-      - 🇲🇴澳门+02
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
       - 微信：gtyz222
-      - 🇺🇸+直连-美国2
-      - 🇺🇸+直连-美国1
-      - 🇯🇵+直连-日本1
-      - 🇭🇰+直连-香港
-      - 🇭🇰香港+03
-      - 🇭🇰香港+05
-      - 🇭🇰香港+08
-      - 🇭🇰香港+01
-      - 🇭🇰香港+02
-      - 🇭🇰香港+04
-      - 🇭🇰香港+07
-      - 🇭🇰香港+06
-      - 🇸🇬 直连-新加坡
-      - 🇹🇼台湾+02
-      - 🇹🇼台湾+03
-      - 🇩🇪+直连-德国
-      - 🇹🇼台湾+01
-      - 🇯🇵日本+01
-      - 🇯🇵日本+04
-      - 🇯🇵日本+02
-      - 🇯🇵日本+03
-      - 🇸🇬新加坡+02
-      - 🇸🇬新加坡+03
-      - 🇲🇴澳门+01
-      - 🇸🇬新加坡+01
-      - 🇺🇸美国+01
-      - 🇺🇸美国+03
-      - 🇺🇸美国+02
       - 🇭🇰 IEPL-香港1
       - 🇭🇰 IEPL-香港2
       - 🇭🇰 IEPL-香港3
       - 🇭🇰 IEPL-香港4
       - 🇭🇰 IEPL-香港动态家宽
+      - 🇭🇰+直连-香港
       - 🇯🇵  IEPL-日本1
       - 🇯🇵  IEPL-日本2
       - 🇯🇵  IEPL-日本3
       - 🇯🇵  IEPL-日本4
+      - 🇯🇵+直连-日本1
+      - 🇯🇵+直连-日本2
+      - 🇩🇪+直连-德国
       - 🇸🇬  IEPL-新加坡1
       - 🇸🇬  IEPL-新加坡2
       - 🇸🇬  IEPL-新加坡3
@@ -910,6 +528,9 @@ proxy-groups:
       - 🇺🇸  IEPL-美国3
       - 🇺🇸  IEPL-美国4
       - 🇺🇸  IEPL-美国静态家宽
+      - 🇺🇸+直连-美国1
+      - 🇺🇸+直连-美国2+IPV6
+      - 🇺🇸+直连-美国3++IPv6
       - 🇦🇺 IEPL-澳大利亚
       - 🇲🇾 IEPL-马来西亚1
       - 🇲🇾 IEPL-马来西亚2
@@ -925,57 +546,31 @@ proxy-groups:
       - 🇨🇭 IEPL-瑞士
       - 🇳🇱 IEPL-荷兰
       - 🇮🇱 IEPL-以色列
-      - 🇦🇪IEPL-阿联酋
+      - 🇦🇪 IEPL-阿联酋
       - 🇮🇳 IEPL-印度
       - 🇧🇷 IEPL-巴西
       - 🇪🇸 IEPL-西班牙
       - 🇮🇩 IEPL-印度尼西亚
       - 🇨🇦 IEPL-加拿大
-      - 🇭🇰香港+09+[0.5X]
-      - 🇲🇴澳门+02
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
       - 微信：gtyz222
-      - 🇺🇸+直连-美国2
-      - 🇺🇸+直连-美国1
-      - 🇯🇵+直连-日本1
-      - 🇭🇰+直连-香港
-      - 🇭🇰香港+03
-      - 🇭🇰香港+05
-      - 🇭🇰香港+08
-      - 🇭🇰香港+01
-      - 🇭🇰香港+02
-      - 🇭🇰香港+04
-      - 🇭🇰香港+07
-      - 🇭🇰香港+06
-      - 🇸🇬 直连-新加坡
-      - 🇹🇼台湾+02
-      - 🇹🇼台湾+03
-      - 🇩🇪+直连-德国
-      - 🇹🇼台湾+01
-      - 🇯🇵日本+01
-      - 🇯🇵日本+04
-      - 🇯🇵日本+02
-      - 🇯🇵日本+03
-      - 🇸🇬新加坡+02
-      - 🇸🇬新加坡+03
-      - 🇲🇴澳门+01
-      - 🇸🇬新加坡+01
-      - 🇺🇸美国+01
-      - 🇺🇸美国+03
-      - 🇺🇸美国+02
       - 🇭🇰 IEPL-香港1
       - 🇭🇰 IEPL-香港2
       - 🇭🇰 IEPL-香港3
       - 🇭🇰 IEPL-香港4
       - 🇭🇰 IEPL-香港动态家宽
+      - 🇭🇰+直连-香港
       - 🇯🇵  IEPL-日本1
       - 🇯🇵  IEPL-日本2
       - 🇯🇵  IEPL-日本3
       - 🇯🇵  IEPL-日本4
+      - 🇯🇵+直连-日本1
+      - 🇯🇵+直连-日本2
+      - 🇩🇪+直连-德国
       - 🇸🇬  IEPL-新加坡1
       - 🇸🇬  IEPL-新加坡2
       - 🇸🇬  IEPL-新加坡3
@@ -985,6 +580,9 @@ proxy-groups:
       - 🇺🇸  IEPL-美国3
       - 🇺🇸  IEPL-美国4
       - 🇺🇸  IEPL-美国静态家宽
+      - 🇺🇸+直连-美国1
+      - 🇺🇸+直连-美国2+IPV6
+      - 🇺🇸+直连-美国3++IPv6
       - 🇦🇺 IEPL-澳大利亚
       - 🇲🇾 IEPL-马来西亚1
       - 🇲🇾 IEPL-马来西亚2
@@ -1000,57 +598,31 @@ proxy-groups:
       - 🇨🇭 IEPL-瑞士
       - 🇳🇱 IEPL-荷兰
       - 🇮🇱 IEPL-以色列
-      - 🇦🇪IEPL-阿联酋
+      - 🇦🇪 IEPL-阿联酋
       - 🇮🇳 IEPL-印度
       - 🇧🇷 IEPL-巴西
       - 🇪🇸 IEPL-西班牙
       - 🇮🇩 IEPL-印度尼西亚
       - 🇨🇦 IEPL-加拿大
-      - 🇭🇰香港+09+[0.5X]
-      - 🇲🇴澳门+02
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
       - 微信：gtyz222
-      - 🇺🇸+直连-美国2
-      - 🇺🇸+直连-美国1
-      - 🇯🇵+直连-日本1
-      - 🇭🇰+直连-香港
-      - 🇭🇰香港+03
-      - 🇭🇰香港+05
-      - 🇭🇰香港+08
-      - 🇭🇰香港+01
-      - 🇭🇰香港+02
-      - 🇭🇰香港+04
-      - 🇭🇰香港+07
-      - 🇭🇰香港+06
-      - 🇸🇬 直连-新加坡
-      - 🇹🇼台湾+02
-      - 🇹🇼台湾+03
-      - 🇩🇪+直连-德国
-      - 🇹🇼台湾+01
-      - 🇯🇵日本+01
-      - 🇯🇵日本+04
-      - 🇯🇵日本+02
-      - 🇯🇵日本+03
-      - 🇸🇬新加坡+02
-      - 🇸🇬新加坡+03
-      - 🇲🇴澳门+01
-      - 🇸🇬新加坡+01
-      - 🇺🇸美国+01
-      - 🇺🇸美国+03
-      - 🇺🇸美国+02
       - 🇭🇰 IEPL-香港1
       - 🇭🇰 IEPL-香港2
       - 🇭🇰 IEPL-香港3
       - 🇭🇰 IEPL-香港4
       - 🇭🇰 IEPL-香港动态家宽
+      - 🇭🇰+直连-香港
       - 🇯🇵  IEPL-日本1
       - 🇯🇵  IEPL-日本2
       - 🇯🇵  IEPL-日本3
       - 🇯🇵  IEPL-日本4
+      - 🇯🇵+直连-日本1
+      - 🇯🇵+直连-日本2
+      - 🇩🇪+直连-德国
       - 🇸🇬  IEPL-新加坡1
       - 🇸🇬  IEPL-新加坡2
       - 🇸🇬  IEPL-新加坡3
@@ -1060,6 +632,9 @@ proxy-groups:
       - 🇺🇸  IEPL-美国3
       - 🇺🇸  IEPL-美国4
       - 🇺🇸  IEPL-美国静态家宽
+      - 🇺🇸+直连-美国1
+      - 🇺🇸+直连-美国2+IPV6
+      - 🇺🇸+直连-美国3++IPv6
       - 🇦🇺 IEPL-澳大利亚
       - 🇲🇾 IEPL-马来西亚1
       - 🇲🇾 IEPL-马来西亚2
@@ -1075,14 +650,12 @@ proxy-groups:
       - 🇨🇭 IEPL-瑞士
       - 🇳🇱 IEPL-荷兰
       - 🇮🇱 IEPL-以色列
-      - 🇦🇪IEPL-阿联酋
+      - 🇦🇪 IEPL-阿联酋
       - 🇮🇳 IEPL-印度
       - 🇧🇷 IEPL-巴西
       - 🇪🇸 IEPL-西班牙
       - 🇮🇩 IEPL-印度尼西亚
       - 🇨🇦 IEPL-加拿大
-      - 🇭🇰香港+09+[0.5X]
-      - 🇲🇴澳门+02
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -1106,43 +679,19 @@ proxy-groups:
       - 🎯 全球直连
       - ♻️ 自动选择
       - 微信：gtyz222
-      - 🇺🇸+直连-美国2
-      - 🇺🇸+直连-美国1
-      - 🇯🇵+直连-日本1
-      - 🇭🇰+直连-香港
-      - 🇭🇰香港+03
-      - 🇭🇰香港+05
-      - 🇭🇰香港+08
-      - 🇭🇰香港+01
-      - 🇭🇰香港+02
-      - 🇭🇰香港+04
-      - 🇭🇰香港+07
-      - 🇭🇰香港+06
-      - 🇸🇬 直连-新加坡
-      - 🇹🇼台湾+02
-      - 🇹🇼台湾+03
-      - 🇩🇪+直连-德国
-      - 🇹🇼台湾+01
-      - 🇯🇵日本+01
-      - 🇯🇵日本+04
-      - 🇯🇵日本+02
-      - 🇯🇵日本+03
-      - 🇸🇬新加坡+02
-      - 🇸🇬新加坡+03
-      - 🇲🇴澳门+01
-      - 🇸🇬新加坡+01
-      - 🇺🇸美国+01
-      - 🇺🇸美国+03
-      - 🇺🇸美国+02
       - 🇭🇰 IEPL-香港1
       - 🇭🇰 IEPL-香港2
       - 🇭🇰 IEPL-香港3
       - 🇭🇰 IEPL-香港4
       - 🇭🇰 IEPL-香港动态家宽
+      - 🇭🇰+直连-香港
       - 🇯🇵  IEPL-日本1
       - 🇯🇵  IEPL-日本2
       - 🇯🇵  IEPL-日本3
       - 🇯🇵  IEPL-日本4
+      - 🇯🇵+直连-日本1
+      - 🇯🇵+直连-日本2
+      - 🇩🇪+直连-德国
       - 🇸🇬  IEPL-新加坡1
       - 🇸🇬  IEPL-新加坡2
       - 🇸🇬  IEPL-新加坡3
@@ -1152,6 +701,9 @@ proxy-groups:
       - 🇺🇸  IEPL-美国3
       - 🇺🇸  IEPL-美国4
       - 🇺🇸  IEPL-美国静态家宽
+      - 🇺🇸+直连-美国1
+      - 🇺🇸+直连-美国2+IPV6
+      - 🇺🇸+直连-美国3++IPv6
       - 🇦🇺 IEPL-澳大利亚
       - 🇲🇾 IEPL-马来西亚1
       - 🇲🇾 IEPL-马来西亚2
@@ -1167,14 +719,12 @@ proxy-groups:
       - 🇨🇭 IEPL-瑞士
       - 🇳🇱 IEPL-荷兰
       - 🇮🇱 IEPL-以色列
-      - 🇦🇪IEPL-阿联酋
+      - 🇦🇪 IEPL-阿联酋
       - 🇮🇳 IEPL-印度
       - 🇧🇷 IEPL-巴西
       - 🇪🇸 IEPL-西班牙
       - 🇮🇩 IEPL-印度尼西亚
       - 🇨🇦 IEPL-加拿大
-      - 🇭🇰香港+09+[0.5X]
-      - 🇲🇴澳门+02
 rule-providers:
   LocalAreaNetwork:
     type: http
