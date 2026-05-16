@@ -18,36 +18,171 @@ dns:
     - https://doh.pub/dns-query
 proxies:
   - name: 微信：gtyz222
-    type: ss
-    server: junp.kuaileiduanko.com
-    port: 36089
-    cipher: 2022-blake3-aes-128-gcm
-    password: ZDc2YTMxZTgwMGFmNjhlMg==:ZGMwMmViMDEtZmViZC00Yw==
-  - name: 🇭🇰 IEPL-香港1
-    type: ss
-    server: junp.kuaileiduanko.com
-    port: 36091
-    cipher: 2022-blake3-aes-128-gcm
-    password: ZDc2YTMxZTgwMGFmNjhlMg==:ZGMwMmViMDEtZmViZC00Yw==
-  - name: 🇭🇰 IEPL-香港2
-    type: ss
-    server: junp.kuaileiduanko.com
-    port: 36092
-    cipher: 2022-blake3-aes-128-gcm
-    password: ZDc2YTMxZTgwMGFmNjhlMg==:ZGMwMmViMDEtZmViZC00Yw==
-  - name: 🇭🇰 IEPL-香港3
-    type: ss
-    server: junp.kuaileiduanko.com
-    port: 36093
-    cipher: 2022-blake3-aes-128-gcm
-    password: ZDc2YTMxZTgwMGFmNjhlMg==:ZGMwMmViMDEtZmViZC00Yw==
-  - name: 🇭🇰 IEPL-香港动态家宽
-    type: ss
-    server: junp.kuaileiduanko.com
-    port: 36123
-    cipher: aes-128-gcm
-    password: dc02eb01-febd-4c4a-8e2c-75da028c624b
-  - name: 🇭🇰+直连-香港
+    type: hysteria2
+    server: aws-linkhy15.liangxin1.xyz
+    port: 60000
+    password: f95dad72-1ba5-4257-95c6-e211cf74977b
+    sni: bilibili-jp.biliimg.com
+    skip-cert-verify: true
+    udp: true
+  - name: 🇯🇵日本专线04|BGP|流媒体
+    type: hysteria2
+    server: aws-linkhy18.liangxin1.xyz
+    port: 60000
+    password: f95dad72-1ba5-4257-95c6-e211cf74977b
+    sni: bilibili-jp4.biliimg.com
+    skip-cert-verify: true
+    udp: true
+  - name: 🇯🇵日本高速03|BGP|CUCM
+    type: vless
+    server: aws-link19.liangxin1.xyz
+    port: 8654
+    uuid: f95dad72-1ba5-4257-95c6-e211cf74977b
+    servername: download-porter.hoyoverse.com
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: safari
+    reality-opts:
+      public-key: QE5l0RUqs4OsH3j3u_xHm06-4NlILmQivZUJqiEx11o
+      short-id: "6314e825"
+    udp: true
+  - name: 🇯🇵日本专线03|BGP|流媒体
+    type: hysteria2
+    server: aws-linkhy17.liangxin1.xyz
+    port: 60000
+    password: f95dad72-1ba5-4257-95c6-e211cf74977b
+    sni: bilibili-jp3.biliimg.com
+    skip-cert-verify: true
+    udp: true
+  - name: 🇯🇵日本高速02|BGP|CUCM
+    type: vless
+    server: aws-link14.liangxin1.xyz
+    port: 25485
+    uuid: f95dad72-1ba5-4257-95c6-e211cf74977b
+    servername: www.apple.com.cn
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: ios
+    reality-opts:
+      public-key: VOFSjjWT0wIH3Q0ntyEZd8WwksrIAb5gPt_3PBnEASg
+      short-id: 9c5b8c53
+    udp: true
+  - name: 🇸🇬新加坡专线02|BGP|流媒体
+    type: hysteria2
+    server: aws-linkhy10.liangxin1.xyz
+    port: 60000
+    password: f95dad72-1ba5-4257-95c6-e211cf74977b
+    sni: iosapps.itunes.apple.com
+    skip-cert-verify: true
+    udp: true
+  - name: 🇯🇵日本专线02|BGP|流媒体
+    type: hysteria2
+    server: aws-linkhy16.liangxin1.xyz
+    port: 60000
+    password: f95dad72-1ba5-4257-95c6-e211cf74977b
+    sni: bilibili-jp2.biliimg.com
+    skip-cert-verify: true
+    udp: true
+  - name: 🇸🇬新加坡专线01|BGP|流媒体
+    type: hysteria2
+    server: aws-linkhy9.liangxin1.xyz
+    port: 60000
+    password: f95dad72-1ba5-4257-95c6-e211cf74977b
+    sni: iosapps.itunes.apple.com
+    skip-cert-verify: true
+    udp: true
+  - name: 🇯🇵日本高速01|BGP|CUCM
+    type: vless
+    server: aws-link13.liangxin1.xyz
+    port: 36574
+    uuid: f95dad72-1ba5-4257-95c6-e211cf74977b
+    servername: www.apple.com.cn
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: safari
+    reality-opts:
+      public-key: sDG-KQk1BF7V83-xnmrWDouXxpPd_ZSxKcHrJJzbols
+      short-id: 32a3650d
+    udp: true
+  - name: 🇯🇵+直连-日本1
+    type: vless
+    server: gm-jp0666.aiwowo.xyz
+    port: 20076
+    uuid: dc02eb01-febd-4c4a-8e2c-75da028c624b
+    servername: www.e-gov.go.jp
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: safari
+    reality-opts:
+      public-key: Z8tJYAjotKrLI4LMnXPYWZZBgJgvNjiD0rtmcUJt-R0
+      short-id: ac1c6898c4bac119
+    udp: true
+  - name: 🇺🇸+直连-美国6
+    type: vless
+    server: gm-us061.aiwowo.xyz
+    port: 30062
+    uuid: dc02eb01-febd-4c4a-8e2c-75da028c624b
+    servername: www.usa.gov
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: Z8tJYAjotKrLI4LMnXPYWZZBgJgvNjiD0rtmcUJt-R0
+      short-id: ac1c6898c4bac129
+    udp: true
+  - name: 🇺🇸+直连-美国5+IPv6
+    type: vless
+    server: gm-jp080.aiwowo.xyz
+    port: 30063
+    uuid: dc02eb01-febd-4c4a-8e2c-75da028c624b
+    servername: www.apple.com
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: qq
+    reality-opts:
+      public-key: Z8tJYAjotKrLI4LMnXPYWZZBgJgvNjiD0rtmcUJt-R0
+      short-id: ac1c6898c4bac999
+    udp: true
+  - name: 🇺🇸+直连-美国4++IPv6
+    type: vless
+    server: gm-jp078.aiwowo.xyz
+    port: 20076
+    uuid: dc02eb01-febd-4c4a-8e2c-75da028c624b
+    servername: www.apple.com
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: qq
+    reality-opts:
+      public-key: Z8tJYAjotKrLI4LMnXPYWZZBgJgvNjiD0rtmcUJt-R0
+      short-id: ac1c6898c4bac169
+    udp: true
+  - name: 🇺🇸+直连-美国1
+    type: vless
+    server: gm-us056.aiwowo.xyz
+    port: 30062
+    uuid: dc02eb01-febd-4c4a-8e2c-75da028c624b
+    servername: www.usa.gov
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: edge
+    reality-opts:
+      public-key: Z8tJYAjotKrLI4LMnXPYWZZBgJgvNjiD0rtmcUJt-R0
+      short-id: ac1c6898c4bac129
+    udp: true
+  - name: 🇺🇸+直连-美国3+IPV6
+    type: vless
+    server: gm-jp079.aiwowo.xyz
+    port: 30062
+    uuid: dc02eb01-febd-4c4a-8e2c-75da028c624b
+    servername: www.apple.com
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: Z8tJYAjotKrLI4LMnXPYWZZBgJgvNjiD0rtmcUJt-R0
+      short-id: ac1c6898c4bac999
+    udp: true
+  - name: 🇭🇰+直连-香港1
     type: vless
     server: gm-hk111.aiwowo.xyz
     port: 20076
@@ -59,54 +194,65 @@ proxies:
     reality-opts:
       public-key: Z8tJYAjotKrLI4LMnXPYWZZBgJgvNjiD0rtmcUJt-R0
       short-id: ac1c6898c4bac539
-  - name: 🇯🇵 IEPL-日本1
+    udp: true
+  - name: 🇺🇸 pzbfpdtn.colocrossing.cloud shadowsocks
     type: ss
-    server: junp.kuaileiduanko.com
-    port: 36098
+    server: 192.3.114.221
+    port: 8885
     cipher: 2022-blake3-aes-128-gcm
-    password: ZDc2YTMxZTgwMGFmNjhlMg==:ZGMwMmViMDEtZmViZC00Yw==
-  - name: 🇯🇵 IEPL-日本2
-    type: ss
-    server: junp.kuaileiduanko.com
-    port: 36125
-    cipher: aes-128-gcm
-    password: dc02eb01-febd-4c4a-8e2c-75da028c624b
-  - name: 🇯🇵  IEPL-日本3
-    type: ss
-    server: junp.kuaileiduanko.com
-    port: 36126
-    cipher: aes-128-gcm
-    password: dc02eb01-febd-4c4a-8e2c-75da028c624b
-  - name: 🇯🇵  IEPL-日本4
-    type: ss
-    server: junp.kuaileiduanko.com
-    port: 36078
-    cipher: aes-128-gcm
-    password: dc02eb01-febd-4c4a-8e2c-75da028c624b
-  - name: 🇯🇵+直连-日本1
+    password: tBR/gNDRLFWzlSK2by/4dw==
+    udp: true
+  - name: 🇺🇸 pzbfpdtn.colocrossing.cloud grpc-reality
     type: vless
-    server: gm-jp0666.aiwowo.xyz
-    port: 20076
-    uuid: dc02eb01-febd-4c4a-8e2c-75da028c624b
-    servername: www.e-gov.go.jp
+    server: 192.3.114.221
+    port: 8890
+    uuid: 912efc89-acd1-4c12-a97d-b106ae6ac27f
+    network: grpc
+    servername: addons.mozilla.org
     tls: true
-    flow: xtls-rprx-vision
-    client-fingerprint: edge
+    client-fingerprint: firefox
+    grpc-opts:
+      grpc-service-name: grpc
     reality-opts:
-      public-key: Z8tJYAjotKrLI4LMnXPYWZZBgJgvNjiD0rtmcUJt-R0
-      short-id: ac1c6898c4bac119
-  - name: 🇯🇵+直连-日本2
+      public-key: 9YL4ZSjKu4Q0VjLMVDzbTPawswBzluzLFUEBC6yP7DQ
+    udp: true
+  - name: 🇺🇸 pzbfpdtn.colocrossing.cloud h2-reality
     type: vless
-    server: gm-jp0444.aiwowo.xyz
-    port: 10001
-    uuid: dc02eb01-febd-4c4a-8e2c-75da028c624b
-    servername: www.e-gov.go.jp
+    server: 192.3.114.221
+    port: 8889
+    uuid: 912efc89-acd1-4c12-a97d-b106ae6ac27f
+    network: http
+    servername: addons.mozilla.org
+    tls: true
+    client-fingerprint: firefox
+    http-opts:
+      path:
+        - /
+    reality-opts:
+      public-key: 9YL4ZSjKu4Q0VjLMVDzbTPawswBzluzLFUEBC6yP7DQ
+    udp: true
+  - name: 🇺🇸 pzbfpdtn.colocrossing.cloud xtls-reality
+    type: vless
+    server: 192.3.114.221
+    port: 8881
+    uuid: 912efc89-acd1-4c12-a97d-b106ae6ac27f
+    servername: addons.mozilla.org
     tls: true
     flow: xtls-rprx-vision
     client-fingerprint: firefox
     reality-opts:
-      public-key: Z8tJYAjotKrLI4LMnXPYWZZBgJgvNjiD0rtmcUJt-R0
-      short-id: ac1c6898c4bac112
+      public-key: 9YL4ZSjKu4Q0VjLMVDzbTPawswBzluzLFUEBC6yP7DQ
+    udp: true
+  - name: 🇺🇸 pzbfpdtn.colocrossing.cloud hysteria2
+    type: hysteria2
+    server: 192.3.114.221
+    port: 8882
+    password: 912efc89-acd1-4c12-a97d-b106ae6ac27f
+    sni: addons.mozilla.org
+    skip-cert-verify: true
+    alpn:
+      - h3
+    udp: true
   - name: 🇩🇪+直连-德国
     type: vless
     server: gm-de09.aiwowo.xyz
@@ -115,226 +261,73 @@ proxies:
     servername: www.apple.com
     tls: true
     flow: xtls-rprx-vision
-    client-fingerprint: edge
+    client-fingerprint: ios
     reality-opts:
       public-key: Z8tJYAjotKrLI4LMnXPYWZZBgJgvNjiD0rtmcUJt-R0
       short-id: ac1c6898c4bac649
-  - name: 🇸🇬 IEPL-新加坡1
-    type: ss
-    server: junp.kuaileiduanko.com
-    port: 36088
-    cipher: 2022-blake3-aes-128-gcm
-    password: ZDc2YTMxZTgwMGFmNjhlMg==:ZGMwMmViMDEtZmViZC00Yw==
-  - name: 🇸🇬  IEPL-新加坡2
-    type: ss
-    server: junp.kuaileiduanko.com
-    port: 36075
-    cipher: aes-128-gcm
-    password: dc02eb01-febd-4c4a-8e2c-75da028c624b
-  - name: 🇸🇬  IEPL-新加坡3
-    type: ss
-    server: junp.kuaileiduanko.com
-    port: 36073
-    cipher: aes-128-gcm
-    password: dc02eb01-febd-4c4a-8e2c-75da028c624b
-  - name: 🇸🇬  IEPL-新加坡4
-    type: ss
-    server: junp.kuaileiduanko.com
-    port: 36450
-    cipher: 2022-blake3-aes-128-gcm
-    password: NjgxY2FhMzYwOTRhZjA4NQ==:ZGMwMmViMDEtZmViZC00Yw==
-  - name: 🇺🇸  IEPL-美国1
-    type: ss
-    server: junp.kuaileiduanko.com
-    port: 36131
-    cipher: aes-128-gcm
-    password: dc02eb01-febd-4c4a-8e2c-75da028c624b
-  - name: 🇺🇸  IEPL-美国2
-    type: ss
-    server: junp.kuaileiduanko.com
-    port: 36132
-    cipher: aes-128-gcm
-    password: dc02eb01-febd-4c4a-8e2c-75da028c624b
-  - name: 🇺🇸  IEPL-美国3
-    type: ss
-    server: 6688.rkkuailei.cc
-    port: 36070
-    cipher: aes-128-gcm
-    password: dc02eb01-febd-4c4a-8e2c-75da028c624b
-  - name: 🇺🇸  IEPL-美国4
-    type: ss
-    server: junp.kuaileiduanko.com
-    port: 36069
-    cipher: 2022-blake3-aes-128-gcm
-    password: NjgxY2FhMzYwOTRhZjA4NQ==:ZGMwMmViMDEtZmViZC00Yw==
-  - name: 🇺🇸  IEPL-美国静态家宽
-    type: ss
-    server: junp.kuaileiduanko.com
-    port: 36165
-    cipher: aes-128-gcm
-    password: dc02eb01-febd-4c4a-8e2c-75da028c624b
-  - name: 🇺🇸+直连-美国1
+    udp: true
+  - name: 🇺🇸 pzbfpdtn.colocrossing.cloud vmess-ws
+    type: vmess
+    server: skk.moe
+    port: 80
+    uuid: 912efc89-acd1-4c12-a97d-b106ae6ac27f
+    alterId: 0
+    cipher: none
+    tls: false
+    skip-cert-verify: false
+    network: ws
+    ws-opts:
+      path: /912efc89-acd1-4c12-a97d-b106ae6ac27f-vmess
+      headers:
+        Host: contributing-console-naval-participants.trycloudflare.com
+    udp: true
+  - name: 🇺🇸 pzbfpdtn.colocrossing.cloud vless-ws-tls
     type: vless
-    server: gm-us055.aiwowo.xyz
-    port: 30062
-    uuid: dc02eb01-febd-4c4a-8e2c-75da028c624b
-    servername: www.usa.gov
+    server: skk.moe
+    port: 443
+    uuid: 912efc89-acd1-4c12-a97d-b106ae6ac27f
+    network: ws
+    servername: contributing-console-naval-participants.trycloudflare.com
+    tls: true
+    ws-opts:
+      path: /912efc89-acd1-4c12-a97d-b106ae6ac27f-vless?ed=2560
+      headers:
+        Host: contributing-console-naval-participants.trycloudflare.com
+    udp: true
+  - name: 🇺🇸 pzbfpdtn.colocrossing.cloud trojan
+    type: trojan
+    server: 192.3.114.221
+    port: 8886
+    password: 912efc89-acd1-4c12-a97d-b106ae6ac27f
+    skip-cert-verify: true
+    tls: true
+    udp: true
+  - name: 🇯🇵日本高速04|BGP|CUCM
+    type: vless
+    server: aws-link20.liangxin1.xyz
+    port: 443
+    uuid: f95dad72-1ba5-4257-95c6-e211cf74977b
+    servername: download-porter.hoyoverse.com
     tls: true
     flow: xtls-rprx-vision
-    client-fingerprint: chrome
+    client-fingerprint: ios
     reality-opts:
-      public-key: Z8tJYAjotKrLI4LMnXPYWZZBgJgvNjiD0rtmcUJt-R0
-      short-id: ac1c6898c4bac129
-  - name: 🇺🇸+直连-美国2+IPV6
+      public-key: QE5l0RUqs4OsH3j3u_xHm06-4NlILmQivZUJqiEx11o
+      short-id: "6314e825"
+    udp: true
+  - name: 🇯🇵日本高速05|BGP|CUCM
     type: vless
-    server: gm-jp079.aiwowo.xyz
-    port: 30062
-    uuid: dc02eb01-febd-4c4a-8e2c-75da028c624b
-    servername: www.apple.com
+    server: aws-link23.liangxin1.xyz
+    port: 443
+    uuid: f95dad72-1ba5-4257-95c6-e211cf74977b
+    servername: download-porter.hoyoverse.com
     tls: true
     flow: xtls-rprx-vision
-    client-fingerprint: qq
+    client-fingerprint: safari
     reality-opts:
-      public-key: Z8tJYAjotKrLI4LMnXPYWZZBgJgvNjiD0rtmcUJt-R0
-      short-id: ac1c6898c4bac999
-  - name: 🇺🇸+直连-美国3++IPv6
-    type: vless
-    server: gm-jp078.aiwowo.xyz
-    port: 20076
-    uuid: dc02eb01-febd-4c4a-8e2c-75da028c624b
-    servername: www.apple.com
-    tls: true
-    flow: xtls-rprx-vision
-    client-fingerprint: edge
-    reality-opts:
-      public-key: Z8tJYAjotKrLI4LMnXPYWZZBgJgvNjiD0rtmcUJt-R0
-      short-id: ac1c6898c4bac169
-  - name: 🇦🇺 IEPL-澳大利亚
-    type: ss
-    server: junp.kuaileiduanko.com
-    port: 36097
-    cipher: 2022-blake3-aes-128-gcm
-    password: YmExMzViMzFhOTY3OTEwYw==:ZGMwMmViMDEtZmViZC00Yw==
-  - name: 🇲🇾 IEPL-马来西亚1
-    type: ss
-    server: junp.kuaileiduanko.com
-    port: 36066
-    cipher: aes-128-gcm
-    password: dc02eb01-febd-4c4a-8e2c-75da028c624b
-  - name: 🇲🇾 IEPL-马来西亚2
-    type: ss
-    server: 6688.rkkuailei.cc
-    port: 36065
-    cipher: aes-128-gcm
-    password: dc02eb01-febd-4c4a-8e2c-75da028c624b
-  - name: 🇻🇳 IEPL-越南
-    type: ss
-    server: junp.kuaileiduanko.com
-    port: 36096
-    cipher: 2022-blake3-aes-128-gcm
-    password: YmExMzViMzFhOTY3OTEwYw==:ZGMwMmViMDEtZmViZC00Yw==
-  - name: 🇹🇼 IEPL-台湾1
-    type: ss
-    server: junp.kuaileiduanko.com
-    port: 36064
-    cipher: aes-128-gcm
-    password: dc02eb01-febd-4c4a-8e2c-75da028c624b
-  - name: 🇹🇼 IEPL-台湾2
-    type: ss
-    server: 6688.rkkuailei.cc
-    port: 36063
-    cipher: aes-128-gcm
-    password: dc02eb01-febd-4c4a-8e2c-75da028c624b
-  - name: 🇹🇼 IEPL-台湾动态家宽
-    type: ss
-    server: junp.kuaileiduanko.com
-    port: 36163
-    cipher: aes-128-gcm
-    password: dc02eb01-febd-4c4a-8e2c-75da028c624b
-  - name: 🇰🇷 IEPL-韩国静态家宽
-    type: ss
-    server: junp.kuaileiduanko.com
-    port: 36062
-    cipher: aes-128-gcm
-    password: dc02eb01-febd-4c4a-8e2c-75da028c624b
-  - name: 🇹🇭 IEPL-泰国
-    type: ss
-    server: junp.kuaileiduanko.com
-    port: 36061
-    cipher: aes-128-gcm
-    password: dc02eb01-febd-4c4a-8e2c-75da028c624b
-  - name: 🇩🇪 IEPL-德国
-    type: ss
-    server: junp.kuaileiduanko.com
-    port: 36060
-    cipher: aes-128-gcm
-    password: dc02eb01-febd-4c4a-8e2c-75da028c624b
-  - name: 🇬🇧 IEPL-英国
-    type: ss
-    server: junp.kuaileiduanko.com
-    port: 36059
-    cipher: aes-128-gcm
-    password: dc02eb01-febd-4c4a-8e2c-75da028c624b
-  - name: 🇬🇧 IEPL-英国静态家宽
-    type: ss
-    server: junp.kuaileiduanko.com
-    port: 36122
-    cipher: aes-128-gcm
-    password: dc02eb01-febd-4c4a-8e2c-75da028c624b
-  - name: 🇨🇭 IEPL-瑞士
-    type: ss
-    server: junp.kuaileiduanko.com
-    port: 36058
-    cipher: aes-128-gcm
-    password: dc02eb01-febd-4c4a-8e2c-75da028c624b
-  - name: 🇳🇱 IEPL-荷兰
-    type: ss
-    server: junp.kuaileiduanko.com
-    port: 36057
-    cipher: aes-128-gcm
-    password: dc02eb01-febd-4c4a-8e2c-75da028c624b
-  - name: 🇮🇱 IEPL-以色列
-    type: ss
-    server: junp.kuaileiduanko.com
-    port: 36056
-    cipher: aes-128-gcm
-    password: dc02eb01-febd-4c4a-8e2c-75da028c624b
-  - name: 🇦🇪 IEPL-阿联酋
-    type: ss
-    server: junp.kuaileiduanko.com
-    port: 36055
-    cipher: aes-128-gcm
-    password: dc02eb01-febd-4c4a-8e2c-75da028c624b
-  - name: 🇮🇳 IEPL-印度
-    type: ss
-    server: junp.kuaileiduanko.com
-    port: 36067
-    cipher: aes-128-gcm
-    password: dc02eb01-febd-4c4a-8e2c-75da028c624b
-  - name: 🇧🇷 IEPL-巴西
-    type: ss
-    server: junp.kuaileiduanko.com
-    port: 36054
-    cipher: aes-128-gcm
-    password: dc02eb01-febd-4c4a-8e2c-75da028c624b
-  - name: 🇪🇸 IEPL-西班牙
-    type: ss
-    server: junp.kuaileiduanko.com
-    port: 36053
-    cipher: aes-128-gcm
-    password: dc02eb01-febd-4c4a-8e2c-75da028c624b
-  - name: 🇮🇩 IEPL-印度尼西亚
-    type: ss
-    server: junp.kuaileiduanko.com
-    port: 36051
-    cipher: aes-128-gcm
-    password: dc02eb01-febd-4c4a-8e2c-75da028c624b
-  - name: 🇨🇦 IEPL-加拿大
-    type: ss
-    server: junp.kuaileiduanko.com
-    port: 36050
-    cipher: aes-128-gcm
-    password: dc02eb01-febd-4c4a-8e2c-75da028c624b
+      public-key: dLmUAqcdy4Z7iucApd9zjOhkXTjl-xt_eHumShIYW0c
+      short-id: ba826a54
+    udp: true
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -342,100 +335,62 @@ proxy-groups:
       - ♻️ 自动选择
       - DIRECT
       - 微信：gtyz222
-      - 🇭🇰 IEPL-香港1
-      - 🇭🇰 IEPL-香港2
-      - 🇭🇰 IEPL-香港3
-      - 🇭🇰 IEPL-香港动态家宽
-      - 🇭🇰+直连-香港
-      - 🇯🇵 IEPL-日本1
-      - 🇯🇵 IEPL-日本2
-      - 🇯🇵  IEPL-日本3
-      - 🇯🇵  IEPL-日本4
+      - 🇯🇵日本专线04|BGP|流媒体
+      - 🇯🇵日本高速03|BGP|CUCM
+      - 🇯🇵日本专线03|BGP|流媒体
+      - 🇯🇵日本高速02|BGP|CUCM
+      - 🇸🇬新加坡专线02|BGP|流媒体
+      - 🇯🇵日本专线02|BGP|流媒体
+      - 🇸🇬新加坡专线01|BGP|流媒体
+      - 🇯🇵日本高速01|BGP|CUCM
       - 🇯🇵+直连-日本1
-      - 🇯🇵+直连-日本2
-      - 🇩🇪+直连-德国
-      - 🇸🇬 IEPL-新加坡1
-      - 🇸🇬  IEPL-新加坡2
-      - 🇸🇬  IEPL-新加坡3
-      - 🇸🇬  IEPL-新加坡4
-      - 🇺🇸  IEPL-美国1
-      - 🇺🇸  IEPL-美国2
-      - 🇺🇸  IEPL-美国3
-      - 🇺🇸  IEPL-美国4
-      - 🇺🇸  IEPL-美国静态家宽
+      - 🇺🇸+直连-美国6
+      - 🇺🇸+直连-美国5+IPv6
+      - 🇺🇸+直连-美国4++IPv6
       - 🇺🇸+直连-美国1
-      - 🇺🇸+直连-美国2+IPV6
-      - 🇺🇸+直连-美国3++IPv6
-      - 🇦🇺 IEPL-澳大利亚
-      - 🇲🇾 IEPL-马来西亚1
-      - 🇲🇾 IEPL-马来西亚2
-      - 🇻🇳 IEPL-越南
-      - 🇹🇼 IEPL-台湾1
-      - 🇹🇼 IEPL-台湾2
-      - 🇹🇼 IEPL-台湾动态家宽
-      - 🇰🇷 IEPL-韩国静态家宽
-      - 🇹🇭 IEPL-泰国
-      - 🇩🇪 IEPL-德国
-      - 🇬🇧 IEPL-英国
-      - 🇬🇧 IEPL-英国静态家宽
-      - 🇨🇭 IEPL-瑞士
-      - 🇳🇱 IEPL-荷兰
-      - 🇮🇱 IEPL-以色列
-      - 🇦🇪 IEPL-阿联酋
-      - 🇮🇳 IEPL-印度
-      - 🇧🇷 IEPL-巴西
-      - 🇪🇸 IEPL-西班牙
-      - 🇮🇩 IEPL-印度尼西亚
-      - 🇨🇦 IEPL-加拿大
+      - 🇺🇸+直连-美国3+IPV6
+      - 🇭🇰+直连-香港1
+      - 🇺🇸 pzbfpdtn.colocrossing.cloud shadowsocks
+      - 🇺🇸 pzbfpdtn.colocrossing.cloud grpc-reality
+      - 🇺🇸 pzbfpdtn.colocrossing.cloud h2-reality
+      - 🇺🇸 pzbfpdtn.colocrossing.cloud xtls-reality
+      - 🇺🇸 pzbfpdtn.colocrossing.cloud hysteria2
+      - 🇩🇪+直连-德国
+      - 🇺🇸 pzbfpdtn.colocrossing.cloud vmess-ws
+      - 🇺🇸 pzbfpdtn.colocrossing.cloud vless-ws-tls
+      - 🇺🇸 pzbfpdtn.colocrossing.cloud trojan
+      - 🇯🇵日本高速04|BGP|CUCM
+      - 🇯🇵日本高速05|BGP|CUCM
   - name: ♻️ 自动选择
     type: url-test
     proxies:
       - 微信：gtyz222
-      - 🇭🇰 IEPL-香港1
-      - 🇭🇰 IEPL-香港2
-      - 🇭🇰 IEPL-香港3
-      - 🇭🇰 IEPL-香港动态家宽
-      - 🇭🇰+直连-香港
-      - 🇯🇵 IEPL-日本1
-      - 🇯🇵 IEPL-日本2
-      - 🇯🇵  IEPL-日本3
-      - 🇯🇵  IEPL-日本4
+      - 🇯🇵日本专线04|BGP|流媒体
+      - 🇯🇵日本高速03|BGP|CUCM
+      - 🇯🇵日本专线03|BGP|流媒体
+      - 🇯🇵日本高速02|BGP|CUCM
+      - 🇸🇬新加坡专线02|BGP|流媒体
+      - 🇯🇵日本专线02|BGP|流媒体
+      - 🇸🇬新加坡专线01|BGP|流媒体
+      - 🇯🇵日本高速01|BGP|CUCM
       - 🇯🇵+直连-日本1
-      - 🇯🇵+直连-日本2
-      - 🇩🇪+直连-德国
-      - 🇸🇬 IEPL-新加坡1
-      - 🇸🇬  IEPL-新加坡2
-      - 🇸🇬  IEPL-新加坡3
-      - 🇸🇬  IEPL-新加坡4
-      - 🇺🇸  IEPL-美国1
-      - 🇺🇸  IEPL-美国2
-      - 🇺🇸  IEPL-美国3
-      - 🇺🇸  IEPL-美国4
-      - 🇺🇸  IEPL-美国静态家宽
+      - 🇺🇸+直连-美国6
+      - 🇺🇸+直连-美国5+IPv6
+      - 🇺🇸+直连-美国4++IPv6
       - 🇺🇸+直连-美国1
-      - 🇺🇸+直连-美国2+IPV6
-      - 🇺🇸+直连-美国3++IPv6
-      - 🇦🇺 IEPL-澳大利亚
-      - 🇲🇾 IEPL-马来西亚1
-      - 🇲🇾 IEPL-马来西亚2
-      - 🇻🇳 IEPL-越南
-      - 🇹🇼 IEPL-台湾1
-      - 🇹🇼 IEPL-台湾2
-      - 🇹🇼 IEPL-台湾动态家宽
-      - 🇰🇷 IEPL-韩国静态家宽
-      - 🇹🇭 IEPL-泰国
-      - 🇩🇪 IEPL-德国
-      - 🇬🇧 IEPL-英国
-      - 🇬🇧 IEPL-英国静态家宽
-      - 🇨🇭 IEPL-瑞士
-      - 🇳🇱 IEPL-荷兰
-      - 🇮🇱 IEPL-以色列
-      - 🇦🇪 IEPL-阿联酋
-      - 🇮🇳 IEPL-印度
-      - 🇧🇷 IEPL-巴西
-      - 🇪🇸 IEPL-西班牙
-      - 🇮🇩 IEPL-印度尼西亚
-      - 🇨🇦 IEPL-加拿大
+      - 🇺🇸+直连-美国3+IPV6
+      - 🇭🇰+直连-香港1
+      - 🇺🇸 pzbfpdtn.colocrossing.cloud shadowsocks
+      - 🇺🇸 pzbfpdtn.colocrossing.cloud grpc-reality
+      - 🇺🇸 pzbfpdtn.colocrossing.cloud h2-reality
+      - 🇺🇸 pzbfpdtn.colocrossing.cloud xtls-reality
+      - 🇺🇸 pzbfpdtn.colocrossing.cloud hysteria2
+      - 🇩🇪+直连-德国
+      - 🇺🇸 pzbfpdtn.colocrossing.cloud vmess-ws
+      - 🇺🇸 pzbfpdtn.colocrossing.cloud vless-ws-tls
+      - 🇺🇸 pzbfpdtn.colocrossing.cloud trojan
+      - 🇯🇵日本高速04|BGP|CUCM
+      - 🇯🇵日本高速05|BGP|CUCM
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
@@ -446,204 +401,128 @@ proxy-groups:
       - ♻️ 自动选择
       - 🎯 全球直连
       - 微信：gtyz222
-      - 🇭🇰 IEPL-香港1
-      - 🇭🇰 IEPL-香港2
-      - 🇭🇰 IEPL-香港3
-      - 🇭🇰 IEPL-香港动态家宽
-      - 🇭🇰+直连-香港
-      - 🇯🇵 IEPL-日本1
-      - 🇯🇵 IEPL-日本2
-      - 🇯🇵  IEPL-日本3
-      - 🇯🇵  IEPL-日本4
+      - 🇯🇵日本专线04|BGP|流媒体
+      - 🇯🇵日本高速03|BGP|CUCM
+      - 🇯🇵日本专线03|BGP|流媒体
+      - 🇯🇵日本高速02|BGP|CUCM
+      - 🇸🇬新加坡专线02|BGP|流媒体
+      - 🇯🇵日本专线02|BGP|流媒体
+      - 🇸🇬新加坡专线01|BGP|流媒体
+      - 🇯🇵日本高速01|BGP|CUCM
       - 🇯🇵+直连-日本1
-      - 🇯🇵+直连-日本2
-      - 🇩🇪+直连-德国
-      - 🇸🇬 IEPL-新加坡1
-      - 🇸🇬  IEPL-新加坡2
-      - 🇸🇬  IEPL-新加坡3
-      - 🇸🇬  IEPL-新加坡4
-      - 🇺🇸  IEPL-美国1
-      - 🇺🇸  IEPL-美国2
-      - 🇺🇸  IEPL-美国3
-      - 🇺🇸  IEPL-美国4
-      - 🇺🇸  IEPL-美国静态家宽
+      - 🇺🇸+直连-美国6
+      - 🇺🇸+直连-美国5+IPv6
+      - 🇺🇸+直连-美国4++IPv6
       - 🇺🇸+直连-美国1
-      - 🇺🇸+直连-美国2+IPV6
-      - 🇺🇸+直连-美国3++IPv6
-      - 🇦🇺 IEPL-澳大利亚
-      - 🇲🇾 IEPL-马来西亚1
-      - 🇲🇾 IEPL-马来西亚2
-      - 🇻🇳 IEPL-越南
-      - 🇹🇼 IEPL-台湾1
-      - 🇹🇼 IEPL-台湾2
-      - 🇹🇼 IEPL-台湾动态家宽
-      - 🇰🇷 IEPL-韩国静态家宽
-      - 🇹🇭 IEPL-泰国
-      - 🇩🇪 IEPL-德国
-      - 🇬🇧 IEPL-英国
-      - 🇬🇧 IEPL-英国静态家宽
-      - 🇨🇭 IEPL-瑞士
-      - 🇳🇱 IEPL-荷兰
-      - 🇮🇱 IEPL-以色列
-      - 🇦🇪 IEPL-阿联酋
-      - 🇮🇳 IEPL-印度
-      - 🇧🇷 IEPL-巴西
-      - 🇪🇸 IEPL-西班牙
-      - 🇮🇩 IEPL-印度尼西亚
-      - 🇨🇦 IEPL-加拿大
+      - 🇺🇸+直连-美国3+IPV6
+      - 🇭🇰+直连-香港1
+      - 🇺🇸 pzbfpdtn.colocrossing.cloud shadowsocks
+      - 🇺🇸 pzbfpdtn.colocrossing.cloud grpc-reality
+      - 🇺🇸 pzbfpdtn.colocrossing.cloud h2-reality
+      - 🇺🇸 pzbfpdtn.colocrossing.cloud xtls-reality
+      - 🇺🇸 pzbfpdtn.colocrossing.cloud hysteria2
+      - 🇩🇪+直连-德国
+      - 🇺🇸 pzbfpdtn.colocrossing.cloud vmess-ws
+      - 🇺🇸 pzbfpdtn.colocrossing.cloud vless-ws-tls
+      - 🇺🇸 pzbfpdtn.colocrossing.cloud trojan
+      - 🇯🇵日本高速04|BGP|CUCM
+      - 🇯🇵日本高速05|BGP|CUCM
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
       - 微信：gtyz222
-      - 🇭🇰 IEPL-香港1
-      - 🇭🇰 IEPL-香港2
-      - 🇭🇰 IEPL-香港3
-      - 🇭🇰 IEPL-香港动态家宽
-      - 🇭🇰+直连-香港
-      - 🇯🇵 IEPL-日本1
-      - 🇯🇵 IEPL-日本2
-      - 🇯🇵  IEPL-日本3
-      - 🇯🇵  IEPL-日本4
+      - 🇯🇵日本专线04|BGP|流媒体
+      - 🇯🇵日本高速03|BGP|CUCM
+      - 🇯🇵日本专线03|BGP|流媒体
+      - 🇯🇵日本高速02|BGP|CUCM
+      - 🇸🇬新加坡专线02|BGP|流媒体
+      - 🇯🇵日本专线02|BGP|流媒体
+      - 🇸🇬新加坡专线01|BGP|流媒体
+      - 🇯🇵日本高速01|BGP|CUCM
       - 🇯🇵+直连-日本1
-      - 🇯🇵+直连-日本2
-      - 🇩🇪+直连-德国
-      - 🇸🇬 IEPL-新加坡1
-      - 🇸🇬  IEPL-新加坡2
-      - 🇸🇬  IEPL-新加坡3
-      - 🇸🇬  IEPL-新加坡4
-      - 🇺🇸  IEPL-美国1
-      - 🇺🇸  IEPL-美国2
-      - 🇺🇸  IEPL-美国3
-      - 🇺🇸  IEPL-美国4
-      - 🇺🇸  IEPL-美国静态家宽
+      - 🇺🇸+直连-美国6
+      - 🇺🇸+直连-美国5+IPv6
+      - 🇺🇸+直连-美国4++IPv6
       - 🇺🇸+直连-美国1
-      - 🇺🇸+直连-美国2+IPV6
-      - 🇺🇸+直连-美国3++IPv6
-      - 🇦🇺 IEPL-澳大利亚
-      - 🇲🇾 IEPL-马来西亚1
-      - 🇲🇾 IEPL-马来西亚2
-      - 🇻🇳 IEPL-越南
-      - 🇹🇼 IEPL-台湾1
-      - 🇹🇼 IEPL-台湾2
-      - 🇹🇼 IEPL-台湾动态家宽
-      - 🇰🇷 IEPL-韩国静态家宽
-      - 🇹🇭 IEPL-泰国
-      - 🇩🇪 IEPL-德国
-      - 🇬🇧 IEPL-英国
-      - 🇬🇧 IEPL-英国静态家宽
-      - 🇨🇭 IEPL-瑞士
-      - 🇳🇱 IEPL-荷兰
-      - 🇮🇱 IEPL-以色列
-      - 🇦🇪 IEPL-阿联酋
-      - 🇮🇳 IEPL-印度
-      - 🇧🇷 IEPL-巴西
-      - 🇪🇸 IEPL-西班牙
-      - 🇮🇩 IEPL-印度尼西亚
-      - 🇨🇦 IEPL-加拿大
+      - 🇺🇸+直连-美国3+IPV6
+      - 🇭🇰+直连-香港1
+      - 🇺🇸 pzbfpdtn.colocrossing.cloud shadowsocks
+      - 🇺🇸 pzbfpdtn.colocrossing.cloud grpc-reality
+      - 🇺🇸 pzbfpdtn.colocrossing.cloud h2-reality
+      - 🇺🇸 pzbfpdtn.colocrossing.cloud xtls-reality
+      - 🇺🇸 pzbfpdtn.colocrossing.cloud hysteria2
+      - 🇩🇪+直连-德国
+      - 🇺🇸 pzbfpdtn.colocrossing.cloud vmess-ws
+      - 🇺🇸 pzbfpdtn.colocrossing.cloud vless-ws-tls
+      - 🇺🇸 pzbfpdtn.colocrossing.cloud trojan
+      - 🇯🇵日本高速04|BGP|CUCM
+      - 🇯🇵日本高速05|BGP|CUCM
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
       - 微信：gtyz222
-      - 🇭🇰 IEPL-香港1
-      - 🇭🇰 IEPL-香港2
-      - 🇭🇰 IEPL-香港3
-      - 🇭🇰 IEPL-香港动态家宽
-      - 🇭🇰+直连-香港
-      - 🇯🇵 IEPL-日本1
-      - 🇯🇵 IEPL-日本2
-      - 🇯🇵  IEPL-日本3
-      - 🇯🇵  IEPL-日本4
+      - 🇯🇵日本专线04|BGP|流媒体
+      - 🇯🇵日本高速03|BGP|CUCM
+      - 🇯🇵日本专线03|BGP|流媒体
+      - 🇯🇵日本高速02|BGP|CUCM
+      - 🇸🇬新加坡专线02|BGP|流媒体
+      - 🇯🇵日本专线02|BGP|流媒体
+      - 🇸🇬新加坡专线01|BGP|流媒体
+      - 🇯🇵日本高速01|BGP|CUCM
       - 🇯🇵+直连-日本1
-      - 🇯🇵+直连-日本2
-      - 🇩🇪+直连-德国
-      - 🇸🇬 IEPL-新加坡1
-      - 🇸🇬  IEPL-新加坡2
-      - 🇸🇬  IEPL-新加坡3
-      - 🇸🇬  IEPL-新加坡4
-      - 🇺🇸  IEPL-美国1
-      - 🇺🇸  IEPL-美国2
-      - 🇺🇸  IEPL-美国3
-      - 🇺🇸  IEPL-美国4
-      - 🇺🇸  IEPL-美国静态家宽
+      - 🇺🇸+直连-美国6
+      - 🇺🇸+直连-美国5+IPv6
+      - 🇺🇸+直连-美国4++IPv6
       - 🇺🇸+直连-美国1
-      - 🇺🇸+直连-美国2+IPV6
-      - 🇺🇸+直连-美国3++IPv6
-      - 🇦🇺 IEPL-澳大利亚
-      - 🇲🇾 IEPL-马来西亚1
-      - 🇲🇾 IEPL-马来西亚2
-      - 🇻🇳 IEPL-越南
-      - 🇹🇼 IEPL-台湾1
-      - 🇹🇼 IEPL-台湾2
-      - 🇹🇼 IEPL-台湾动态家宽
-      - 🇰🇷 IEPL-韩国静态家宽
-      - 🇹🇭 IEPL-泰国
-      - 🇩🇪 IEPL-德国
-      - 🇬🇧 IEPL-英国
-      - 🇬🇧 IEPL-英国静态家宽
-      - 🇨🇭 IEPL-瑞士
-      - 🇳🇱 IEPL-荷兰
-      - 🇮🇱 IEPL-以色列
-      - 🇦🇪 IEPL-阿联酋
-      - 🇮🇳 IEPL-印度
-      - 🇧🇷 IEPL-巴西
-      - 🇪🇸 IEPL-西班牙
-      - 🇮🇩 IEPL-印度尼西亚
-      - 🇨🇦 IEPL-加拿大
+      - 🇺🇸+直连-美国3+IPV6
+      - 🇭🇰+直连-香港1
+      - 🇺🇸 pzbfpdtn.colocrossing.cloud shadowsocks
+      - 🇺🇸 pzbfpdtn.colocrossing.cloud grpc-reality
+      - 🇺🇸 pzbfpdtn.colocrossing.cloud h2-reality
+      - 🇺🇸 pzbfpdtn.colocrossing.cloud xtls-reality
+      - 🇺🇸 pzbfpdtn.colocrossing.cloud hysteria2
+      - 🇩🇪+直连-德国
+      - 🇺🇸 pzbfpdtn.colocrossing.cloud vmess-ws
+      - 🇺🇸 pzbfpdtn.colocrossing.cloud vless-ws-tls
+      - 🇺🇸 pzbfpdtn.colocrossing.cloud trojan
+      - 🇯🇵日本高速04|BGP|CUCM
+      - 🇯🇵日本高速05|BGP|CUCM
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
       - 微信：gtyz222
-      - 🇭🇰 IEPL-香港1
-      - 🇭🇰 IEPL-香港2
-      - 🇭🇰 IEPL-香港3
-      - 🇭🇰 IEPL-香港动态家宽
-      - 🇭🇰+直连-香港
-      - 🇯🇵 IEPL-日本1
-      - 🇯🇵 IEPL-日本2
-      - 🇯🇵  IEPL-日本3
-      - 🇯🇵  IEPL-日本4
+      - 🇯🇵日本专线04|BGP|流媒体
+      - 🇯🇵日本高速03|BGP|CUCM
+      - 🇯🇵日本专线03|BGP|流媒体
+      - 🇯🇵日本高速02|BGP|CUCM
+      - 🇸🇬新加坡专线02|BGP|流媒体
+      - 🇯🇵日本专线02|BGP|流媒体
+      - 🇸🇬新加坡专线01|BGP|流媒体
+      - 🇯🇵日本高速01|BGP|CUCM
       - 🇯🇵+直连-日本1
-      - 🇯🇵+直连-日本2
-      - 🇩🇪+直连-德国
-      - 🇸🇬 IEPL-新加坡1
-      - 🇸🇬  IEPL-新加坡2
-      - 🇸🇬  IEPL-新加坡3
-      - 🇸🇬  IEPL-新加坡4
-      - 🇺🇸  IEPL-美国1
-      - 🇺🇸  IEPL-美国2
-      - 🇺🇸  IEPL-美国3
-      - 🇺🇸  IEPL-美国4
-      - 🇺🇸  IEPL-美国静态家宽
+      - 🇺🇸+直连-美国6
+      - 🇺🇸+直连-美国5+IPv6
+      - 🇺🇸+直连-美国4++IPv6
       - 🇺🇸+直连-美国1
-      - 🇺🇸+直连-美国2+IPV6
-      - 🇺🇸+直连-美国3++IPv6
-      - 🇦🇺 IEPL-澳大利亚
-      - 🇲🇾 IEPL-马来西亚1
-      - 🇲🇾 IEPL-马来西亚2
-      - 🇻🇳 IEPL-越南
-      - 🇹🇼 IEPL-台湾1
-      - 🇹🇼 IEPL-台湾2
-      - 🇹🇼 IEPL-台湾动态家宽
-      - 🇰🇷 IEPL-韩国静态家宽
-      - 🇹🇭 IEPL-泰国
-      - 🇩🇪 IEPL-德国
-      - 🇬🇧 IEPL-英国
-      - 🇬🇧 IEPL-英国静态家宽
-      - 🇨🇭 IEPL-瑞士
-      - 🇳🇱 IEPL-荷兰
-      - 🇮🇱 IEPL-以色列
-      - 🇦🇪 IEPL-阿联酋
-      - 🇮🇳 IEPL-印度
-      - 🇧🇷 IEPL-巴西
-      - 🇪🇸 IEPL-西班牙
-      - 🇮🇩 IEPL-印度尼西亚
-      - 🇨🇦 IEPL-加拿大
+      - 🇺🇸+直连-美国3+IPV6
+      - 🇭🇰+直连-香港1
+      - 🇺🇸 pzbfpdtn.colocrossing.cloud shadowsocks
+      - 🇺🇸 pzbfpdtn.colocrossing.cloud grpc-reality
+      - 🇺🇸 pzbfpdtn.colocrossing.cloud h2-reality
+      - 🇺🇸 pzbfpdtn.colocrossing.cloud xtls-reality
+      - 🇺🇸 pzbfpdtn.colocrossing.cloud hysteria2
+      - 🇩🇪+直连-德国
+      - 🇺🇸 pzbfpdtn.colocrossing.cloud vmess-ws
+      - 🇺🇸 pzbfpdtn.colocrossing.cloud vless-ws-tls
+      - 🇺🇸 pzbfpdtn.colocrossing.cloud trojan
+      - 🇯🇵日本高速04|BGP|CUCM
+      - 🇯🇵日本高速05|BGP|CUCM
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -667,51 +546,32 @@ proxy-groups:
       - 🎯 全球直连
       - ♻️ 自动选择
       - 微信：gtyz222
-      - 🇭🇰 IEPL-香港1
-      - 🇭🇰 IEPL-香港2
-      - 🇭🇰 IEPL-香港3
-      - 🇭🇰 IEPL-香港动态家宽
-      - 🇭🇰+直连-香港
-      - 🇯🇵 IEPL-日本1
-      - 🇯🇵 IEPL-日本2
-      - 🇯🇵  IEPL-日本3
-      - 🇯🇵  IEPL-日本4
+      - 🇯🇵日本专线04|BGP|流媒体
+      - 🇯🇵日本高速03|BGP|CUCM
+      - 🇯🇵日本专线03|BGP|流媒体
+      - 🇯🇵日本高速02|BGP|CUCM
+      - 🇸🇬新加坡专线02|BGP|流媒体
+      - 🇯🇵日本专线02|BGP|流媒体
+      - 🇸🇬新加坡专线01|BGP|流媒体
+      - 🇯🇵日本高速01|BGP|CUCM
       - 🇯🇵+直连-日本1
-      - 🇯🇵+直连-日本2
-      - 🇩🇪+直连-德国
-      - 🇸🇬 IEPL-新加坡1
-      - 🇸🇬  IEPL-新加坡2
-      - 🇸🇬  IEPL-新加坡3
-      - 🇸🇬  IEPL-新加坡4
-      - 🇺🇸  IEPL-美国1
-      - 🇺🇸  IEPL-美国2
-      - 🇺🇸  IEPL-美国3
-      - 🇺🇸  IEPL-美国4
-      - 🇺🇸  IEPL-美国静态家宽
+      - 🇺🇸+直连-美国6
+      - 🇺🇸+直连-美国5+IPv6
+      - 🇺🇸+直连-美国4++IPv6
       - 🇺🇸+直连-美国1
-      - 🇺🇸+直连-美国2+IPV6
-      - 🇺🇸+直连-美国3++IPv6
-      - 🇦🇺 IEPL-澳大利亚
-      - 🇲🇾 IEPL-马来西亚1
-      - 🇲🇾 IEPL-马来西亚2
-      - 🇻🇳 IEPL-越南
-      - 🇹🇼 IEPL-台湾1
-      - 🇹🇼 IEPL-台湾2
-      - 🇹🇼 IEPL-台湾动态家宽
-      - 🇰🇷 IEPL-韩国静态家宽
-      - 🇹🇭 IEPL-泰国
-      - 🇩🇪 IEPL-德国
-      - 🇬🇧 IEPL-英国
-      - 🇬🇧 IEPL-英国静态家宽
-      - 🇨🇭 IEPL-瑞士
-      - 🇳🇱 IEPL-荷兰
-      - 🇮🇱 IEPL-以色列
-      - 🇦🇪 IEPL-阿联酋
-      - 🇮🇳 IEPL-印度
-      - 🇧🇷 IEPL-巴西
-      - 🇪🇸 IEPL-西班牙
-      - 🇮🇩 IEPL-印度尼西亚
-      - 🇨🇦 IEPL-加拿大
+      - 🇺🇸+直连-美国3+IPV6
+      - 🇭🇰+直连-香港1
+      - 🇺🇸 pzbfpdtn.colocrossing.cloud shadowsocks
+      - 🇺🇸 pzbfpdtn.colocrossing.cloud grpc-reality
+      - 🇺🇸 pzbfpdtn.colocrossing.cloud h2-reality
+      - 🇺🇸 pzbfpdtn.colocrossing.cloud xtls-reality
+      - 🇺🇸 pzbfpdtn.colocrossing.cloud hysteria2
+      - 🇩🇪+直连-德国
+      - 🇺🇸 pzbfpdtn.colocrossing.cloud vmess-ws
+      - 🇺🇸 pzbfpdtn.colocrossing.cloud vless-ws-tls
+      - 🇺🇸 pzbfpdtn.colocrossing.cloud trojan
+      - 🇯🇵日本高速04|BGP|CUCM
+      - 🇯🇵日本高速05|BGP|CUCM
 rule-providers:
   LocalAreaNetwork:
     type: http
